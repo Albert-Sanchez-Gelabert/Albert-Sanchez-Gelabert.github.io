@@ -35,13 +35,6 @@
     "text": "Selected research projects\nMAPINEQ — Mapping inequalities through the life course\nUNED, 2024–2025\nEuropean research project on how inequalities develop and interact across the life course, including educational inequalities and school-to-work transitions.\nINVENT Culture — European Inventory of Societal Values of Culture as a Basis for Inclusive Cultural Policies\nUniversitat Autònoma de Barcelona, 2022–2023\nHorizon 2020 project examining cultural participation, values and inequalities, with the aim of bringing a stronger social perspective into cultural policy and research.\nComplex Trajectories\nUniversitat Autònoma de Barcelona / Universitat Oberta de Catalunya, 2020–2022\nResearch on complex and non-linear university trajectories, including changes between programmes or study modalities, interruptions and other pathways that depart from a standard linear progression. The project also developed approaches for analysing and monitoring student trajectories.\nUOC Impact\nUniversitat Oberta de Catalunya, 2018–2020\nResearch on the contribution of online higher education to Catalan society.\nVia Universitària\nXarxa Vives d’Universitats, 2015–2019\nResearch on university access, learning conditions, expectations and outcomes across the university system."
   },
   {
-    "objectID": "publications.ejs.html",
-    "href": "publications.ejs.html",
-    "title": "Albert Sánchez-Gelabert",
-    "section": "",
-    "text": "&lt;%\nlet currentYear = null;\n\nfor (const item of items) {\n\n  if (item.year !== currentYear) {\n    currentYear = item.year;\n%&gt;\n\n&lt;%= currentYear %&gt;\n\n&lt;%\n  }\n%&gt;\n\n&gt;\n\n  \n    &lt;%= item.title %&gt;\n  \n\n  &lt;% if (item.author) { %&gt;\n  \n    &lt;%= item.author %&gt;\n  \n  &lt;% } %&gt;\n\n  &lt;% if (item.journal) { %&gt;\n  \n    &lt;%= item.journal %&gt;&lt;%\n      if (item.volume) { %&gt;, &lt;%= item.volume %&gt;&lt;% }\n      if (item.issue) { %&gt;(&lt;%= item.issue %&gt;)&lt;% }\n      if (item.pages) { %&gt;, &lt;%= item.pages %&gt;&lt;% }\n    %&gt;\n  \n  &lt;% } %&gt;\n\n  &lt;% if (item.status === \"Accepted\") { %&gt;\n  \n    Accepted / forthcoming\n  \n  &lt;% } %&gt;\n\n  \n\n    &lt;% if (item.doi_url) { %&gt;\n      DOI\n    &lt;% } %&gt;\n\n    &lt;% if (item.free_access) { %&gt;\n      Free access\n    &lt;% } %&gt;\n\n    &lt;% if (item.manuscript) { %&gt;\n      Accepted manuscript\n    &lt;% } %&gt;\n\n  \n\n\n\n&lt;%\n}\n%&gt;"
-  },
-  {
     "objectID": "news/2026_Youth/index.html",
     "href": "news/2026_Youth/index.html",
     "title": "A longitudinal analysis of behavioural engagement and achievement in the transition to upper tracked secondary education in Barcelona",
@@ -49,11 +42,25 @@
     "text": "A new article with Ona Valls and Rafael Merino has been published in the Journal of Applied Youth Studies.\nThe paper examines the transition to upper tracked secondary education in Barcelona using a longitudinal perspective, focusing on behavioural engagement and academic achievement.\nDOI · Free access"
   },
   {
-    "objectID": "news/2026_Simbolic/index.html",
-    "href": "news/2026_Simbolic/index.html",
-    "title": "Revisiting cultural omnivorousness through symbolic boundaries in musical tastes",
+    "objectID": "news/2026_STEM_gender/index.html",
+    "href": "news/2026_STEM_gender/index.html",
+    "title": "Gender inequalities in STEM are already visible at university entry",
     "section": "",
-    "text": "Revisiting cultural omnivorousness through symbolic boundaries in musical tastes\nUsing data from 14,524 people in Spain, we find that even broad musical tastes coexist with clear exclusions between genres.\nRather than a dominant omnivorous pattern, we find different taste structures characterized by varying degrees of breadth, specialization and exclusion.\nDOI· Free access"
+    "text": "Gender inequalities in STEM are already visible at university entry\nAnalysing 36,075 first-time university entrants in Catalonia, we find that women entering technical, experimental and biological STEM fields are concentrated in the most academically selective profiles, while men access STEM from a broader range of academic positions.\nThis points to a pattern of academic over-selection in women’s access to STEM and suggests that these differences cannot be understood only in terms of interests or aspirations, but also in relation to the stratified conditions of university entry.\nDOI· Free access"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Albert Sánchez-Gelabert",
+    "section": "",
+    "text": "Sociologist · Lecturer · Researcher\n\n\nInstitut de Ciències de l’Educació (ICE) · Universitat Politècnica de Catalunya · BarcelonaTech (UPC)\n\nI am a sociologist whose research focuses on social inequalities in education, particularly in higher education. I study how social background, educational pathways and institutional contexts shape access to university, degree choice, persistence, dropout and students’ academic trajectories.\nMuch of my work uses quantitative and longitudinal approaches to examine how inequalities develop over time and across educational transitions. More recently, I have broadened my research to life-course inequalities and cultural consumption, including digital participation, musical tastes and processes of social differentiation.\n\nEmail · ORCID · Google Scholar"
+  },
+  {
+    "objectID": "index.html#research-interests",
+    "href": "index.html#research-interests",
+    "title": "Albert Sánchez-Gelabert",
+    "section": "Research interests",
+    "text": "Research interests\n\nHigher education\nEducational inequalities\nStudent trajectories and transitions\nSTEM and gender\nLife-course inequalities\nCultural consumption"
   },
   {
     "objectID": "cv.html",
@@ -98,32 +105,18 @@
     "text": "Full CV\nA detailed CV, including publications, research projects, teaching and conference presentations, is available here:\nDownload full CV (PDF)"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Albert Sánchez-Gelabert",
-    "section": "",
-    "text": "Sociologist · Lecturer · Researcher\n\n\nInstitut de Ciències de l’Educació (ICE) · Universitat Politècnica de Catalunya · BarcelonaTech (UPC)\n\nI am a sociologist whose research focuses on social inequalities in education, particularly in higher education. I study how social background, educational pathways and institutional contexts shape access to university, degree choice, persistence, dropout and students’ academic trajectories.\nMuch of my work uses quantitative and longitudinal approaches to examine how inequalities develop over time and across educational transitions. More recently, I have broadened my research to life-course inequalities and cultural consumption, including digital participation, musical tastes and processes of social differentiation.\n\nEmail · ORCID · Google Scholar"
-  },
-  {
-    "objectID": "index.html#research-interests",
-    "href": "index.html#research-interests",
-    "title": "Albert Sánchez-Gelabert",
-    "section": "Research interests",
-    "text": "Research interests\n\nHigher education\nEducational inequalities\nStudent trajectories and transitions\nSTEM and gender\nLife-course inequalities\nCultural consumption"
-  },
-  {
-    "objectID": "news/2026_STEM_gender/index.html",
-    "href": "news/2026_STEM_gender/index.html",
-    "title": "Gender inequalities in STEM are already visible at university entry",
-    "section": "",
-    "text": "Gender inequalities in STEM are already visible at university entry\nAnalysing 36,075 first-time university entrants in Catalonia, we find that women entering technical, experimental and biological STEM fields are concentrated in the most academically selective profiles, while men access STEM from a broader range of academic positions.\nThis points to a pattern of academic over-selection in women’s access to STEM and suggests that these differences cannot be understood only in terms of interests or aspirations, but also in relation to the stratified conditions of university entry.\nDOI· Free access"
-  },
-  {
     "objectID": "news.html",
     "href": "news.html",
     "title": "News",
     "section": "",
-    "text": "Revisiting cultural omnivorousness through symbolic boundaries in musical tastes\n\n\n\nPublication\n\n\n\nNew publication: Symbolic boundaries and musical tastes in Spanish consumers: beyond cultural omnivorousness\n\n\n\nAug 29, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nGender inequalities in STEM are already visible at university entry\n\n\n\nPublication\n\n\n\nNew publication: Gender and STEM: academic over-selection and stratified university entry\n\n\n\nAug 29, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nA longitudinal analysis of behavioural engagement and achievement in the transition to upper tracked secondary education in Barcelona\n\n\n\nPublication\n\n\n\nNew publication: Youth Transition to Upper Tracked Secondary School in Barcelona\n\n\n\nApr 13, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "Revisiting cultural omnivorousness through symbolic boundaries in musical tastes\n\n\n\nPublication\n\n\n\nNew publication: Symbolic boundaries and musical tastes in Spanish consumers: beyond cultural omnivorousness\n\n\n\nSep 1, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nGender inequalities in STEM are already visible at university entry\n\n\n\nPublication\n\n\n\nNew publication: Gender and STEM: academic over-selection and stratified university entry\n\n\n\nAug 29, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nA longitudinal analysis of behavioural engagement and achievement in the transition to upper tracked secondary education in Barcelona\n\n\n\nPublication\n\n\n\nNew publication: Youth Transition to Upper Tracked Secondary School in Barcelona\n\n\n\nApr 13, 2026\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "news/2026_Simbolic/index.html",
+    "href": "news/2026_Simbolic/index.html",
+    "title": "Revisiting cultural omnivorousness through symbolic boundaries in musical tastes",
+    "section": "",
+    "text": "Revisiting cultural omnivorousness through symbolic boundaries in musical tastes\nUsing data from 14,524 people in Spain, we find that even broad musical tastes coexist with clear exclusions between genres.\nRather than a dominant omnivorous pattern, we find different taste structures characterized by varying degrees of breadth, specialization and exclusion.\nDOI· Free access"
   },
   {
     "objectID": "publications.html",
