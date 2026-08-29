@@ -1,6 +1,6 @@
 ---
 title: "Revisiting cultural omnivorousness through symbolic boundaries in musical tastes"
-date: 2026-08-29
+date: 2026-09-01
 description: "New publication: Symbolic boundaries and musical tastes in Spanish consumers: beyond cultural omnivorousness"
 categories: [Publication]
 image: image.jpg

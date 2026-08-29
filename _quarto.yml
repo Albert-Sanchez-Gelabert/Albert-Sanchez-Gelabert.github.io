@@ -1,5 +1,8 @@
 project:
   type: website
+  render:
+    - "*.qmd"
+    - "news/**/*.qmd"
 
 website:
   title: "Albert Sánchez-Gelabert"

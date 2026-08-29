@@ -4,3 +4,5 @@ _site/
 .Rhistory
 .RData
 .Ruserdata
+/.quarto/
+**/*.quarto_ipynb
