@@ -1,0 +1,13 @@
+---
+title: "A longitudinal analysis of behavioural engagement and achievement in the transition to upper tracked secondary education in Barcelona"
+date: 2026-04-13
+description: "New publication: Youth Transition to Upper Tracked Secondary School in Barcelona"
+categories: [Publication]
+image: image.jpg
+---
+
+A new article with Ona Valls and Rafael Merino has been published in the *Journal of Applied Youth Studies*.
+
+The paper examines the transition to upper tracked secondary education in Barcelona using a longitudinal perspective, focusing on behavioural engagement and academic achievement.
+
+[DOI](https://doi.org/10.1007/s43151-025-00193-y) · [Free access](https://hdl.handle.net/2117/460706)

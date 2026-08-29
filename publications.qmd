@@ -1,0 +1,12 @@
+---
+title: "Publications"
+
+listing:
+  contents:
+    - publications.yml
+  template: publications.ejs.md
+  sort: "date desc"
+  filter-ui: true
+  sort-ui: false
+  page-size: 100
+---

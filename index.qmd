@@ -1,0 +1,34 @@
+---
+title: "Albert Sánchez-Gelabert"
+---
+
+::: {.home-hero}
+
+<div class="home-kicker">Sociologist · Lecturer · Researcher</div>
+
+<div class="home-affiliation">
+Institut de Ciències de l'Educació (ICE) · Universitat Politècnica de Catalunya · BarcelonaTech (UPC)
+</div>
+
+I am a sociologist whose research focuses on social inequalities in education, particularly in higher education. I study how social background, educational pathways and institutional contexts shape access to university, degree choice, persistence, dropout and students' academic trajectories.
+
+Much of my work uses quantitative and longitudinal approaches to examine how inequalities develop over time and across educational transitions. More recently, I have broadened my research to life-course inequalities and cultural consumption, including digital participation, musical tastes and processes of social differentiation.
+
+<div class="home-links">
+<a href="mailto:albert.sanchez.gelabert@upc.edu">Email</a>
+<span>·</span>
+<a href="https://orcid.org/0000-0002-4135-6121" target="_blank">ORCID</a>
+<span>·</span>
+<a href="https://scholar.google.es/citations?user=Z5TisEcAAAAJ&hl=ca" target="_blank">Google Scholar</a>
+</div>
+
+:::
+
+## Research interests
+
+- Higher education
+- Educational inequalities
+- Student trajectories and transitions
+- STEM and gender
+- Life-course inequalities
+- Cultural consumption

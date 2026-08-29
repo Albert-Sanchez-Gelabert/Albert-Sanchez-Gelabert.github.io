@@ -1,0 +1,15 @@
+---
+title: "Gender inequalities in STEM are already visible at university entry"
+date: 2026-08-29
+description: "New publication: Gender and STEM: academic over-selection and stratified university entry"
+categories: [Publication]
+image: image.jpg
+---
+
+*Gender inequalities in STEM are already visible at university entry*
+
+Analysing 36,075 first-time university entrants in Catalonia, we find that women entering technical, experimental and biological STEM fields are concentrated in the most academically selective profiles, while men access STEM from a broader range of academic positions.
+
+This points to a pattern of academic over-selection in women’s access to STEM and suggests that these differences cannot be understood only in terms of interests or aspirations, but also in relation to the stratified conditions of university entry.
+
+[DOI]()· [Free access]()

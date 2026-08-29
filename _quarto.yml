@@ -1,0 +1,25 @@
+project:
+  type: website
+
+website:
+  title: "Albert Sánchez-Gelabert"
+
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: research.qmd
+        text: Research
+      - href: publications.qmd
+        text: Publications
+      - href: news.qmd
+        text: News
+      - href: cv.qmd
+        text: CV
+
+  search: true
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css

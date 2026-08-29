@@ -1,0 +1,11 @@
+---
+title: "News"
+
+listing:
+  contents: news
+  sort: "date desc"
+  type: grid
+  grid-columns: 2
+  fields: [image, date, categories, title, description]
+  page-size: 20
+---
