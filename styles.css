@@ -1,0 +1,131 @@
+/* css styles */
+
+/* Publications */
+
+.publication-year {
+  margin-top: 2.6rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.publication-item {
+  margin-bottom: 1.8rem;
+}
+
+.publication-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0.25rem;
+}
+
+.publication-authors {
+  line-height: 1.45;
+  margin-bottom: 0.15rem;
+}
+
+.publication-journal {
+  line-height: 1.45;
+  margin-bottom: 0.3rem;
+}
+
+.publication-status {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.publication-links {
+  margin-top: 0.35rem;
+  font-size: 0.92rem;
+}
+
+.publication-links a {
+  margin-right: 0.8rem;
+  text-decoration: none;
+}
+
+.publication-links a:hover {
+  text-decoration: underline;
+}
+
+/* News cards */
+
+.quarto-grid-item {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.quarto-grid-item .card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.quarto-grid-item .card-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.quarto-grid-item .listing-date {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.quarto-grid-item img {
+  object-fit: cover;
+}
+
+/* Home */
+
+.home-hero {
+  max-width: 820px;
+  margin-top: 1.2rem;
+  margin-bottom: 2.6rem;
+}
+
+.home-kicker {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.home-affiliation {
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+}
+
+.home-hero p {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 780px;
+}
+
+.home-links {
+  margin-top: 1.4rem;
+  font-size: 0.98rem;
+}
+
+.home-links a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.home-links a:hover {
+  text-decoration: underline;
+}
+
+.home-links span {
+  margin: 0 0.55rem;
+  color: #adb5bd;
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    margin-top: 0.5rem;
+  }
+}
