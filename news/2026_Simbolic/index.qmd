@@ -6,11 +6,13 @@ categories: [Publication]
 image: image.jpg
 ---
 
-*Revisiting cultural omnivorousness through symbolic boundaries in musical tastes*
+Cultural omnivorousness is often understood in terms of the breadth and diversity of people’s tastes. Our results suggest, however, that having a broad musical repertoire does not necessarily imply an absence of boundaries between genres.
 
 Using data from 14,524 people in Spain, we find that even broad musical tastes coexist with clear exclusions between genres.
 
 Rather than a dominant omnivorous pattern, we find different taste structures characterized by varying degrees of breadth, specialization and exclusion.
+
+Forthcoming with Marc Barbeta-Viñas: Symbolic boundaries and musical tastes in Spanish consumers: beyond cultural omnivorousness.
 
 
 [DOI]()· [Free access]()
