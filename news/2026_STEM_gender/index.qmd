@@ -1,7 +1,7 @@
 ---
 title: "Gender inequalities in STEM are also visible at university entry"
-date: 2026-08-29
-description: "New publication: Gender and STEM: academic over-selection and stratified university entry"
+date: 2026-09-02
+description: "New publication in Research in Science & Technological Education: Gender and STEM: academic over-selection and stratified university entry"
 categories: [Publication]
 image: image.jpg
 ---
@@ -12,4 +12,10 @@ Analysing 36,075 first-time university entrants in Catalonia, we find that women
 
 This points to a pattern of academic over-selection in women’s access to STEM and suggests that gender differences in STEM cannot be understood only in terms of interests or aspirations, but also in relation to the stratified conditions of university entry.
 
-[DOI]()· [Free access]()
+Published with Cristina Simarro Rodríguez in *Research in Science & Technological Education*.
+
+### Reference
+
+Sánchez-Gelabert, A., & Simarro Rodríguez, C. (2026). Gender and STEM: academic over-selection and stratified university entry. *Research in Science & Technological Education*. https://doi.org/10.1080/02635143.2026.2727576
+
+[DOI](https://doi.org/10.1080/02635143.2026.2727576) · [Free eprint](https://www.tandfonline.com/eprint/PFYYUWNWH3VDKWXFMT9R/full?target=10.1080/02635143.2026.2727576)
