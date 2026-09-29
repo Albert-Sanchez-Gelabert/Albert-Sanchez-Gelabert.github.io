@@ -1,0 +1,868 @@
+---
+title: "Compensatory Advantage Explorer"
+format: html
+engine: knitr
+filters:
+  - shinylive
+---
+
+Explore how first-year academic performance and family educational background are associated with students' decisions to continue, transfer or leave university.
+
+```{shinylive-r}
+#| standalone: true
+#| viewerHeight: 670
+
+library(shiny)
+
+
+# ------------------------------------------------------------
+# DATA
+# Published predicted probabilities
+# Sánchez-Gelabert & Troiano
+# Appendix 2
+# ------------------------------------------------------------
+
+dat <- data.frame(
+
+  performance = rep(seq(0, 100, 10), each = 3),
+
+  family = rep(
+    c(
+      "Compulsory",
+      "Post-compulsory",
+      "University"
+    ),
+    11
+  ),
+
+  continuing = c(
+    .132,.147,.168,
+    .207,.226,.245,
+    .308,.329,.342,
+    .430,.451,.453,
+    .561,.577,.567,
+    .683,.692,.674,
+    .783,.787,.764,
+    .858,.857,.835,
+    .910,.907,.887,
+    .944,.940,.924,
+    .965,.962,.950
+  ),
+
+  dropout = c(
+    .599,.532,.445,
+    .526,.453,.376,
+    .440,.367,.304,
+    .346,.278,.233,
+    .254,.198,.169,
+    .174,.132,.116,
+    .112,.083,.076,
+    .069,.050,.048,
+    .041,.029,.030,
+    .024,.017,.018,
+    .014,.010,.011
+  ),
+
+  transfer = c(
+    .269,.321,.387,
+    .267,.321,.379,
+    .252,.304,.354,
+    .224,.271,.314,
+    .186,.226,.264,
+    .144,.176,.210,
+    .105,.130,.159,
+    .073,.092,.117,
+    .049,.064,.083,
+    .032,.043,.058,
+    .021,.029,.040
+  )
+)
+
+
+# ------------------------------------------------------------
+# UI
+# ------------------------------------------------------------
+
+ui <- fluidPage(
+
+  tags$head(
+
+    tags$style(
+      HTML("
+
+        body {
+          font-family:
+            system-ui,
+            -apple-system,
+            BlinkMacSystemFont,
+            'Segoe UI',
+            sans-serif;
+
+          margin: 0;
+          padding: 0;
+        }
+
+        .app-wrapper {
+          max-width: 900px;
+          margin: 0 auto;
+          padding: 5px 10px 15px 10px;
+        }
+
+        .control-panel {
+          padding: 14px;
+          background: #f7f7f7;
+          border-radius: 8px;
+          margin-bottom: 15px;
+        }
+
+        .control-panel .form-group {
+          margin-bottom: 13px;
+        }
+
+        .result-number {
+          font-size: 24px;
+          line-height: 1.15;
+          font-weight: 600;
+        }
+
+        .result-label {
+          font-size: 13px;
+          color: #666;
+          margin-bottom: 3px;
+        }
+
+        .result-box {
+          padding: 10px;
+          border: 1px solid #dddddd;
+          border-radius: 7px;
+          text-align: center;
+          background: white;
+          min-height: 65px;
+        }
+
+        .compare-section {
+          margin-top: 20px;
+        }
+
+        .compare-section h4 {
+          margin-bottom: 4px;
+        }
+
+        .compare-description {
+          font-size: 13px;
+          margin-bottom: 12px;
+        }
+
+        .compare-row {
+          margin-bottom: 10px;
+        }
+
+        .compare-label {
+          font-size: 12px;
+          margin-bottom: 3px;
+        }
+
+        .compare-bar {
+          display: flex;
+          width: 100%;
+          height: 23px;
+          overflow: hidden;
+          border-radius: 4px;
+        }
+
+        .legend {
+          display: flex;
+          gap: 18px;
+          margin-top: 8px;
+          font-size: 11px;
+          color: #666;
+        }
+
+        .legend-item {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+
+        .legend-box {
+          width: 10px;
+          height: 10px;
+          border-radius: 2px;
+        }
+
+        .note {
+          color: #666;
+          font-size: 11px;
+          line-height: 1.4;
+          margin-top: 18px;
+        }
+
+      ")
+    )
+  ),
+
+
+  div(
+
+    class = "app-wrapper",
+
+
+    # ----------------------------------------------------------
+    # Controls + main flow
+    # ----------------------------------------------------------
+
+    fluidRow(
+
+      column(
+
+        width = 4,
+
+        div(
+
+          class = "control-panel",
+
+          selectInput(
+            inputId = "family",
+            label = "Family educational level",
+            choices = c(
+              "Compulsory",
+              "Post-compulsory",
+              "University"
+            ),
+            selected = "Compulsory"
+          ),
+
+          sliderInput(
+            inputId = "performance",
+            label = "First-year performance (%)",
+            min = 0,
+            max = 100,
+            value = 20,
+            step = 10
+          ),
+
+          p(
+            style = "
+              font-size:11px;
+              line-height:1.4;
+              color:#666;
+              margin-bottom:0;
+            ",
+            "Percentage of enrolled credits successfully completed during the first year."
+          )
+
+        )
+
+      ),
+
+
+      column(
+
+        width = 8,
+
+        uiOutput("flow")
+
+      )
+
+    ),
+
+
+    # ----------------------------------------------------------
+    # Outcome boxes
+    # ----------------------------------------------------------
+
+    fluidRow(
+
+      column(
+
+        width = 4,
+
+        div(
+          class = "result-box",
+
+          div(
+            "Continue",
+            class = "result-label"
+          ),
+
+          div(
+            textOutput("continue_value"),
+            class = "result-number"
+          )
+        )
+
+      ),
+
+
+      column(
+
+        width = 4,
+
+        div(
+          class = "result-box",
+
+          div(
+            "Drop out",
+            class = "result-label"
+          ),
+
+          div(
+            textOutput("dropout_value"),
+            class = "result-number"
+          )
+        )
+
+      ),
+
+
+      column(
+
+        width = 4,
+
+        div(
+          class = "result-box",
+
+          div(
+            "Transfer",
+            class = "result-label"
+          ),
+
+          div(
+            textOutput("transfer_value"),
+            class = "result-number"
+          )
+        )
+
+      )
+
+    ),
+
+
+    # ----------------------------------------------------------
+    # Comparison
+    # ----------------------------------------------------------
+
+    div(
+
+      class = "compare-section",
+
+      h4("Compare family educational backgrounds"),
+
+      p(
+        class = "compare-description",
+
+        "At the same level of academic performance, how are the three outcomes distributed across family educational backgrounds?"
+      ),
+
+      uiOutput("comparison"),
+
+      div(
+
+        class = "legend",
+
+        div(
+          class = "legend-item",
+          div(
+            class = "legend-box",
+            style = "background:#4E79A7;"
+          ),
+          span("Continue")
+        ),
+
+        div(
+          class = "legend-item",
+          div(
+            class = "legend-box",
+            style = "background:#C95D5D;"
+          ),
+          span("Drop out")
+        ),
+
+        div(
+          class = "legend-item",
+          div(
+            class = "legend-box",
+            style = "background:#59A875;"
+          ),
+          span("Transfer")
+        )
+
+      )
+
+    ),
+
+
+    # ----------------------------------------------------------
+    # Source
+    # ----------------------------------------------------------
+
+    div(
+
+      class = "note",
+
+      HTML(
+        "<strong>Source:</strong> Sánchez-Gelabert, A. & Troiano, H.
+        <em>Compensatory advantage after the first year at university
+        in the Catalan system: between continuing, transferring and
+        dropping out</em>. Predicted probabilities reported in
+        Appendix 2.<br>
+        Values are model-based predicted probabilities.
+        The visualization does not represent causal effects."
+      )
+
+    )
+
+  )
+
+)
+
+
+# ------------------------------------------------------------
+# SERVER
+# ------------------------------------------------------------
+
+server <- function(input, output, session) {
+
+
+  # Selected combination --------------------------------------
+
+  selected <- reactive({
+
+    dat[
+      dat$performance == input$performance &
+      dat$family == input$family,
+    ]
+
+  })
+
+
+  # Numbers ----------------------------------------------------
+
+  output$continue_value <- renderText({
+
+    paste0(
+      round(
+        selected()$continuing * 100,
+        1
+      ),
+      "%"
+    )
+
+  })
+
+
+  output$dropout_value <- renderText({
+
+    paste0(
+      round(
+        selected()$dropout * 100,
+        1
+      ),
+      "%"
+    )
+
+  })
+
+
+  output$transfer_value <- renderText({
+
+    paste0(
+      round(
+        selected()$transfer * 100,
+        1
+      ),
+      "%"
+    )
+
+  })
+
+
+  # ----------------------------------------------------------
+  # Dynamic Sankey-like flow
+  # ----------------------------------------------------------
+
+  output$flow <- renderUI({
+
+    x <- selected()
+
+    p1 <- x$continuing
+    p2 <- x$dropout
+    p3 <- x$transfer
+
+
+    # Flow thickness
+
+    width1 <- max(4, p1 * 60)
+    width2 <- max(4, p2 * 60)
+    width3 <- max(4, p3 * 60)
+
+
+    html <- paste0(
+
+      '<div style="
+          width:100%;
+          display:flex;
+          justify-content:center;
+          align-items:center;
+        ">',
+
+
+      '<svg
+          viewBox="0 0 650 300"
+          style="
+            width:100%;
+            max-width:620px;
+            height:auto;
+            display:block;
+          ">',
+
+
+      # --------------------------------------------------------
+      # Title
+      # --------------------------------------------------------
+
+      '<text
+          x="20"
+          y="20"
+          font-size="13"
+          font-weight="600"
+          fill="#222222">',
+
+      input$family,
+      ' family education · ',
+      input$performance,
+      '% performance',
+
+      '</text>',
+
+
+      # --------------------------------------------------------
+      # Cohort box
+      # --------------------------------------------------------
+
+      '<rect
+          x="25"
+          y="112"
+          width="125"
+          height="76"
+          rx="9"
+          fill="#f5f5f5"
+          stroke="#cccccc"/>',
+
+
+      '<text
+          x="87"
+          y="137"
+          text-anchor="middle"
+          font-size="10"
+          fill="#666666">
+          SELECTED GROUP
+       </text>',
+
+
+      '<text
+          x="87"
+          y="164"
+          text-anchor="middle"
+          font-size="23"
+          font-weight="600"
+          fill="#222222">
+          100
+       </text>',
+
+
+      '<text
+          x="87"
+          y="180"
+          text-anchor="middle"
+          font-size="10"
+          fill="#666666">
+          students
+       </text>',
+
+
+      # --------------------------------------------------------
+      # Flows
+      # --------------------------------------------------------
+
+      '<path
+          d="M150 140 C280 140, 330 63, 500 63"
+          fill="none"
+          stroke="#4E79A7"
+          stroke-width="',
+          width1,
+          '"
+          stroke-linecap="round"
+          opacity="0.78"/>',
+
+
+      '<path
+          d="M150 150 C280 150, 330 150, 500 150"
+          fill="none"
+          stroke="#C95D5D"
+          stroke-width="',
+          width2,
+          '"
+          stroke-linecap="round"
+          opacity="0.78"/>',
+
+
+      '<path
+          d="M150 160 C280 160, 330 237, 500 237"
+          fill="none"
+          stroke="#59A875"
+          stroke-width="',
+          width3,
+          '"
+          stroke-linecap="round"
+          opacity="0.78"/>',
+
+
+      # --------------------------------------------------------
+      # Continue box
+      # --------------------------------------------------------
+
+      '<rect
+          x="500"
+          y="33"
+          width="125"
+          height="60"
+          rx="9"
+          fill="white"
+          stroke="#cccccc"/>',
+
+
+      '<text
+          x="562"
+          y="57"
+          text-anchor="middle"
+          font-size="12"
+          fill="#444444">
+          Continue
+       </text>',
+
+
+      '<text
+          x="562"
+          y="80"
+          text-anchor="middle"
+          font-size="20"
+          font-weight="600"
+          fill="#222222">',
+
+      round(p1 * 100, 1),
+
+      '%</text>',
+
+
+      # --------------------------------------------------------
+      # Dropout box
+      # --------------------------------------------------------
+
+      '<rect
+          x="500"
+          y="120"
+          width="125"
+          height="60"
+          rx="9"
+          fill="white"
+          stroke="#cccccc"/>',
+
+
+      '<text
+          x="562"
+          y="144"
+          text-anchor="middle"
+          font-size="12"
+          fill="#444444">
+          Drop out
+       </text>',
+
+
+      '<text
+          x="562"
+          y="167"
+          text-anchor="middle"
+          font-size="20"
+          font-weight="600"
+          fill="#222222">',
+
+      round(p2 * 100, 1),
+
+      '%</text>',
+
+
+      # --------------------------------------------------------
+      # Transfer box
+      # --------------------------------------------------------
+
+      '<rect
+          x="500"
+          y="207"
+          width="125"
+          height="60"
+          rx="9"
+          fill="white"
+          stroke="#cccccc"/>',
+
+
+      '<text
+          x="562"
+          y="231"
+          text-anchor="middle"
+          font-size="12"
+          fill="#444444">
+          Transfer
+       </text>',
+
+
+      '<text
+          x="562"
+          y="254"
+          text-anchor="middle"
+          font-size="20"
+          font-weight="600"
+          fill="#222222">',
+
+      round(p3 * 100, 1),
+
+      '%</text>',
+
+
+      '</svg>',
+      '</div>'
+
+    )
+
+
+    HTML(html)
+
+  })
+
+
+  # ----------------------------------------------------------
+  # Comparison between family educational backgrounds
+  # ----------------------------------------------------------
+
+  output$comparison <- renderUI({
+
+    temp <- dat[
+      dat$performance == input$performance,
+    ]
+
+
+    rows <- lapply(
+
+      seq_len(nrow(temp)),
+
+      function(i) {
+
+        r <- temp[i, ]
+
+
+        tags$div(
+
+          class = "compare-row",
+
+
+          tags$div(
+
+            r$family,
+
+            class = "compare-label"
+
+          ),
+
+
+          tags$div(
+
+            class = "compare-bar",
+
+
+            tags$div(
+
+              style = paste0(
+                "width:",
+                r$continuing * 100,
+                "%;",
+                "background:#4E79A7;"
+              ),
+
+              title = paste0(
+                "Continue: ",
+                round(
+                  r$continuing * 100,
+                  1
+                ),
+                "%"
+              )
+
+            ),
+
+
+            tags$div(
+
+              style = paste0(
+                "width:",
+                r$dropout * 100,
+                "%;",
+                "background:#C95D5D;"
+              ),
+
+              title = paste0(
+                "Drop out: ",
+                round(
+                  r$dropout * 100,
+                  1
+                ),
+                "%"
+              )
+
+            ),
+
+
+            tags$div(
+
+              style = paste0(
+                "width:",
+                r$transfer * 100,
+                "%;",
+                "background:#59A875;"
+              ),
+
+              title = paste0(
+                "Transfer: ",
+                round(
+                  r$transfer * 100,
+                  1
+                ),
+                "%"
+              )
+
+            )
+
+          )
+
+        )
+
+      }
+
+    )
+
+
+    tagList(rows)
+
+  })
+
+}
+
+
+# ------------------------------------------------------------
+# RUN APP
+# ------------------------------------------------------------
+
+shinyApp(
+  ui = ui,
+  server = server
+)
+```

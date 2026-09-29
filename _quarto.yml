@@ -3,6 +3,7 @@ project:
   render:
     - "*.qmd"
     - "news/**/*.qmd"
+    - "tools/**/*.qmd"
 
 website:
   title: "Albert Sánchez-Gelabert"
@@ -17,6 +18,8 @@ website:
         text: Publications
       - href: news.qmd
         text: News
+      - href: tools/compensatory/index.qmd
+        text: Tools
       - href: cv.qmd
         text: CV
 
