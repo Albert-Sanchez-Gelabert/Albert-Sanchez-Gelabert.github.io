@@ -18,8 +18,12 @@ website:
         text: Publications
       - href: news.qmd
         text: News
-      - href: tools/compensatory/index.qmd
-        text: Tools
+      - text: Tools
+        menu:
+          - href: tools/compensatory/index.qmd
+            text: Compensatory Advantage Explorer
+          - href: tools/entry-space/index.qmd
+            text: University Entry Space Explorer
       - href: cv.qmd
         text: CV
 
