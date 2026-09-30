@@ -401,14 +401,13 @@ ui <- fluidPage(
       class = "note",
 
       HTML(
-        "<strong>Source:</strong> Sánchez-Gelabert, A. & Troiano, H.
-        <em>Compensatory advantage after the first year at university
-        in the Catalan system: between continuing, transferring and
-        dropping out</em>. Predicted probabilities reported in
-        Appendix 2.<br>
-        Values are model-based predicted probabilities.
-        The visualization does not represent causal effects."
-      )
+           "<strong>Conceptual background:</strong> Compensatory advantage refers to the weaker consequences of poor academic performance among students from more advantaged social backgrounds (Bernardi, 2014).<br><br>
+
+            <strong>Source:</strong> Sánchez-Gelabert, A. & Troiano, H.
+            <em>Compensatory advantage after the first year at university in the Catalan system: between continuing, transferring and dropping out</em>. Predicted probabilities reported in Appendix 2.<br>
+
+  Values are model-based predicted probabilities. The visualization does not represent causal effects."
+)
 
     )
 
