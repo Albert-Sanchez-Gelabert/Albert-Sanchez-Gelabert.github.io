@@ -22,6 +22,8 @@ website:
         text: News
       - text: Tools
         menu:
+          - href: tools/index.qmd
+            text: All tools
           - href: tools/compensatory/index.qmd
             text: Compensatory Advantage Explorer
           - href: tools/entry-space/index.qmd
