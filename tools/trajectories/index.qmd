@@ -1,0 +1,1300 @@
+---
+title: "University Trajectory Lab"
+format: html
+engine: knitr
+filters:
+  - shinylive
+---
+
+Explore how university performance develops over time, who is more often found in each trajectory, and how adjusted trajectory probabilities differ across fields of study.
+
+```{shinylive-r}
+#| standalone: true
+#| viewerHeight: 900
+
+library(shiny)
+
+# ============================================================
+# DATA
+# ============================================================
+
+# ------------------------------------------------------------
+# 1. Six empirical GBTM trajectories
+# ------------------------------------------------------------
+# Shapes are visually reconstructed from Figure 1 of the paper
+# (the original model-predicted coordinates were not available).
+# Published group prevalence is taken from the final article.
+
+traj <- data.frame(
+  year = rep(1:7, 6),
+  group = rep(paste0("G", 1:6), each = 7),
+  performance = c(
+    # G1 Early descending
+    32, 4, 0.5, 0, 0, 0, 0,
+    # G2 Stable descending
+    67, 52, 30, 10, 2, 0, 0,
+    # G3 Mid-stable performance
+    55, 51, 49, 49, 52, 56, 60,
+    # G4 Upward performance
+    73, 77, 81, 85, 90, 94, 97,
+    # G5 High performance & decline
+    86, 87, 88, 83, 50, 4, 0,
+    # G6 High-stable performance
+    97, 98, 99, 99, 99, 97, 89
+  )
+)
+
+meta <- data.frame(
+  group = paste0("G", 1:6),
+  trajectory = c(
+    "Early descending",
+    "Stable descending",
+    "Mid-stable performance",
+    "Upward performance",
+    "High performance & decline",
+    "High-stable performance"
+  ),
+  share = c(9.7, 5.5, 8.0, 27.0, 6.1, 43.7),
+  colour = c(
+    "#1A476F",
+    "#90353B",
+    "#55752F",
+    "#E37E00",
+    "#6E8E84",
+    "#C10534"
+  ),
+  description = c(
+    "Low performance in the first year, followed by a rapid fall to almost no academic progress.",
+    "Relatively high initial performance followed by a progressive decline towards no academic progress.",
+    "Performance remains around the middle of the scale, with a modest increase in later years.",
+    "High initial performance followed by progressive improvement towards very high performance.",
+    "Very high performance during the first years, followed by a sharp late decline.",
+    "Consistently very high performance across the observation period."
+  ),
+  stringsAsFactors = FALSE
+)
+
+# Final status after seven years (Table 4, final article)
+outcomes <- data.frame(
+  group = paste0("G", 1:6),
+  dropout = c(97.3, 96.5, 8.3, 0.3, 67.1, 0.2),
+  on_time = c(0.0, 0.1, 0.3, 56.6, 4.8, 92.9),
+  delayed = c(0.0, 0.0, 17.2, 38.3, 9.8, 6.2),
+  persistence = c(2.7, 3.4, 74.2, 4.8, 18.2, 0.6)
+)
+
+# ------------------------------------------------------------
+# 2. Descriptive composition of the six trajectories
+#    (Table A1, percentages within each category)
+# ------------------------------------------------------------
+
+comp <- data.frame(
+  variable = character(),
+  category = character(),
+  n = integer(),
+  G1 = numeric(), G2 = numeric(), G3 = numeric(),
+  G4 = numeric(), G5 = numeric(), G6 = numeric(),
+  stringsAsFactors = FALSE
+)
+
+add_comp <- function(variable, category, n, values) {
+  data.frame(
+    variable = variable,
+    category = category,
+    n = n,
+    G1 = values[1], G2 = values[2], G3 = values[3],
+    G4 = values[4], G5 = values[5], G6 = values[6],
+    stringsAsFactors = FALSE
+  )
+}
+
+comp <- rbind(
+  comp,
+
+  add_comp("Field of study", "Arts & Humanities", 3693,
+           c(15.00, 7.74, 6.99, 23.23, 5.47, 41.57)),
+  add_comp("Field of study", "Social & Law", 12188,
+           c(7.88, 5.46, 6.21, 25.78, 4.86, 49.81)),
+  add_comp("Field of study", "Health", 5518,
+           c(5.53, 3.64, 4.10, 22.83, 2.52, 61.38)),
+  add_comp("Field of study", "Sciences", 2430,
+           c(9.67, 4.86, 8.23, 29.09, 2.55, 45.60)),
+  add_comp("Field of study", "Engineering & Architecture", 6563,
+           c(14.22, 5.59, 12.71, 39.34, 4.08, 24.06)),
+
+  add_comp("Access grade", "Up to 5.99", 2588,
+           c(23.72, 10.39, 13.18, 28.13, 5.76, 18.82)),
+  add_comp("Access grade", "6–6.99", 4395,
+           c(17.75, 8.76, 10.92, 31.06, 5.53, 25.98)),
+  add_comp("Access grade", "7–7.99", 5533,
+           c(13.34, 6.98, 9.07, 30.47, 4.77, 35.37)),
+  add_comp("Access grade", "8–8.99", 5496,
+           c(8.08, 5.35, 7.66, 29.68, 4.49, 44.74)),
+  add_comp("Access grade", "9–9.99", 4781,
+           c(4.77, 3.62, 5.12, 29.22, 3.35, 53.92)),
+  add_comp("Access grade", "10–10.99", 3665,
+           c(2.51, 1.91, 4.88, 26.60, 2.62, 61.47)),
+  add_comp("Access grade", "11–11.99", 2520,
+           c(2.70, 1.83, 3.10, 21.55, 2.70, 68.13)),
+  add_comp("Access grade", "12–12.99", 1231,
+           c(1.54, 1.06, 2.19, 16.57, 2.27, 76.36)),
+  add_comp("Access grade", "13–14", 183,
+           c(2.19, 1.09, 1.09, 10.93, 4.37, 80.33)),
+
+  add_comp("Parental education", "Non-university", 17656,
+           c(11.00, 6.02, 7.28, 26.48, 4.55, 44.66)),
+  add_comp("Parental education", "University", 12736,
+           c(8.20, 4.51, 7.77, 30.41, 3.60, 45.50)),
+
+  add_comp("Gender", "Women", 16643,
+           c(7.50, 4.27, 5.23, 24.66, 3.60, 54.74)),
+  add_comp("Gender", "Men", 13749,
+           c(12.65, 6.75, 10.21, 32.33, 4.83, 33.23)),
+
+  add_comp("Age", "Up to 25", 28389,
+           c(8.65, 4.96, 7.56, 29.03, 4.05, 45.75)),
+  add_comp("Age", "26 or more", 2003,
+           c(26.46, 11.53, 6.44, 15.33, 5.69, 34.55)),
+
+  add_comp("Access route", "Academic track", 22180,
+           c(7.33, 4.31, 7.73, 29.99, 3.83, 46.82)),
+  add_comp("Access route", "VET track", 5272,
+           c(13.60, 7.02, 6.60, 25.28, 4.99, 42.51)),
+  add_comp("Access route", "Other", 2940,
+           c(21.94, 10.65, 7.24, 19.18, 5.14, 35.85)),
+
+  add_comp("Working while studying", "Not working", 20237,
+           c(8.80, 5.03, 7.25, 28.71, 3.98, 46.22)),
+  add_comp("Working while studying", "Up to 15 hours/week", 1787,
+           c(11.14, 5.76, 7.67, 26.92, 4.64, 43.87)),
+  add_comp("Working while studying", "15 hours or more", 8368,
+           c(12.03, 6.19, 8.01, 26.97, 4.47, 42.33))
+)
+
+# ------------------------------------------------------------
+# 3. Adjusted predicted probabilities across fields
+#    Tables 5–7 in the final article.
+#    Four analytical routes:
+#      G1 + G2 = Dropout trajectory
+#      G3      = Slow progression
+#      G4      = Successful recovery
+#      G6      = Optimal route
+# G5 is retained in model estimation but not displayed in this
+# second analytical stage, following the published article.
+# ------------------------------------------------------------
+
+pred <- data.frame(
+  variable = character(),
+  field = character(),
+  category = character(),
+  dropout = numeric(),
+  slow = numeric(),
+  recovery = numeric(),
+  optimal = numeric(),
+  stringsAsFactors = FALSE
+)
+
+add_pred <- function(variable, field, category, vals) {
+  data.frame(
+    variable = variable,
+    field = field,
+    category = category,
+    dropout = vals[1],
+    slow = vals[2],
+    recovery = vals[3],
+    optimal = vals[4],
+    stringsAsFactors = FALSE
+  )
+}
+
+# Parental education
+pred <- rbind(
+  pred,
+  add_pred("Parental education", "Arts & Humanities", "Non-university", c(.208,.068,.242,.428)),
+  add_pred("Parental education", "Arts & Humanities", "University", c(.199,.069,.221,.464)),
+  add_pred("Parental education", "Social & Law", "Non-university", c(.137,.063,.243,.512)),
+  add_pred("Parental education", "Social & Law", "University", c(.122,.070,.286,.476)),
+  add_pred("Parental education", "Health", "Non-university", c(.096,.044,.239,.593)),
+  add_pred("Parental education", "Health", "University", c(.114,.059,.273,.532)),
+  add_pred("Parental education", "Sciences", "Non-university", c(.216,.107,.292,.353)),
+  add_pred("Parental education", "Sciences", "University", c(.195,.094,.318,.374)),
+  add_pred("Parental education", "Engineering & Architecture", "Non-university", c(.197,.113,.367,.284)),
+  add_pred("Parental education", "Engineering & Architecture", "University", c(.175,.126,.417,.249)),
+
+  # Gender
+  add_pred("Gender", "Arts & Humanities", "Women", c(.191,.063,.240,.457)),
+  add_pred("Gender", "Arts & Humanities", "Men", c(.214,.070,.214,.450)),
+  add_pred("Gender", "Social & Law", "Women", c(.112,.051,.235,.564)),
+  add_pred("Gender", "Social & Law", "Men", c(.156,.084,.300,.405)),
+  add_pred("Gender", "Health", "Women", c(.094,.042,.232,.611)),
+  add_pred("Gender", "Health", "Men", c(.107,.056,.284,.522)),
+  add_pred("Gender", "Sciences", "Women", c(.172,.081,.319,.402)),
+  add_pred("Gender", "Sciences", "Men", c(.245,.123,.291,.313)),
+  add_pred("Gender", "Engineering & Architecture", "Women", c(.159,.105,.413,.291)),
+  add_pred("Gender", "Engineering & Architecture", "Men", c(.211,.137,.389,.223)),
+
+  # Age
+  add_pred("Age", "Arts & Humanities", "Up to 25", c(.209,.070,.237,.433)),
+  add_pred("Age", "Arts & Humanities", "26 or more", c(.219,.046,.132,.544)),
+  add_pred("Age", "Social & Law", "Up to 25", c(.123,.067,.267,.499)),
+  add_pred("Age", "Social & Law", "26 or more", c(.210,.056,.180,.506)),
+  add_pred("Age", "Health", "Up to 25", c(.100,.049,.254,.573)),
+  add_pred("Age", "Health", "26 or more", c(.128,.056,.251,.530)),
+  add_pred("Age", "Sciences", "Up to 25", c(.195,.103,.311,.363)),
+  add_pred("Age", "Sciences", "26 or more", c(.323,.076,.147,.454)),
+  add_pred("Age", "Engineering & Architecture", "Up to 25", c(.178,.120,.402,.264)),
+  add_pred("Age", "Engineering & Architecture", "26 or more", c(.280,.106,.160,.398))
+)
+
+# Significance of the pairwise category difference in Tables 5–7.
+sig <- data.frame(
+  variable = character(), field = character(), route = character(),
+  stars = character(), stringsAsFactors = FALSE
+)
+
+add_sig <- function(variable, field, stars) {
+  data.frame(
+    variable = variable,
+    field = rep(field, 4),
+    route = c("Dropout trajectory", "Slow progression",
+              "Successful recovery", "Optimal route"),
+    stars = stars,
+    stringsAsFactors = FALSE
+  )
+}
+
+sig <- rbind(
+  sig,
+  add_sig("Parental education", "Arts & Humanities", c("n.s.","n.s.","n.s.","*")),
+  add_sig("Parental education", "Social & Law", c("*","n.s.","***","***")),
+  add_sig("Parental education", "Health", c("*","*","**","***")),
+  add_sig("Parental education", "Sciences", c("n.s.","n.s.","n.s.","n.s.")),
+  add_sig("Parental education", "Engineering & Architecture", c("*","n.s.","***","**")),
+
+  add_sig("Gender", "Arts & Humanities", c("n.s.","n.s.","n.s.","n.s.")),
+  add_sig("Gender", "Social & Law", c("***","***","***","***")),
+  add_sig("Gender", "Health", c("n.s.","*","***","***")),
+  add_sig("Gender", "Sciences", c("***","***","n.s.","***")),
+  add_sig("Gender", "Engineering & Architecture", c("***","**","n.s.","***")),
+
+  add_sig("Age", "Arts & Humanities", c("n.s.","*","***","***")),
+  add_sig("Age", "Social & Law", c("***","n.s.","***","n.s.")),
+  add_sig("Age", "Health", c("*","n.s.","n.s.","n.s.")),
+  add_sig("Age", "Sciences", c("**","n.s.","***","*")),
+  add_sig("Age", "Engineering & Architecture", c("***","n.s.","***","***"))
+)
+
+route_labels <- c(
+  dropout = "Dropout trajectory",
+  slow = "Slow progression",
+  recovery = "Successful recovery",
+  optimal = "Optimal route"
+)
+
+# ============================================================
+# STYLES
+# ============================================================
+
+ui <- fluidPage(
+
+  tags$head(
+    tags$style(
+      HTML("
+        body {
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+          margin: 0;
+          padding: 0;
+          background: #ffffff;
+        }
+
+        .app-wrap {
+          max-width: 1060px;
+          margin: 0 auto;
+          padding: 4px 10px 18px 10px;
+        }
+
+        .mode-strip {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+          padding: 10px 12px;
+          border: 1px solid #e2e2e2;
+          border-radius: 9px;
+          margin-bottom: 14px;
+          background: #fafafa;
+        }
+
+        .mode-strip .form-group {
+          margin: 0;
+        }
+
+        .mode-strip .radio-inline {
+          font-size: 12px;
+          margin-right: 13px;
+        }
+
+        .mode-kicker {
+          font-size: 10px;
+          text-transform: uppercase;
+          letter-spacing: .06em;
+          color: #888;
+          font-weight: 700;
+          white-space: nowrap;
+        }
+
+        .control-panel {
+          background: #f7f7f7;
+          border-radius: 9px;
+          padding: 15px;
+          min-height: 335px;
+        }
+
+        .control-title {
+          font-size: 13px;
+          font-weight: 650;
+          margin-bottom: 12px;
+        }
+
+        .control-panel .form-group {
+          margin-bottom: 14px;
+        }
+
+        .control-panel label {
+          font-size: 12px;
+          font-weight: 600;
+        }
+
+        .control-note {
+          font-size: 11px;
+          line-height: 1.45;
+          color: #6f6f6f;
+          margin-top: 10px;
+        }
+
+        .plot-card {
+          border: 1px solid #e1e1e1;
+          border-radius: 9px;
+          padding: 10px 10px 8px 10px;
+          background: white;
+        }
+
+        .plot-heading {
+          display: flex;
+          align-items: baseline;
+          justify-content: space-between;
+          gap: 10px;
+          padding: 2px 5px 7px 5px;
+        }
+
+        .plot-title {
+          font-size: 14px;
+          font-weight: 650;
+        }
+
+        .plot-subtitle {
+          font-size: 11px;
+          color: #777;
+          text-align: right;
+        }
+
+        .legend {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 6px 12px;
+          margin: 8px 5px 4px 5px;
+          font-size: 10.5px;
+          color: #666;
+        }
+
+        .legend-item {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          min-width: 0;
+        }
+
+        .legend-line {
+          width: 17px;
+          min-width: 17px;
+          height: 3px;
+          border-radius: 3px;
+        }
+
+        .detail-card {
+          margin-top: 14px;
+          border: 1px solid #e1e1e1;
+          border-radius: 9px;
+          padding: 13px 15px;
+          background: white;
+        }
+
+        .detail-kicker {
+          font-size: 10px;
+          text-transform: uppercase;
+          letter-spacing: .06em;
+          color: #888;
+          font-weight: 700;
+          margin-bottom: 5px;
+        }
+
+        .detail-title {
+          font-size: 16px;
+          font-weight: 650;
+          margin-bottom: 5px;
+        }
+
+        .detail-text {
+          font-size: 12px;
+          line-height: 1.5;
+          color: #555;
+        }
+
+        .metric-row {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 8px;
+          margin-top: 12px;
+        }
+
+        .metric {
+          border: 1px solid #e4e4e4;
+          border-radius: 7px;
+          padding: 8px 7px;
+          text-align: center;
+          background: #fff;
+        }
+
+        .metric-value {
+          font-size: 17px;
+          line-height: 1.15;
+          font-weight: 650;
+        }
+
+        .metric-label {
+          font-size: 10px;
+          line-height: 1.25;
+          color: #777;
+          margin-top: 3px;
+        }
+
+        .dist-grid {
+          display: grid;
+          grid-template-columns: 170px 1fr 56px 54px;
+          gap: 7px 8px;
+          align-items: center;
+          margin-top: 11px;
+        }
+
+        .dist-label {
+          font-size: 11px;
+          color: #555;
+        }
+
+        .dist-track {
+          position: relative;
+          height: 10px;
+          background: #efefef;
+          border-radius: 999px;
+          overflow: visible;
+        }
+
+        .dist-fill {
+          height: 10px;
+          border-radius: 999px;
+        }
+
+        .overall-marker {
+          position: absolute;
+          top: -3px;
+          width: 2px;
+          height: 16px;
+          background: #222;
+          opacity: .55;
+        }
+
+        .dist-value {
+          font-size: 11px;
+          font-weight: 600;
+          text-align: right;
+        }
+
+        .dist-delta {
+          font-size: 10px;
+          color: #777;
+          text-align: right;
+        }
+
+        .mini-key {
+          font-size: 10px;
+          color: #777;
+          margin-top: 8px;
+        }
+
+        .source-note {
+          color: #666;
+          font-size: 10.5px;
+          line-height: 1.45;
+          margin-top: 15px;
+        }
+
+        .source-note a {
+          color: inherit;
+          text-decoration: underline;
+        }
+
+        @media (max-width: 767px) {
+          .control-panel {
+            min-height: 0;
+            margin-bottom: 12px;
+          }
+          .plot-subtitle {
+            display: none;
+          }
+          .legend {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+          .metric-row {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          .dist-grid {
+            grid-template-columns: 125px 1fr 48px;
+          }
+          .dist-delta {
+            display: none;
+          }
+        }
+      ")
+    )
+  ),
+
+  div(
+    class = "app-wrap",
+
+    div(
+      class = "mode-strip",
+      div(class = "mode-kicker", "Explore"),
+      radioButtons(
+        "view",
+        label = NULL,
+        choices = c(
+          "Trajectories" = "trajectories",
+          "Who follows them?" = "composition",
+          "Across fields" = "fields"
+        ),
+        selected = "trajectories",
+        inline = TRUE
+      )
+    ),
+
+    fluidRow(
+      column(
+        width = 3,
+        div(
+          class = "control-panel",
+          uiOutput("controls")
+        )
+      ),
+
+      column(
+        width = 9,
+        div(
+          class = "plot-card",
+          div(
+            class = "plot-heading",
+            div(class = "plot-title", uiOutput("plot_title")),
+            div(class = "plot-subtitle", uiOutput("plot_subtitle"))
+          ),
+          uiOutput("main_plot"),
+          uiOutput("legend_ui")
+        ),
+        uiOutput("detail")
+      )
+    ),
+
+    div(
+      class = "source-note",
+      HTML(
+        "<strong>Source:</strong> Troiano, H. & Sánchez-Gelabert, A. (2026).
+        <em>Patterns of university progression and social inequalities: delving into complex trajectories in higher education</em>.
+        European Journal of Higher Education, 16(2), 246–268.
+        <a href='https://doi.org/10.1080/21568235.2025.2556438' target='_blank'>https://doi.org/10.1080/21568235.2025.2556438</a><br>
+        Six-trajectory prevalence, final outcomes, descriptive composition and adjusted predicted probabilities reproduce the published article and supplementary tables.
+        Adjusted probabilities are model-based estimates and should not be interpreted as causal effects."
+      )
+    )
+  )
+)
+
+# ============================================================
+# HELPERS
+# ============================================================
+
+trajectory_svg <- function(weights = NULL, selected = "All") {
+
+  W <- 760
+  H <- 390
+  left <- 58
+  right <- 18
+  top <- 24
+  bottom <- 47
+
+  pw <- W - left - right
+  ph <- H - top - bottom
+
+  xmap <- function(y) left + (y - 1) / 6 * pw
+  ymap <- function(p) top + (100 - p) / 100 * ph
+
+  # grid
+  grid <- paste0(
+    sapply(
+      seq(0, 100, 20),
+      function(v) {
+        paste0(
+          '<line x1="', left, '" y1="', ymap(v),
+          '" x2="', W-right, '" y2="', ymap(v),
+          '" stroke="#eeeeee" stroke-width="1"/>',
+          '<text x="', left-10, '" y="', ymap(v)+4,
+          '" text-anchor="end" font-size="10" fill="#888">',
+          v, '%</text>'
+        )
+      }
+    ),
+    collapse = ""
+  )
+
+  xlabels <- paste0(
+    sapply(
+      1:7,
+      function(y) {
+        paste0(
+          '<text x="', xmap(y), '" y="', H-18,
+          '" text-anchor="middle" font-size="10" fill="#777">',
+          'Y', y, '</text>'
+        )
+      }
+    ),
+    collapse = ""
+  )
+
+  paths <- ""
+
+  if (!is.null(weights)) {
+    mx <- max(weights)
+  }
+
+  for (i in seq_len(nrow(meta))) {
+
+    g <- meta$group[i]
+    col <- meta$colour[i]
+    d <- traj[traj$group == g, ]
+
+    pts <- paste0(
+      xmap(d$year), ",", ymap(d$performance),
+      collapse = " "
+    )
+
+    if (!is.null(weights)) {
+      rel <- sqrt(weights[g] / mx)
+      sw <- 2.4 + 5.2 * rel
+      op <- 0.24 + 0.76 * rel
+    } else if (!is.null(selected) && selected != "All") {
+      if (g == selected) {
+        sw <- 6
+        op <- 1
+      } else {
+        sw <- 2.4
+        op <- 0.16
+      }
+    } else {
+      sw <- 4
+      op <- 0.92
+    }
+
+    paths <- paste0(
+      paths,
+      '<polyline points="', pts,
+      '" fill="none" stroke="', col,
+      '" stroke-width="', sw,
+      '" stroke-linecap="round" stroke-linejoin="round"',
+      ' opacity="', op, '"/>'
+    )
+  }
+
+  axis_label <- paste0(
+    '<text x="15" y="', top + ph/2,
+    '" transform="rotate(-90 15 ', top + ph/2, ')"',
+    ' text-anchor="middle" font-size="11" fill="#666">',
+    'Performance rate</text>'
+  )
+
+  HTML(
+    paste0(
+      '<svg viewBox="0 0 ', W, ' ', H, '"',
+      ' style="width:100%;height:auto;display:block;">',
+      grid,
+      '<line x1="', left, '" y1="', top+ph,
+      '" x2="', W-right, '" y2="', top+ph,
+      '" stroke="#bdbdbd" stroke-width="1"/>',
+      xlabels,
+      axis_label,
+      paths,
+      '</svg>'
+    )
+  )
+}
+
+
+trajectory_legend <- function() {
+  div(
+    class = "legend",
+    lapply(
+      seq_len(nrow(meta)),
+      function(i) {
+        div(
+          class = "legend-item",
+          div(
+            class = "legend-line",
+            style = paste0("background:", meta$colour[i], ";")
+          ),
+          span(
+            paste0(
+              meta$group[i], " · ",
+              meta$trajectory[i], " (",
+              sprintf("%.1f", meta$share[i]), "%)"
+            )
+          )
+        )
+      }
+    )
+  )
+}
+
+
+dumbbell_svg <- function(d, stars, group1, group2) {
+
+  routes <- c("dropout", "slow", "recovery", "optimal")
+  labels <- unname(route_labels[routes])
+
+  W <- 760
+  H <- 330
+  left <- 185
+  right <- 75
+  top <- 45
+  bottom <- 38
+
+  maxp <- 0.70
+  pw <- W - left - right
+
+  xmap <- function(p) left + p / maxp * pw
+
+  # four row positions
+  ys <- c(75, 135, 195, 255)
+
+  # axis / grid
+  ticks <- seq(0, .7, by = .1)
+
+  grid <- paste0(
+    sapply(
+      ticks,
+      function(v) {
+        paste0(
+          '<line x1="', xmap(v), '" y1="', top,
+          '" x2="', xmap(v), '" y2="', H-bottom,
+          '" stroke="#eeeeee" stroke-width="1"/>',
+          '<text x="', xmap(v), '" y="', H-14,
+          '" text-anchor="middle" font-size="10" fill="#888">',
+          round(v*100), '%</text>'
+        )
+      }
+    ),
+    collapse = ""
+  )
+
+  rows <- ""
+
+  for (i in seq_along(routes)) {
+
+    r <- routes[i]
+    y <- ys[i]
+
+    a <- d[d$category == group1, r]
+    b <- d[d$category == group2, r]
+
+    sig_i <- stars$stars[stars$route == labels[i]]
+    if (length(sig_i) == 0) sig_i <- ""
+
+    rows <- paste0(
+      rows,
+
+      '<text x="', left-12, '" y="', y+4,
+      '" text-anchor="end" font-size="11" fill="#444">',
+      labels[i], '</text>',
+
+      '<line x1="', xmap(a), '" y1="', y,
+      '" x2="', xmap(b), '" y2="', y,
+      '" stroke="#c9c9c9" stroke-width="3" stroke-linecap="round"/>',
+
+      '<circle cx="', xmap(a), '" cy="', y,
+      '" r="6" fill="#4E79A7"/>',
+
+      '<circle cx="', xmap(b), '" cy="', y,
+      '" r="6" fill="#C95D5D"/>',
+
+      '<text x="', xmap(a), '" y="', y-11,
+      '" text-anchor="middle" font-size="10" fill="#4E79A7" font-weight="600">',
+      sprintf("%.1f%%", 100*a), '</text>',
+
+      '<text x="', xmap(b), '" y="', y+22,
+      '" text-anchor="middle" font-size="10" fill="#C95D5D" font-weight="600">',
+      sprintf("%.1f%%", 100*b), '</text>',
+
+      '<text x="', W-right+14, '" y="', y+4,
+      '" text-anchor="start" font-size="10" fill="#777">',
+      sig_i, '</text>'
+    )
+  }
+
+  # group legend
+  legend <- paste0(
+    '<circle cx="', left, '" cy="20" r="5" fill="#4E79A7"/>',
+    '<text x="', left+10, '" y="24" font-size="10.5" fill="#555">',
+    group1, '</text>',
+    '<circle cx="', left+210, '" cy="20" r="5" fill="#C95D5D"/>',
+    '<text x="', left+220, '" y="24" font-size="10.5" fill="#555">',
+    group2, '</text>'
+  )
+
+  HTML(
+    paste0(
+      '<svg viewBox="0 0 ', W, ' ', H, '"',
+      ' style="width:100%;height:auto;display:block;">',
+      grid,
+      legend,
+      rows,
+      '</svg>'
+    )
+  )
+}
+
+# ============================================================
+# SERVER
+# ============================================================
+
+server <- function(input, output, session) {
+
+  # ----------------------------------------------------------
+  # Dynamic controls
+  # ----------------------------------------------------------
+
+  output$controls <- renderUI({
+
+    if (input$view == "trajectories") {
+
+      tagList(
+        div(class = "control-title", "Six empirical trajectories"),
+
+        selectInput(
+          "traj_select",
+          "Highlight trajectory",
+          choices = c(
+            "All trajectories" = "All",
+            setNames(meta$group, paste0(meta$group, " · ", meta$trajectory))
+          ),
+          selected = "All"
+        ),
+
+        p(
+          class = "control-note",
+          "The six GBTM groups describe ideal-typical patterns of annual academic performance over seven years. Select one trajectory to connect its shape with students' final academic status."
+        )
+      )
+
+    } else if (input$view == "composition") {
+
+      v <- if (is.null(input$comp_var)) "Age" else input$comp_var
+      cats <- comp$category[comp$variable == v]
+      default_cat <- if (v == "Age") "26 or more" else cats[1]
+
+      tagList(
+        div(class = "control-title", "Who follows each trajectory?"),
+
+        selectInput(
+          "comp_var",
+          "Variable",
+          choices = unique(comp$variable),
+          selected = v
+        ),
+
+        selectInput(
+          "comp_category",
+          "Category",
+          choices = cats,
+          selected = default_cat
+        ),
+
+        p(
+          class = "control-note",
+          "The line shapes remain fixed. Their visual prominence reflects the descriptive distribution of the selected group across the six trajectories."
+        ),
+
+        p(
+          class = "control-note",
+          strong("Important: "),
+          "these are unadjusted descriptive percentages, not causal effects."
+        )
+      )
+
+    } else {
+
+      v <- if (is.null(input$field_var)) "Age" else input$field_var
+
+      tagList(
+        div(class = "control-title", "Inequalities across fields"),
+
+        selectInput(
+          "field_var",
+          "Compare by",
+          choices = c("Age", "Gender", "Parental education"),
+          selected = v
+        ),
+
+        selectInput(
+          "field_select",
+          "Field of study",
+          choices = c(
+            "Arts & Humanities",
+            "Social & Law",
+            "Health",
+            "Sciences",
+            "Engineering & Architecture"
+          ),
+          selected = "Engineering & Architecture"
+        ),
+
+        p(
+          class = "control-note",
+          "This view uses adjusted predicted probabilities from the published multinomial models."
+        ),
+
+        p(
+          class = "control-note",
+          strong("Four analytical routes: "),
+          "G1+G2 = Dropout; G3 = Slow progression; G4 = Successful recovery; G6 = Optimal route. G5 was retained in estimation but omitted from this display, following the article."
+        )
+      )
+    }
+  })
+
+
+  # ----------------------------------------------------------
+  # Plot headings
+  # ----------------------------------------------------------
+
+  output$plot_title <- renderUI({
+
+    if (input$view == "trajectories") {
+      HTML("Academic performance across seven years")
+    } else if (input$view == "composition") {
+      HTML("The same trajectories, viewed through a social profile")
+    } else {
+      HTML("Adjusted probability of following each analytical route")
+    }
+  })
+
+
+  output$plot_subtitle <- renderUI({
+
+    if (input$view == "trajectories") {
+      HTML("Six-group GBTM")
+    } else if (input$view == "composition") {
+      HTML("Descriptive distribution · Table A1")
+    } else {
+      req(input$field_var, input$field_select)
+      HTML(paste(input$field_select, "·", input$field_var))
+    }
+  })
+
+
+  # ----------------------------------------------------------
+  # Main plot
+  # ----------------------------------------------------------
+
+  output$main_plot <- renderUI({
+
+    if (input$view == "trajectories") {
+
+      selected <- if (is.null(input$traj_select)) "All" else input$traj_select
+      trajectory_svg(selected = selected)
+
+    } else if (input$view == "composition") {
+
+      req(input$comp_var, input$comp_category)
+
+      row <- comp[
+        comp$variable == input$comp_var &
+        comp$category == input$comp_category,
+      ]
+
+      weights <- as.numeric(row[paste0("G", 1:6)])
+      names(weights) <- paste0("G", 1:6)
+
+      trajectory_svg(weights = weights)
+
+    } else {
+
+      req(input$field_var, input$field_select)
+
+      d <- pred[
+        pred$variable == input$field_var &
+        pred$field == input$field_select,
+      ]
+
+      cats <- unique(d$category)
+      req(length(cats) == 2)
+
+      s <- sig[
+        sig$variable == input$field_var &
+        sig$field == input$field_select,
+      ]
+
+      dumbbell_svg(
+        d = d,
+        stars = s,
+        group1 = cats[1],
+        group2 = cats[2]
+      )
+    }
+  })
+
+
+  # ----------------------------------------------------------
+  # Legend
+  # ----------------------------------------------------------
+
+  output$legend_ui <- renderUI({
+
+    if (input$view %in% c("trajectories", "composition")) {
+      trajectory_legend()
+    } else {
+      div(
+        class = "mini-key",
+        HTML("Stars indicate the published Wald test for the difference between the two categories: *** p ≤ .001 · ** p ≤ .01 · * p ≤ .05 · n.s. = not significant.")
+      )
+    }
+  })
+
+
+  # ----------------------------------------------------------
+  # Detail area
+  # ----------------------------------------------------------
+
+  output$detail <- renderUI({
+
+    # ---- Trajectory detail ----------------------------------
+    if (input$view == "trajectories") {
+
+      selected <- if (is.null(input$traj_select)) "All" else input$traj_select
+
+      if (selected == "All") {
+
+        return(
+          div(
+            class = "detail-card",
+            div(class = "detail-kicker", "Cohort overview"),
+            div(class = "detail-title", "Most students follow high-performance trajectories"),
+            div(
+              class = "detail-text",
+              "The largest group is G6, high-stable performance (43.7%), followed by G4, upward performance (27.0%). Select a trajectory to see how its performance pattern relates to final academic status."
+            )
+          )
+        )
+      }
+
+      m <- meta[meta$group == selected, ]
+      o <- outcomes[outcomes$group == selected, ]
+
+      div(
+        class = "detail-card",
+        div(
+          class = "detail-kicker",
+          paste0(m$group, " · ", sprintf("%.1f", m$share), "% of students")
+        ),
+        div(class = "detail-title", m$trajectory),
+        div(class = "detail-text", m$description),
+
+        div(
+          class = "metric-row",
+
+          div(
+            class = "metric",
+            div(class = "metric-value", sprintf("%.1f%%", o$dropout)),
+            div(class = "metric-label", "Dropout")
+          ),
+
+          div(
+            class = "metric",
+            div(class = "metric-value", sprintf("%.1f%%", o$on_time)),
+            div(class = "metric-label", "Graduated on time")
+          ),
+
+          div(
+            class = "metric",
+            div(class = "metric-value", sprintf("%.1f%%", o$delayed)),
+            div(class = "metric-label", "Graduated with delay")
+          ),
+
+          div(
+            class = "metric",
+            div(class = "metric-value", sprintf("%.1f%%", o$persistence)),
+            div(class = "metric-label", "Still enrolled after 7 years")
+          )
+        )
+      )
+
+    # ---- Composition detail ---------------------------------
+    } else if (input$view == "composition") {
+
+      req(input$comp_var, input$comp_category)
+
+      row <- comp[
+        comp$variable == input$comp_var &
+        comp$category == input$comp_category,
+      ]
+
+      vals <- as.numeric(row[paste0("G", 1:6)])
+      overall <- meta$share
+      deltas <- vals - overall
+
+      bar_rows <- lapply(
+        seq_len(6),
+        function(i) {
+
+          div(
+            class = "dist-grid",
+
+            div(
+              class = "dist-label",
+              paste0(meta$group[i], " · ", meta$trajectory[i])
+            ),
+
+            div(
+              class = "dist-track",
+
+              div(
+                class = "dist-fill",
+                style = paste0(
+                  "width:", vals[i], "%;",
+                  "background:", meta$colour[i], ";"
+                )
+              ),
+
+              div(
+                class = "overall-marker",
+                style = paste0("left:", overall[i], "%;")
+              )
+            ),
+
+            div(
+              class = "dist-value",
+              sprintf("%.1f%%", vals[i])
+            ),
+
+            div(
+              class = "dist-delta",
+              paste0(
+                ifelse(deltas[i] >= 0, "+", ""),
+                sprintf("%.1f", deltas[i]),
+                " pp"
+              )
+            )
+          )
+        }
+      )
+
+      div(
+        class = "detail-card",
+
+        div(
+          class = "detail-kicker",
+          paste0(input$comp_var, " · N = ", format(row$n, big.mark = ","))
+        ),
+
+        div(class = "detail-title", input$comp_category),
+
+        div(
+          class = "detail-text",
+          "Distribution of this group across the six empirical trajectories. The black marker shows the overall cohort share for each trajectory."
+        ),
+
+        do.call(tagList, bar_rows),
+
+        div(
+          class = "mini-key",
+          "pp = percentage-point difference from the overall cohort."
+        )
+      )
+
+    # ---- Field comparison detail ----------------------------
+    } else {
+
+      req(input$field_var, input$field_select)
+
+      d <- pred[
+        pred$variable == input$field_var &
+        pred$field == input$field_select,
+      ]
+
+      cats <- unique(d$category)
+
+      # calculate largest absolute gap across the four routes
+      diffs <- c(
+        dropout = d$dropout[d$category == cats[2]] - d$dropout[d$category == cats[1]],
+        slow = d$slow[d$category == cats[2]] - d$slow[d$category == cats[1]],
+        recovery = d$recovery[d$category == cats[2]] - d$recovery[d$category == cats[1]],
+        optimal = d$optimal[d$category == cats[2]] - d$optimal[d$category == cats[1]]
+      )
+
+      biggest <- names(which.max(abs(diffs)))
+      diff_val <- diffs[biggest]
+
+      a <- d[d$category == cats[1], biggest]
+      b <- d[d$category == cats[2], biggest]
+
+      div(
+        class = "detail-card",
+
+        div(
+          class = "detail-kicker",
+          paste0(input$field_select, " · adjusted model")
+        ),
+
+        div(
+          class = "detail-title",
+          paste0("Largest contrast: ", route_labels[biggest])
+        ),
+
+        div(
+          class = "detail-text",
+          paste0(
+            cats[1], ": ", sprintf("%.1f%%", 100*a),
+            " · ",
+            cats[2], ": ", sprintf("%.1f%%", 100*b),
+            " · difference: ",
+            ifelse(diff_val >= 0, "+", ""),
+            sprintf("%.1f", 100*diff_val),
+            " percentage points."
+          )
+        ),
+
+        div(
+          class = "mini-key",
+          "Each comparison comes from a separate multinomial model including the selected characteristic, field of study, their interaction, and the control variables reported in the article."
+        )
+      )
+    }
+  })
+}
+
+shinyApp(ui, server)
+```

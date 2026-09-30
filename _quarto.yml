@@ -26,6 +26,8 @@ website:
             text: Compensatory Advantage Explorer
           - href: tools/entry-space/index.qmd
             text: University Entry Space Explorer
+          - href: tools/trajectories/index.qmd
+            text: University Trajectory Lab
       - href: cv.qmd
         text: CV
 
