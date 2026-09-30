@@ -1,0 +1,2542 @@
+#| standalone: true
+#| viewerHeight: 1080
+
+library(shiny)
+
+
+# ============================================================
+# ACTIVE MODALITIES + DEGREE SUBDISCIPLINES
+# First two MCA dimensions
+# ============================================================
+
+coords <- data.frame(
+
+  variable = c(
+    rep("Employment status", 3),
+    rep("Sex", 2),
+    rep("Nationality", 2),
+    rep("Age", 4),
+    rep("Access route", 2),
+    rep("Family educational level", 3),
+    rep("Admission grade", 10),
+    rep("Degree subdiscipline", 22)
+  ),
+
+  label = c(
+
+    # Employment
+    "Up to 15 hours/week",
+    "15 or more hours/week",
+    "Not working",
+
+    # Sex
+    "Male",
+    "Female",
+
+    # Nationality
+    "Spanish",
+    "Non-Spanish",
+
+    # Age
+    "Up to 18",
+    "19–20",
+    "21–24",
+    "25 or older",
+
+    # Access route
+    "Academic track (Bachillerato)",
+    "Professional track (Upper VET)",
+
+    # Family education
+    "Compulsory education",
+    "Post-compulsory education",
+    "University education",
+
+    # Admission grade
+    "1st decile (≤ 7.08)",
+    "2nd decile (7.09–7.95)",
+    "3rd decile (7.96–8.66)",
+    "4th decile (8.67–9.31)",
+    "5th decile (9.32–9.89)",
+    "6th decile (9.90–10.42)",
+    "7th decile (10.43–10.96)",
+    "8th decile (10.97–11.55)",
+    "9th decile (11.56–12.30)",
+    "10th decile (≥ 12.31)",
+
+    # Degree subdisciplines
+    "Philosophy and History",
+    "Languages and Literatures",
+    "Arts and Design",
+    "Joint Programmes (Humanities)",
+    "Economics, Business and Tourism",
+    "Law, Labour Relations and Political Sciences",
+    "Communication and Documentation",
+    "Education",
+    "Social Intervention",
+    "Joint Programmes (Social Sciences)",
+    "Biological and Earth Sciences",
+    "Experimental Sciences and Mathematics",
+    "Joint Programmes (Sciences)",
+    "Nursing and Healthcare",
+    "Psychology and Therapy",
+    "Medicine and Biomedical Sciences",
+    "Joint Programmes (Health)",
+    "Architecture, Construction and Civil Engineering",
+    "Industrial Technologies",
+    "Information and Communication Technologies (ICT)",
+    "Agriculture, Forestry and Fisheries",
+    "Joint Programmes (Engineering)"
+  ),
+
+  dim1 = c(
+
+     0.207,
+     1.375,
+    -0.234,
+
+    -0.029,
+     0.030,
+
+    -0.048,
+     0.582,
+
+    -0.514,
+     0.963,
+     2.093,
+     1.479,
+
+    -0.371,
+     1.829,
+
+     0.801,
+     0.272,
+    -0.384,
+
+     0.630,
+     0.745,
+     0.631,
+     0.183,
+    -0.063,
+    -0.229,
+    -0.300,
+    -0.402,
+    -0.519,
+    -0.611,
+
+     0.039,
+    -0.004,
+    -0.130,
+    -0.174,
+     0.042,
+     0.021,
+    -0.222,
+     0.304,
+     1.027,
+    -0.260,
+    -0.305,
+    -0.572,
+    -0.554,
+     0.560,
+     0.001,
+    -0.382,
+    -0.162,
+    -0.273,
+    -0.285,
+    -0.170,
+     0.109,
+     0.138
+  ),
+
+  dim2 = c(
+
+     0.526,
+     0.109,
+    -0.076,
+
+    -0.460,
+     0.334,
+
+     0.184,
+    -2.049,
+
+    -0.006,
+    -0.279,
+     0.613,
+    -0.004,
+
+    -0.134,
+     0.629,
+
+     0.217,
+    -0.140,
+    -0.001,
+
+    -1.454,
+    -0.514,
+     0.110,
+     0.060,
+     0.071,
+     0.055,
+     0.159,
+     0.445,
+     0.472,
+     0.547,
+
+    -0.348,
+    -0.196,
+     0.103,
+    -0.267,
+    -0.338,
+    -0.053,
+     0.200,
+     0.426,
+     0.490,
+     0.041,
+     0.307,
+     0.183,
+     0.123,
+    -0.006,
+     0.387,
+     0.603,
+     0.013,
+     0.031,
+    -0.151,
+    -0.253,
+     0.014,
+    -0.448
+  ),
+
+  type = c(
+    rep("active", 26),
+    rep("subfield", 22)
+  ),
+
+  stringsAsFactors = FALSE
+)
+
+
+
+# ============================================================
+# STEM CLASSIFICATION
+# ============================================================
+
+stem_fields <- c(
+  "Biological and Earth Sciences",
+  "Experimental Sciences and Mathematics",
+  "Joint Programmes (Sciences)",
+  "Architecture, Construction and Civil Engineering",
+  "Industrial Technologies",
+  "Information and Communication Technologies (ICT)",
+  "Agriculture, Forestry and Fisheries",
+  "Joint Programmes (Engineering)"
+)
+
+coords$stem <- NA_character_
+
+coords$stem[
+  coords$type == "subfield"
+] <- ifelse(
+  coords$label[
+    coords$type == "subfield"
+  ] %in% stem_fields,
+  "STEM",
+  "Non-STEM"
+)
+
+
+
+# ============================================================
+# CLUSTERS
+# ============================================================
+#
+# Cluster coordinates come from the cluster solution.
+#
+# Axis 2 for C6 was not reported among its characteristic axes
+# because its coordinate is effectively around zero.
+#
+
+clusters <- data.frame(
+
+  cluster = paste0(
+    "C",
+    1:8
+  ),
+
+  dim1 = c(
+     0.134582,
+    -0.163598,
+    -0.160301,
+    -0.293565,
+    -0.382857,
+    -0.210608,
+    -0.342365,
+     1.080950
+  ),
+
+  dim2 = c(
+    -0.584221,
+     0.036385,
+     0.030476,
+     0.178244,
+     0.233587,
+     0.006000,
+     0.180295,
+     0.272692
+  ),
+
+  n = c(
+    6428,
+    5879,
+    5492,
+    3328,
+    3357,
+    3358,
+    3415,
+    4818
+  ),
+
+  share = c(
+    17.8,
+    16.3,
+    15.2,
+     9.2,
+     9.3,
+     9.3,
+     9.5,
+    13.4
+  ),
+
+  gender = c(
+    "Male",
+    "Mixed",
+    "Male",
+    "Female",
+    "Female",
+    "Mixed",
+    "Female",
+    "Female"
+  ),
+
+  orientation = c(
+    "Non-STEM",
+    "Mixed",
+    "STEM",
+    "STEM",
+    "STEM",
+    "Mixed",
+    "STEM",
+    "Non-STEM"
+  ),
+
+  access = c(
+    "Academic track",
+    "Academic track",
+    "Academic track",
+    "Academic track",
+    "Academic track",
+    "Academic track",
+    "Academic track",
+    "Upper VET"
+  ),
+
+  grade = c(
+    "1st–2nd deciles",
+    "Heterogeneous",
+    "4th–5th deciles",
+    "8th decile",
+    "10th decile",
+    "6th decile",
+    "9th decile",
+    "1st–4th deciles"
+  ),
+
+  family = c(
+    "Post-compulsory",
+    "University",
+    "Post-compulsory",
+    "University",
+    "University",
+    "University",
+    "University",
+    "Compulsory / Post-compulsory"
+  ),
+
+  employment = c(
+    "Not working",
+    "Working <15 h/week",
+    "Not working",
+    "Not working",
+    "Not working",
+    "Not working",
+    "Not working",
+    "Working"
+  ),
+
+  feature = c(
+    "Higher presence of non-Spanish students; constraint-related profile",
+    "Heterogeneous profile",
+    "Intrinsic motivation",
+    "Intrinsic motivation",
+    "Intrinsic motivation",
+    "Heterogeneous profile",
+    "Intrinsic motivation",
+    "Instrumental motivation"
+  ),
+
+  # Manual label offsets to avoid overlapping C2/C3 etc.
+  label_dx = c(
+     15,
+    -17,
+     17,
+    -14,
+    -14,
+     16,
+    -14,
+     15
+  ),
+
+  label_dy = c(
+     17,
+    -12,
+     16,
+    -11,
+    -11,
+     16,
+     16,
+    -10
+  ),
+
+  label_anchor = c(
+    "start",
+    "end",
+    "start",
+    "end",
+    "end",
+    "start",
+    "end",
+    "start"
+  ),
+
+  stringsAsFactors = FALSE
+)
+
+
+cluster_cols <- c(
+  "Female" = "#8E63B6",
+  "Male"   = "#D6A83B",
+  "Mixed"  = "#59A875"
+)
+
+
+
+# ============================================================
+# UI
+# ============================================================
+
+ui <- fluidPage(
+
+  tags$head(
+
+    tags$style(
+
+      HTML("
+
+        body {
+          font-family:
+            system-ui,
+            -apple-system,
+            BlinkMacSystemFont,
+            'Segoe UI',
+            sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+
+        .container-fluid {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        .app-wrapper {
+          max-width: 1180px;
+          margin: 0 auto;
+          padding: 5px 10px 20px 10px;
+        }
+
+        .plot-card {
+          border: 1px solid #dddddd;
+          border-radius: 9px;
+          background: white;
+          padding: 10px 12px 5px 12px;
+          margin-bottom: 14px;
+        }
+
+        .control-panel {
+          background: #f7f7f7;
+          border-radius: 8px;
+          padding: 13px 15px 6px 15px;
+          margin-bottom: 15px;
+        }
+
+        .control-panel .form-group {
+          margin-bottom: 9px;
+        }
+
+        .control-panel label.control-label {
+          font-size: 12px;
+          font-weight: 600;
+        }
+
+        .control-panel .checkbox-inline,
+        .control-panel .radio-inline {
+          font-size: 12px;
+        }
+
+        .selectize-control.multi .selectize-input {
+          max-height: 78px;
+          overflow-y: auto;
+        }
+
+        .clear-button {
+          margin-top: 2px;
+          font-size: 11px;
+        }
+
+        .plot-legend {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 18px;
+          padding: 2px 5px 8px 5px;
+          font-size: 11px;
+          color: #666;
+        }
+
+        .legend-item {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+
+        .legend-circle {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          display: inline-block;
+          background: #bdbdbd;
+        }
+
+        .legend-square {
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+          background: #bdbdbd;
+        }
+
+        .legend-ring {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          display: inline-block;
+          background: rgba(255,255,255,0.8);
+          border: 2px solid;
+        }
+
+        .legend-blue {
+          background: #4E79A7;
+        }
+
+        .legend-red {
+          background: #C95D5D;
+        }
+
+        .information-row {
+          margin-top: 3px;
+        }
+
+        .axis-description {
+          font-size: 11px;
+          line-height: 1.5;
+          color: #666;
+          padding: 8px 4px;
+        }
+
+        .selection-note {
+          font-size: 11px;
+          line-height: 1.5;
+          color: #555;
+          padding: 8px 12px;
+          background: #fafafa;
+          border-left: 3px solid #C95D5D;
+          margin-top: 8px;
+          max-height: 150px;
+          overflow-y: auto;
+        }
+
+        .method-note {
+          font-size: 11px;
+          line-height: 1.5;
+          color: #666;
+          margin-top: 12px;
+          padding-top: 10px;
+          border-top: 1px solid #eeeeee;
+        }
+
+
+        /* ----------------------------------------------
+           Subdiscipline hover
+           ---------------------------------------------- */
+
+        .subfield-point {
+          cursor: default;
+        }
+
+        .subfield-point .hover-label {
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.12s ease;
+        }
+
+        .subfield-point:hover .hover-label {
+          opacity: 1;
+        }
+
+        .subfield-point:hover .subfield-symbol {
+          stroke: #555555;
+          stroke-width: 2;
+        }
+
+
+        /* ----------------------------------------------
+           Cluster hover
+           ---------------------------------------------- */
+
+        .cluster-point {
+          cursor: default;
+        }
+
+        .cluster-point .cluster-hover {
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.12s ease;
+        }
+
+        .cluster-point:hover .cluster-hover {
+          opacity: 1;
+        }
+
+        .cluster-point:hover .cluster-symbol {
+          stroke-width: 3.5;
+        }
+
+
+        @media (max-width: 768px) {
+
+          .app-wrapper {
+            padding-left: 3px;
+            padding-right: 3px;
+          }
+
+          .plot-card {
+            padding: 4px;
+          }
+
+        }
+
+      ")
+
+    )
+
+  ),
+
+
+  div(
+
+    class = "app-wrapper",
+
+
+    # ========================================================
+    # FACTORIAL SPACE
+    # ========================================================
+
+    fluidRow(
+
+      column(
+
+        width = 12,
+
+        div(
+
+          class = "plot-card",
+
+          uiOutput("space"),
+
+
+          div(
+
+            class = "plot-legend",
+
+
+            div(
+              class = "legend-item",
+              span(
+                class = "legend-circle legend-blue"
+              ),
+              span("Active variable categories")
+            ),
+
+
+            div(
+              class = "legend-item",
+              span(
+                class = "legend-ring",
+                style = "border-color:#8E63B6;"
+              ),
+              span("Female-profile cluster")
+            ),
+
+
+            div(
+              class = "legend-item",
+              span(
+                class = "legend-ring",
+                style = "border-color:#D6A83B;"
+              ),
+              span("Male-profile cluster")
+            ),
+
+
+            div(
+              class = "legend-item",
+              span(
+                class = "legend-ring",
+                style = "border-color:#59A875;"
+              ),
+              span("Mixed-profile cluster")
+            ),
+
+
+            div(
+              class = "legend-item",
+              span(
+                class = "legend-circle"
+              ),
+              span("STEM subdiscipline")
+            ),
+
+
+            div(
+              class = "legend-item",
+              span(
+                class = "legend-square"
+              ),
+              span("Non-STEM subdiscipline")
+            ),
+
+
+            div(
+              class = "legend-item",
+              span(
+                class = "legend-circle legend-red"
+              ),
+              span("Highlighted subdiscipline")
+            )
+
+          )
+
+        )
+
+      )
+
+    ),
+
+
+
+    # ========================================================
+    # CONTROLS
+    # ========================================================
+
+    fluidRow(
+
+      column(
+
+        width = 12,
+
+        div(
+
+          class = "control-panel",
+
+          fluidRow(
+
+
+            # ------------------------------------------------
+            # Layers
+            # ------------------------------------------------
+
+            column(
+
+              width = 3,
+
+              checkboxGroupInput(
+
+                "layers",
+
+                "Layers",
+
+                choices = c(
+                  "Variables" = "variables",
+                  "Clusters" = "clusters",
+                  "Subdisciplines" = "subfields"
+                ),
+
+                selected = c(
+                  "variables",
+                  "clusters",
+                  "subfields"
+                ),
+
+                inline = TRUE
+
+              )
+
+            ),
+
+
+
+            # ------------------------------------------------
+            # Variable
+            # ------------------------------------------------
+
+            column(
+
+              width = 2,
+
+              conditionalPanel(
+
+                condition =
+                  "input.layers && input.layers.indexOf('variables') !== -1",
+
+                selectInput(
+
+                  "variable",
+
+                  "Active variable",
+
+                  choices = c(
+                    "Sex",
+                    "Admission grade",
+                    "Access route",
+                    "Age",
+                    "Employment status",
+                    "Family educational level",
+                    "Nationality"
+                  ),
+
+                  selected = "Sex"
+
+                )
+
+              )
+
+            ),
+
+
+
+            # ------------------------------------------------
+            # STEM filter
+            # ------------------------------------------------
+
+            column(
+
+              width = 2,
+
+              conditionalPanel(
+
+                condition =
+                  "input.layers && input.layers.indexOf('subfields') !== -1",
+
+                radioButtons(
+
+                  "field_filter",
+
+                  "Field type",
+
+                  choices = c(
+                    "All" = "All",
+                    "STEM" = "STEM",
+                    "Non-STEM" = "Non-STEM"
+                  ),
+
+                  selected = "All",
+
+                  inline = TRUE
+
+                )
+
+              )
+
+            ),
+
+
+
+            # ------------------------------------------------
+            # Subdiscipline selector
+            # ------------------------------------------------
+
+            column(
+
+              width = 4,
+
+              conditionalPanel(
+
+                condition =
+                  "input.layers && input.layers.indexOf('subfields') !== -1",
+
+                selectizeInput(
+
+                  "subfields",
+
+                  "Highlight subdisciplines",
+
+                  choices =
+                    coords$label[
+                      coords$type == "subfield"
+                    ],
+
+                  selected =
+                    character(0),
+
+                  multiple = TRUE,
+
+                  options = list(
+                    plugins =
+                      list("remove_button"),
+                    placeholder =
+                      "Select subdisciplines"
+                  )
+
+                ),
+
+
+                actionButton(
+                  "clear_subfields",
+                  "Clear selection",
+                  class =
+                    "btn-default btn-sm clear-button"
+                )
+
+              )
+
+            ),
+
+
+
+            # ------------------------------------------------
+            # Persistent labels
+            # ------------------------------------------------
+
+            column(
+
+              width = 1,
+
+              br(),
+
+              checkboxInput(
+                "labels",
+                "Labels",
+                value = TRUE
+              )
+
+            )
+
+          )
+
+        )
+
+      )
+
+    ),
+
+
+
+    # ========================================================
+    # INTERPRETATION
+    # ========================================================
+
+    fluidRow(
+
+      class = "information-row",
+
+
+      column(
+
+        width = 6,
+
+        div(
+
+          class = "axis-description",
+
+          HTML(
+
+            "<strong>
+            Axis 1 — Life-course position and
+            institutionalised access pathway.
+            </strong><br>
+
+            Negative values are associated with earlier and
+            academically linear entry trajectories; positive
+            values with later, vocational and more constrained
+            entry pathways.
+
+            <br><br>
+
+            <strong>
+            Axis 2 — Academic and institutional constraint gradient.
+            </strong><br>
+
+            This is a secondary dimension and should be
+            interpreted more cautiously."
+
+          )
+
+        )
+
+      ),
+
+
+      column(
+
+        width = 6,
+
+        uiOutput(
+          "selection_note"
+        )
+
+      )
+
+    ),
+
+
+
+    # ========================================================
+    # METHODOLOGICAL NOTE
+    # ========================================================
+
+    div(
+
+      class = "method-note",
+
+      HTML(
+
+        "<strong>How to read the space.</strong>
+        Proximity indicates association between categories,
+        profiles and university-entry contexts.
+
+        Cluster circle radius is proportional to the relative
+        weight of each profile in the sample. Cluster colour
+        indicates whether the profile has a higher female
+        representation, a higher male representation, or a
+        mixed gender composition.
+
+        <br><br>
+
+        Degree subdisciplines are illustrative variables:
+        they were projected after the factorial axes had been
+        constructed and therefore do not contribute to the
+        formation of the dimensions.
+
+        <br><br>
+
+        <strong>STEM classification.</strong>
+        STEM includes scientific, technological, engineering
+        and mathematical fields. Health-related fields are
+        treated separately and are classified here as
+        non-STEM, following the operational definition used
+        in the study.
+
+        <br><br>
+
+        <strong>Source:</strong>
+        Sánchez-Gelabert, A. & Simarro Rodríguez, C. (2026).
+        <em>
+        Gender and STEM: academic over-selection and
+        stratified university entry
+        </em>.
+        Research in Science & Technological Education."
+
+      )
+
+    )
+
+  )
+
+)
+
+
+
+# ============================================================
+# SERVER
+# ============================================================
+
+server <- function(
+  input,
+  output,
+  session
+) {
+
+
+  # ==========================================================
+  # AVAILABLE SUBDISCIPLINES
+  # ==========================================================
+
+  available_subfields <- reactive({
+
+
+    d <- coords[
+      coords$type == "subfield",
+    ]
+
+
+    if (
+      is.null(input$field_filter) ||
+      input$field_filter == "All"
+    ) {
+
+      return(
+        d$label
+      )
+
+    }
+
+
+    d$label[
+      d$stem == input$field_filter
+    ]
+
+  })
+
+
+
+  # ==========================================================
+  # UPDATE SELECTOR WHEN STEM FILTER CHANGES
+  # ==========================================================
+
+  observeEvent(
+
+    input$field_filter,
+
+    {
+
+
+      choices <-
+        available_subfields()
+
+
+      current <-
+        input$subfields
+
+
+      if (
+        is.null(current)
+      ) {
+
+        current <-
+          character(0)
+
+      }
+
+
+      current <-
+        intersect(
+          current,
+          choices
+        )
+
+
+      updateSelectizeInput(
+
+        session,
+
+        "subfields",
+
+        choices = choices,
+
+        selected = current,
+
+        server = FALSE
+
+      )
+
+    }
+
+  )
+
+
+
+  # ==========================================================
+  # CLEAR SELECTED SUBDISCIPLINES
+  # ==========================================================
+
+  observeEvent(
+
+    input$clear_subfields,
+
+    {
+
+      updateSelectizeInput(
+
+        session,
+
+        "subfields",
+
+        choices =
+          available_subfields(),
+
+        selected =
+          character(0),
+
+        server = FALSE
+
+      )
+
+    }
+
+  )
+
+
+
+  # ==========================================================
+  # FACTORIAL SPACE
+  # ==========================================================
+
+  output$space <- renderUI({
+
+
+    layers <-
+      input$layers
+
+
+    if (
+      is.null(layers)
+    ) {
+
+      layers <-
+        character(0)
+
+    }
+
+
+
+    # --------------------------------------------------------
+    # Plot limits
+    #
+    # If active variables are displayed, use the complete
+    # factorial space. Otherwise zoom into the area containing
+    # clusters and subdisciplines.
+    # --------------------------------------------------------
+
+    if (
+      "variables" %in% layers
+    ) {
+
+      xmin <- -0.80
+      xmax <-  2.25
+
+      ymin <- -2.20
+      ymax <-  0.80
+
+    } else {
+
+      xmin <- -0.70
+      xmax <-  1.20
+
+      ymin <- -0.70
+      ymax <-  0.75
+
+    }
+
+
+
+    # --------------------------------------------------------
+    # SVG dimensions
+    # --------------------------------------------------------
+
+    svg_width  <- 1000
+    svg_height <- 560
+
+    left   <- 85
+    right  <- 965
+
+    top    <- 38
+    bottom <- 485
+
+
+
+    # --------------------------------------------------------
+    # Coordinate transforms
+    # --------------------------------------------------------
+
+    sx <- function(x) {
+
+      left +
+        (x - xmin) /
+        (xmax - xmin) *
+        (right - left)
+
+    }
+
+
+    sy <- function(y) {
+
+      bottom -
+        (y - ymin) /
+        (ymax - ymin) *
+        (bottom - top)
+
+    }
+
+
+
+    esc <- function(x) {
+
+      as.character(
+        htmltools::htmlEscape(
+          x
+        )
+      )
+
+    }
+
+
+
+    # ========================================================
+    # AXES
+    # ========================================================
+
+    axis_html <- ""
+
+
+    if (
+      xmin <= 0 &&
+      xmax >= 0
+    ) {
+
+      axis_html <- paste0(
+
+        axis_html,
+
+        '<line
+           x1="', sx(0), '"
+           y1="', top, '"
+           x2="', sx(0), '"
+           y2="', bottom, '"
+           stroke="#cccccc"
+           stroke-width="1"/>'
+
+      )
+
+    }
+
+
+    if (
+      ymin <= 0 &&
+      ymax >= 0
+    ) {
+
+      axis_html <- paste0(
+
+        axis_html,
+
+        '<line
+           x1="', left, '"
+           y1="', sy(0), '"
+           x2="', right, '"
+           y2="', sy(0), '"
+           stroke="#cccccc"
+           stroke-width="1"/>'
+
+      )
+
+    }
+
+
+
+    # ========================================================
+    # CLUSTERS
+    # Drawn behind the other layers
+    # ========================================================
+
+    cluster_html <- ""
+
+
+    if (
+      "clusters" %in% layers
+    ) {
+
+
+      # Larger clusters first, smaller ones afterwards
+
+      ord <-
+        order(
+          clusters$share,
+          decreasing = TRUE
+        )
+
+
+      cluster_html <- paste(
+
+        vapply(
+
+          ord,
+
+          function(i) {
+
+
+            px <-
+              sx(
+                clusters$dim1[i]
+              )
+
+
+            py <-
+              sy(
+                clusters$dim2[i]
+              )
+
+
+            # Radius proportional to cluster share
+
+            radius <-
+              clusters$share[i] *
+              0.80
+
+
+            col <-
+              cluster_cols[
+                clusters$gender[i]
+              ]
+
+
+            label_x <-
+              px +
+              clusters$label_dx[i]
+
+
+            label_y <-
+              py +
+              clusters$label_dy[i]
+
+
+            tooltip <- paste0(
+
+              clusters$cluster[i],
+
+              " · ",
+              sprintf(
+                "%.1f%%",
+                clusters$share[i]
+              ),
+
+              " · ",
+              clusters$gender[i],
+
+              " · ",
+              clusters$orientation[i],
+
+              " | ",
+              clusters$access[i],
+
+              " | Admission grade: ",
+              clusters$grade[i],
+
+              " | Family education: ",
+              clusters$family[i],
+
+              " | Employment: ",
+              clusters$employment[i],
+
+              " | ",
+              clusters$feature[i]
+
+            )
+
+
+            hover_label <- paste0(
+
+              clusters$cluster[i],
+
+              " · ",
+              clusters$gender[i],
+
+              " · ",
+              clusters$orientation[i],
+
+              " · ",
+              sprintf(
+                "%.1f%%",
+                clusters$share[i]
+              )
+
+            )
+
+
+            paste0(
+
+              '<g class="cluster-point">',
+
+
+              '<circle
+                 class="cluster-symbol"
+
+                 cx="', px, '"
+                 cy="', py, '"
+
+                 r="', radius, '"
+
+                 fill="', col, '"
+                 fill-opacity="0.16"
+
+                 stroke="', col, '"
+                 stroke-width="2.5">
+
+                 <title>',
+                 esc(tooltip),
+                 '</title>
+
+               </circle>',
+
+
+              '<text
+                 x="', label_x, '"
+                 y="', label_y, '"
+
+                 text-anchor="',
+                 clusters$label_anchor[i],
+                 '"
+
+                 font-size="12"
+                 font-weight="700"
+
+                 fill="', col, '"
+
+                 style="
+                   paint-order:stroke;
+                   stroke:white;
+                   stroke-width:4px;
+                   stroke-linejoin:round;
+                 ">',
+
+              clusters$cluster[i],
+
+              '</text>',
+
+
+              '<text
+                 class="cluster-hover"
+
+                 x="', label_x, '"
+                 y="', label_y + 15, '"
+
+                 text-anchor="',
+                 clusters$label_anchor[i],
+                 '"
+
+                 font-size="11"
+                 font-weight="500"
+
+                 fill="', col, '"
+
+                 style="
+                   paint-order:stroke;
+                   stroke:white;
+                   stroke-width:4px;
+                   stroke-linejoin:round;
+                 ">',
+
+              esc(hover_label),
+
+              '</text>',
+
+
+              '</g>'
+
+            )
+
+          },
+
+          character(1)
+
+        ),
+
+        collapse = ""
+
+      )
+
+    }
+
+
+
+    # ========================================================
+    # UNSELECTED SUBDISCIPLINES
+    # ========================================================
+
+    unselected_subfield_html <- ""
+    selected_subfield_html   <- ""
+
+
+    if (
+      "subfields" %in% layers
+    ) {
+
+
+      d <- coords[
+        coords$type == "subfield",
+      ]
+
+
+      # ------------------------------------------------------
+      # STEM / Non-STEM filter
+      # ------------------------------------------------------
+
+      if (
+        !is.null(input$field_filter) &&
+        input$field_filter != "All"
+      ) {
+
+        d <- d[
+          d$stem == input$field_filter,
+        ]
+
+      }
+
+
+
+      selected_subfields <-
+        input$subfields
+
+
+      if (
+        is.null(selected_subfields)
+      ) {
+
+        selected_subfields <-
+          character(0)
+
+      }
+
+
+
+      # ------------------------------------------------------
+      # Unselected
+      # ------------------------------------------------------
+
+      unselected <- d[
+        !(
+          d$label %in%
+            selected_subfields
+        ),
+      ]
+
+
+      if (
+        nrow(unselected) > 0
+      ) {
+
+
+        unselected_subfield_html <- paste(
+
+          vapply(
+
+            seq_len(
+              nrow(unselected)
+            ),
+
+            function(i) {
+
+
+              px <-
+                sx(
+                  unselected$dim1[i]
+                )
+
+
+              py <-
+                sy(
+                  unselected$dim2[i]
+                )
+
+
+              if (
+                unselected$dim1[i] >
+                  0.50
+              ) {
+
+                tx <-
+                  px - 10
+
+                anchor <-
+                  "end"
+
+              } else {
+
+                tx <-
+                  px + 10
+
+                anchor <-
+                  "start"
+
+              }
+
+
+
+              if (
+                unselected$stem[i] ==
+                  "STEM"
+              ) {
+
+                symbol <- paste0(
+
+                  '<circle
+                     class="subfield-symbol"
+
+                     cx="', px, '"
+                     cy="', py, '"
+
+                     r="5.5"
+
+                     fill="#bdbdbd"
+
+                     stroke="white"
+
+                     stroke-width="1"/>'
+
+                )
+
+              } else {
+
+                symbol <- paste0(
+
+                  '<rect
+                     class="subfield-symbol"
+
+                     x="', px - 5, '"
+                     y="', py - 5, '"
+
+                     width="10"
+                     height="10"
+
+                     rx="1"
+
+                     fill="#bdbdbd"
+
+                     stroke="white"
+
+                     stroke-width="1"/>'
+
+                )
+
+              }
+
+
+
+              paste0(
+
+                '<g class="subfield-point">',
+
+                symbol,
+
+
+                '<text
+                   class="hover-label"
+
+                   x="', tx, '"
+                   y="', py - 9, '"
+
+                   text-anchor="', anchor, '"
+
+                   font-size="12"
+                   font-weight="500"
+
+                   fill="#666666"
+
+                   style="
+                     paint-order:stroke;
+                     stroke:white;
+                     stroke-width:4px;
+                     stroke-linejoin:round;
+                   ">',
+
+                esc(
+                  unselected$label[i]
+                ),
+
+                '</text>',
+
+
+                '<title>',
+
+                esc(
+                  paste0(
+                    unselected$label[i],
+                    " · ",
+                    unselected$stem[i],
+                    " | Dim 1: ",
+                    round(
+                      unselected$dim1[i],
+                      3
+                    ),
+                    " | Dim 2: ",
+                    round(
+                      unselected$dim2[i],
+                      3
+                    )
+                  )
+                ),
+
+                '</title>',
+
+
+                '</g>'
+
+              )
+
+            },
+
+            character(1)
+
+          ),
+
+          collapse = ""
+
+        )
+
+      }
+
+
+
+      # ------------------------------------------------------
+      # Selected
+      # ------------------------------------------------------
+
+      selected <- d[
+        d$label %in%
+          selected_subfields,
+      ]
+
+
+      if (
+        nrow(selected) > 0
+      ) {
+
+
+        selected_subfield_html <- paste(
+
+          vapply(
+
+            seq_len(
+              nrow(selected)
+            ),
+
+            function(i) {
+
+
+              px <-
+                sx(
+                  selected$dim1[i]
+                )
+
+
+              py <-
+                sy(
+                  selected$dim2[i]
+                )
+
+
+              if (
+                selected$dim1[i] >
+                  0.50
+              ) {
+
+                tx <-
+                  px - 11
+
+                anchor <-
+                  "end"
+
+              } else {
+
+                tx <-
+                  px + 11
+
+                anchor <-
+                  "start"
+
+              }
+
+
+
+              if (
+                selected$stem[i] ==
+                  "STEM"
+              ) {
+
+                symbol <- paste0(
+
+                  '<circle
+                     class="subfield-symbol"
+
+                     cx="', px, '"
+                     cy="', py, '"
+
+                     r="8"
+
+                     fill="#C95D5D"
+
+                     stroke="white"
+
+                     stroke-width="1.7"/>'
+
+                )
+
+              } else {
+
+                symbol <- paste0(
+
+                  '<rect
+                     class="subfield-symbol"
+
+                     x="', px - 7, '"
+                     y="', py - 7, '"
+
+                     width="14"
+                     height="14"
+
+                     rx="1.5"
+
+                     fill="#C95D5D"
+
+                     stroke="white"
+
+                     stroke-width="1.7"/>'
+
+                )
+
+              }
+
+
+              persistent_label <- ""
+
+
+              if (
+                isTRUE(
+                  input$labels
+                )
+              ) {
+
+                persistent_label <- paste0(
+
+                  '<text
+
+                     x="', tx, '"
+                     y="', py - 10, '"
+
+                     text-anchor="', anchor, '"
+
+                     font-size="12"
+                     font-weight="600"
+
+                     fill="#333333"
+
+                     style="
+                       paint-order:stroke;
+                       stroke:white;
+                       stroke-width:4px;
+                       stroke-linejoin:round;
+                     ">',
+
+                  esc(
+                    selected$label[i]
+                  ),
+
+                  '</text>'
+
+                )
+
+              }
+
+
+
+              paste0(
+
+                '<g class="subfield-point">',
+
+                symbol,
+
+
+                '<text
+                   class="hover-label"
+
+                   x="', tx, '"
+                   y="', py - 10, '"
+
+                   text-anchor="', anchor, '"
+
+                   font-size="12"
+                   font-weight="600"
+
+                   fill="#666666"
+
+                   style="
+                     paint-order:stroke;
+                     stroke:white;
+                     stroke-width:4px;
+                     stroke-linejoin:round;
+                   ">',
+
+                esc(
+                  selected$label[i]
+                ),
+
+                '</text>',
+
+
+                '<title>',
+
+                esc(
+                  paste0(
+                    selected$label[i],
+                    " · ",
+                    selected$stem[i],
+                    " | Dim 1: ",
+                    round(
+                      selected$dim1[i],
+                      3
+                    ),
+                    " | Dim 2: ",
+                    round(
+                      selected$dim2[i],
+                      3
+                    )
+                  )
+                ),
+
+                '</title>',
+
+
+                '</g>',
+
+                persistent_label
+
+              )
+
+            },
+
+            character(1)
+
+          ),
+
+          collapse = ""
+
+        )
+
+      }
+        
+    }
+
+
+
+    # ========================================================
+    # ACTIVE VARIABLE CATEGORIES
+    # ========================================================
+
+    variable_html <- ""
+
+
+    if (
+      "variables" %in% layers
+    ) {
+
+
+      d <- coords[
+        coords$type == "active" &
+        coords$variable ==
+          input$variable,
+      ]
+
+
+      variable_html <- paste(
+
+        vapply(
+
+          seq_len(
+            nrow(d)
+          ),
+
+          function(i) {
+
+
+            px <-
+              sx(
+                d$dim1[i]
+              )
+
+
+            py <-
+              sy(
+                d$dim2[i]
+              )
+
+
+            if (
+              d$dim1[i] >
+                1
+            ) {
+
+              tx <-
+                px - 11
+
+              anchor <-
+                "end"
+
+            } else {
+
+              tx <-
+                px + 11
+
+              anchor <-
+                "start"
+
+            }
+
+
+            label_html <- ""
+
+
+            if (
+              isTRUE(
+                input$labels
+              )
+            ) {
+
+              label_html <- paste0(
+
+                '<text
+
+                   x="', tx, '"
+                   y="', py - 9, '"
+
+                   text-anchor="', anchor, '"
+
+                   font-size="13"
+
+                   fill="#333333"
+
+                   style="
+                     paint-order:stroke;
+                     stroke:white;
+                     stroke-width:3px;
+                     stroke-linejoin:round;
+                   ">',
+
+                esc(
+                  d$label[i]
+                ),
+
+                '</text>'
+
+              )
+
+            }
+
+
+            paste0(
+
+              '<circle
+
+                 cx="', px, '"
+                 cy="', py, '"
+
+                 r="7.5"
+
+                 fill="#4E79A7"
+
+                 stroke="white"
+
+                 stroke-width="1.5">
+
+                 <title>',
+
+                 esc(
+                   paste0(
+                     d$label[i],
+                     " | Dim 1: ",
+                     round(
+                       d$dim1[i],
+                       3
+                     ),
+                     " | Dim 2: ",
+                     round(
+                       d$dim2[i],
+                       3
+                     )
+                   )
+                 ),
+
+                 '</title>
+
+               </circle>',
+
+              label_html
+
+            )
+
+          },
+
+          character(1)
+
+        ),
+
+        collapse = ""
+
+      )
+
+    }
+
+
+
+    # ========================================================
+    # VIEW LABELS
+    # ========================================================
+
+    zoom_label <- ""
+
+
+    if (
+      !(
+        "variables" %in% layers
+      )
+    ) {
+
+      zoom_label <- paste0(
+
+        '<text
+
+           x="', right, '"
+           y="23"
+
+           text-anchor="end"
+
+           font-size="11"
+
+           fill="#777777">
+
+           Zoomed cluster / subdiscipline view
+
+         </text>'
+
+      )
+
+    }
+
+
+
+    filter_label <- ""
+
+
+    if (
+      "subfields" %in% layers &&
+      !is.null(
+        input$field_filter
+      )
+    ) {
+
+      filter_label <- paste0(
+
+        '<text
+
+           x="', left, '"
+           y="23"
+
+           text-anchor="start"
+
+           font-size="11"
+
+           font-weight="600"
+
+           fill="#777777">',
+
+        esc(
+          paste0(
+            "Degree fields: ",
+            input$field_filter
+          )
+        ),
+
+        '</text>'
+
+      )
+
+    }
+
+
+
+    # ========================================================
+    # SVG
+    # ========================================================
+
+    html <- paste0(
+
+      '<svg
+
+         viewBox="0 0 ',
+         svg_width,
+         ' ',
+         svg_height,
+         '"
+
+         preserveAspectRatio="xMidYMid meet"
+
+         style="
+           width:100%;
+           height:auto;
+           display:block;
+         ">',
+
+
+      # Background
+
+      '<rect
+
+         x="', left, '"
+         y="', top, '"
+
+         width="', right - left, '"
+         height="', bottom - top, '"
+
+         fill="#ffffff"
+
+         stroke="#eeeeee"/>',
+
+
+      axis_html,
+
+
+      # Layer order
+
+      cluster_html,
+
+      unselected_subfield_html,
+
+      variable_html,
+
+      selected_subfield_html,
+
+
+      filter_label,
+
+      zoom_label,
+
+
+      # ------------------------------------------------------
+      # Axis 1 interpretation
+      # ------------------------------------------------------
+
+      '<text
+
+         x="', left, '"
+         y="515"
+
+         text-anchor="start"
+
+         font-size="11"
+
+         fill="#777777">
+
+         ← Academic / linear
+
+       </text>',
+
+
+      '<text
+
+         x="', right, '"
+         y="515"
+
+         text-anchor="end"
+
+         font-size="11"
+
+         fill="#777777">
+
+         Vocational / delayed →
+
+       </text>',
+
+
+      '<text
+
+         x="525"
+         y="545"
+
+         text-anchor="middle"
+
+         font-size="12"
+         font-weight="600"
+
+         fill="#555555">
+
+         Axis 1 — Life-course position and
+         institutionalised access pathway
+
+       </text>',
+
+
+      # ------------------------------------------------------
+      # Axis 2
+      # ------------------------------------------------------
+
+      '<text
+
+         x="25"
+         y="260"
+
+         transform="rotate(-90 25 260)"
+
+         text-anchor="middle"
+
+         font-size="12"
+         font-weight="600"
+
+         fill="#555555">
+
+         Axis 2 — Academic and institutional
+         constraint gradient
+
+       </text>',
+
+
+      '</svg>'
+
+    )
+
+
+    HTML(
+      html
+    )
+
+  })
+
+
+
+  # ==========================================================
+  # SELECTED SUBDISCIPLINE SUMMARY
+  # ==========================================================
+
+  output$selection_note <- renderUI({
+
+
+    if (
+      is.null(input$subfields) ||
+      length(
+        input$subfields
+      ) == 0
+    ) {
+
+      return(
+        NULL
+      )
+
+    }
+
+
+    d <- coords[
+      coords$type == "subfield" &
+      coords$label %in%
+        input$subfields,
+    ]
+
+
+    if (
+      nrow(d) == 0
+    ) {
+
+      return(
+        NULL
+      )
+
+    }
+
+
+    lines <- vapply(
+
+      seq_len(
+        nrow(d)
+      ),
+
+      function(i) {
+
+        paste0(
+
+          "<strong>",
+
+          htmltools::htmlEscape(
+            d$label[i]
+          ),
+
+          "</strong>",
+
+          " · ",
+          d$stem[i],
+
+          " &nbsp; ",
+
+          "Dim 1 = ",
+          sprintf(
+            "%.3f",
+            d$dim1[i]
+          ),
+
+          " · Dim 2 = ",
+          sprintf(
+            "%.3f",
+            d$dim2[i]
+          )
+
+        )
+
+      },
+
+      character(1)
+
+    )
+
+
+    div(
+
+      class =
+        "selection-note",
+
+      HTML(
+        paste(
+          lines,
+          collapse = "<br>"
+        )
+      )
+
+    )
+
+  })
+
+}
+
+
+
+# ============================================================
+# RUN APP
+# ============================================================
+
+shinyApp(
+  ui = ui,
+  server = server
+)
+<!-- ``` -->
