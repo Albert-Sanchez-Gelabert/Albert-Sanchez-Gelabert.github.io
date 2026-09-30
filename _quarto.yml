@@ -7,6 +7,8 @@ project:
 
 website:
   title: "Albert Sánchez-Gelabert"
+  site-url: "https://albert-sanchez-gelabert.github.io/"
+  description: "Sociologist and researcher studying higher education, educational inequalities, student trajectories and STEM participation."
 
   navbar:
     left:
