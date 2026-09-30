@@ -35,3 +35,4 @@ format:
   html:
     theme: cosmo
     css: styles.css
+    include-in-header: google_verification.html
