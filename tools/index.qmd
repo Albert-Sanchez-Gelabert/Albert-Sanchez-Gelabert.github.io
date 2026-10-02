@@ -1,6 +1,6 @@
 ---
 title: "Interactive Research Tools"
-subtitle: "Interactive explorations based on published research."
+subtitle: "Interactive explorations of educational inequalities, university entry and student trajectories."
 format: html
 ---
 
@@ -89,6 +89,30 @@ format: html
 </style>
 
 <div class="tools-list">
+
+<div class="tool-item">
+
+<a class="tool-image-link" href="pathways/">
+<img class="tool-image" src="images/pathways.png" alt="Longitudinal Pathway Dynamics preview">
+</a>
+
+<div class="tool-content">
+
+### [Longitudinal Pathway Dynamics](pathways/)
+
+<p class="tool-description">
+Follow how a university cohort evolves across six annual observations and compare longitudinal pathway dynamics across student profiles.
+</p>
+
+<p class="tool-meta">
+Sequence analysis · TraMineR · longitudinal trajectories
+</p>
+
+[Open explorer →](pathways/){.tool-link}
+
+</div>
+</div>
+
 
 <div class="tool-item">
 
@@ -186,7 +210,8 @@ Group-Based Trajectory Modelling · longitudinal progression
 </div>
 
 <div class="tools-note">
-Each tool is based on published research. Model-based estimates are presented as associations and should not be interpreted as causal effects.
+These tools are based on published studies and research outputs. Where model-based estimates are shown, they should be interpreted as associations rather than causal effects.
 </div>
 
 </div>
+

@@ -24,12 +24,14 @@ website:
         menu:
           - href: tools/index.qmd
             text: All tools
+          - href: tools/pathways/index.qmd
+            text: Longitudinal Pathway Dynamics
           - href: tools/context/index.qmd
             text: School Context & Transition Explorer
-          - href: tools/compensatory/index.qmd
-            text: Compensatory Advantage Explorer
           - href: tools/entry-space/index.qmd
             text: University Entry Space Explorer
+          - href: tools/compensatory/index.qmd
+            text: Compensatory Advantage Explorer
           - href: tools/trajectories/index.qmd
             text: University Trajectory Lab
       - href: cv.qmd
@@ -41,4 +43,4 @@ format:
   html:
     theme: cosmo
     css: styles.css
-    include-in-header: google_verification.html
+

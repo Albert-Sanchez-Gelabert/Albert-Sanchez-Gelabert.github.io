@@ -32,3 +32,9 @@ Much of my work uses quantitative and longitudinal approaches to examine how ine
 - STEM and gender
 - Life-course inequalities
 - Cultural consumption
+
+## Interactive research tools
+
+I develop interactive research tools that translate sequence analysis, longitudinal modelling and other quantitative approaches into explorable visualisations of educational trajectories and inequalities.
+
+[Explore interactive research tools →](tools/)
