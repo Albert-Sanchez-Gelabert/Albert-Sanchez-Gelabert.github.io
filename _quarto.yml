@@ -22,6 +22,8 @@ website:
         text: News
       - text: Tools
         menu:
+          - href: tools/context/index.qmd
+            text: School Context & Transition Explorer
           - href: tools/index.qmd
             text: All tools
           - href: tools/compensatory/index.qmd

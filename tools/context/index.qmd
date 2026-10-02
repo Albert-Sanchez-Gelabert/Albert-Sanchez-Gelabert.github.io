@@ -1,0 +1,512 @@
+---
+title: "School Context & Transition Explorer"
+format: html
+engine: knitr
+filters:
+  - shinylive
+---
+
+Compare gender and migrant-background differences across three school-composition contexts.
+
+```{shinylive-r}
+#| standalone: true
+#| viewerHeight: 585
+
+library(shiny)
+
+# ============================================================
+# Published adjusted predicted probabilities (Tables 7–9)
+# ============================================================
+
+prob <- data.frame(
+  concentration = rep(c("Low", "Medium", "High"), each = 4),
+  gender = rep(rep(c("Female", "Male"), each = 2), 3),
+  background = rep(c("Native", "Non-native"), 6),
+
+  dropout = c(
+    .051, .129, .042, .112,
+    .073, .149, .058, .117,
+    .080, .139, .088, .140
+  ),
+
+  vocational = c(
+    .237, .298, .245, .328,
+    .276, .320, .306, .376,
+    .316, .321, .347, .384
+  ),
+
+  academic = c(
+    .712, .572, .713, .560,
+    .651, .531, .636, .507,
+    .603, .540, .565, .476
+  ),
+
+  stringsAsFactors = FALSE
+)
+
+context_meta <- data.frame(
+  concentration = c("Low", "Medium", "High"),
+  range = c("0–15%", "16–30%", "31%+"),
+  stringsAsFactors = FALSE
+)
+
+outcome_meta <- list(
+  Academic = list(
+    key = "academic",
+    min = .45,
+    max = .75,
+    colour = "#5B8E7D"
+  ),
+  Vocational = list(
+    key = "vocational",
+    min = .20,
+    max = .40,
+    colour = "#D9823F"
+  ),
+  Dropout = list(
+    key = "dropout",
+    min = .03,
+    max = .16,
+    colour = "#527CA5"
+  )
+)
+
+# ============================================================
+# SVG: two gender rows, Native vs Non-native on each row
+# ============================================================
+
+panel_svg <- function(d, outcome_name) {
+
+  meta <- outcome_meta[[outcome_name]]
+
+  W <- 320
+  H <- 205
+
+  x0 <- 78
+  x1 <- 278
+
+  y_f <- 72
+  y_m <- 145
+
+  xmap <- function(v) {
+    x0 + (v - meta$min) / (meta$max - meta$min) * (x1 - x0)
+  }
+
+  getv <- function(g, b) {
+    d[d$gender == g & d$background == b, meta$key]
+  }
+
+  fn <- getv("Female", "Native")
+  fz <- getv("Female", "Non-native")
+  mn <- getv("Male", "Native")
+  mz <- getv("Male", "Non-native")
+
+  x_fn <- xmap(fn)
+  x_fz <- xmap(fz)
+  x_mn <- xmap(mn)
+  x_mz <- xmap(mz)
+
+  gap_f <- 100 * (fn - fz)
+  gap_m <- 100 * (mn - mz)
+
+  row_svg <- function(y, label, xn, xz, vn, vz, gap) {
+
+    paste0(
+      # gender label
+      '<text x="8" y="', y+4,
+      '" font-size="11" font-weight="700" fill="#444">',
+      label, '</text>',
+
+      # row scale
+      '<line x1="', x0, '" y1="', y,
+      '" x2="', x1, '" y2="', y,
+      '" stroke="#dddddd" stroke-width="2" stroke-linecap="round"/>',
+
+      # connector
+      '<line x1="', min(xn,xz), '" y1="', y,
+      '" x2="', max(xn,xz), '" y2="', y,
+      '" stroke="', meta$colour,
+      '" stroke-width="5" stroke-linecap="round" opacity=".32"/>',
+
+      # Native = solid
+      '<circle cx="', xn, '" cy="', y,
+      '" r="7.5" fill="', meta$colour,
+      '" stroke="#fff" stroke-width="1.8"/>',
+
+      # Non-native = open
+      '<circle cx="', xz, '" cy="', y,
+      '" r="7" fill="#fff" stroke="', meta$colour,
+      '" stroke-width="2.5"/>',
+
+      # Values
+      '<text x="', xn, '" y="', y-15,
+      '" text-anchor="middle" font-size="10.5" font-weight="700" fill="#333">',
+      sprintf("%.1f%%",100*vn), '</text>',
+
+      '<text x="', xz, '" y="', y+24,
+      '" text-anchor="middle" font-size="10.5" font-weight="700" fill="#555">',
+      sprintf("%.1f%%",100*vz), '</text>',
+
+      # gap on far right
+      '<text x="310" y="', y+4,
+      '" text-anchor="end" font-size="9" font-weight="700" fill="#777">',
+      'Δ ', sprintf("%.1f",gap), '</text>'
+    )
+  }
+
+  HTML(
+    paste0(
+      '<svg viewBox="0 0 ',W,' ',H,
+      '" style="width:100%;height:auto;display:block;">',
+
+      # top labels / legend integrated
+      '<circle cx="83" cy="18" r="5" fill="', meta$colour, '"/>',
+      '<text x="94" y="22" font-size="9.5" fill="#666">Native</text>',
+
+      '<circle cx="145" cy="18" r="5" fill="#fff" stroke="', meta$colour, '" stroke-width="2"/>',
+      '<text x="156" y="22" font-size="9.5" fill="#666">Non-native</text>',
+
+      '<text x="310" y="22" text-anchor="end" font-size="8.5" fill="#888">Δ Native − Non-native</text>',
+
+      # rows
+      row_svg(y_f, "Female", x_fn, x_fz, fn, fz, gap_f),
+      row_svg(y_m, "Male", x_mn, x_mz, mn, mz, gap_m),
+
+      # faint separator
+      '<line x1="8" y1="108" x2="310" y2="108" stroke="#f0f0f0" stroke-width="1"/>',
+
+      # shared local scale
+      '<text x="',x0,'" y="197" text-anchor="start" font-size="8.5" fill="#999">',
+      sprintf("%.0f%%",100*meta$min), '</text>',
+      '<text x="',x1,'" y="197" text-anchor="end" font-size="8.5" fill="#999">',
+      sprintf("%.0f%%",100*meta$max), '</text>',
+
+      '</svg>'
+    )
+  )
+}
+
+# ============================================================
+# UI
+# ============================================================
+
+ui <- fluidPage(
+
+  tags$head(
+    tags$style(
+      HTML("
+        html, body {
+          margin: 0;
+          padding: 0;
+          background: #fff;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .app-wrap {
+          max-width: 1120px;
+          margin: 0 auto;
+          padding: 4px 8px 12px 8px;
+        }
+
+        .intro-bar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 18px;
+          padding: 10px 12px;
+          border: 1px solid #e4e4e4;
+          border-radius: 10px;
+          background: #fafafa;
+          margin-bottom: 11px;
+        }
+
+        .eyebrow {
+          font-size: 9px;
+          text-transform: uppercase;
+          letter-spacing: .07em;
+          color: #888;
+          font-weight: 750;
+          margin-bottom: 2px;
+        }
+
+        .headline {
+          font-size: 12.5px;
+          font-weight: 650;
+          color: #333;
+        }
+
+        .outcome-tabs .form-group {
+          margin: 0;
+        }
+
+        .outcome-tabs label.control-label {
+          display: none;
+        }
+
+        .outcome-tabs .radio-inline {
+          margin: 0;
+          padding: 7px 15px 7px 25px;
+          border-top: 1px solid #ddd;
+          border-bottom: 1px solid #ddd;
+          border-right: 1px solid #ddd;
+          background: #fff;
+          font-size: 11px;
+        }
+
+        .outcome-tabs .radio-inline:first-child {
+          border-left: 1px solid #ddd;
+          border-radius: 8px 0 0 8px;
+        }
+
+        .outcome-tabs .radio-inline:last-child {
+          border-radius: 0 8px 8px 0;
+        }
+
+        .outcome-title {
+          font-size: 14px;
+          font-weight: 700;
+          color: #333;
+          margin: 3px 3px 9px 3px;
+        }
+
+        .contexts {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0,1fr));
+          gap: 12px;
+        }
+
+        .context-card {
+          border: 1px solid #e3e3e3;
+          border-radius: 11px;
+          overflow: hidden;
+          background: #fff;
+          min-width: 0;
+        }
+
+        .context-head {
+          padding: 10px 12px 8px 12px;
+          border-bottom: 1px solid #eee;
+          background: #fcfcfc;
+        }
+
+        .context-name {
+          font-size: 14px;
+          font-weight: 700;
+          color: #333;
+        }
+
+        .context-range {
+          font-size: 9.5px;
+          color: #888;
+          margin-top: 1px;
+        }
+
+        .context-body {
+          padding: 5px 7px 2px 7px;
+        }
+
+        .reading {
+          margin-top: 11px;
+          display: grid;
+          grid-template-columns: 145px 1fr;
+          gap: 12px;
+          align-items: start;
+          border: 1px solid #e5e5e5;
+          border-radius: 10px;
+          padding: 9px 12px;
+          background: #fafafa;
+        }
+
+        .reading-label {
+          font-size: 9px;
+          text-transform: uppercase;
+          letter-spacing: .06em;
+          color: #888;
+          font-weight: 750;
+          padding-top: 2px;
+        }
+
+        .reading-text {
+          font-size: 10.5px;
+          line-height: 1.45;
+          color: #555;
+        }
+
+        .source-note {
+          margin-top: 8px;
+          font-size: 9.2px;
+          line-height: 1.42;
+          color: #777;
+        }
+
+        .source-note a {
+          color: inherit;
+          text-decoration: underline;
+        }
+
+        @media (max-width: 760px) {
+          .intro-bar {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          .contexts {
+            grid-template-columns: 1fr;
+          }
+
+          .reading {
+            grid-template-columns: 1fr;
+          }
+        }
+      ")
+    )
+  ),
+
+  div(
+    class = "app-wrap",
+
+    div(
+      class = "intro-bar",
+
+      div(
+        div(class = "eyebrow", "Four groups, one view"),
+        div(
+          class = "headline",
+          "Compare women and men — and Native and Non-native students — without changing the profile."
+        )
+      ),
+
+      div(
+        class = "outcome-tabs",
+        radioButtons(
+          "outcome",
+          label = NULL,
+          choices = c("Academic", "Vocational", "Dropout"),
+          selected = "Academic",
+          inline = TRUE
+        )
+      )
+    ),
+
+    uiOutput("outcome_title"),
+
+    uiOutput("contexts"),
+
+    uiOutput("reading"),
+
+    div(
+      class = "source-note",
+      HTML(
+        "<strong>How to read this:</strong> each school-context panel has two rows, one for women and one for men. Within each row, the filled point is Native and the open point is Non-native. The horizontal distance between the two points is the migrant-background gap; comparing the two rows shows gender differences. All three panels use the same outcome-specific scale.<br>
+        <strong>Source:</strong> Sánchez-Gelabert, A., Elias Andreu, M. & Bouvier, N. (2024).
+        <em>Transition to post-compulsory education according to migrant background and gender in Catalonia:
+        Exploring the effect of non-native student concentration</em>.
+        International Journal of Educational Research, 124, 102321.
+        <a href='https://doi.org/10.1016/j.ijer.2024.102321' target='_blank'>DOI</a>.
+        Estimates are model-based associations and should not be interpreted as causal effects."
+      )
+    )
+  )
+)
+
+# ============================================================
+# SERVER
+# ============================================================
+
+server <- function(input, output, session) {
+
+  output$outcome_title <- renderUI({
+    div(
+      class = "outcome-title",
+      paste0(input$outcome, " transition")
+    )
+  })
+
+  output$contexts <- renderUI({
+
+    panels <- lapply(
+      c("Low","Medium","High"),
+      function(conc) {
+
+        d <- prob[
+          prob$concentration == conc,
+        ]
+
+        cm <- context_meta[
+          context_meta$concentration == conc,
+        ]
+
+        div(
+          class = "context-card",
+
+          div(
+            class = "context-head",
+            div(
+              class = "context-name",
+              paste0(conc, " concentration")
+            ),
+            div(
+              class = "context-range",
+              paste0(cm$range, " non-native students")
+            )
+          ),
+
+          div(
+            class = "context-body",
+            panel_svg(
+              d,
+              input$outcome
+            )
+          )
+        )
+      }
+    )
+
+    div(class = "contexts", panels)
+  })
+
+  output$reading <- renderUI({
+
+    meta <- outcome_meta[[input$outcome]]
+
+    get_gap <- function(conc, gender) {
+      d <- prob[
+        prob$concentration == conc &
+        prob$gender == gender,
+      ]
+      100 * (
+        d[d$background == "Native", meta$key] -
+        d[d$background == "Non-native", meta$key]
+      )
+    }
+
+    low_f <- get_gap("Low","Female")
+    high_f <- get_gap("High","Female")
+    low_m <- get_gap("Low","Male")
+    high_m <- get_gap("High","Male")
+
+    div(
+      class = "reading",
+
+      div(
+        class = "reading-label",
+        "Migrant-background gap"
+      ),
+
+      div(
+        class = "reading-text",
+        paste0(
+          "For women, the Native–Non-native gap changes from ",
+          sprintf("%.1f", abs(low_f)), " pp at low concentration to ",
+          sprintf("%.1f", abs(high_f)), " pp at high concentration. ",
+          "For men, it changes from ",
+          sprintf("%.1f", abs(low_m)), " to ",
+          sprintf("%.1f", abs(high_m)), " pp."
+        )
+      )
+    )
+  })
+}
+
+shinyApp(ui, server)
+```

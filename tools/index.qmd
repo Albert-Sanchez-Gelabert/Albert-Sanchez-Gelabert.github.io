@@ -92,23 +92,23 @@ format: html
 
 <div class="tool-item">
 
-<a class="tool-image-link" href="compensatory/">
-<img class="tool-image" src="images/compensatory.png" alt="Compensatory Advantage Explorer preview">
+<a class="tool-image-link" href="context/">
+<img class="tool-image" src="images/context.png" alt="School Context & Transition Explorer preview">
 </a>
 
 <div class="tool-content">
 
-### [Compensatory Advantage Explorer](compensatory/)
+### [School Context & Transition Explorer](context/)
 
 <p class="tool-description">
-Explore how first-year academic performance and family educational background are associated with the probability of continuing, transferring or dropping out of university.
+Compare academic, vocational and dropout transitions across different school-composition contexts, examining gender and migrant-background inequalities at a glance.
 </p>
 
 <p class="tool-meta">
-Predicted probabilities · social background × academic performance
+Predicted probabilities · gender × migrant background × school composition
 </p>
 
-[Open explorer →](compensatory/){.tool-link}
+[Open explorer →](context/){.tool-link}
 
 </div>
 </div>
@@ -133,6 +133,30 @@ Multiple Correspondence Analysis · profiles · degree subfields
 </p>
 
 [Open explorer →](entry-space/){.tool-link}
+
+</div>
+</div>
+
+
+<div class="tool-item">
+
+<a class="tool-image-link" href="compensatory/">
+<img class="tool-image" src="images/compensatory.png" alt="Compensatory Advantage Explorer preview">
+</a>
+
+<div class="tool-content">
+
+### [Compensatory Advantage Explorer](compensatory/)
+
+<p class="tool-description">
+Explore how first-year academic performance and family educational background are associated with the probability of continuing, transferring or dropping out of university.
+</p>
+
+<p class="tool-meta">
+Predicted probabilities · social background × academic performance
+</p>
+
+[Open explorer →](compensatory/){.tool-link}
 
 </div>
 </div>
@@ -166,4 +190,3 @@ Each tool is based on published research. Model-based estimates are presented as
 </div>
 
 </div>
-
