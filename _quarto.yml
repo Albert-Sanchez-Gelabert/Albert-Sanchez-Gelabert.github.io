@@ -22,10 +22,10 @@ website:
         text: News
       - text: Tools
         menu:
-          - href: tools/context/index.qmd
-            text: School Context & Transition Explorer
           - href: tools/index.qmd
             text: All tools
+          - href: tools/context/index.qmd
+            text: School Context & Transition Explorer
           - href: tools/compensatory/index.qmd
             text: Compensatory Advantage Explorer
           - href: tools/entry-space/index.qmd
