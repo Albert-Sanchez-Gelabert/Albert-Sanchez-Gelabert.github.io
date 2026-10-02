@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>School Context &amp; Transition Explorer – Albert Sánchez-Gelabert</title>
+<title>Longitudinal Pathway Dynamics – Albert Sánchez-Gelabert</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -75,6 +75,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="google-site-verification" content="FonrxgXXD00-tiL3CyiMzsFjkJewo8iNo_ZYe2iGWr4">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -123,20 +124,16 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">All tools</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tools/pathways/index.html">
- <span class="dropdown-text">Longitudinal Pathway Dynamics</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="../../tools/context/index.html">
  <span class="dropdown-text">School Context &amp; Transition Explorer</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tools/entry-space/index.html">
- <span class="dropdown-text">University Entry Space Explorer</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="../../tools/compensatory/index.html">
  <span class="dropdown-text">Compensatory Advantage Explorer</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../tools/entry-space/index.html">
+ <span class="dropdown-text">University Entry Space Explorer</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../tools/trajectories/index.html">
@@ -165,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">School Context &amp; Transition Explorer</h1>
+<h1 class="title">Longitudinal Pathway Dynamics</h1>
 </div>
 
 
@@ -182,183 +179,411 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Compare gender and migrant-background differences across three school-composition contexts.</p>
+<p>How do university pathways unfold over time — and for whom?</p>
 <pre class="shinylive-r" data-engine="r"><code>#| '!! shinylive warning !!': |
 #|   shinylive does not work in self-contained HTML documents.
 #|   Please set `embed-resources: false` in your metadata.
 #| standalone: true
-#| viewerHeight: 585
+#| viewerHeight: 720
 
 library(shiny)
 
 # ============================================================
-# Published adjusted predicted probabilities (Tables 7–9)
+# AGGREGATED OUTPUTS ONLY
+# Derived locally from the UAB research file.
+# No individual-level records or identifiers are embedded here.
 # ============================================================
 
-prob &lt;- data.frame(
-  concentration = rep(c("Low", "Medium", "High"), each = 4),
-  gender = rep(rep(c("Female", "Male"), each = 2), 3),
-  background = rep(c("Native", "Non-native"), 6),
-
-  dropout = c(
-    .051, .129, .042, .112,
-    .073, .149, .058, .117,
-    .080, .139, .088, .140
+state_df &lt;- data.frame(
+  variable = c(
+    rep("Gender", 12),
+    rep("Age at entry", 12),
+    rep("Working status", 12),
+    rep("Entry grade", 18)
   ),
-
-  vocational = c(
-    .237, .298, .245, .328,
-    .276, .320, .306, .376,
-    .316, .321, .347, .384
+  category = c(
+    rep("Female",6), rep("Male",6),
+    rep("Up to 21",6), rep("22+",6),
+    rep("Not working",6), rep("Working",6),
+    rep("Lower tertile",6), rep("Middle tertile",6), rep("Upper tertile",6)
   ),
-
-  academic = c(
-    .712, .572, .713, .560,
-    .651, .531, .636, .507,
-    .603, .540, .565, .476
+  n = c(
+    rep(3695,6), rep(2468,6),
+    rep(5014,6), rep(1149,6),
+    rep(4012,6), rep(2148,6),
+    rep(2026,6), rep(2019,6), rep(2019,6)
   ),
-
+  year = rep(1:6, 9),
+  university = c(
+    100,87.2,80.3,77.3,41.6,19.7,
+    100,85.7,76.3,71.1,48.1,24.8,
+    100,89.0,82.3,79.2,47.7,23.0,
+    100,76.0,62.6,55.5,28.9,16.4,
+    100,89.0,82.0,78.9,47.0,22.9,
+    100,82.1,72.4,67.1,38.9,19.6,
+    100,79.7,67.9,62.6,44.5,23.8,
+    100,88.8,82.0,78.3,43.1,17.9,
+    100,92.6,87.6,85.4,45.9,23.9
+  ),
+  outside = c(
+    0,12.8,18.1,21.0,23.0,24.2,
+    0,14.3,21.4,26.3,28.6,31.3,
+    0,11.0,16.2,19.2,21.0,22.9,
+    0,24.0,33.2,40.2,43.6,45.1,
+    0,11.0,16.3,19.3,21.4,23.1,
+    0,17.9,25.1,30.3,32.4,34.5,
+    0,20.3,30.3,35.5,38.4,41.7,
+    0,11.2,16.0,19.6,21.9,23.5,
+    0,7.4,10.4,12.5,13.7,14.2
+  ),
+  graduated = c(
+    0,0,1.7,1.7,35.4,56.1,
+    0,0,2.4,2.6,23.4,43.8,
+    0,0,1.4,1.5,31.3,54.1,
+    0,0,4.3,4.3,27.5,38.6,
+    0,0,1.7,1.8,31.6,54.0,
+    0,0,2.5,2.6,28.7,45.9,
+    0,0,1.8,1.9,17.1,34.6,
+    0,0,2.0,2.1,35.0,58.6,
+    0,0,2.0,2.1,40.4,61.9
+  ),
   stringsAsFactors = FALSE
 )
 
-context_meta &lt;- data.frame(
-  concentration = c("Low", "Medium", "High"),
-  range = c("0–15%", "16–30%", "31%+"),
+metrics_df &lt;- data.frame(
+  variable = c(
+    "Gender","Gender",
+    "Age at entry","Age at entry",
+    "Working status","Working status",
+    "Entry grade","Entry grade","Entry grade"
+  ),
+  category = c(
+    "Female","Male",
+    "Up to 21","22+",
+    "Not working","Working",
+    "Lower tertile","Middle tertile","Upper tertile"
+  ),
+  n = c(3695,2468,5014,1149,4012,2148,2026,2019,2019),
+  transfer = c(16.2,21.5,19.3,13.9,19.5,16.1,25.0,17.5,12.9),
+  outside = c(26.6,34.2,25.4,48.2,25.6,37.2,45.3,26.0,16.0),
+  returned = c(3.0,3.8,3.2,3.8,3.3,3.3,4.9,3.0,2.0),
+  complex = c(17.2,22.2,20.0,15.7,20.4,17.0,26.3,18.3,13.4),
+  graduated = c(56.1,43.8,54.1,38.6,54.0,45.9,34.6,58.6,61.9),
   stringsAsFactors = FALSE
 )
 
-outcome_meta &lt;- list(
-  Academic = list(
-    key = "academic",
-    min = .45,
-    max = .75,
-    colour = "#5B8E7D"
-  ),
-  Vocational = list(
-    key = "vocational",
-    min = .20,
-    max = .40,
-    colour = "#D9823F"
-  ),
-  Dropout = list(
-    key = "dropout",
-    min = .03,
-    max = .16,
-    colour = "#527CA5"
+category_order &lt;- list(
+  "Gender" = c("Female","Male"),
+  "Age at entry" = c("Up to 21","22+"),
+  "Working status" = c("Not working","Working"),
+  "Entry grade" = c("Lower tertile","Middle tertile","Upper tertile")
+)
+
+state_col &lt;- c(
+  university = "#5B8E7D",
+  outside = "#D27A5E",
+  graduated = "#667FB2"
+)
+
+group_palette &lt;- c("#3D78B2", "#D66B55", "#6E9B75")
+
+year_labels &lt;- c("Entry","Y2","Y3","Y4","Y5","Y6")
+
+# ============================================================
+# Helpers
+# ============================================================
+
+state_legend &lt;- function(key, label) {
+  div(
+    class = "legend-item",
+    span(
+      class = "legend-swatch",
+      style = paste0("background:", state_col[key], ";")
+    ),
+    label
   )
-)
+}
 
-# ============================================================
-# SVG: two gender rows, Native vs Non-native on each row
-# ============================================================
+cohort_svg &lt;- function(d) {
 
-panel_svg &lt;- function(d, outcome_name) {
+  d &lt;- d[order(d$year), ]
 
-  meta &lt;- outcome_meta[[outcome_name]]
+  W &lt;- 430
+  H &lt;- 235
 
-  W &lt;- 320
-  H &lt;- 205
+  left &lt;- 42
+  right &lt;- 18
+  top &lt;- 18
+  bottom &lt;- 40
 
-  x0 &lt;- 78
-  x1 &lt;- 278
+  ph &lt;- H - top - bottom
+  bar_gap &lt;- 5
+  n &lt;- nrow(d)
+  usable_w &lt;- W - left - right
+  bar_w &lt;- (usable_w - bar_gap * (n - 1)) / n
 
-  y_f &lt;- 72
-  y_m &lt;- 145
+  ymap &lt;- function(v) top + (100 - v) / 100 * ph
 
-  xmap &lt;- function(v) {
-    x0 + (v - meta$min) / (meta$max - meta$min) * (x1 - x0)
-  }
+  svg &lt;- paste0(
+    '&lt;svg viewBox="0 0 ',W,' ',H,
+    '" style="width:100%;height:auto;display:block;"&gt;'
+  )
 
-  getv &lt;- function(g, b) {
-    d[d$gender == g &amp; d$background == b, meta$key]
-  }
-
-  fn &lt;- getv("Female", "Native")
-  fz &lt;- getv("Female", "Non-native")
-  mn &lt;- getv("Male", "Native")
-  mz &lt;- getv("Male", "Non-native")
-
-  x_fn &lt;- xmap(fn)
-  x_fz &lt;- xmap(fz)
-  x_mn &lt;- xmap(mn)
-  x_mz &lt;- xmap(mz)
-
-  gap_f &lt;- 100 * (fn - fz)
-  gap_m &lt;- 100 * (mn - mz)
-
-  row_svg &lt;- function(y, label, xn, xz, vn, vz, gap) {
-
-    paste0(
-      # gender label
-      '&lt;text x="8" y="', y+4,
-      '" font-size="11" font-weight="700" fill="#444"&gt;',
-      label, '&lt;/text&gt;',
-
-      # row scale
-      '&lt;line x1="', x0, '" y1="', y,
-      '" x2="', x1, '" y2="', y,
-      '" stroke="#dddddd" stroke-width="2" stroke-linecap="round"/&gt;',
-
-      # connector
-      '&lt;line x1="', min(xn,xz), '" y1="', y,
-      '" x2="', max(xn,xz), '" y2="', y,
-      '" stroke="', meta$colour,
-      '" stroke-width="5" stroke-linecap="round" opacity=".32"/&gt;',
-
-      # Native = solid
-      '&lt;circle cx="', xn, '" cy="', y,
-      '" r="7.5" fill="', meta$colour,
-      '" stroke="#fff" stroke-width="1.8"/&gt;',
-
-      # Non-native = open
-      '&lt;circle cx="', xz, '" cy="', y,
-      '" r="7" fill="#fff" stroke="', meta$colour,
-      '" stroke-width="2.5"/&gt;',
-
-      # Values
-      '&lt;text x="', xn, '" y="', y-15,
-      '" text-anchor="middle" font-size="10.5" font-weight="700" fill="#333"&gt;',
-      sprintf("%.1f%%",100*vn), '&lt;/text&gt;',
-
-      '&lt;text x="', xz, '" y="', y+24,
-      '" text-anchor="middle" font-size="10.5" font-weight="700" fill="#555"&gt;',
-      sprintf("%.1f%%",100*vz), '&lt;/text&gt;',
-
-      # gap on far right
-      '&lt;text x="310" y="', y+4,
-      '" text-anchor="end" font-size="9" font-weight="700" fill="#777"&gt;',
-      'Δ ', sprintf("%.1f",gap), '&lt;/text&gt;'
+  # horizontal grid and y-axis labels
+  for (p in c(0,25,50,75,100)) {
+    yy &lt;- ymap(p)
+    svg &lt;- paste0(
+      svg,
+      '&lt;line x1="',left,'" y1="',yy,
+      '" x2="',W-right,'" y2="',yy,
+      '" stroke="#ededed" stroke-width="1"/&gt;',
+      '&lt;text x="',left-8,'" y="',yy+3,
+      '" text-anchor="end" font-size="8.5" fill="#8d8d8d"&gt;',
+      p, '%&lt;/text&gt;'
     )
   }
 
-  HTML(
-    paste0(
-      '&lt;svg viewBox="0 0 ',W,' ',H,
-      '" style="width:100%;height:auto;display:block;"&gt;',
+  # TraMineR-style state distribution bars
+  for (i in seq_len(n)) {
 
-      # top labels / legend integrated
-      '&lt;circle cx="83" cy="18" r="5" fill="', meta$colour, '"/&gt;',
-      '&lt;text x="94" y="22" font-size="9.5" fill="#666"&gt;Native&lt;/text&gt;',
+    x &lt;- left + (i - 1) * (bar_w + bar_gap)
 
-      '&lt;circle cx="145" cy="18" r="5" fill="#fff" stroke="', meta$colour, '" stroke-width="2"/&gt;',
-      '&lt;text x="156" y="22" font-size="9.5" fill="#666"&gt;Non-native&lt;/text&gt;',
+    vals &lt;- c(
+      university = d$university[i],
+      outside = d$outside[i],
+      graduated = d$graduated[i]
+    )
 
-      '&lt;text x="310" y="22" text-anchor="end" font-size="8.5" fill="#888"&gt;Δ Native − Non-native&lt;/text&gt;',
+    lower &lt;- 0
 
-      # rows
-      row_svg(y_f, "Female", x_fn, x_fz, fn, fz, gap_f),
-      row_svg(y_m, "Male", x_mn, x_mz, mn, mz, gap_m),
+    for (k in c("university","outside","graduated")) {
 
-      # faint separator
-      '&lt;line x1="8" y1="108" x2="310" y2="108" stroke="#f0f0f0" stroke-width="1"/&gt;',
+      v &lt;- vals[k]
+      y_top &lt;- ymap(lower + v)
+      y_bottom &lt;- ymap(lower)
+      h &lt;- y_bottom - y_top
 
-      # shared local scale
-      '&lt;text x="',x0,'" y="197" text-anchor="start" font-size="8.5" fill="#999"&gt;',
-      sprintf("%.0f%%",100*meta$min), '&lt;/text&gt;',
-      '&lt;text x="',x1,'" y="197" text-anchor="end" font-size="8.5" fill="#999"&gt;',
-      sprintf("%.0f%%",100*meta$max), '&lt;/text&gt;',
+      svg &lt;- paste0(
+        svg,
+        '&lt;rect x="',sprintf("%.2f",x),
+        '" y="',sprintf("%.2f",y_top),
+        '" width="',sprintf("%.2f",bar_w),
+        '" height="',sprintf("%.2f",h),
+        '" fill="',state_col[k],
+        '" stroke="#555" stroke-width=".75"/&gt;'
+      )
 
-      '&lt;/svg&gt;'
+      # Add percentage labels only when the segment is large enough
+      # to remain legible inside the stacked bar.
+      if (v &gt;= 5) {
+
+        label_y &lt;- y_top + h / 2
+        label_col &lt;- "#FFFFFF"
+
+        svg &lt;- paste0(
+          svg,
+          '&lt;text x="', sprintf("%.2f", x + bar_w / 2),
+          '" y="', sprintf("%.2f", label_y + 3),
+          '" text-anchor="middle" font-size="8.3" font-weight="650" fill="', label_col, '"&gt;',
+          sprintf("%.1f%%", v),
+          '&lt;/text&gt;'
+        )
+      }
+
+      lower &lt;- lower + v
+    }
+
+    svg &lt;- paste0(
+      svg,
+      '&lt;text x="',sprintf("%.2f",x + bar_w/2),
+      '" y="',H-14,
+      '" text-anchor="middle" font-size="8.8" fill="#666"&gt;',
+      year_labels[i], '&lt;/text&gt;'
+    )
+  }
+
+  svg &lt;- paste0(
+    svg,
+    '&lt;line x1="',left,'" y1="',top,
+    '" x2="',left,'" y2="',top+ph,
+    '" stroke="#666" stroke-width="1"/&gt;',
+    '&lt;line x1="',left,'" y1="',top+ph,
+    '" x2="',W-right,'" y2="',top+ph,
+    '" stroke="#666" stroke-width="1"/&gt;',
+    '&lt;/svg&gt;'
+  )
+
+  HTML(svg)
+}
+
+cohort_card &lt;- function(d, category) {
+
+  final &lt;- d[d$year == max(d$year), ]
+
+  div(
+    class = "group-card",
+
+    div(
+      class = "group-head",
+      div(
+        class = "group-title",
+        category
+      ),
+      div(
+        class = "group-n",
+        paste0("n = ", format(final$n, big.mark=","))
+      )
+    ),
+
+    div(
+      class = "plot-wrap",
+      cohort_svg(d)
+    ),
+
+    div(
+      class = "final-row",
+
+      div(
+        class = "final-item",
+        span(class="final-dot", style=paste0("background:",state_col["university"],";")),
+        span(class="final-label","University"),
+        strong(sprintf("%.1f%%",final$university))
+      ),
+
+      div(
+        class = "final-item",
+        span(class="final-dot", style=paste0("background:",state_col["outside"],";")),
+        span(class="final-label","Outside"),
+        strong(sprintf("%.1f%%",final$outside))
+      ),
+
+      div(
+        class = "final-item",
+        span(class="final-dot", style=paste0("background:",state_col["graduated"],";")),
+        span(class="final-label","Graduated"),
+        strong(sprintf("%.1f%%",final$graduated))
+      )
+    )
+  )
+}
+
+metrics_svg &lt;- function(m) {
+
+  cats &lt;- category_order[[unique(m$variable)]]
+  m &lt;- m[match(cats, m$category), ]
+
+  metrics &lt;- data.frame(
+    key = c("transfer","outside","returned","complex","graduated"),
+    label = c(
+      "Ever transferred",
+      "Ever outside university",
+      "Returned after an exit",
+      "2+ state changes",
+      "Graduated at final observation"
+    ),
+    stringsAsFactors = FALSE
+  )
+
+  W &lt;- 860
+  H &lt;- 355
+  left &lt;- 215
+  right &lt;- 55
+  top &lt;- 42
+  row_h &lt;- 57
+  max_x &lt;- 65
+
+  xmap &lt;- function(v) {
+    left + (v/max_x) * (W-left-right)
+  }
+
+  svg &lt;- paste0(
+    '&lt;svg viewBox="0 0 ',W,' ',H,
+    '" style="width:100%;height:auto;display:block;"&gt;'
+  )
+
+  # axis
+  for (p in c(0,20,40,60)) {
+    xx &lt;- xmap(p)
+    svg &lt;- paste0(
+      svg,
+      '&lt;line x1="',xx,'" y1="',top-11,
+      '" x2="',xx,'" y2="',H-20,
+      '" stroke="#eeeeee" stroke-width="1"/&gt;',
+      '&lt;text x="',xx,'" y="',H-5,
+      '" text-anchor="middle" font-size="9" fill="#999"&gt;',
+      p, '%&lt;/text&gt;'
+    )
+  }
+
+  # metric rows
+  for (r in seq_len(nrow(metrics))) {
+
+    cy &lt;- top + (r-1)*row_h
+
+    svg &lt;- paste0(
+      svg,
+      '&lt;text x="8" y="',cy+4,
+      '" font-size="11" font-weight="650" fill="#444"&gt;',
+      metrics$label[r], '&lt;/text&gt;',
+
+      '&lt;line x1="',left,'" y1="',cy,
+      '" x2="',xmap(max_x),'" y2="',cy,
+      '" stroke="#dddddd" stroke-width="2" stroke-linecap="round"/&gt;'
+    )
+
+    vals &lt;- m[[metrics$key[r]]]
+
+    if (length(vals) &gt; 1) {
+      svg &lt;- paste0(
+        svg,
+        '&lt;line x1="',min(xmap(vals)),'" y1="',cy,
+        '" x2="',max(xmap(vals)),'" y2="',cy,
+        '" stroke="#bdbdbd" stroke-width="4" stroke-linecap="round" opacity=".55"/&gt;'
+      )
+    }
+
+    offsets &lt;- if (length(vals)==2) c(-7,7) else c(-10,0,10)
+
+    for (i in seq_along(vals)) {
+
+      xx &lt;- xmap(vals[i])
+      yy &lt;- cy + offsets[i]
+
+      svg &lt;- paste0(
+        svg,
+        '&lt;circle cx="',xx,'" cy="',yy,
+        '" r="6.5" fill="',group_palette[i],
+        '" stroke="#fff" stroke-width="1.5"/&gt;',
+
+        '&lt;text x="',xx+10,'" y="',yy+4,
+        '" font-size="9.5" font-weight="700" fill="#555"&gt;',
+        sprintf("%.1f%%",vals[i]), '&lt;/text&gt;'
+      )
+    }
+  }
+
+  svg &lt;- paste0(svg, '&lt;/svg&gt;')
+  HTML(svg)
+}
+
+group_legend &lt;- function(variable) {
+
+  cats &lt;- category_order[[variable]]
+
+  div(
+    class = "group-legend",
+    lapply(
+      seq_along(cats),
+      function(i) {
+        div(
+          class = "legend-item",
+          span(
+            class = "legend-dot",
+            style = paste0("background:",group_palette[i],";")
+          ),
+          cats[i]
+        )
+      }
     )
   )
 }
@@ -385,11 +610,11 @@ ui &lt;- fluidPage(
           padding: 4px 8px 12px 8px;
         }
 
-        .intro-bar {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+        .topbar {
+          display: grid;
+          grid-template-columns: 1.35fr .75fr .95fr;
           gap: 18px;
+          align-items: center;
           padding: 10px 12px;
           border: 1px solid #e4e4e4;
           border-radius: 10px;
@@ -400,9 +625,9 @@ ui &lt;- fluidPage(
         .eyebrow {
           font-size: 9px;
           text-transform: uppercase;
-          letter-spacing: .07em;
-          color: #888;
+          letter-spacing: .075em;
           font-weight: 750;
+          color: #888;
           margin-bottom: 2px;
         }
 
@@ -410,96 +635,191 @@ ui &lt;- fluidPage(
           font-size: 12.5px;
           font-weight: 650;
           color: #333;
+          line-height: 1.3;
         }
 
-        .outcome-tabs .form-group {
+        .topbar .form-group {
           margin: 0;
         }
 
-        .outcome-tabs label.control-label {
+        .topbar label {
+          font-size: 10px;
+          color: #777;
+          font-weight: 650;
+          margin-bottom: 2px;
+        }
+
+        .topbar select {
+          font-size: 11px;
+        }
+
+        .view-tabs label.control-label {
           display: none;
         }
 
-        .outcome-tabs .radio-inline {
+        .view-tabs .radio-inline {
           margin: 0;
-          padding: 7px 15px 7px 25px;
+          padding: 7px 13px 7px 24px;
           border-top: 1px solid #ddd;
           border-bottom: 1px solid #ddd;
           border-right: 1px solid #ddd;
           background: #fff;
-          font-size: 11px;
+          font-size: 10.5px;
         }
 
-        .outcome-tabs .radio-inline:first-child {
+        .view-tabs .radio-inline:first-child {
           border-left: 1px solid #ddd;
           border-radius: 8px 0 0 8px;
         }
 
-        .outcome-tabs .radio-inline:last-child {
+        .view-tabs .radio-inline:last-child {
           border-radius: 0 8px 8px 0;
         }
 
-        .outcome-title {
-          font-size: 14px;
+        .section-head {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 16px;
+          margin: 2px 3px 8px 3px;
+        }
+
+        .section-title {
+          font-size: 15px;
           font-weight: 700;
           color: #333;
-          margin: 3px 3px 9px 3px;
+          margin-bottom: 2px;
         }
 
-        .contexts {
-          display: grid;
-          grid-template-columns: repeat(3, minmax(0,1fr));
+        .section-copy {
+          font-size: 10.5px;
+          color: #666;
+          line-height: 1.4;
+          max-width: 720px;
+        }
+
+        .state-legend,
+        .group-legend {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
           gap: 12px;
+          font-size: 9.5px;
+          color: #666;
         }
 
-        .context-card {
+        .legend-item {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+
+        .legend-swatch {
+          width: 10px;
+          height: 10px;
+          border-radius: 2px;
+          display: inline-block;
+        }
+
+        .legend-dot {
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          display: inline-block;
+        }
+
+        .group-grid {
+          display: grid;
+          gap: 12px;
+          align-items: stretch;
+        }
+
+        .group-card {
           border: 1px solid #e3e3e3;
           border-radius: 11px;
-          overflow: hidden;
           background: #fff;
+          overflow: hidden;
           min-width: 0;
         }
 
-        .context-head {
-          padding: 10px 12px 8px 12px;
-          border-bottom: 1px solid #eee;
+        .group-head {
+          display: flex;
+          justify-content: space-between;
+          gap: 8px;
+          align-items: baseline;
+          padding: 9px 11px 6px 11px;
+          border-bottom: 1px solid #eeeeee;
           background: #fcfcfc;
         }
 
-        .context-name {
-          font-size: 14px;
+        .group-title {
+          font-size: 13px;
           font-weight: 700;
           color: #333;
         }
 
-        .context-range {
-          font-size: 9.5px;
+        .group-n {
+          font-size: 9px;
           color: #888;
+        }
+
+        .plot-wrap {
+          padding: 3px 5px 0 5px;
+        }
+
+        .final-row {
+          display: grid;
+          grid-template-columns: repeat(3,1fr);
+          gap: 4px;
+          padding: 3px 8px 9px 8px;
+        }
+
+        .final-item {
+          border: 1px solid #eeeeee;
+          background: #fafafa;
+          border-radius: 7px;
+          padding: 5px 5px;
+          text-align: center;
+          min-width: 0;
+        }
+
+        .final-dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          display: inline-block;
+          margin-right: 3px;
+        }
+
+        .final-label {
+          font-size: 7.8px;
+          color: #777;
+        }
+
+        .final-item strong {
+          display: block;
+          font-size: 11px;
+          color: #333;
           margin-top: 1px;
         }
 
-        .context-body {
-          padding: 5px 7px 2px 7px;
-        }
-
         .reading {
-          margin-top: 11px;
-          display: grid;
-          grid-template-columns: 145px 1fr;
-          gap: 12px;
-          align-items: start;
+          margin-top: 10px;
           border: 1px solid #e5e5e5;
           border-radius: 10px;
-          padding: 9px 12px;
           background: #fafafa;
+          padding: 8px 11px;
+          display: grid;
+          grid-template-columns: 145px 1fr;
+          gap: 11px;
         }
 
         .reading-label {
           font-size: 9px;
           text-transform: uppercase;
           letter-spacing: .06em;
-          color: #888;
           font-weight: 750;
+          color: #888;
           padding-top: 2px;
         }
 
@@ -509,30 +829,60 @@ ui &lt;- fluidPage(
           color: #555;
         }
 
+        .dynamics-card {
+          border: 1px solid #e3e3e3;
+          border-radius: 11px;
+          background: #fff;
+          padding: 7px 9px 2px 9px;
+        }
+
+        .definition-row {
+          display: grid;
+          grid-template-columns: repeat(4,1fr);
+          gap: 7px;
+          margin-top: 9px;
+        }
+
+        .definition {
+          border-top: 1px solid #ededed;
+          padding-top: 6px;
+          font-size: 8.7px;
+          line-height: 1.35;
+          color: #777;
+        }
+
+        .definition strong {
+          color: #555;
+        }
+
         .source-note {
-          margin-top: 8px;
+          margin-top: 9px;
+          padding-top: 7px;
+          border-top: 1px solid #ededed;
           font-size: 9.2px;
           line-height: 1.42;
           color: #777;
         }
 
-        .source-note a {
-          color: inherit;
-          text-decoration: underline;
-        }
-
-        @media (max-width: 760px) {
-          .intro-bar {
-            flex-direction: column;
-            align-items: flex-start;
+        @media (max-width: 780px) {
+          .topbar {
+            grid-template-columns: 1fr;
           }
 
-          .contexts {
-            grid-template-columns: 1fr;
+          .section-head {
+            flex-direction: column;
+          }
+
+          .group-grid {
+            grid-template-columns: 1fr !important;
           }
 
           .reading {
             grid-template-columns: 1fr;
+          }
+
+          .definition-row {
+            grid-template-columns: 1fr 1fr;
           }
         }
       ")
@@ -543,44 +893,53 @@ ui &lt;- fluidPage(
     class = "app-wrap",
 
     div(
-      class = "intro-bar",
+      class = "topbar",
 
       div(
-        div(class = "eyebrow", "Four groups, one view"),
+        div(class="eyebrow","Longitudinal sequence analysis"),
         div(
-          class = "headline",
-          "Compare women and men — and Native and Non-native students — without changing the profile."
+          class="headline",
+          "Follow the cohort through time, then inspect where pathway complexity emerges."
         )
       ),
 
+      selectInput(
+        "compare_by",
+        "Compare by",
+        choices = c(
+          "Gender",
+          "Age at entry",
+          "Working status",
+          "Entry grade"
+        ),
+        selected = "Gender"
+      ),
+
       div(
-        class = "outcome-tabs",
+        class="view-tabs",
         radioButtons(
-          "outcome",
+          "view",
           label = NULL,
-          choices = c("Academic", "Vocational", "Dropout"),
-          selected = "Academic",
+          choices = c(
+            "Cohort over time" = "cohort",
+            "Pathway dynamics" = "dynamics"
+          ),
+          selected = "cohort",
           inline = TRUE
         )
       )
     ),
 
-    uiOutput("outcome_title"),
-
-    uiOutput("contexts"),
-
-    uiOutput("reading"),
+    uiOutput("main_view"),
 
     div(
       class = "source-note",
       HTML(
-        "&lt;strong&gt;How to read this:&lt;/strong&gt; each school-context panel has two rows, one for women and one for men. Within each row, the filled point is Native and the open point is Non-native. The horizontal distance between the two points is the migrant-background gap; comparing the two rows shows gender differences. All three panels use the same outcome-specific scale.&lt;br&gt;
-        &lt;strong&gt;Source:&lt;/strong&gt; Sánchez-Gelabert, A., Elias Andreu, M. &amp; Bouvier, N. (2024).
-        &lt;em&gt;Transition to post-compulsory education according to migrant background and gender in Catalonia:
-        Exploring the effect of non-native student concentration&lt;/em&gt;.
-        International Journal of Educational Research, 124, 102321.
-        &lt;a href='https://doi.org/10.1016/j.ijer.2024.102321' target='_blank'&gt;DOI&lt;/a&gt;.
-        Estimates are model-based associations and should not be interpreted as causal effects."
+        "&lt;strong&gt;Source:&lt;/strong&gt; Aggregated longitudinal analyses based on the dataset used in Sánchez-Gelabert (2020), extended here to six annual observations. Sequence analysis and visualisation follow the TraMineR framework (Gabadinho et al., 2011). All results are presented in aggregated form; no individual-level data are included.&lt;br&gt;&lt;br&gt;
+        
+        &lt;strong&gt;Related publication:&lt;/strong&gt; Sánchez-Gelabert, A. (2020). Non-traditional students, university trajectories, and higher education institutions: A comparative analysis of face-to-face and online universities. Studia Paedagogica, 25(4). https://doi.org/10.5817/SP2020-4-3&lt;br&gt;&lt;br&gt;
+        
+        &lt;strong&gt;Methodological reference&lt;/strong&gt;: Gabadinho, A., Ritschard, G., Müller, N. S., &amp; Studer, M. (2011). Analyzing and visualizing state sequences in R with TraMineR. Journal of Statistical Software, 40(4), 1–37."
       )
     )
   )
@@ -592,96 +951,162 @@ ui &lt;- fluidPage(
 
 server &lt;- function(input, output, session) {
 
-  output$outcome_title &lt;- renderUI({
-    div(
-      class = "outcome-title",
-      paste0(input$outcome, " transition")
-    )
-  })
+  output$main_view &lt;- renderUI({
 
-  output$contexts &lt;- renderUI({
+    req(input$compare_by)
 
-    panels &lt;- lapply(
-      c("Low","Medium","High"),
-      function(conc) {
+    cats &lt;- category_order[[input$compare_by]]
 
-        d &lt;- prob[
-          prob$concentration == conc,
-        ]
+    if (input$view == "cohort") {
 
-        cm &lt;- context_meta[
-          context_meta$concentration == conc,
-        ]
+      d &lt;- state_df[state_df$variable == input$compare_by, ]
+
+      cards &lt;- lapply(
+        cats,
+        function(cat) {
+          cohort_card(
+            d[d$category == cat, ],
+            cat
+          )
+        }
+      )
+
+      final &lt;- d[d$year == 6, ]
+
+      grad_vals &lt;- final$graduated[match(cats, final$category)]
+      out_vals &lt;- final$outside[match(cats, final$category)]
+
+      hi_grad &lt;- cats[which.max(grad_vals)]
+      lo_grad &lt;- cats[which.min(grad_vals)]
+      grad_gap &lt;- max(grad_vals) - min(grad_vals)
+
+      hi_out &lt;- cats[which.max(out_vals)]
+      lo_out &lt;- cats[which.min(out_vals)]
+      out_gap &lt;- max(out_vals) - min(out_vals)
+
+      tagList(
 
         div(
-          class = "context-card",
+          class = "section-head",
 
           div(
-            class = "context-head",
+            div(class="section-title","Cohort over time"),
             div(
-              class = "context-name",
-              paste0(conc, " concentration")
-            ),
-            div(
-              class = "context-range",
-              paste0(cm$range, " non-native students")
+              class="section-copy",
+              "Each panel follows the same cohort through six annual observations. Each vertical bar is one annual observation and sums to 100%. The coloured segments show the distribution of educational states over time, following the visual logic of a TraMineR state distribution plot."
             )
           ),
 
           div(
-            class = "context-body",
-            panel_svg(
-              d,
-              input$outcome
+            class="state-legend",
+            state_legend("university","University"),
+            state_legend("outside","Not in university"),
+            state_legend("graduated","Graduated")
+          )
+        ),
+
+        div(
+          class="group-grid",
+          style=paste0(
+            "grid-template-columns:repeat(",
+            length(cats),
+            ",minmax(0,1fr));"
+          ),
+          cards
+        ),
+
+        div(
+          class="reading",
+          div(class="reading-label","At final observation"),
+          div(
+            class="reading-text",
+            paste0(
+              hi_grad, " has the highest graduation share (",
+              sprintf("%.1f",max(grad_vals)), "%), compared with ",
+              lo_grad, " (", sprintf("%.1f",min(grad_vals)),
+              "%): a ", sprintf("%.1f",grad_gap),
+              "-point gap. The largest share outside university is observed for ",
+              hi_out, " (", sprintf("%.1f",max(out_vals)),
+              "%), versus ", lo_out, " (", sprintf("%.1f",min(out_vals)),
+              "%)."
             )
           )
         )
-      }
-    )
-
-    div(class = "contexts", panels)
-  })
-
-  output$reading &lt;- renderUI({
-
-    meta &lt;- outcome_meta[[input$outcome]]
-
-    get_gap &lt;- function(conc, gender) {
-      d &lt;- prob[
-        prob$concentration == conc &amp;
-        prob$gender == gender,
-      ]
-      100 * (
-        d[d$background == "Native", meta$key] -
-        d[d$background == "Non-native", meta$key]
       )
-    }
 
-    low_f &lt;- get_gap("Low","Female")
-    high_f &lt;- get_gap("High","Female")
-    low_m &lt;- get_gap("Low","Male")
-    high_m &lt;- get_gap("High","Male")
+    } else {
 
-    div(
-      class = "reading",
+      m &lt;- metrics_df[metrics_df$variable == input$compare_by, ]
 
-      div(
-        class = "reading-label",
-        "Migrant-background gap"
-      ),
+      returned_vals &lt;- m$returned[match(cats,m$category)]
+      trans_vals &lt;- m$transfer[match(cats,m$category)]
+      comp_vals &lt;- m$complex[match(cats,m$category)]
 
-      div(
-        class = "reading-text",
-        paste0(
-          "For women, the Native–Non-native gap changes from ",
-          sprintf("%.1f", abs(low_f)), " pp at low concentration to ",
-          sprintf("%.1f", abs(high_f)), " pp at high concentration. ",
-          "For men, it changes from ",
-          sprintf("%.1f", abs(low_m)), " to ",
-          sprintf("%.1f", abs(high_m)), " pp."
+      tagList(
+
+        div(
+          class="section-head",
+
+          div(
+            div(class="section-title","Pathway dynamics"),
+            div(
+              class="section-copy",
+              "Instead of looking only at the final outcome, this view compares events that occur during the trajectory: transfers, exits, returns and repeated state changes."
+            )
+          ),
+
+          group_legend(input$compare_by)
+        ),
+
+        div(
+          class="dynamics-card",
+          metrics_svg(m)
+        ),
+
+        div(
+          class="definition-row",
+
+          div(
+            class="definition",
+            HTML("&lt;strong&gt;Ever transferred&lt;/strong&gt;&lt;br&gt;At least one annual observation in the transfer state.")
+          ),
+
+          div(
+            class="definition",
+            HTML("&lt;strong&gt;Ever outside university&lt;/strong&gt;&lt;br&gt;At least one observed year outside university.")
+          ),
+
+          div(
+            class="definition",
+            HTML("&lt;strong&gt;Returned after an exit&lt;/strong&gt;&lt;br&gt;Re-enrolment after an observed year outside university.")
+          ),
+
+          div(
+            class="definition",
+            HTML("&lt;strong&gt;2+ state changes&lt;/strong&gt;&lt;br&gt;At least two changes between annual educational states.")
+          )
+        ),
+
+        div(
+          class="reading",
+          div(class="reading-label","Complexity signal"),
+          div(
+            class="reading-text",
+            paste0(
+              "The largest transfer share is observed for ",
+              cats[which.max(trans_vals)], " (",
+              sprintf("%.1f",max(trans_vals)), "%). ",
+              "The highest share with two or more state changes is ",
+              cats[which.max(comp_vals)], " (",
+              sprintf("%.1f",max(comp_vals)), "%). ",
+              "Returns after an observed exit are comparatively uncommon in every group, ranging from ",
+              sprintf("%.1f",min(returned_vals)), "% to ",
+              sprintf("%.1f",max(returned_vals)), "%."
+            )
+          )
         )
       )
-    )
+    }
   })
 }
 
