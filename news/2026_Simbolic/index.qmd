@@ -1,18 +1,21 @@
 ---
-title: "Revisiting cultural omnivorousness through symbolic boundaries in musical tastes"
-date: 2026-09-01
-description: "New publication: Symbolic boundaries and musical tastes in Spanish consumers: beyond cultural omnivorousness"
-categories: [Publication]
+title: "New article on symbolic boundaries and musical tastes"
+description: "A new article in Sociological Research Online examines relational structures of musical taste and the persistence of symbolic boundaries in Spain."
+date: 2026-10-16
+categories: [Publications, Cultural consumption]
 image: image.jpg
 ---
 
-Cultural omnivorousness is often understood in terms of the breadth and diversity of people’s tastes. Our results suggest, however, that having a broad musical repertoire does not necessarily imply an absence of boundaries between genres.
+Our new article, **“Symbolic boundaries and musical tastes in Spanish consumers: beyond cultural omnivorousness”**, co-authored with Marc Barbeta-Viñas, has been published in *Sociological Research Online*.
 
-Using data from 14,524 people in Spain, we find that even broad musical tastes coexist with clear exclusions between genres.
+Using data from the **Survey on Cultural Habits and Practices in Spain** (n = 14,524), the article applies **Correlational Class Analysis (CCA)** to identify relational structures of musical taste. The results point to four distinct configurations and show that broad or eclectic repertoires can coexist with selective exclusions and symbolic boundaries.
 
-Rather than a dominant omnivorous pattern, we find different taste structures characterized by varying degrees of breadth, specialization and exclusion.
-
-Forthcoming with Marc Barbeta-Viñas: Symbolic boundaries and musical tastes in Spanish consumers: beyond cultural omnivorousness.
+The analysis also examines how these taste structures are socially patterned by age, education, gender and cultural practices.
 
 
-[DOI]()· [Free access]()
+### Reference
+
+Sánchez-Gelabert, A., & Barbeta-Viñas, M. (2026). Symbolic boundaries and musical tastes in Spanish consumers: Beyond cultural omnivorousness. *Sociological Research Online*, 0(0). https://doi.org/10.1177/13607804261489903
+
+[DOI](https://doi.org/10.1177/13607804261489903) · [Accepted manuscript](/files/symbolic-boundaries-aam.pdf)
+

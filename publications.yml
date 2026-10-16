@@ -517,17 +517,18 @@
   date: '2026-01-01'
   year: 2026
   type: Journal article
-  journal: 'Sociological Research Online'
+  journal: Sociological Research Online
   volume: ''
   issue: ''
   pages: ''
-  doi: ''
-  doi_url: ''
-  url: ''
+  doi: 10.1177/13607804261489903
+  doi_url: https://doi.org/10.1177/13607804261489903
+  url: https://journals.sagepub.com/doi/10.1177/13607804261489903
   bibtex_key: sanchezgelabert2026symbolic
-  status: Accepted
+  status: Published
   free_access: ''
-  manuscript: ''
+  manuscript: /files/symbolic-boundaries-aam.pdf
+  preprint: ''
   categories: []
 - title: La selectividad invisible. La desigualdad en el acceso a la universidad
   author: Helena Troiano & Albert Sánchez-Gelabert
