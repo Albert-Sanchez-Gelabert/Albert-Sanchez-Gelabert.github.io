@@ -1,0 +1,35 @@
+/* Educational Inequality Lab home - isolated from the site's global styles. */
+#eil-home {--ink:#19323a;--muted:#61747a;--green:#1d7569;--stroke:#dbe4df;--paper:#f8f9f6; color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Arial,sans-serif;line-height:1.55;padding:12px 0 70px;font-size:16px}
+#eil-home *{box-sizing:border-box}
+#eil-home .home-shell{max-width:940px;margin:0 auto;padding:0 22px}
+#eil-home .brandbar{display:flex;justify-content:space-between;align-items:center;gap:14px;border-bottom:1px solid var(--stroke);padding:12px 0 21px;margin-bottom:55px}
+#eil-home .brand{display:flex;align-items:center;gap:11px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+#eil-home .brandmark{border-radius:8px;display:grid;place-items:center;background:var(--green);color:white;font:20px Georgia,serif;width:31px;height:31px}
+#eil-home .descriptor{color:var(--muted);font-size:12px}
+#eil-home .eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--green)}
+#eil-home h1,#eil-home h2{font-family:Georgia,'Times New Roman',serif;font-weight:500;letter-spacing:-.045em;color:var(--ink)}
+#eil-home h1{font-size:clamp(43px,7vw,82px);line-height:1.05;margin:15px 0 20px}
+#eil-home h1 em{color:var(--green);font-weight:400}
+#eil-home .intro{max-width:710px;font-size:clamp(17px,2.1vw,21px);line-height:1.65;color:#4c6369;margin:0 0 27px}
+#eil-home .hero{padding-bottom:59px;border-bottom:1px solid var(--stroke)}
+#eil-home .hero-actions{display:flex;gap:15px;align-items:center;flex-wrap:wrap}
+#eil-home .button{background:var(--green);padding:14px 22px;color:white;border-radius:9px;font-weight:750;text-decoration:none;display:inline-flex;align-items:center;gap:12px}
+#eil-home .button:hover{background:#145b51;color:white}
+#eil-home a:focus-visible{outline:3px solid #d98757;outline-offset:3px}
+#eil-home .plain{color:var(--green);font-size:14px;font-weight:650;text-decoration:none}
+#eil-home .hero-note{font-size:12px;color:var(--muted);margin-top:18px}
+#eil-home .section-top{display:flex;justify-content:space-between;gap:22px;align-items:baseline;margin:47px 0 16px}
+#eil-home h2{font-size:clamp(29px,4vw,41px);line-height:1.2;margin:6px 0 0}
+#eil-home .muted{color:var(--muted);font-size:13px}
+#eil-home .chapters{display:grid;gap:12px;padding:0;margin:0;list-style:none}
+#eil-home .chapter{border:1px solid var(--stroke);border-radius:14px;background:white;padding:21px 24px;display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:19px}
+#eil-home .chapter.available{background:#f0f8f4;border-color:#bad8c8}
+#eil-home .number{color:var(--green);font-weight:800;font-size:15px}
+#eil-home .chapter h3{font-size:17px;margin:0 0 3px;color:var(--ink);font-weight:750}
+#eil-home .chapter p{font-size:13px;color:var(--muted);margin:0}
+#eil-home .chapter .status{font-size:12px;font-weight:750;color:var(--green);white-space:nowrap}
+#eil-home .chapter:not(.available) .status{color:#8c9b9a;font-weight:600}
+#eil-home .chapter .titlelink{color:var(--ink);text-decoration:none}
+#eil-home .chapter .titlelink:hover{text-decoration:underline}
+#eil-home .foot{border-top:1px solid var(--stroke);margin-top:36px;padding-top:18px;color:var(--muted);font-size:12px;line-height:1.8}
+@media(max-width:600px){#eil-home .home-shell{padding:0 15px}#eil-home .brandbar{margin-bottom:34px}#eil-home .descriptor{max-width:130px;text-align:right}#eil-home .chapter{grid-template-columns:29px minmax(0,1fr);padding:17px;gap:9px}#eil-home .chapter .status{grid-column:2}#eil-home .section-top{display:block}}

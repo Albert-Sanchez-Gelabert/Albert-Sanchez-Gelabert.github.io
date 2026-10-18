@@ -1,0 +1,227 @@
+/* Educational Inequality Lab · Chapter 01
+   Scoped to #eil-root to coexist with an existing Quarto site. */
+#eil-root {
+  --eil-ink: #19323a;
+  --eil-muted: #61747a;
+  --eil-green: #1d7569;
+  --eil-green-2: #3d9487;
+  --eil-green-light: #e2f1eb;
+  --eil-copper: #b96b44;
+  --eil-copper-light: #fff1e8;
+  --eil-paper: #f8f9f6;
+  --eil-stroke: #dbe4df;
+  --eil-shadow: 0 14px 36px rgba(15, 58, 55, .065);
+  color: var(--eil-ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  line-height: 1.55;
+  padding: 10px 0 72px;
+  font-size: 16px;
+}
+#eil-root *, #eil-root *::before, #eil-root *::after { box-sizing: border-box; }
+#eil-root button, #eil-root input { font: inherit; }
+#eil-root button { cursor: pointer; }
+#eil-root [hidden] { display: none !important; }
+#eil-root a { color: var(--eil-green); text-underline-offset: 3px; }
+#eil-root button:focus-visible, #eil-root a:focus-visible, #eil-root input:focus-visible + .eil-choice-face {
+  outline: 3px solid #d98757; outline-offset: 4px;
+}
+#eil-root .eil-shell { max-width: 1190px; margin: auto; padding: 0 22px; }
+#eil-root .eil-masthead { display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--eil-stroke); padding: 13px 0 19px; margin-bottom: 28px; }
+#eil-root .eil-brand { display: flex; align-items: center; gap: 12px; font-size: 12px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+#eil-root .eil-brand-mark { width: 30px; height: 30px; border-radius: 9px; background: var(--eil-green); color: white; display: grid; place-items: center; font-family: Georgia, serif; font-size: 18px; font-weight: normal; letter-spacing: 0; }
+#eil-root .eil-masthead-note { font-size: 12px; color: var(--eil-muted); white-space: nowrap; }
+#eil-root .eil-layout { display: grid; grid-template-columns: 246px minmax(0, 1fr); gap: clamp(26px, 4.5vw, 68px); align-items: start; }
+#eil-root .eil-rail { position: sticky; top: 22px; padding-top: 20px; }
+#eil-root .eil-eyebrow { display: block; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; font-weight: 800; color: var(--eil-green); }
+#eil-root .eil-rail-title { font-family: Georgia, 'Times New Roman', serif; font-size: 28px; letter-spacing: -.035em; line-height: 1.08; margin: 13px 0 14px; }
+#eil-root .eil-rail-description { color: var(--eil-muted); font-size: 13px; line-height: 1.65; margin: 0 0 34px; }
+#eil-root .eil-chapter-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 2px; }
+#eil-root .eil-chapter-list li { display: grid; grid-template-columns: 31px 1fr; align-items: center; padding: 11px 8px; gap: 7px; border-left: 2px solid transparent; }
+#eil-root .eil-chapter-list li.is-active { background: var(--eil-green-light); border-left-color: var(--eil-green); border-radius: 0 8px 8px 0; }
+#eil-root .eil-chapter-number { font-size: 12px; font-weight: 800; color: var(--eil-green); }
+#eil-root .eil-chapter-label { font-size: 12px; font-weight: 650; line-height: 1.35; }
+#eil-root .eil-chapter-list li.is-future .eil-chapter-label { color: #8b9999; font-weight: 500; }
+#eil-root .eil-chapter-list li.is-future .eil-chapter-number { color: #a3b0aa; }
+#eil-root .eil-rail-foot { margin-top: 24px; border-top: 1px solid var(--eil-stroke); padding-top: 15px; font-size: 12px; color: var(--eil-muted); }
+#eil-root .eil-stage { min-width: 0; }
+#eil-root .eil-progress { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 4px 0 28px; }
+#eil-root .eil-progress-name { font-size: 11px; text-transform: uppercase; font-weight: 800; letter-spacing: .10em; color: var(--eil-muted); }
+#eil-root .eil-dots { display: flex; gap: 6px; margin-left: auto; }
+#eil-root .eil-dot { background: #e4eae6; width: 28px; height: 5px; border-radius: 20px; }
+#eil-root .eil-dot.done { background: var(--eil-green); }
+#eil-root .eil-dot.current { background: #b3cfc5; }
+#eil-root .eil-step-count { color: var(--eil-muted); font-size: 12px; font-variant-numeric: tabular-nums; min-width: 39px; text-align: right; }
+#eil-root .eil-scene { animation: eil-appear .38s ease-out both; }
+@keyframes eil-appear { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
+#eil-root .eil-scene h1, #eil-root .eil-scene h2, #eil-root .eil-scene h3 { color: var(--eil-ink); }
+#eil-root .eil-scene h1, #eil-root .eil-scene h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; letter-spacing: -.045em; line-height: 1.11; }
+#eil-root .eil-scene h1 { font-size: clamp(42px, 5.1vw, 67px); max-width: 770px; margin: 13px 0 22px; }
+#eil-root .eil-scene h2 { font-size: clamp(32px, 3.8vw, 49px); max-width: 770px; margin: 13px 0 20px; }
+#eil-root .eil-deck { max-width: 670px; font-size: clamp(16px, 1.7vw, 20px); line-height: 1.62; color: #4c6369; margin: 0 0 28px; }
+#eil-root .eil-emphasis { color: var(--eil-green); }
+#eil-root .eil-hero-art { margin: 24px 0 29px; padding: 8px 24px; border: 1px solid var(--eil-stroke); border-radius: 16px; background: linear-gradient(125deg, #e6f2ed 2%, #f8f8f4 65%, #f8ede3 100%); overflow: hidden; }
+#eil-root .eil-hero-art svg { display: block; width: 100%; height: auto; max-height: 240px; }
+#eil-root .eil-hero-art text { font-size: 12px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; fill: #3d605e; }
+#eil-root .eil-statline { display: flex; flex-wrap: wrap; gap: 10px 24px; padding: 0 0 26px; font-size: 12px; color: var(--eil-muted); }
+#eil-root .eil-statline strong { color: var(--eil-ink); }
+#eil-root .eil-card { border: 1px solid var(--eil-stroke); background: white; padding: clamp(20px, 3vw, 30px); border-radius: 16px; margin: 24px 0 25px; box-shadow: var(--eil-shadow); }
+#eil-root .eil-card.soft { background: var(--eil-paper); box-shadow: none; }
+#eil-root .eil-card-heading { font-weight: 800; font-size: 13px; margin-bottom: 6px; color: var(--eil-ink); }
+#eil-root .eil-mini { color: var(--eil-muted); font-size: 13px; line-height: 1.6; }
+#eil-root .eil-options { display: grid; gap: 10px; margin: 21px 0 4px; }
+#eil-root .eil-option { position: relative; display: block; cursor: pointer; }
+#eil-root .eil-option input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+#eil-root .eil-choice-face { display: flex; gap: 12px; align-items: center; border: 1px solid #dbe4df; border-radius: 10px; background: #fff; padding: 16px 15px; font-weight: 600; font-size: 14px; transition: border-color .15s, background .15s, transform .15s; }
+#eil-root .eil-choice-circle { width: 20px; height: 20px; border: 1.5px solid #aebeb5; border-radius: 50%; flex: 0 0 20px; display: grid; place-items: center; }
+#eil-root .eil-option input:checked + .eil-choice-face { border-color: var(--eil-green); background: #f1f8f4; }
+#eil-root .eil-option input:checked + .eil-choice-face .eil-choice-circle { border-color: var(--eil-green); }
+#eil-root .eil-option input:checked + .eil-choice-face .eil-choice-circle::after { content: ''; width: 10px; height: 10px; background: var(--eil-green); border-radius: 50%; }
+#eil-root .eil-option:hover .eil-choice-face { border-color: var(--eil-green-2); }
+#eil-root .eil-steps-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 27px; }
+#eil-root .eil-btn { appearance: none; border: 0; border-radius: 8px; padding: 13px 19px; font-weight: 750; font-size: 14px; transition: transform .18s, background .18s; text-decoration: none; display: inline-flex; justify-content: center; align-items: center; gap: 12px; line-height: 1.35; }
+#eil-root .eil-btn:hover { transform: translateY(-1px); }
+#eil-root .eil-btn.primary { background: var(--eil-green); color: #fff; }
+#eil-root .eil-btn.primary:hover { background: #145b51; }
+#eil-root .eil-btn.secondary { background: #e9f0eb; color: var(--eil-ink); }
+#eil-root .eil-btn.text { padding: 12px 7px; background: transparent; color: var(--eil-muted); }
+#eil-root .eil-btn[disabled] { cursor: not-allowed; opacity: .52; transform: none; }
+#eil-root .eil-btn svg { width: 15px; height: 15px; }
+#eil-root .eil-segment { background: #edf2ef; display: inline-flex; border-radius: 9px; padding: 4px; gap: 4px; }
+#eil-root .eil-segment button { border-radius: 6px; border: 0; padding: 9px 17px; color: var(--eil-muted); background: transparent; font-size: 13px; font-weight: 700; }
+#eil-root .eil-segment button.is-selected { background: white; color: var(--eil-green); box-shadow: 0 1px 5px rgba(20,60,45,.10); }
+#eil-root .eil-result-kicker { color: var(--eil-muted); letter-spacing: .1em; font-size: 11px; font-weight: 800; text-transform: uppercase; margin-bottom: 12px; }
+#eil-root .eil-gap-chart { display: grid; gap: 24px; margin: 23px 0; }
+#eil-root .eil-gap-row { display: grid; grid-template-columns: 118px minmax(0, 1fr) 76px; gap: 15px; align-items: center; }
+#eil-root .eil-gap-label { font-size: 14px; font-weight: 650; }
+#eil-root .eil-gap-label small { display: block; font-size: 11px; color: var(--eil-muted); font-weight: 400; }
+#eil-root .eil-gap-bar { background: #e8efea; border-radius: 12px; height: 17px; position: relative; }
+#eil-root .eil-gap-fill { display: block; height: 100%; background: linear-gradient(90deg, #70b5a5, #197569); border-radius: 12px; width: 0; transition: width .95s cubic-bezier(.21,.74,.28,.99); }
+#eil-root .eil-gap-row.max .eil-gap-fill { background: linear-gradient(90deg, #d2a183, #b96b44); }
+#eil-root .eil-gap-value { text-align: right; font-variant-numeric: tabular-nums; font-weight: 750; color: var(--eil-ink); font-size: 19px; }
+#eil-root .eil-gap-value small { font-size: 10px; color: var(--eil-muted); font-weight: 500; }
+#eil-root .eil-feedback { background: var(--eil-copper-light); border-left: 3px solid var(--eil-copper); padding: 15px 18px; border-radius: 0 8px 8px 0; font-size: 14px; line-height: 1.65; margin-top: 23px; }
+#eil-root .eil-feedback p { margin: 4px 0 0; }
+#eil-root .eil-reveal-wrap { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
+#eil-root .eil-key { display: flex; flex-wrap: wrap; align-items: center; gap: 17px; font-size: 12px; color: var(--eil-muted); margin: 15px 0 24px; }
+#eil-root .eil-key-item { display: flex; align-items: center; gap: 8px; }
+#eil-root .eil-key-mark { width: 12px; height: 12px; border-radius: 50%; background: var(--eil-green); }
+#eil-root .eil-key-mark.open { border: 2px solid var(--eil-copper); background: #fff; }
+#eil-root .eil-level-chart { display: grid; gap: 15px; }
+#eil-root .eil-level-row { border-bottom: 1px solid #edf0ed; padding: 0 0 16px; }
+#eil-root .eil-level-row:last-child { border-bottom: 0; padding-bottom: 0; }
+#eil-root .eil-level-head { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 7px; font-size: 13px; font-weight: 750; }
+#eil-root .eil-level-head small { font-weight: 500; color: var(--eil-muted); }
+#eil-root .eil-tick-row { display: grid; grid-template-columns: 92px minmax(0, 1fr) 56px; align-items: center; gap: 12px; margin-top: 8px; }
+#eil-root .eil-tick-label { font-size: 12px; color: var(--eil-muted); }
+#eil-root .eil-tick-track { height: 10px; border-radius: 6px; background: #eef2ed; overflow: hidden; }
+#eil-root .eil-tick-fill { height: 100%; border-radius: 6px; width: 0; background: var(--eil-green); transition: width 1s cubic-bezier(.21,.74,.28,.99); }
+#eil-root .eil-tick-fill.non { background: var(--eil-copper); }
+#eil-root .eil-tick-value { font-variant-numeric: tabular-nums; text-align: right; font-weight: 750; font-size: 13px; }
+#eil-root .eil-two-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 19px; }
+#eil-root .eil-fact { border: 1px solid var(--eil-stroke); background: #f8faf8; border-radius: 10px; padding: 15px; }
+#eil-root .eil-fact .eil-fact-number { font-size: 25px; font-weight: 800; letter-spacing: -.03em; margin: 4px 0; font-variant-numeric: tabular-nums; }
+#eil-root .eil-fact .eil-fact-label { color: var(--eil-muted); font-size: 12px; }
+#eil-root .eil-discovery { background: #e9f2ec; border: 1px solid #cde4d6; padding: clamp(20px, 3vw, 31px); border-radius: 13px; margin: 22px 0 25px; }
+#eil-root .eil-discovery .eil-big { font: normal clamp(23px, 3vw, 34px)/1.25 Georgia, serif; letter-spacing: -.03em; margin: 9px 0 13px; max-width: 640px; }
+#eil-root .eil-discovery p { color: #3a5956; margin: 0; font-size: 14px; line-height: 1.72; }
+#eil-root .eil-outro-card { display: flex; align-items: flex-start; gap: 18px; padding: 20px; border: 1px solid var(--eil-stroke); border-radius: 12px; background: var(--eil-paper); margin-top: 29px; }
+#eil-root .eil-outro-mark { background: var(--eil-green-light); color: var(--eil-green); width: 44px; height: 44px; border-radius: 50%; flex: 0 0 44px; display: grid; place-items: center; font-size: 22px; }
+#eil-root .eil-outro-card p { margin: 7px 0 0; font-size: 13px; color: var(--eil-muted); }
+#eil-root .eil-footer { margin: 35px 0 0; padding-top: 17px; border-top: 1px solid var(--eil-stroke); font-size: 11.5px; color: var(--eil-muted); line-height: 1.7; }
+#eil-root .eil-source-links { display: flex; flex-wrap: wrap; gap: 7px 22px; margin-top: 14px; }
+#eil-root .eil-next-status { font-size: 12px; font-weight: 750; color: var(--eil-green); margin-top: 4px; }
+#eil-root .eil-note { background: #f2f5f1; border-radius: 8px; border: 1px solid #dde8de; padding: 12px 15px; font-size: 12px; color: #596d69; line-height: 1.6; margin-top: 19px; }
+#eil-root .eil-results-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 20px; }
+@media (max-width: 920px) {
+  #eil-root .eil-layout { grid-template-columns: 1fr; gap: 12px; }
+  #eil-root .eil-rail { position: static; padding: 0; }
+  #eil-root .eil-rail-title, #eil-root .eil-rail-description, #eil-root .eil-chapter-list { display: none; }
+  #eil-root .eil-rail-foot { margin: 0 0 15px; border-top: 0; padding: 0; }
+  #eil-root .eil-progress { margin-top: 8px; }
+}
+@media (max-width: 600px) {
+  #eil-root .eil-shell { padding: 0 15px; }
+  #eil-root .eil-masthead { align-items: flex-start; }
+  #eil-root .eil-masthead-note { white-space: normal; text-align: right; }
+  #eil-root .eil-hero-art { padding: 0 4px; }
+  #eil-root .eil-card { padding: 17px; }
+  #eil-root .eil-gap-row { grid-template-columns: 93px minmax(0,1fr) 60px; gap: 8px; }
+  #eil-root .eil-gap-label { font-size: 12px; }
+  #eil-root .eil-gap-value { font-size: 16px; }
+  #eil-root .eil-two-facts { grid-template-columns: 1fr; }
+  #eil-root .eil-progress-name { font-size: 10px; }
+  #eil-root .eil-dot { width: 18px; }
+  #eil-root .eil-btn { width: 100%; }
+  #eil-root .eil-steps-actions { gap: 6px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #eil-root *, #eil-root *::before, #eil-root *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* v2: chapter-only layout; The Journey now lives on its own landing page. */
+/* v3: wider chapter layout */
+#eil-root .eil-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+#eil-root .eil-layout {
+  display: block;
+}
+
+#eil-root .eil-stage {
+  width: 100%;
+  max-width: 1120px;
+  min-width: 0;
+}
+
+/* keep the text readable, but allow cards and charts to breathe */
+#eil-root .eil-breadcrumb,
+#eil-root .eil-progress,
+#eil-root .eil-scene h1,
+#eil-root .eil-scene h2,
+#eil-root .eil-scene .eil-deck,
+#eil-root .eil-statline,
+#eil-root .eil-mini {
+  max-width: 760px;
+}
+
+#eil-root .eil-card,
+#eil-root .eil-hero-art,
+#eil-root .eil-discovery,
+#eil-root .eil-outro-card,
+#eil-root .eil-footer {
+  max-width: 980px;
+}
+
+@media (max-width: 600px) {
+  #eil-root .eil-shell {
+    padding: 0 16px;
+  }
+
+  #eil-root .eil-card,
+  #eil-root .eil-hero-art,
+  #eil-root .eil-discovery,
+  #eil-root .eil-outro-card,
+  #eil-root .eil-footer {
+    max-width: 100%;
+  }
+}
+
+#eil-root .eil-brand { text-decoration: none; color: var(--eil-ink); }
+#eil-root .eil-brand:hover { color: var(--eil-green); }
+#eil-root .eil-breadcrumb {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  margin: 1px 0 29px; font-size: 12px; font-weight: 650; color: var(--eil-muted);
+}
+#eil-root .eil-breadcrumb a { color: var(--eil-green); text-decoration: none; }
+#eil-root .eil-breadcrumb a:hover { text-decoration: underline; }
+#eil-root .eil-progress { padding: 16px 0; margin: 0 0 24px; border-top: 1px solid var(--eil-stroke); border-bottom: 1px solid var(--eil-stroke); }
+#eil-root .eil-scene h1 { font-size: clamp(39px, 5.2vw, 66px); }
+@media (max-width: 600px) {
+ #eil-root .eil-shell { padding: 0 16px; }
+ #eil-root .eil-masthead { margin-bottom: 23px; }
+ #eil-root .eil-masthead-note { font-size: 11px; }
+ #eil-root .eil-progress { margin-bottom: 20px; }
+}
