@@ -1,0 +1,88 @@
+---
+pagetitle: "Educational Inequality Lab | Beyond merit"
+description: "Five interactive sociological stories about how educational inequalities emerge, persist and change across students' trajectories."
+format:
+  html:
+    page-layout: full
+    toc: false
+    css: lab-home.css
+---
+
+```{=html}
+<div id="eil-home">
+  <div class="home-shell">
+    <header class="brandbar">
+      <div class="brand"><span class="brandmark" aria-hidden="true">≋</span> Educational Inequality Lab</div>
+      <span class="descriptor">Interactive sociology · Catalonia</span>
+    </header>
+
+    <section class="hero">
+      <span class="eyebrow">A journey through education and inequality</span>
+      <h1>Beyond <em>merit.</em></h1>
+      <p class="intro">Educational inequality does not end with a single decision. Across five guided stories, explore how school contexts, life circumstances, family resources, academic trajectories and institutional opportunities shape students' educational futures.</p>
+      <div class="hero-actions">
+        <a class="button" href="chapter-1/index.html">Start with Chapter 1 <span aria-hidden="true">→</span></a>
+        <a class="plain" href="#journey-title">Choose a chapter ↓</a>
+      </div>
+      <p class="hero-note">Five standalone discoveries · Read them in order or choose your own route · No account required</p>
+    </section>
+
+    <section aria-labelledby="journey-title">
+      <div class="section-top">
+        <div>
+          <span class="eyebrow">The journey</span>
+          <h2 id="journey-title">Five questions. One broader argument.</h2>
+        </div>
+        <span class="muted">All five chapters available</span>
+      </div>
+      <ol class="chapters">
+        <li class="chapter available">
+          <span class="number">01</span>
+          <div>
+            <h3><a class="titlelink" href="chapter-1/index.html">Does school context matter?</a></h3>
+            <p>A smaller gap between groups does not always mean better educational opportunities.</p>
+          </div>
+          <a class="status" href="chapter-1/index.html" aria-label="Explore chapter 1">Explore →</a>
+        </li>
+        <li class="chapter available">
+          <span class="number">02</span>
+          <div>
+            <h3><a class="titlelink" href="chapter-2/index.html">What happens when university meets the rest of life?</a></h3>
+            <p>Why age, work and life circumstances matter, even for students who perform well.</p>
+          </div>
+          <a class="status" href="chapter-2/index.html" aria-label="Explore chapter 2">Explore →</a>
+        </li>
+        <li class="chapter available">
+          <span class="number">03</span>
+          <div>
+            <h3><a class="titlelink" href="chapter-3/index.html">Same grades, different futures?</a></h3>
+            <p>When results are poor, family background can shape who changes course and who leaves.</p>
+          </div>
+          <a class="status" href="chapter-3/index.html" aria-label="Explore chapter 3">Explore →</a>
+        </li>
+        <li class="chapter available">
+          <span class="number">04</span>
+          <div>
+            <h3><a class="titlelink" href="chapter-4/index.html">Is academic success a straight line?</a></h3>
+            <p>A slow start can lead to graduation, while a promising start can take another turn.</p>
+          </div>
+          <a class="status" href="chapter-4/index.html" aria-label="Explore chapter 4">Explore →</a>
+        </li>
+        <li class="chapter available">
+          <span class="number">05</span>
+          <div>
+            <h3><a class="titlelink" href="chapter-5/index.html">Who really benefits from flexibility?</a></h3>
+            <p>More flexible ways to study do not necessarily mean equal chances of graduating.</p>
+          </div>
+          <a class="status" href="chapter-5/index.html" aria-label="Explore chapter 5">Explore →</a>
+        </li>
+      </ol>
+    </section>
+
+    <footer class="foot">
+      Each chapter draws on published research. These are five connected sociological stories, not a single longitudinal dataset.
+      <a href="../">Explore the research tools ↗</a>
+    </footer>
+  </div>
+</div>
+```

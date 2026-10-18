@@ -1,0 +1,127 @@
+---
+pagetitle: "Is academic success a straight line? | Educational Inequality Lab"
+description: "A guided sociological discovery about university progression, recovery and the time it takes to graduate."
+format:
+  html:
+    page-layout: full
+    toc: false
+    css: lab.css
+---
+
+```{=html}
+<div id="eil4-root">
+  <div class="eil4-shell">
+    <header class="eil4-masthead">
+      <a class="eil4-brand" href="../index.html"><span class="eil4-brand-mark" aria-hidden="true">≋</span><span>Educational Inequality Lab</span></a>
+      <span class="eil4-masthead-note">Interactive sociology · Catalonia</span>
+    </header>
+    <nav class="eil4-breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">← All chapters</a><span aria-hidden="true">/</span><strong>04 · University pathways</strong>
+      <span class="eil4-breadcrumb-trail">Beyond merit. / Chapter 04</span>
+    </nav>
+    <main>
+      <div class="eil4-progress" aria-label="Chapter progress">
+        <span data-progress-title>The expected path</span>
+        <span class="eil4-progress-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+        <span data-progress-number>01 / 05</span>
+      </div>
+
+      <section class="eil4-screen" data-screen="0" aria-labelledby="eil4-heading">
+        <p class="eil4-eyebrow">01 / An expectation</p>
+        <h1 id="eil4-heading">Is academic success <em>a straight line?</em></h1>
+        <p class="eil4-deck">We often picture university as a predictable journey: enter, pass each year, graduate.</p>
+        <div class="eil4-path" aria-label="A conventional four-year route through university">
+          <div><small>START</small><strong>Enter</strong></div><span aria-hidden="true">→</span>
+          <div><small>YEAR 1</small><strong>Progress</strong></div><span aria-hidden="true">→</span>
+          <div><small>YEAR 2–3</small><strong>Progress</strong></div><span aria-hidden="true">→</span>
+          <div class="eil4-path-final"><small>FINISH</small><strong>Degree</strong></div>
+        </div>
+        <p class="eil4-prose">But academic progress is not a single event. Students advance, struggle, recover, slow down or stop. <strong>The order in which these things happen matters.</strong></p>
+        <div class="eil4-bridge"><strong>What changes if we follow students over time, instead of only looking at whether they graduate?</strong><p>We followed the progression of 30,392 university entrants in Catalonia across seven academic years.</p></div>
+        <div class="eil4-actions"><button class="eil4-button" type="button" data-go="1">Follow their journeys <span aria-hidden="true">→</span></button></div>
+      </section>
+
+      <section class="eil4-screen" data-screen="1" aria-labelledby="eil4-recovery-title" hidden>
+        <p class="eil4-eyebrow">02 / The first discovery</p>
+        <h2 id="eil4-recovery-title">There is more than one way <em>to earn a degree.</em></h2>
+        <p class="eil4-prose">The most common pattern is straightforward: consistently high performance. But it is not the only route that leads to graduation.</p>
+        <div class="eil4-chart-card" data-figure="recovery">
+          <div class="eil4-chart-head"><strong>Academic performance across seven years</strong><span>Typical trajectory patterns</span></div>
+          <svg class="eil4-chart" data-chart="recovery" viewBox="0 0 780 314" role="img" aria-label="Schematic chart of annual performance: stable high achievement, later revealing a gradually improving trajectory"></svg>
+          <div class="eil4-curve-legend"><span><i class="eil4-swatch stable"></i> Consistently high · <b>43.7%</b> of entrants</span><span data-legend="recovery" hidden><i class="eil4-swatch improve"></i> Progressively improving · <b>27.0%</b> of entrants</span></div>
+          <p class="eil4-chart-note">Illustrative shapes based on Figure 1 of the published study; exact outcome percentages below come from Table 4. These are modelled trajectory types, not individual student records.</p>
+        </div>
+        <div class="eil4-reveal-box" data-before="recovery">
+          <strong>Must you perform near perfectly from the beginning to graduate?</strong>
+          <p>Look at what happens when we reveal another common successful pathway.</p>
+          <button class="eil4-button" type="button" data-reveal="recovery">Reveal another successful route <span aria-hidden="true">→</span></button>
+        </div>
+        <div class="eil4-after" data-after="recovery" hidden aria-live="polite">
+          <h3>A different journey. Still a degree.</h3>
+          <p>The improving group starts below the high-stable group and gradually catches up. <strong>94.9% of this group graduated within the seven-year observation period</strong> — but graduation took longer for many.</p>
+          <div class="eil4-stats-two"><div><small>HIGH-STABLE TRAJECTORY</small><strong>92.9%</strong><span>graduate on time</span></div><div><small>UPWARD TRAJECTORY</small><strong>56.6%</strong><span>graduate on time</span><em>38.3% graduate later</em></div></div>
+          <p class="eil4-mini-insight">The final diploma does not tell us <em>how long the journey took.</em></p>
+        </div>
+        <div class="eil4-actions eil4-actions-space"><button class="eil4-back" type="button" data-go="0">← Previous</button><button class="eil4-button" type="button" data-go="2" data-next="recovery" hidden>But can a strong start still go wrong? <span aria-hidden="true">→</span></button></div>
+      </section>
+
+      <section class="eil4-screen" data-screen="2" aria-labelledby="eil4-late-title" hidden>
+        <p class="eil4-eyebrow">03 / A second surprise</p>
+        <h2 id="eil4-late-title">A strong start does not <em>guarantee a straight ending.</em></h2>
+        <p class="eil4-prose">One smaller group maintains relatively high academic performance for several years. Looking only at the beginning of their studies, we might expect them to finish.</p>
+        <div class="eil4-chart-card" data-figure="late">
+          <div class="eil4-chart-head"><strong>Follow one trajectory beyond year four</strong><span>6.1% of entrants · Model-estimated share</span></div>
+          <svg class="eil4-chart" data-chart="late" viewBox="0 0 780 314" role="img" aria-label="Schematic annual-performance chart for the high-performance-then-decline trajectory; only years one to four are shown at first"></svg>
+          <div class="eil4-curve-legend"><span><i class="eil4-swatch decline"></i> High performance followed by decline</span></div>
+          <p class="eil4-chart-note">Schematic contour based on Figure 1. In the study, a year without enrolment and without graduation is coded as zero progress; the downward line should not be read as failing every exam.</p>
+        </div>
+        <div class="eil4-reveal-box" data-before="late">
+          <strong>What happens in the years after this apparently strong beginning?</strong>
+          <button class="eil4-button" type="button" data-reveal="late">Follow this route to year seven <span aria-hidden="true">→</span></button>
+        </div>
+        <div class="eil4-after" data-after="late" hidden aria-live="polite">
+          <h3>Progress can disappear late in the journey.</h3>
+          <p>The group's progress falls sharply after the initial years. By the end of the observation period, <strong>67.1% of the students assigned to this trajectory had dropped out.</strong></p>
+          <div class="eil4-stat-line"><strong>67.1%</strong><span>dropout after seven years among students assigned to this trajectory</span></div>
+          <p class="eil4-mini-insight">A good beginning and a good ending are not the same thing.</p>
+        </div>
+        <div class="eil4-actions eil4-actions-space"><button class="eil4-back" type="button" data-go="1">← Previous</button><button class="eil4-button" type="button" data-go="3" data-next="late" hidden>What shapes the time to recover? <span aria-hidden="true">→</span></button></div>
+      </section>
+
+      <section class="eil4-screen" data-screen="3" aria-labelledby="eil4-time-title" hidden>
+        <p class="eil4-eyebrow">04 / The sociological meaning</p>
+        <h2 id="eil4-time-title">Recovery takes time. <em>And time is not equally available.</em></h2>
+        <p class="eil4-deck">The same academic system does not offer the same practical room for extending or redirecting a university journey.</p>
+        <p class="eil4-prose">The study finds that older entrants are generally less likely to follow a recovery trajectory, particularly in demanding fields. Some follow an optimal route; others leave. <strong>Gradual recovery is less common.</strong></p>
+        <div class="eil4-age-card">
+          <div class="eil4-age-head"><span>ENGINEERING &amp; ARCHITECTURE</span><strong>Estimated probability of an improving trajectory</strong></div>
+          <div class="eil4-age-row"><span>Up to 25 years old</span><div class="eil4-age-track"><i style="width:40.2%"></i></div><strong>40.2%</strong></div>
+          <div class="eil4-age-row"><span>26 or older</span><div class="eil4-age-track"><i style="width:16%"></i></div><strong>16.0%</strong></div>
+          <p>Adjusted probabilities from Table 7. These associations do not establish that age causes the difference.</p>
+        </div>
+        <p class="eil4-prose">Work commitments, family responsibilities, the costs of extra years and the academic demands of different fields are plausible reasons why extending a degree may be more feasible for some students than others. <strong>The study identifies patterned trajectories, not the direct causes of every decision.</strong></p>
+        <div class="eil4-additional"><span>ANOTHER WAY TIME MATTERS</span><p>In the <strong>slow-progression</strong> group, <strong>74.2%</strong> were still enrolled after seven years. Persistence and graduation are not synonymous.</p></div>
+        <div class="eil4-actions eil4-actions-space"><button class="eil4-back" type="button" data-go="2">← Previous</button><button class="eil4-button" type="button" data-go="4">See the sociological discovery <span aria-hidden="true">→</span></button></div>
+      </section>
+
+      <section class="eil4-screen eil4-outro" data-screen="4" aria-labelledby="eil4-final-title" hidden>
+        <p class="eil4-eyebrow">05 / Your sociological insight</p>
+        <h2 id="eil4-final-title">A degree is an outcome. <em>Progression is a journey.</em></h2>
+        <div class="eil4-insight-card">
+          <span class="eil4-eyebrow">The discovery</span>
+          <h3>Some students improve and graduate later. Others start strongly but leave. <em>The timing and sequence of academic experiences matter.</em></h3>
+          <p>Looking only at who graduates hides the diversity of university experiences. And looking only at performance in the first year hides what happens next. Paths of recovery, persistence and departure are unevenly distributed across students' circumstances and fields of study.</p>
+        </div>
+        <p class="eil4-final-line"><strong>Success is not one straight line.</strong> Understanding inequality means looking at the paths students can follow — and the time those paths require.</p>
+        <div class="eil4-source"><span class="eil4-eyebrow">Based on published research</span><p>Troiano, H. &amp; Sánchez-Gelabert, A. (2026). <em>Patterns of university progression and social inequalities: delving into complex trajectories in higher education.</em> <em>European Journal of Higher Education</em>, 16(2), 246–268. <a href="https://doi.org/10.1080/21568235.2025.2556438" target="_blank" rel="noopener">Read the article ↗</a></p><p>For a more detailed exploration: <a href="https://albert-sanchez-gelabert.github.io/tools/trajectories/" target="_blank" rel="noopener">University Trajectories Explorer ↗</a></p><p class="eil4-source-note">Catalan university cohort entering in 2012–13, n = 30,392, seven annual observations. Trajectory proportions are model estimates; subsequent outcomes are observed among cases classified to each group. Curves are simplified illustrations of the published trajectory patterns.</p></div>
+        <div class="eil4-actions eil4-actions-space"><button class="eil4-back" type="button" data-go="3">← Previous</button><button class="eil4-button eil4-button-outline" type="button" data-restart>Restart the chapter ↺</button></div>
+        <div class="eil4-end-links"><a href="../index.html">← All chapters</a><a href="../chapter-3/index.html">← Previous chapter: Different futures</a></div>
+      </section>
+    </main>
+  </div>
+</div>
+```
+
+```{=html}
+<script src="lab.js" defer></script>
+```

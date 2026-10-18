@@ -1,0 +1,111 @@
+---
+pagetitle: "Same grades, different futures? | Educational Inequality Lab"
+description: "A guided sociological story about family background, first-year academic results and compensatory advantage."
+format:
+  html:
+    page-layout: full
+    toc: false
+    css: lab.css
+---
+
+```{=html}
+<div id="eil3-root" class="eil3-guided" data-mode="high">
+  <div class="eil3-shell">
+    <header class="eil3-masthead">
+      <a class="eil3-brand" href="../index.html"><span class="eil3-brand-mark" aria-hidden="true">≋</span>Educational Inequality Lab</a>
+      <span class="eil3-masthead-note">Interactive sociology · Catalonia</span>
+    </header>
+    <nav class="eil3-breadcrumb" aria-label="Breadcrumb"><a href="../index.html">← All chapters</a><span aria-hidden="true">/</span><strong>03 · After the first year</strong><span class="eil3-breadcrumb-trail">Beyond merit. / Chapter 03</span></nav>
+    <main class="eil3-main">
+      <div class="eil3-progress" aria-label="Chapter progress">
+        <span class="eil3-progress-name" data-progress-title>The decision</span>
+        <span class="eil3-progress-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="eil3-progress-counter" data-progress-number>01 / 04</span>
+      </div>
+
+      <section class="eil3-screen" data-screen="0" aria-labelledby="eil3-title">
+        <p class="eil3-eyebrow">01 / The decision</p>
+        <h1 id="eil3-title">Same grades, <em>different futures?</em></h1>
+        <p class="eil3-deck">Getting into university is a major decision. <strong>But it isn't the last.</strong></p>
+        <p class="eil3-prose">Students enter university with expectations about their chances of success. By the end of the first year, they have something they did not have before: <strong>information about how well they are doing.</strong></p>
+        <div class="eil3-path" aria-label="Theoretical sequence: university entry, first-year results and reassessment, then another educational decision">
+          <div class="eil3-path-first"><span class="eil3-path-num">01 / ENTRY</span><strong>Enter university</strong><small>Expectations about success</small></div>
+          <span class="eil3-path-arrow" aria-hidden="true">→</span>
+          <div class="eil3-path-first eil3-path-focus"><span class="eil3-path-num">02 / NEW INFORMATION</span><strong>First-year results</strong><small>Reassess expectations and chances of success</small></div>
+          <span class="eil3-path-arrow" aria-hidden="true">→</span>
+          <div class="eil3-path-first eil3-path-last"><span class="eil3-path-num">03 / WHAT NEXT?</span><strong>A new decision</strong><small>What educational options now seem possible?</small></div>
+        </div>
+        <p class="eil3-turn">When first-year results are disappointing, <strong>do the routes students take differ by family background?</strong></p>
+        <div class="eil3-screen-actions"><button class="eil3-button" type="button" data-go="1">Let's explore <span aria-hidden="true">→</span></button></div>
+      </section>
+
+      <section class="eil3-screen" data-screen="1" aria-labelledby="eil3-figure-title" hidden>
+        <p class="eil3-eyebrow">02 / The evidence</p>
+        <h2 id="eil3-figure-title">When things go well, <em>the gap is small.</em></h2>
+        <p class="eil3-prose" id="eil3-figure-deck">Let's compare students with different family backgrounds who passed <strong>80% of their first-year credits.</strong> Most remain in the same degree, and dropout is low in both groups.</p>
+        <div aria-describedby="eil3-figure-description" class="eil3-chart-card">
+<div class="eil3-chart-top"><span class="eil3-chart-eyebrow">Same academic performance · Different family backgrounds</span><span class="eil3-chart-source">Predicted probabilities</span></div>
+<div class="eil3-credit-status"><span>First-year credits passed</span><strong data-credit-number="">80<span>%</span></strong></div>
+<div aria-hidden="true" class="eil3-credit-meter"><i data-credit-meter="" style="width:80%"></i></div>
+<div class="eil3-groups">
+<div class="eil3-group" data-group="low">
+<div class="eil3-group-head"><strong>Families with compulsory education</strong><small>Lower family education</small></div>
+<div aria-label="Lower family education: 91 percent continue, 4.9 percent transfer, 4.1 percent drop out." class="eil3-bar" role="img"><span class="eil3-seg stay" data-outcome="continuing" style="width:91%"></span><span class="eil3-seg transfer" data-outcome="transfer" style="width:4.9%"></span><span class="eil3-seg leave" data-outcome="dropout" style="width:4.1%"></span></div>
+<div class="eil3-percent-row"><span>Continue <b data-value="continuing">91.0%</b></span><span>Transfer <b data-value="transfer">4.9%</b></span><span>Leave <b data-value="dropout">4.1%</b></span></div>
+</div>
+<div class="eil3-group" data-group="high">
+<div class="eil3-group-head"><strong>University-educated families</strong><small>Higher family education</small></div>
+<div aria-label="University-educated families: 88.7 percent continue, 8.3 percent transfer, 3 percent drop out." class="eil3-bar" role="img"><span class="eil3-seg stay" data-outcome="continuing" style="width:88.7%"></span><span class="eil3-seg transfer" data-outcome="transfer" style="width:8.3%"></span><span class="eil3-seg leave" data-outcome="dropout" style="width:3%"></span></div>
+<div class="eil3-percent-row"><span>Continue <b data-value="continuing">88.7%</b></span><span>Transfer <b data-value="transfer">8.3%</b></span><span>Leave <b data-value="dropout">3.0%</b></span></div>
+</div>
+</div>
+<div aria-label="Pathway colours" class="eil3-legend"><span><i class="stay"></i> Continue in same degree</span><span><i class="transfer"></i> Transfer to another degree</span><span><i class="leave"></i> Leave university</span></div><div aria-live="polite" class="eil3-evidence-message" data-evidence-message=""><strong>With strong results, the likelihood of dropping out is low in both groups.</strong><p>At 80% of credits passed, predicted dropout is 4.1% and 3.0%. Now see what changes when first-year results are poor.</p></div>
+
+
+
+<p class="eil3-chart-footnote" id="eil3-figure-description">Adjusted probabilities from Sánchez-Gelabert &amp; Troiano (2024), Appendix 2. The model compares three family-education groups; two are shown here. Estimates describe progression after the first year, not individual predictions or causal effects.</p>
+</div>
+        <div class="eil3-screen-actions eil3-chart-actions">
+          <button class="eil3-button" type="button" data-switch>What if the first year goes badly? <span aria-hidden="true">→</span></button>
+          <button class="eil3-button eil3-button-secondary" type="button" data-go="2" data-next-after hidden>What might explain this? <span aria-hidden="true">→</span></button>
+          <button class="eil3-text-button" type="button" data-compare-again hidden>Compare with good results ↺</button>
+        </div>
+        <div class="eil3-screen-actions eil3-back-action"><button class="eil3-text-button" type="button" data-go="0">← Previous</button></div>
+      </section>
+
+      <section class="eil3-screen" data-screen="2" aria-labelledby="eil3-meaning-title" hidden>
+        <p class="eil3-eyebrow">03 / What it means</p>
+        <h2 id="eil3-meaning-title">The same setback. <em>Different ways forward.</em></h2>
+        <p class="eil3-deck">Academic results are new information. But students may not have the same resources to respond to them.</p>
+        <p class="eil3-prose">When a first year goes badly, students may rethink whether the degree is right for them, whether another route is available or whether continuing is feasible. This is where <strong>compensatory advantage</strong> offers a sociological interpretation.</p>
+        <div class="eil3-ideas" aria-label="Possible mechanisms for socially differentiated educational decisions">
+          <div><span>Expectations</span><strong>“Can I still succeed?”</strong><p>Results may prompt students to reassess their chances of completing the degree.</p></div>
+          <div><span>Information</span><strong>“What other routes exist?”</strong><p>Knowledge of alternatives and familiarity with the university system can differ.</p></div>
+          <div><span>Resources</span><strong>“Can I afford to try again?”</strong><p>Support and the costs of changing direction can make options more or less feasible.</p></div>
+        </div>
+        <p class="eil3-interpret-note">These are <strong>plausible explanatory mechanisms</strong>, not resources measured as the direct causes of each student's decision in the study.</p>
+        <div class="eil3-seventy"><strong>When do these inequalities fade?</strong> As performance improves, differences in predicted dropout narrow. Around <strong>70% of credits passed</strong>, the study no longer detects statistically significant gaps in dropout — not an exact threshold, and not proof that all pathways become identical.</div>
+        <div class="eil3-screen-actions eil3-screen-actions-spread"><button class="eil3-text-button" type="button" data-go="1">← Back to the evidence</button><button class="eil3-button" type="button" data-go="3">See the sociological discovery <span aria-hidden="true">→</span></button></div>
+      </section>
+
+      <section class="eil3-screen eil3-outro" data-screen="3" aria-labelledby="eil3-conclusion-title" hidden>
+        <p class="eil3-eyebrow">04 / Your sociological insight</p>
+        <h2 id="eil3-conclusion-title">Inequality doesn't end <em>at the university gate.</em></h2>
+        <div class="eil3-insight-card">
+          <p class="eil3-eyebrow">The discovery</p>
+          <h3>When academic results are good, social differences in dropout are small. <em>When things go wrong, different ways forward emerge.</em></h3>
+          <p>Getting into university is one socially structured transition. Decisions made after the first year can be another. New evidence about academic performance meets the expectations, information and resources students bring with them.</p>
+        </div>
+        <p class="eil3-final-line">Educational inequality is not only about <em>who gets in.</em> It is also about <strong>what becomes possible after a setback.</strong></p>
+        <div class="eil3-source"><span class="eil3-eyebrow">Based on published research</span><p>Sánchez-Gelabert, A. &amp; Troiano, H. (2024). <em>Compensatory advantage after the first year at university in the Catalan system: between continuing, transferring and dropping out.</em> <em>Studies in Higher Education</em>. <a href="https://doi.org/10.1080/03075079.2023.2281539" target="_blank" rel="noopener">Read the article ↗</a></p><p>Want to explore the full set of estimates? <a href="https://albert-sanchez-gelabert.github.io/tools/compensatory/" target="_blank" rel="noopener">Compensatory Advantage Explorer ↗</a></p><p class="eil3-meta">Cohort of 36,909 entrants to on-site university education in Catalonia (2012–13). Outcomes refer to progression after the first year, not eventual graduation.</p></div>
+        <div class="eil3-screen-actions eil3-screen-actions-spread"><button class="eil3-text-button" type="button" data-go="2">← Previous</button><button class="eil3-button eil3-button-secondary" type="button" data-restart>Restart the chapter ↺</button></div>
+        <div class="eil3-end-links"><a href="../index.html">← All chapters</a><a href="../chapter-2/index.html">← Previous chapter: Student lives</a></div>
+      </section>
+    </main>
+  </div>
+</div>
+```
+
+```{=html}
+<script src="lab.js" defer></script>
+```

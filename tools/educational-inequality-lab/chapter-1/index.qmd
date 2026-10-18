@@ -1,0 +1,165 @@
+---
+pagetitle: "Does school context matter? | Educational Inequality Lab"
+description: "An interactive discovery about educational transitions, school context, and inequality in Catalonia."
+format:
+  html:
+    page-layout: full
+    toc: false
+    title-block-style: none
+    css: lab.css
+---
+
+```{=html}
+<div id="eil-root">
+  <div class="eil-shell">
+    <header class="eil-masthead">
+      <a class="eil-brand" href="../index.html" aria-label="Educational Inequality Lab home"><span class="eil-brand-mark" aria-hidden="true">≋</span> Educational Inequality Lab</a>
+      <span class="eil-masthead-note">Chapter 1 of 5 · Catalonia</span>
+    </header>
+
+    <div class="eil-layout">
+
+      <div class="eil-stage" aria-label="Chapter 1 interactive experience">
+        <nav class="eil-breadcrumb" aria-label="Lab navigation"><a href="../index.html">← All chapters</a><span aria-hidden="true">/</span><span>01 · Before university</span></nav>
+        <div class="eil-progress" aria-label="Chapter progress">
+          <span class="eil-progress-name" data-progress-name>Introduction</span>
+          <div class="eil-dots" aria-hidden="true"><span class="eil-dot"></span><span class="eil-dot"></span><span class="eil-dot"></span><span class="eil-dot"></span><span class="eil-dot"></span></div>
+          <span class="eil-step-count" data-step-count>0 / 5</span>
+        </div>
+
+        <!-- SCENE 0 · Introduction -->
+        <section class="eil-scene" data-scene="0">
+          <span class="eil-eyebrow">Chapter 01 · Before university</span>
+          <h1>Does school context <em class="eil-emphasis">matter?</em></h1>
+          <p class="eil-deck">A smaller inequality gap sounds like progress. But what if the chances of entering an academic pathway are lower for both groups in some contexts?</p>
+          <div class="eil-hero-art" role="img" aria-label="Illustration of three possible routes after compulsory school: academic, vocational, and leaving education; not drawn to scale.">
+            <svg viewBox="0 0 700 224" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="eil-path-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#337f72"/><stop offset="1" stop-color="#8fb9a6"/></linearGradient>
+              </defs>
+              <circle cx="60" cy="116" r="26" fill="#235d54"/><text x="60" y="120" text-anchor="middle" fill="#fff" style="fill:#fff;font-size:17px;font-weight:700">01</text>
+              <path d="M88,116 C210,116 210,43 362,43 L558,43" fill="none" stroke="url(#eil-path-grad)" stroke-width="11" stroke-linecap="round" opacity=".9"/>
+              <path d="M88,116 C205,116 254,116 362,116 L558,116" fill="none" stroke="#b8c8bf" stroke-width="9" stroke-linecap="round"/>
+              <path d="M88,116 C210,116 210,189 362,189 L558,189" fill="none" stroke="#c8a487" stroke-width="7" stroke-linecap="round" opacity=".9"/>
+              <circle cx="562" cy="43" r="10" fill="#287969"/><circle cx="562" cy="116" r="9" fill="#9cb9a6"/><circle cx="562" cy="189" r="8" fill="#bc815e"/>
+              <text x="588" y="47" font-weight="700">Academic track</text>
+              <text x="588" y="120" font-weight="700">Vocational</text>
+              <text x="588" y="193" font-weight="700">Exit</text>
+              <text x="54" y="167" text-anchor="middle" style="font-size:11px">Compulsory</text><text x="54" y="181" text-anchor="middle" style="font-size:11px">school</text>
+            </svg>
+          </div>
+          <div class="eil-statline"><span><strong>82,923</strong> students in the original study</span><span><strong>~3 minutes</strong> of discovery</span><span><strong>2024</strong> research</span></div>
+          <div class="eil-steps-actions"><button class="eil-btn primary" type="button" data-action="start">Begin the discovery <span aria-hidden="true">→</span></button><a class="eil-btn text" href="https://albert-sanchez-gelabert.github.io/tools/" target="_blank" rel="noopener">Browse other research tools ↗</a></div>
+          <p class="eil-mini">No personal data are collected. Your progress is stored only in this browser, if storage is available.</p>
+        </section>
+
+        <!-- SCENE 1 · Prediction -->
+        <section class="eil-scene" data-scene="1" hidden>
+          <span class="eil-eyebrow">01 / Make a prediction</span>
+          <h2>Where would you expect the <em class="eil-emphasis">largest gap?</em></h2>
+          <p class="eil-deck">We compare the estimated probability of entering the academic track after compulsory education for native and non-native students in different school contexts.</p>
+          <div class="eil-card">
+            <div class="eil-card-heading">Choose the group</div>
+            <p class="eil-mini" style="margin-top:0">You can also compare the other group after seeing the evidence.</p>
+            <div class="eil-segment" role="group" aria-label="Student group">
+              <button type="button" class="is-selected" data-gender="female" aria-pressed="true">Girls</button>
+              <button type="button" data-gender="male" aria-pressed="false">Boys</button>
+            </div>
+            <fieldset style="border:0;padding:0;margin:24px 0 0;min-width:0">
+              <legend class="eil-card-heading">Where is the Native–Non-native gap in academic transitions largest?</legend>
+              <div class="eil-options">
+                <label class="eil-option"><input type="radio" name="eil-prediction" value="Low"><span class="eil-choice-face"><span class="eil-choice-circle" aria-hidden="true"></span><span>Low concentration <span class="eil-mini">(0–15% non-native students)</span></span></span></label>
+                <label class="eil-option"><input type="radio" name="eil-prediction" value="Medium"><span class="eil-choice-face"><span class="eil-choice-circle" aria-hidden="true"></span><span>Medium concentration <span class="eil-mini">(16–30%)</span></span></span></label>
+                <label class="eil-option"><input type="radio" name="eil-prediction" value="High"><span class="eil-choice-face"><span class="eil-choice-circle" aria-hidden="true"></span><span>High concentration <span class="eil-mini">(31% or more)</span></span></span></label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="eil-steps-actions"><button class="eil-btn primary" type="button" data-action="predict" disabled>Reveal the gap <span aria-hidden="true">→</span></button><button class="eil-btn text" type="button" data-action="back">← Back</button></div>
+          <div class="eil-note">The exercise compares adjusted predicted probabilities from a statistical model. The school-composition categories describe observed contexts, not experimentally assigned conditions.</div>
+        </section>
+
+        <!-- SCENE 2 · Gaps -->
+        <section class="eil-scene" data-scene="2" hidden>
+          <span class="eil-eyebrow">02 / Reveal the differences</span>
+          <h2>The inequality gap <em class="eil-emphasis">varies</em> across school contexts.</h2>
+          <p class="eil-deck">Here is the difference, in percentage points, between Native and Non-native students' adjusted probabilities of entering the academic track.</p>
+          <div class="eil-card">
+            <div class="eil-segment" role="group" aria-label="Switch student group"><button type="button" data-gender="female">Girls</button><button type="button" data-gender="male">Boys</button></div>
+            <p class="eil-result-kicker" style="margin-top:24px">Native minus Non-native · <span data-gender-word>girls</span></p>
+            <div data-gap-chart class="eil-gap-chart" role="group" aria-label="Adjusted probability gaps by school concentration"></div>
+            <div class="eil-mini">One bar represents a gap, not a probability. All bars share the same 0–20 percentage-point scale.</div>
+            <div class="eil-feedback" role="status"><strong data-prediction-feedback-title></strong><p data-prediction-feedback-body></p></div>
+          </div>
+          <div class="eil-steps-actions"><button class="eil-btn primary" type="button" data-action="levels">But what happens to the actual probabilities? <span aria-hidden="true">→</span></button><button class="eil-btn text" type="button" data-action="back">← Back</button></div>
+        </section>
+
+        <!-- SCENE 3 · Absolute levels -->
+        <section class="eil-scene" data-scene="3" hidden>
+          <span class="eil-eyebrow">03 / Look behind the gap</span>
+          <h2>A smaller gap does not always mean <em class="eil-emphasis">better chances.</em></h2>
+          <p class="eil-deck">The gap can become smaller because both groups have lower predicted probabilities. Now compare the absolute levels, not just the distance between them.</p>
+          <div class="eil-card">
+            <div class="eil-segment" role="group" aria-label="Switch student group"><button type="button" data-gender="female">Girls</button><button type="button" data-gender="male">Boys</button></div>
+            <div class="eil-key"><div class="eil-key-item"><span class="eil-key-mark"></span> Native</div><div class="eil-key-item"><span class="eil-key-mark open"></span> Non-native</div><span>Bar scale: 0–100%</span></div>
+            <div class="eil-level-chart" data-level-chart role="group" aria-label="Estimated probabilities for native and non-native students across three school contexts"></div>
+            <div class="eil-two-facts">
+              <div class="eil-fact"><div class="eil-fact-label">Gap at low concentration</div><div class="eil-fact-number" data-low-gap>14.0 pp</div><div class="eil-fact-label">Native <span data-low-native>71.2%</span> · Non-native <span data-low-nonnative>57.2%</span></div></div>
+              <div class="eil-fact"><div class="eil-fact-label">Gap at high concentration</div><div class="eil-fact-number" data-high-gap>6.3 pp</div><div class="eil-fact-label">Native <span data-high-native>60.3%</span> · Non-native <span data-high-nonnative>54.0%</span></div></div>
+            </div>
+            <div class="eil-note">Among <span data-gender-word-level>girls</span>, both groups have lower estimated academic-transition probabilities in high- than low-concentration contexts. This is a cross-context comparison, not evidence that school composition caused the change.</div>
+          </div>
+          <div class="eil-steps-actions"><button class="eil-btn primary" type="button" data-action="insight">What does this tell us about inequality? <span aria-hidden="true">→</span></button><button class="eil-btn text" type="button" data-action="back">← Back</button></div>
+        </section>
+
+        <!-- SCENE 4 · Interpretation -->
+        <section class="eil-scene" data-scene="4" hidden>
+          <span class="eil-eyebrow">04 / Interpret the evidence</span>
+          <h2>What can we really <em class="eil-emphasis">conclude?</em></h2>
+          <p class="eil-deck">You have seen the gaps and the underlying predicted probabilities. Which conclusion best captures the evidence?</p>
+          <div class="eil-card">
+            <fieldset style="border:0;padding:0;margin:0;min-width:0">
+              <legend class="eil-card-heading">Choose the most defensible interpretation</legend>
+              <div class="eil-options">
+                <label class="eil-option"><input type="radio" name="eil-reflection" value="higher"><span class="eil-choice-face"><span class="eil-choice-circle" aria-hidden="true"></span>A smaller gap proves that educational opportunities are improving for everyone.</span></label>
+                <label class="eil-option"><input type="radio" name="eil-reflection" value="lower"><span class="eil-choice-face"><span class="eil-choice-circle" aria-hidden="true"></span>Group differences may narrow even while both groups have lower predicted probabilities.</span></label>
+                <label class="eil-option"><input type="radio" name="eil-reflection" value="causal"><span class="eil-choice-face"><span class="eil-choice-circle" aria-hidden="true"></span>School composition alone causes the differences we observe.</span></label>
+              </div>
+            </fieldset>
+            <div class="eil-feedback" data-reflection-feedback hidden role="status"><strong data-reflection-head></strong><p data-reflection-body></p></div>
+          </div>
+          <div class="eil-steps-actions"><button class="eil-btn primary" type="button" data-action="reflect" disabled>See the interpretation <span aria-hidden="true">→</span></button><button class="eil-btn text" type="button" data-action="back">← Back</button></div>
+        </section>
+
+        <!-- SCENE 5 · Discovery -->
+        <section class="eil-scene" data-scene="5" hidden>
+          <span class="eil-eyebrow">05 / Your sociological insight</span>
+          <h2>Educational opportunities are shaped <em class="eil-emphasis">before university.</em></h2>
+          <div class="eil-discovery">
+            <span class="eil-eyebrow">The discovery</span>
+            <div class="eil-big">A smaller gap between groups does not necessarily mean higher opportunities for either group.</div>
+            <p>The study shows how predicted transitions vary by migrant background, gender and school composition. Understanding inequality requires examining both the distance between groups and the levels of opportunity available to them.</p>
+          </div>
+          <p class="eil-deck" style="font-size:16px" data-finish-recall>You have now seen why a smaller group difference does not, by itself, indicate better opportunities.</p>
+          <div class="eil-outro-card">
+            <div class="eil-outro-mark" aria-hidden="true">↗</div>
+            <div><strong>Next question: What happens when university meets the rest of life?</strong><p>Doing well academically is not always enough. Age, paid work and life circumstances are also linked to whether students stay at university and graduate.</p><div class="eil-next-status"><a href="../chapter-2/index.html" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">Explore Chapter 2 →</a></div></div>
+          </div>
+          <div class="eil-steps-actions"><a class="eil-btn primary" href="https://albert-sanchez-gelabert.github.io/tools/context/" target="_blank" rel="noopener">Explore the full research tool ↗</a><button class="eil-btn secondary" type="button" data-action="restart">Restart this chapter ↺</button><a class="eil-btn text" href="../index.html">← All chapters</a></div>
+          <p class="eil-mini">Continue to Chapter 2, explore the original research tool, or return to all chapters.</p>
+        </section>
+
+        <footer class="eil-footer">
+          <strong>Source and interpretation</strong><br>
+          Data: adjusted predicted probabilities for the academic transition, taken from the author's <em>School Context &amp; Transition Explorer</em> (published Tables 7–9). Sánchez-Gelabert, A., Elias Andreu, M. &amp; Bouvier, N. (2024), <em>International Journal of Educational Research</em>, 124, 102321. Cohort: 82,923 students in Catalonia.<br>
+          These are model-based associations, <strong>not causal effects</strong>. Context categories indicate the share of non-native students at school (Low: 0–15%; Medium: 16–30%; High: 31%+). Gender is represented using the female/male categories in the original analysis; “girls/boys” is used here for readability. The three pathways in the introduction are schematic and not proportional to observed transition rates.
+          <div class="eil-source-links"><a href="../index.html">Lab overview ↗</a><a href="https://doi.org/10.1016/j.ijer.2024.102321" target="_blank" rel="noopener">Read the article ↗</a><a href="https://albert-sanchez-gelabert.github.io/tools/context/" target="_blank" rel="noopener">Full interactive explorer ↗</a><a href="https://albert-sanchez-gelabert.github.io/tools/" target="_blank" rel="noopener">All research tools ↗</a></div>
+        </footer>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<script src="lab.js" defer></script>
+```

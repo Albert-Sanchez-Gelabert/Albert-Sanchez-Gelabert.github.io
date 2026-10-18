@@ -20,6 +20,8 @@ website:
         text: Publications
       - href: news.qmd
         text: News
+      - href: tools/educational-inequality-lab/index.qmd
+        text: Lab
       - text: Tools
         menu:
           - href: tools/index.qmd

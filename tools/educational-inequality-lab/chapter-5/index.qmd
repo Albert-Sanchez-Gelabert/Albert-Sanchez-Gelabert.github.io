@@ -1,0 +1,108 @@
+---
+pagetitle: "Who really benefits from flexibility? | Educational Inequality Lab"
+description: "A guided sociological discovery about the promises and limits of switching to online university."
+format:
+  html:
+    page-layout: full
+    toc: false
+    css: lab.css
+---
+
+```{=html}
+<div id="eil5-root">
+  <div class="eil5-shell">
+    <header class="eil5-masthead">
+      <a class="eil5-brand" href="../index.html"><span class="eil5-brand-mark" aria-hidden="true">≋</span><span>Educational Inequality Lab</span></a>
+      <span class="eil5-masthead-note">Interactive sociology · Catalonia</span>
+    </header>
+    <nav class="eil5-breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">← All chapters</a><span aria-hidden="true">/</span><strong>05 · Flexibility and equity</strong><span class="eil5-breadcrumb-trail">Beyond merit. / Chapter 05</span>
+    </nav>
+    <main>
+      <div class="eil5-progress" aria-label="Chapter progress">
+        <span data-progress-title>The promise</span>
+        <span class="eil5-progress-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span data-progress-number>01 / 03</span>
+      </div>
+
+      <section class="eil5-screen" data-screen="0" aria-labelledby="eil5-main-heading">
+        <p class="eil5-eyebrow">01 / The promise of flexibility</p>
+        <h1 id="eil5-main-heading">Who really benefits <em>from flexibility?</em></h1>
+        <p class="eil5-deck">What if university does not fit your working hours, family responsibilities, or everyday life?</p>
+        <div class="eil5-situation" aria-label="Conceptual contrast between face-to-face and online study">
+          <div><small>On-campus education</small><strong>A timetable you have to fit into</strong><p>Travel, scheduled classes and activities at particular times and places.</p></div>
+          <span class="eil5-between" aria-hidden="true">→</span>
+          <div><small>Online education</small><strong>A more flexible way to participate</strong><p>Greater freedom over when and where to study, though academic work still requires time.</p></div>
+        </div>
+        <p class="eil5-prose">For some students, moving online offers a way to keep studying while managing other responsibilities. <strong>But does having this alternative lead to the same chance of graduating?</strong></p>
+        <p class="eil5-context-foot">This move was <strong>slightly more common</strong> among entrants whose parents had no university education: 3.3%, compared with 2.5% for entrants from university-educated families (Table 2). It is a modest difference, not the central discovery.</p>
+        <div class="eil5-actions"><button class="eil5-button" type="button" data-go="1">Let's explore <span aria-hidden="true">→</span></button></div>
+      </section>
+
+      <section class="eil5-screen" data-screen="1" aria-labelledby="eil5-evidence-heading" hidden>
+        <p class="eil5-eyebrow">02 / One change, a different outcome</p>
+        <h2 id="eil5-evidence-heading">When students change route, <em>what happens next?</em></h2>
+        <p class="eil5-outcomes-intro">Consider students who began at an on-campus university and later changed their educational route. After almost a decade, outcomes differed depending on the kind of change.</p>
+        <div class="eil5-outcomes" data-benchmark role="group" aria-label="Estimated educational outcomes at the end of the follow-up among university pathway switchers">
+          <div class="eil5-outcomes-head"><div><strong data-outcomes-title>Two routes to compare</strong><small>Model-estimated outcomes at the end of the observation period</small></div><span class="eil5-outcomes-kicker">2012–13 entrants</span></div>
+          <div class="eil5-route eil5-quiet-route"><div class="eil5-route-name"><span>Change degree · same university</span><span>Another degree, same institution</span></div><div class="eil5-stacked" role="img" aria-label="65 percent graduated, 15 percent left without a degree, 20 percent still studying"><span class="graduate" style="width:65%"></span><span class="dropout" style="width:15%"></span><span class="enrolled" style="width:20%"></span></div><div class="eil5-route-values"><span><strong>65%</strong> graduated</span><span><strong>15%</strong> left</span><span><strong>20%</strong> still studying</span></div></div>
+          <div class="eil5-route eil5-quiet-route"><div class="eil5-route-name"><span>Change institution</span><span>Another on-campus university</span></div><div class="eil5-stacked" role="img" aria-label="53 percent graduated, 19 percent left without a degree, 28 percent still studying"><span class="graduate" style="width:53%"></span><span class="dropout" style="width:19%"></span><span class="enrolled" style="width:28%"></span></div><div class="eil5-route-values"><span><strong>53%</strong> graduated</span><span><strong>19%</strong> left</span><span><strong>28%</strong> still studying</span></div></div>
+          <div class="eil5-route eil5-online-route" data-online-route hidden aria-live="polite">
+            <div class="eil5-route-name"><span>Move to online university <strong class="eil5-route-new">NEW ROUTE</strong></span><span>Change institution and study mode</span></div>
+            <div class="eil5-stacked" role="img" aria-label="6 percent graduated, 39 percent left without a degree, 55 percent still studying"><span class="graduate" data-width="6%" style="width:0%"></span><span class="dropout" data-width="39%" style="width:0%"></span><span class="enrolled" data-width="55%" style="width:0%"></span></div>
+            <div class="eil5-route-values"><span><strong>6%</strong> graduated</span><span><strong>39%</strong> left</span><span><strong>55%</strong> still studying</span></div>
+          </div>
+          <div class="eil5-legend" aria-label="Outcome colours"><span><i class="eil5-dot graduate"></i>Graduated</span><span><i class="eil5-dot dropout"></i>Left without a degree</span><span><i class="eil5-dot enrolled"></i>Still studying</span></div>
+        </div>
+
+        <div class="eil5-trigger" data-online-trigger>
+          <p class="eil5-trigger-question">What if the change is to an online university?</p>
+          <p class="eil5-prose">Moving online offers greater flexibility. How does this third route compare with the other two?</p>
+          <button class="eil5-button" type="button" data-reveal="online">Reveal the online route <span aria-hidden="true">→</span></button>
+        </div>
+
+        <div class="eil5-online-panel" data-online-panel hidden aria-live="polite" aria-label="A closer look at the online pathway and social differences">
+          <p class="eil5-online-topline">A closer look · The online route</p>
+          <h3 class="eil5-online-title">Remaining enrolled <em>is not the same as graduating.</em></h3>
+          <p class="eil5-online-subtitle">Among those who changed to an online university, many were still enrolled at the end of the observation period. Their outcomes differ sharply from the other two routes shown above.</p>
+          <div class="eil5-focus-facts" aria-label="55 percent were still studying, compared with 6 percent who had graduated">
+            <div class="eil5-focus-fact continuing"><strong>55%</strong><span>Still studying</span></div>
+            <span class="eil5-focus-separator" aria-hidden="true">versus</span>
+            <div class="eil5-focus-fact completing"><strong>6%</strong><span>Graduated</span></div>
+          </div>
+          <p class="eil5-reveal-key">Flexibility can support continued enrolment without guaranteeing a qualification in the same period.</p>
+          <p class="eil5-footnote">The remaining 39% were no longer enrolled without a degree. Figure 1 reports model-predicted outcomes at the end of the follow-up, not causal effects. Some students still enrolled may graduate later.</p>
+
+          <div class="eil5-inline-social">
+            <p class="eil5-online-topline">And within this same route?</p>
+            <h3>Greater flexibility. <em>Persistent social differences.</em></h3>
+            <p>Among students who moved online, family educational background was still associated with different adjusted probabilities of leaving without a degree:</p>
+            <div class="eil5-social-compact" role="group" aria-label="Estimated probability of leaving after moving online: 36.4 percent for families without university education, 28.4 percent for university-educated families">
+              <div class="eil5-social-mini"><span class="eil5-mini-label">Family without university education</span><div class="eil5-mini-values"><strong>36.4%</strong><span>probability of leaving</span></div><div class="eil5-social-track"><i style="width:72.8%"></i></div></div>
+              <div class="eil5-social-mini"><span class="eil5-mini-label">University-educated family</span><div class="eil5-mini-values"><strong>28.4%</strong><span>probability of leaving</span></div><div class="eil5-social-track"><i style="width:56.8%"></i></div></div>
+            </div>
+            <p class="eil5-footnote">Adjusted predictions from Table 5, on a shared 0–50% scale. These estimates come from a different comparison than the overall 39% figure. The family gap is statistically significant, but not demonstrably larger than in other types of transfer.</p>
+            <p class="eil5-meaning-inline">Online study can ease travel and fixed attendance requirements. It cannot eliminate competing responsibilities or differences in available resources. Those are plausible sociological mechanisms, not causes directly identified by this study.</p>
+          </div>
+        </div>
+        <div class="eil5-actions eil5-actions-space"><button class="eil5-back" type="button" data-go="0">← Previous</button><button class="eil5-button" type="button" data-go="2" data-next="online" hidden>What does this tell us? <span aria-hidden="true">→</span></button></div>
+      </section>
+
+      <section class="eil5-screen" data-screen="2" aria-labelledby="eil5-conclusion-heading" hidden>
+        <p class="eil5-eyebrow">03 / Your sociological insight</p>
+        <h2 id="eil5-conclusion-heading">More ways to study do not guarantee <em>equal chances to finish.</em></h2>
+        <div class="eil5-insight-card"><span class="eil5-eyebrow">The discovery</span><h3>Flexibility can help students remain in higher education. <em>It does not remove all the inequalities that shape their outcomes.</em></h3><p>Online university can make continued enrolment possible for students whose circumstances do not fit conventional attendance. Yet many are still studying after years of enrolment, and the likelihood of leaving without a degree remains associated with family background.</p></div>
+        <p class="eil5-final-line">Educational opportunities are not simply about <em>having an alternative</em>. They also depend on <strong>the conditions under which students can make use of it.</strong></p>
+        <p class="eil5-prose">Across <em>Beyond merit</em>, the story is about how educational opportunities are shaped, reconsidered and experienced across successive decisions — rather than by merit or effort alone.</p>
+        <div class="eil5-source"><span class="eil5-eyebrow">Based on published research</span><p>Sánchez-Gelabert, A., &amp; Elias, M. (2023). <em>Going online? Does transferring to online university increase the likelihood of graduation among students from lower social background?</em> <em>International Journal of Educational Technology in Higher Education</em>, 20, article 39. <a href="https://doi.org/10.1186/s41239-023-00407-4" target="_blank" rel="noopener">Read the published article ↗</a></p><p class="eil5-smallprint">Catalan university entrants in 2012–13, followed to 2019–20. Route categories use n=42,370; model comparisons focus on 6,121 on-campus entrants who changed pathway. Descriptive transfer shares, overall model outcomes and adjusted family-specific dropout probabilities have different statistical bases. None identifies a causal effect of studying online.</p></div>
+        <div class="eil5-actions eil5-actions-space"><button class="eil5-back" type="button" data-go="1">← Previous</button><button class="eil5-button eil5-button-outline" type="button" data-restart>Restart the chapter ↺</button></div>
+        <div class="eil5-end-links"><a href="../index.html">← All chapters</a><a href="../chapter-4/index.html">← Previous chapter: Academic trajectories</a></div>
+      </section>
+    </main>
+  </div>
+</div>
+```
+
+```{=html}
+<script src="lab.js" defer></script>
+```

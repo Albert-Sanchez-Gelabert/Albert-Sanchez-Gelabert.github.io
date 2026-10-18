@@ -33,8 +33,84 @@ Much of my work uses quantitative and longitudinal approaches to examine how ine
 - Life-course inequalities
 - Cultural consumption
 
-## Interactive research tools
+```{=html}
+<style>
+/* Scoped styles: affect only the two feature cards on the main Home. */
+#asg-home-explore { margin: 2.4rem 0 2.1rem; }
+#asg-home-explore .asg-home-explore-heading {
+  margin: 0 0 .55rem; font-size: 1.6rem; font-weight: 700;
+  letter-spacing: -.025em; line-height: 1.25;
+}
+#asg-home-explore .asg-home-explore-intro {
+  margin: 0 0 1.35rem; color: #586975; line-height: 1.6;
+}
+#asg-home-explore .asg-home-explore-grid {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem; align-items: stretch;
+}
+#asg-home-explore .asg-home-explore-card {
+  display: flex; flex-direction: column; align-items: flex-start;
+  min-width: 0; padding: 1.65rem;
+  border: 1px solid #dbe4df; border-radius: 13px;
+  background: #f8faf9; color: #26343c;
+  text-decoration: none !important;
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+#asg-home-explore .asg-home-explore-card--lab { background: #edf5f1; border-color: #cbded5; }
+#asg-home-explore .asg-home-explore-card:hover,
+#asg-home-explore .asg-home-explore-card:focus-visible {
+  border-color: #277f72; box-shadow: 0 7px 23px rgba(19, 70, 61, .085);
+  transform: translateY(-2px);
+}
+#asg-home-explore .asg-home-explore-card:focus-visible {
+  outline: 3px solid #8dc3b1; outline-offset: 3px;
+}
+#asg-home-explore .asg-home-explore-eyebrow {
+  margin-bottom: .8rem; color: #277668;
+  font-size: .71rem; font-weight: 750; line-height: 1.5;
+  letter-spacing: .10em; text-transform: uppercase;
+}
+#asg-home-explore .asg-home-explore-title {
+  margin: 0 0 .8rem; font-family: Georgia, 'Times New Roman', serif;
+  color: #23343a; font-size: clamp(1.42rem, 2.45vw, 1.95rem);
+  font-weight: 400; letter-spacing: -.035em; line-height: 1.14;
+}
+#asg-home-explore .asg-home-explore-title em { color: #187768; }
+#asg-home-explore .asg-home-explore-description {
+  margin: 0 0 1.3rem; color: #566571; font-size: .96rem; line-height: 1.6;
+  flex: 1;
+}
+#asg-home-explore .asg-home-explore-link {
+  color: #156c60; font-size: .93rem; font-weight: 750;
+  text-decoration: underline; text-underline-offset: 3px;
+}
+@media (max-width: 680px) {
+  #asg-home-explore .asg-home-explore-grid { grid-template-columns: 1fr; }
+  #asg-home-explore .asg-home-explore-card { padding: 1.35rem; }
+  #asg-home-explore .asg-home-explore-title { font-size: 1.7rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #asg-home-explore .asg-home-explore-card { transition: none; }
+  #asg-home-explore .asg-home-explore-card:hover { transform: none; }
+}
+</style>
 
-I develop interactive research tools that translate sequence analysis, longitudinal modelling and other quantitative approaches into explorable visualisations of educational trajectories and inequalities.
-
-[Explore interactive research tools →](tools/)
+<section id="asg-home-explore" aria-labelledby="asg-home-explore-title">
+  <h2 class="asg-home-explore-heading" id="asg-home-explore-title">Explore the research</h2>
+  <p class="asg-home-explore-intro">Two ways to engage with the evidence: explore the data yourself or follow a guided sociological discovery.</p>
+  <div class="asg-home-explore-grid">
+    <a class="asg-home-explore-card" href="tools/" aria-label="Explore interactive research tools">
+      <span class="asg-home-explore-eyebrow">Explore the evidence</span>
+      <h3 class="asg-home-explore-title">Interactive<br>research tools</h3>
+      <p class="asg-home-explore-description">Examine educational inequalities through interactive visualisations, comparisons and longitudinal models.</p>
+      <span class="asg-home-explore-link">Browse the tools ↗</span>
+    </a>
+    <a class="asg-home-explore-card asg-home-explore-card--lab" href="tools/educational-inequality-lab/" aria-label="Discover Beyond merit at the Educational Inequality Lab">
+      <span class="asg-home-explore-eyebrow">Five guided stories · Beyond merit</span>
+      <h3 class="asg-home-explore-title">Educational<br>Inequality <em>Lab</em></h3>
+      <p class="asg-home-explore-description">Follow five interactive stories about how educational inequalities emerge and unfold, from school transitions to university pathways.</p>
+      <span class="asg-home-explore-link">Start the Lab →</span>
+    </a>
+  </div>
+</section>
+```
