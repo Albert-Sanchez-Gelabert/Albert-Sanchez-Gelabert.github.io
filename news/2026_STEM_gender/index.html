@@ -90,7 +90,22 @@ ul.task-list li input[type="checkbox"] {
     news: 'news.html',
     cv: 'cv.html',
     tools: 'tools/index.html',
-    lab: 'tools/educational-inequality-lab/index.html'
+    lab: 'tools/educational-inequality-lab/index.html',
+    chapter1: 'tools/educational-inequality-lab/chapter-1/index.html',
+    chapter2: 'tools/educational-inequality-lab/chapter-2/index.html',
+    chapter3: 'tools/educational-inequality-lab/chapter-3/index.html',
+    chapter4: 'tools/educational-inequality-lab/chapter-4/index.html',
+    chapter5: 'tools/educational-inequality-lab/chapter-5/index.html',
+    chapter1: 'tools/educational-inequality-lab/chapter-1/index.html',
+    chapter2: 'tools/educational-inequality-lab/chapter-2/index.html',
+    chapter3: 'tools/educational-inequality-lab/chapter-3/index.html',
+    chapter4: 'tools/educational-inequality-lab/chapter-4/index.html',
+    chapter5: 'tools/educational-inequality-lab/chapter-5/index.html',
+    chapter1: 'tools/educational-inequality-lab/chapter-1/index.html',
+    chapter2: 'tools/educational-inequality-lab/chapter-2/index.html',
+    chapter3: 'tools/educational-inequality-lab/chapter-3/index.html',
+    chapter4: 'tools/educational-inequality-lab/chapter-4/index.html',
+    chapter5: 'tools/educational-inequality-lab/chapter-5/index.html'
   };
   const articleIds = new Set(['2026_Simbolic', '2026_STEM_gender', '2026_Youth']);
   const labels = {
@@ -179,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
       a.setAttribute('href', urlFor(lang, targetInfo.page));
       const caption = a.querySelector('.menu-text');
       if (caption) caption.textContent = labels[lang][targetInfo.page];
-      const selected = info.page === targetInfo.page || (info.page.startsWith('article:') && targetInfo.page === 'news');
+      const selected = info.page === targetInfo.page || (info.page.startsWith('chapter') && targetInfo.page === 'lab') || (info.page.startsWith('article:') && targetInfo.page === 'news');
       a.classList.toggle('active', selected);
       if (selected) a.setAttribute('aria-current', 'page');
       else a.removeAttribute('aria-current');

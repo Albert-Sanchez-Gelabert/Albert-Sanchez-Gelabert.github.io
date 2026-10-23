@@ -1,6 +1,14 @@
 [
   {
-    "listing": "/es/publications.html",
+    "listing": "/ca/news.html",
+    "items": [
+      "/ca/news/2026_Simbolic/index.html",
+      "/ca/news/2026_STEM_gender/index.html",
+      "/ca/news/2026_Youth/index.html"
+    ]
+  },
+  {
+    "listing": "/ca/publications.html",
     "items": []
   },
   {
@@ -12,15 +20,7 @@
     ]
   },
   {
-    "listing": "/ca/news.html",
-    "items": [
-      "/ca/news/2026_Simbolic/index.html",
-      "/ca/news/2026_STEM_gender/index.html",
-      "/ca/news/2026_Youth/index.html"
-    ]
-  },
-  {
-    "listing": "/ca/publications.html",
+    "listing": "/es/publications.html",
     "items": []
   },
   {

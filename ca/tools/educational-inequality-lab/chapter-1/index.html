@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ca" xml:lang="ca"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Capítol interactiu de divulgació sociològica sobre desigualtats educatives.">
+
+<title>Importa el context escolar? | Educational Inequality Lab – Albert Sánchez-Gelabert</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-32643bc00688b413a4b4dac13675c875.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Cap resultat",
+    "search-matching-documents-text": "documents que coincideixen",
+    "search-copy-link-title": "Copia l'enllaç a la cerca",
+    "search-hide-matches-text": "Amaga les coincidències addicionals",
+    "search-more-match-text": "altra coincidència en aquest document",
+    "search-more-matches-text": "altres coincidències en aquest document",
+    "search-clear-button-title": "Neteja",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel·la",
+    "search-submit-button-title": "Envia",
+    "search-label": "Cerca"
+  }
+}</script>
+<!-- Language navigation for the Quarto website (EN/CA/ES). -->
+<script>
+(function () {
+  'use strict';
+
+  // This website is served at the domain root (GitHub user Pages and Quarto preview).
+  // Do not infer the root from the navbar brand: its markup/href can vary by page.
+  const ROOT = '/';
+  const routes = {
+    home: 'index.html',
+    research: 'research.html',
+    publications: 'publications.html',
+    news: 'news.html',
+    cv: 'cv.html',
+    tools: 'tools/index.html',
+    lab: 'tools/educational-inequality-lab/index.html',
+    chapter1: 'tools/educational-inequality-lab/chapter-1/index.html',
+    chapter2: 'tools/educational-inequality-lab/chapter-2/index.html',
+    chapter3: 'tools/educational-inequality-lab/chapter-3/index.html',
+    chapter4: 'tools/educational-inequality-lab/chapter-4/index.html',
+    chapter5: 'tools/educational-inequality-lab/chapter-5/index.html',
+    chapter1: 'tools/educational-inequality-lab/chapter-1/index.html',
+    chapter2: 'tools/educational-inequality-lab/chapter-2/index.html',
+    chapter3: 'tools/educational-inequality-lab/chapter-3/index.html',
+    chapter4: 'tools/educational-inequality-lab/chapter-4/index.html',
+    chapter5: 'tools/educational-inequality-lab/chapter-5/index.html',
+    chapter1: 'tools/educational-inequality-lab/chapter-1/index.html',
+    chapter2: 'tools/educational-inequality-lab/chapter-2/index.html',
+    chapter3: 'tools/educational-inequality-lab/chapter-3/index.html',
+    chapter4: 'tools/educational-inequality-lab/chapter-4/index.html',
+    chapter5: 'tools/educational-inequality-lab/chapter-5/index.html'
+  };
+  const articleIds = new Set(['2026_Simbolic', '2026_STEM_gender', '2026_Youth']);
+  const labels = {
+    en: {home: 'Home', research: 'Research', publications: 'Publications', news: 'News', cv: 'CV', tools: 'Tools', lab: 'Lab', all: 'All tools'},
+    ca: {home: 'Inici', research: 'Recerca', publications: 'Publicacions', news: 'Actualitat', cv: 'Currículum', tools: 'Eines', lab: 'Lab', all: 'Totes les eines'},
+    es: {home: 'Inicio', research: 'Investigación', publications: 'Publicaciones', news: 'Actualidad', cv: 'Currículum', tools: 'Herramientas', lab: 'Lab', all: 'Todas las herramientas'}
+  };
+  const languageChoices = {'English': 'en', 'Català': 'ca', 'Castellano': 'es'};
+
+  function pageInfo(pathname) {
+    let rel = pathname.replace(/^\/+/, '');
+    let lang = 'en';
+    const match = rel.match(/^(ca|es)(?:\/|$)/);
+    if (match) {
+      lang = match[1];
+      rel = rel.substring(lang.length).replace(/^\/+/, '');
+    }
+    if (!rel || rel.endsWith('/')) rel += 'index.html';
+    for (const [id, file] of Object.entries(routes)) {
+      if (rel === file) return {lang, page: id, rel};
+    }
+    const newsMatch = rel.match(/^news\/([^/]+)\/index\.html$/);
+    if (newsMatch) return {lang, page: articleIds.has(newsMatch[1]) ? 'article:' + newsMatch[1] : 'news', rel};
+    if (rel.startsWith('tools/educational-inequality-lab/')) return {lang, page: 'lab', rel};
+    if (rel.startsWith('tools/')) return {lang, page: 'tools', rel};
+    if (rel.startsWith('news/')) return {lang, page: 'news', rel};
+    return {lang, page: 'home', rel};
+  }
+
+  function urlFor(lang, page) {
+    let file;
+    if (page.startsWith('article:')) {
+      const id = page.substring('article:'.length);
+      file = articleIds.has(id) ? 'news/' + id + '/index.html' : routes.news;
+    } else {
+      file = routes[page] || routes.home;
+    }
+    return ROOT + (lang === 'en' ? '' : lang + '/') + file;
+  }
+
+  function languageMenu(header) {
+    for (const li of header.querySelectorAll('li.dropdown')) {
+      const choices = [...li.querySelectorAll('a.dropdown-item')].map(a => (a.querySelector('.dropdown-text')?.textContent || a.textContent || '').trim());
+      if (Object.keys(languageChoices).every(name => choices.includes(name))) return li;
+    }
+    return null;
+  }
+
+  function refresh() {
+    const header = document.getElementById('quarto-header');
+    if (!header) return;
+    const info = pageInfo(window.location.pathname);
+    const lang = info.lang;
+    const langNav = languageMenu(header);
+
+    // Quarto's static language menu links all point to the homepage.
+    // Rewrite those links on EVERY page, including listings and nested pages.
+    if (langNav) {
+      const trigger = langNav.querySelector('a.nav-link.dropdown-toggle');
+      const caption = trigger?.querySelector('.menu-text');
+      if (caption) caption.textContent = lang.toUpperCase();
+      trigger?.setAttribute('aria-label', 'Language / Idioma: ' + lang.toUpperCase());
+      for (const a of langNav.querySelectorAll('a.dropdown-item')) {
+        const name = (a.querySelector('.dropdown-text')?.textContent || a.textContent || '').trim();
+        const choice = languageChoices[name];
+        if (!choice) continue;
+        a.setAttribute('href', urlFor(choice, info.page));
+        a.setAttribute('hreflang', choice);
+        a.setAttribute('lang', choice);
+        a.classList.toggle('active', choice === lang);
+        if (choice === lang) a.setAttribute('aria-current', 'page');
+        else a.removeAttribute('aria-current');
+      }
+    }
+
+    // Main navigation: link to equivalent translated landing pages.
+    for (const a of header.querySelectorAll('a.nav-link[href]')) {
+      if (a.classList.contains('dropdown-toggle')) continue;
+      let path;
+      try { path = new URL(a.getAttribute('href'), document.baseURI).pathname; }
+      catch (err) { continue; }
+      const targetInfo = pageInfo(path);
+      if (!(Object.values(routes).includes(targetInfo.rel))) continue;
+      // Only rewrite direct links for sections in the global menu.
+      if (targetInfo.page === 'tools') continue;
+      a.setAttribute('href', urlFor(lang, targetInfo.page));
+      const caption = a.querySelector('.menu-text');
+      if (caption) caption.textContent = labels[lang][targetInfo.page];
+      const selected = info.page === targetInfo.page || (info.page.startsWith('chapter') && targetInfo.page === 'lab') || (info.page.startsWith('article:') && targetInfo.page === 'news');
+      a.classList.toggle('active', selected);
+      if (selected) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    }
+
+    for (const li of header.querySelectorAll('li.dropdown')) {
+      if (li === langNav) continue;
+      const first = li.querySelector('a.dropdown-item[href]');
+      if (!first) continue;
+      let firstPath;
+      try { firstPath = new URL(first.getAttribute('href'), document.baseURI).pathname; }
+      catch (err) { continue; }
+      if (pageInfo(firstPath).rel !== routes.tools) continue;
+      const trigger = li.querySelector('a.nav-link.dropdown-toggle');
+      const caption = trigger?.querySelector('.menu-text');
+      if (caption) caption.textContent = labels[lang].tools;
+      trigger?.classList.toggle('active', info.page === 'tools');
+      first.setAttribute('href', urlFor(lang, 'tools'));
+      const label = first.querySelector('.dropdown-text');
+      if (label) label.textContent = labels[lang].all;
+      first.classList.toggle('active', info.page === 'tools' && info.rel === routes.tools);
+    }
+  }
+
+  // Safety net: catch language selections even if Quarto or a theme resets
+  // the dropdown's static href after the initial rewrite.
+  document.addEventListener('click', function (event) {
+    const a = event.target.closest?.('a.dropdown-item');
+    if (!a || event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    const header = document.getElementById('quarto-header');
+    const menu = header ? languageMenu(header) : null;
+    if (!menu || !menu.contains(a)) return;
+    const name = (a.querySelector('.dropdown-text')?.textContent || a.textContent || '').trim();
+    const choice = languageChoices[name];
+    if (!choice) return;
+    event.preventDefault();
+    window.location.assign(urlFor(choice, pageInfo(window.location.pathname).page));
+  }, true);
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', refresh, {once: true});
+  else refresh();
+  window.addEventListener('pageshow', refresh);
+})();
+</script>
+
+
+<link rel="stylesheet" href="../../../../styles.css">
+<link rel="stylesheet" href="lab.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title">Albert Sánchez-Gelabert</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Cerca"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Commuta la navegació" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../research.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../news.html"> 
+<span class="menu-text">News</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../tools/educational-inequality-lab/index.html"> 
+<span class="menu-text">Lab</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tools" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Tools</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tools">    
+        <li>
+    <a class="dropdown-item" href="../../../../tools/index.html">
+ <span class="dropdown-text">All tools</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../tools/pathways/index.html">
+ <span class="dropdown-text">Longitudinal Pathway Dynamics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../tools/context/index.html">
+ <span class="dropdown-text">School Context &amp; Transition Explorer</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../tools/entry-space/index.html">
+ <span class="dropdown-text">University Entry Space Explorer</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../tools/compensatory/index.html">
+ <span class="dropdown-text">Compensatory Advantage Explorer</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../tools/trajectories/index.html">
+ <span class="dropdown-text">University Trajectory Lab</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../cv.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-en-·-ca-·-es" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">EN · CA · ES</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-en-·-ca-·-es">    
+        <li>
+    <a class="dropdown-item" href="../../../../index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../ca/index.html">
+ <span class="dropdown-text">Català</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../es/index.html">
+ <span class="dropdown-text">Castellano</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div id="eil-root">
+<div class="eil-shell">
+<header class="eil-masthead">
+<a aria-label="Portada de l’Educational Inequality Lab" class="eil-brand" href="../index.html"><span aria-hidden="true" class="eil-brand-mark">≋</span> Educational Inequality Lab</a>
+<span class="eil-masthead-note">Capítol 1 de 5 · Catalunya</span>
+</header>
+<div class="eil-layout">
+<div aria-label="Experiència interactiva del capítol 1" class="eil-stage">
+<nav aria-label="Navegació del Lab" class="eil-breadcrumb"><a href="../index.html">← Tots els capítols</a><span aria-hidden="true">/</span><span>01 · Abans de la universitat</span></nav>
+<div aria-label="Progrés del capítol" class="eil-progress">
+<span class="eil-progress-name" data-progress-name="">Introducció</span>
+<div aria-hidden="true" class="eil-dots"><span class="eil-dot"></span><span class="eil-dot"></span><span class="eil-dot"></span><span class="eil-dot"></span><span class="eil-dot"></span></div>
+<span class="eil-step-count" data-step-count="">0 / 5</span>
+</div>
+<!-- SCENE 0 · Introduction -->
+<section class="eil-scene" data-scene="0">
+<span class="eil-eyebrow">Capítol 01 · Abans de la universitat</span>
+<h1>Importa el context <em class="eil-emphasis">escolar?</em></h1>
+<p class="eil-deck">Una bretxa més petita entre grups sembla un progrés. Però què passa si, en alguns contextos, les probabilitats d'accedir a la via acadèmica són més baixes per a tots dos grups?</p>
+<div aria-label="Esquema de tres possibles vies després de l’educació obligatòria: acadèmica, professional i sortida del sistema. No és a escala." class="eil-hero-art" role="img">
+<svg aria-hidden="true" focusable="false" viewbox="0 0 700 224">
+<defs>
+<lineargradient id="eil-path-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#337f72"></stop><stop offset="1" stop-color="#8fb9a6"></stop></lineargradient>
+</defs>
+<circle cx="60" cy="116" fill="#235d54" r="26"></circle><text fill="#fff" style="fill:#fff;font-size:17px;font-weight:700" text-anchor="middle" x="60" y="120">01</text>
+<path d="M88,116 C210,116 210,43 362,43 L558,43" fill="none" opacity=".9" stroke="url(#eil-path-grad)" stroke-linecap="round" stroke-width="11"></path>
+<path d="M88,116 C205,116 254,116 362,116 L558,116" fill="none" stroke="#b8c8bf" stroke-linecap="round" stroke-width="9"></path>
+<path d="M88,116 C210,116 210,189 362,189 L558,189" fill="none" opacity=".9" stroke="#c8a487" stroke-linecap="round" stroke-width="7"></path>
+<circle cx="562" cy="43" fill="#287969" r="10"></circle><circle cx="562" cy="116" fill="#9cb9a6" r="9"></circle><circle cx="562" cy="189" fill="#bc815e" r="8"></circle>
+<text font-weight="700" x="588" y="47">Via acadèmica</text>
+<text font-weight="700" x="588" y="120">Formació professional</text>
+<text font-weight="700" x="588" y="193">Sortida del sistema</text>
+<text style="font-size:11px" text-anchor="middle" x="54" y="167">Educació</text><text style="font-size:11px" text-anchor="middle" x="54" y="181">obligatòria</text>
+</svg>
+</div>
+<div class="eil-statline"><span><strong>82,923</strong> estudiants a l'estudi original</span><span><strong>~3 minuts</strong> de descoberta</span><span><strong>2024</strong> recerca</span></div>
+<div class="eil-steps-actions"><button class="eil-btn primary" data-action="start" type="button">Comença la descoberta <span aria-hidden="true">→</span></button><a class="eil-btn text" href="https://albert-sanchez-gelabert.github.io/tools/" rel="noopener" target="_blank">Explora altres eines de recerca ↗</a></div>
+<p class="eil-mini">No es recullen dades personals. El progrés només es desa en aquest navegador, si l'emmagatzematge està disponible.</p>
+</section>
+<!-- SCENE 1 · Prediction -->
+<section class="eil-scene" data-scene="1" hidden="">
+<span class="eil-eyebrow">01 / Fes una predicció</span>
+<h2 class="anchored">On esperaries trobar <em class="eil-emphasis">la bretxa més gran?</em></h2>
+<p class="eil-deck">Comparem la probabilitat estimada d'accedir a la via acadèmica després de l'educació obligatòria entre alumnat d'origen autòcton i no autòcton en contextos escolars diferents.</p>
+<div class="eil-card">
+<div class="eil-card-heading">Tria el grup</div>
+<p class="eil-mini" style="margin-top:0">També podràs comparar l'altre grup després de veure les dades.</p>
+<div aria-label="Grup d’estudiants" class="eil-segment" role="group">
+<button aria-pressed="true" class="is-selected" data-gender="female" type="button">Noies</button>
+<button aria-pressed="false" data-gender="male" type="button">Nois</button>
+</div>
+<fieldset style="border:0;padding:0;margin:24px 0 0;min-width:0">
+<legend class="eil-card-heading">En quin context és més gran la bretxa entre alumnat autòcton i no autòcton en l'accés a la via acadèmica?</legend>
+<div class="eil-options">
+<label class="eil-option"><input name="eil-prediction" type="radio" value="Low"><span class="eil-choice-face"><span aria-hidden="true" class="eil-choice-circle"></span><span>Concentració baixa <span class="eil-mini">(0–15% d'alumnat no autòcton)</span></span></span></label>
+<label class="eil-option"><input name="eil-prediction" type="radio" value="Medium"><span class="eil-choice-face"><span aria-hidden="true" class="eil-choice-circle"></span><span>Concentració mitjana <span class="eil-mini">(16–30%)</span></span></span></label>
+<label class="eil-option"><input name="eil-prediction" type="radio" value="High"><span class="eil-choice-face"><span aria-hidden="true" class="eil-choice-circle"></span><span>Concentració alta <span class="eil-mini">(31% o més)</span></span></span></label>
+</div>
+</fieldset>
+</div>
+<div class="eil-steps-actions"><button class="eil-btn primary" data-action="predict" disabled="" type="button">Descobreix la bretxa <span aria-hidden="true">→</span></button><button class="eil-btn text" data-action="back" type="button">← Enrere</button></div>
+<div class="eil-note">L'exercici compara probabilitats predites ajustades d'un model estadístic. Les categories de composició escolar descriuen contextos observats, no condicions assignades experimentalment.</div>
+</section>
+<!-- SCENE 2 · Gaps -->
+<section class="eil-scene" data-scene="2" hidden="">
+<span class="eil-eyebrow">02 / Descobreix les diferències</span>
+<h2 class="anchored">La bretxa de desigualtat <em class="eil-emphasis">varia</em> segons el context escolar.</h2>
+<p class="eil-deck">Aquesta és la diferència, en punts percentuals, entre les probabilitats ajustades d'accedir a la via acadèmica de l'alumnat autòcton i no autòcton.</p>
+<div class="eil-card">
+<div aria-label="Canvia el grup d’estudiants" class="eil-segment" role="group"><button data-gender="female" type="button">Noies</button><button data-gender="male" type="button">Nois</button></div>
+<p class="eil-result-kicker" style="margin-top:24px">Autòcton menys no autòcton · <span data-gender-word="">noies</span></p>
+<div aria-label="Bretxes de probabilitat ajustades segons la concentració escolar" class="eil-gap-chart" data-gap-chart="" role="group"></div>
+<div class="eil-mini">Cada barra representa una bretxa, no una probabilitat. Totes comparteixen la mateixa escala de 0 a 20 punts percentuals.</div>
+<div class="eil-feedback" role="status"><strong data-prediction-feedback-title=""></strong><p data-prediction-feedback-body=""></p></div>
+</div>
+<div class="eil-steps-actions"><button class="eil-btn primary" data-action="levels" type="button">Però què passa amb les probabilitats reals? <span aria-hidden="true">→</span></button><button class="eil-btn text" data-action="back" type="button">← Enrere</button></div>
+</section>
+<!-- SCENE 3 · Absolute levels -->
+<section class="eil-scene" data-scene="3" hidden="">
+<span class="eil-eyebrow">03 / Mira més enllà de la bretxa</span>
+<h2 class="anchored">Una bretxa més petita no sempre vol dir <em class="eil-emphasis">més oportunitats.</em></h2>
+<p class="eil-deck">La bretxa pot reduir-se perquè tots dos grups tenen probabilitats predites més baixes. Ara compara'n els nivells absoluts, no només la distància entre grups.</p>
+<div class="eil-card">
+<div aria-label="Canvia el grup d’estudiants" class="eil-segment" role="group"><button data-gender="female" type="button">Noies</button><button data-gender="male" type="button">Nois</button></div>
+<div class="eil-key"><div class="eil-key-item"><span class="eil-key-mark"></span> Autòcton</div><div class="eil-key-item"><span class="eil-key-mark open"></span> No autòcton</div><span>Escala de les barres: 0–100%</span></div>
+<div aria-label="Probabilitats estimades d’alumnat autòcton i no autòcton en tres contextos escolars" class="eil-level-chart" data-level-chart="" role="group"></div>
+<div class="eil-two-facts">
+<div class="eil-fact"><div class="eil-fact-label">Bretxa amb concentració baixa</div><div class="eil-fact-number" data-low-gap="">14.0 pp</div><div class="eil-fact-label">Autòcton <span data-low-native="">71.2%</span> · No autòcton <span data-low-nonnative="">57.2%</span></div></div>
+<div class="eil-fact"><div class="eil-fact-label">Bretxa amb concentració alta</div><div class="eil-fact-number" data-high-gap="">6.3 pp</div><div class="eil-fact-label">Autòcton <span data-high-native="">60.3%</span> · No autòcton <span data-high-nonnative="">54.0%</span></div></div>
+</div>
+<div class="eil-note">Entre les <span data-gender-word-level="">noies</span>, tots dos grups tenen probabilitats estimades d'accedir a la via acadèmica més baixes en contextos de concentració alta que baixa. Aquesta és una comparació entre contextos, no una prova que la composició escolar en causi la diferència.</div>
+</div>
+<div class="eil-steps-actions"><button class="eil-btn primary" data-action="insight" type="button">Què ens diu això sobre la desigualtat? <span aria-hidden="true">→</span></button><button class="eil-btn text" data-action="back" type="button">← Enrere</button></div>
+</section>
+<!-- SCENE 4 · Interpretation -->
+<section class="eil-scene" data-scene="4" hidden="">
+<span class="eil-eyebrow">04 / Interpreta les dades</span>
+<h2 class="anchored">Què podem concloure <em class="eil-emphasis">realment?</em></h2>
+<p class="eil-deck">Has vist les bretxes i les probabilitats predites que hi ha al darrere. Quina conclusió recull millor les dades?</p>
+<div class="eil-card">
+<fieldset style="border:0;padding:0;margin:0;min-width:0">
+<legend class="eil-card-heading">Tria la interpretació més defensable</legend>
+<div class="eil-options">
+<label class="eil-option"><input name="eil-reflection" type="radio" value="higher"><span class="eil-choice-face"><span aria-hidden="true" class="eil-choice-circle"></span>Una bretxa més petita demostra que les oportunitats educatives milloren per a tothom.</span></label>
+<label class="eil-option"><input name="eil-reflection" type="radio" value="lower"><span class="eil-choice-face"><span aria-hidden="true" class="eil-choice-circle"></span>Les diferències entre grups poden reduir-se encara que tots dos tinguin probabilitats predites més baixes.</span></label>
+<label class="eil-option"><input name="eil-reflection" type="radio" value="causal"><span class="eil-choice-face"><span aria-hidden="true" class="eil-choice-circle"></span>La composició escolar, per si sola, causa les diferències observades.</span></label>
+</div>
+</fieldset>
+<div class="eil-feedback" data-reflection-feedback="" hidden="" role="status"><strong data-reflection-head=""></strong><p data-reflection-body=""></p></div>
+</div>
+<div class="eil-steps-actions"><button class="eil-btn primary" data-action="reflect" disabled="" type="button">Consulta la interpretació <span aria-hidden="true">→</span></button><button class="eil-btn text" data-action="back" type="button">← Enrere</button></div>
+</section>
+<!-- SCENE 5 · Discovery -->
+<section class="eil-scene" data-scene="5" hidden="">
+<span class="eil-eyebrow">05 / La teva descoberta sociològica</span>
+<h2 class="anchored">Les oportunitats educatives es configuren <em class="eil-emphasis">abans de la universitat.</em></h2>
+<div class="eil-discovery">
+<span class="eil-eyebrow">La descoberta</span>
+<div class="eil-big">Una bretxa menor entre grups no implica necessàriament més oportunitats per a cap dels dos.</div>
+<p>L'estudi mostra que les transicions predites varien segons l'origen migratori, el gènere i la composició escolar. Per entendre la desigualtat, cal examinar tant la distància entre grups com els nivells d'oportunitat de cadascun.</p>
+</div>
+<p class="eil-deck" data-finish-recall="" style="font-size:16px">Ara ja has vist per què una diferència menor entre grups no indica, per si mateixa, unes oportunitats millors.</p>
+<div class="eil-outro-card">
+<div aria-hidden="true" class="eil-outro-mark">↗</div>
+<div><strong>Pregunta següent: Com es compaginen els estudis universitaris amb la feina i la vida personal?</strong><p>Tenir bons resultats acadèmics no sempre és suficient. L'edat, el treball remunerat i les circumstàncies vitals també s'associen amb la permanència a la universitat i la graduació.</p><div class="eil-next-status"><a href="../chapter-2/index.html" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">Explora el capítol 2 →</a></div></div>
+</div>
+<div class="eil-steps-actions"><a class="eil-btn primary" href="https://albert-sanchez-gelabert.github.io/tools/context/" rel="noopener" target="_blank">Explora l'eina de recerca completa ↗</a><button class="eil-btn secondary" data-action="restart" type="button">Torna a començar aquest capítol ↺</button><a class="eil-btn text" href="../index.html">← Tots els capítols</a></div>
+<p class="eil-mini">Continua amb el capítol 2, explora l'eina original o torna a tots els capítols.</p>
+</section>
+<footer class="eil-footer">
+<strong>Font i interpretació</strong><br>
+          Dades: probabilitats predites ajustades de la transició acadèmica, extretes de l'eina de l'autor <em>School Context &amp; Transition Explorer</em> (taules 7–9 publicades). Sánchez-Gelabert, A., Elias Andreu, M. i Bouvier, N. (2024), <em>International Journal of Educational Research</em>, 124, 102321. Cohort: 82.923 estudiants a Catalunya.<br>
+          Aquestes són associacions basades en models, <strong>no efectes causals</strong>. Les categories de context indiquen la proporció d'alumnat no autòcton al centre (baixa: 0–15%; mitjana: 16–30%; alta: 31% o més). El gènere correspon a les categories femení/masculí de l'anàlisi original; aquí fem servir «noies/nois» per facilitar la lectura. Les tres vies de la introducció són esquemàtiques i no proporcionals a les taxes observades.
+          <div class="eil-source-links"><a href="../index.html">Portada del Lab ↗</a><a href="https://doi.org/10.1016/j.ijer.2024.102321" rel="noopener" target="_blank">Llegeix l'article ↗</a><a href="https://albert-sanchez-gelabert.github.io/tools/context/" rel="noopener" target="_blank">Explorador interactiu complet ↗</a><a href="https://albert-sanchez-gelabert.github.io/tools/" rel="noopener" target="_blank">Totes les eines de recerca ↗</a></div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+<script defer="" src="lab.js"></script>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiat!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiat!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/albert-sanchez-gelabert\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
