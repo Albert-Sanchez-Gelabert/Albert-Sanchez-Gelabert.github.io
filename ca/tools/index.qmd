@@ -1,0 +1,324 @@
+---
+title: "Eines interactives de recerca"
+lang: ca
+subtitle: "Exploracions interactives de les desigualtats educatives, l’accés a la universitat i les trajectòries de l’estudiantat."
+format: html
+---
+
+<style>
+.tools-list {
+  max-width: 980px;
+  margin: 1.5rem auto 0 auto;
+}
+
+.tool-item {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.6rem;
+  align-items: start;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.tool-item:first-child {
+  padding-top: 0;
+}
+
+.tool-image-link {
+  display: block;
+  text-decoration: none;
+}
+
+.tool-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+  background: #f4f4f4;
+}
+
+.tool-content h3 {
+  margin: 0 0 .45rem 0;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.tool-content h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tool-content h3 a:hover {
+  text-decoration: underline;
+}
+
+.tool-description {
+  margin: 0 0 .65rem 0;
+  line-height: 1.55;
+}
+
+.tool-meta {
+  font-size: .82rem;
+  color: #777;
+  margin-bottom: .55rem;
+}
+
+.tool-link {
+  font-size: .9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.tools-note {
+  margin-top: 1.4rem;
+  font-size: .82rem;
+  color: #777;
+  line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+  .tool-item {
+    grid-template-columns: 1fr;
+    gap: .9rem;
+  }
+
+  .tool-image {
+    max-height: 260px;
+  }
+}
+
+/* Featured editorial Lab: intentionally distinct from exploratory tools. */
+.eil-feature {
+  max-width: 980px;
+  margin: 1.6rem auto 2.5rem;
+  padding: clamp(1.45rem, 3.5vw, 2.3rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(190px, .7fr);
+  gap: clamp(1.2rem, 3vw, 2.6rem);
+  background: linear-gradient(120deg, #f0f7f3 0%, #f5f6ef 100%);
+  border: 1px solid #d7e5db;
+  border-radius: 16px;
+}
+.eil-feature-kicker,
+.eil-feature-aside-label {
+  display: block;
+  color: #287b70;
+  font-size: .73rem;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+.eil-feature h2 {
+  margin: .7rem 0 .85rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.1rem, 4vw, 3.05rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -.035em;
+  color: #17323a;
+}
+.eil-feature h2 em { color: #187c6d; font-weight: 400; }
+.eil-feature-description {
+  max-width: 580px;
+  margin: 0 0 1.25rem;
+  line-height: 1.58;
+  color: #3f5155;
+}
+.eil-feature-link {
+  display: inline-flex;
+  gap: .6rem;
+  align-items: center;
+  padding: .66rem 1rem;
+  border-radius: 7px;
+  background: #167468;
+  color: #fff !important;
+  font-weight: 650;
+  font-size: .92rem;
+  text-decoration: none !important;
+  transition: background .18s ease;
+}
+.eil-feature-link:hover, .eil-feature-link:focus-visible {
+  background: #105a52;
+}
+.eil-feature-aside {
+  border-left: 1px solid #d0ddd5;
+  padding-left: clamp(1.1rem, 2.3vw, 1.65rem);
+  align-self: center;
+}
+.eil-feature-aside p {
+  margin: .5rem 0 0;
+  line-height: 1.55;
+  color: #586a69;
+  font-size: .92rem;
+}
+.eil-tools-heading {
+  max-width: 980px;
+  margin: 0 auto .55rem;
+  color: #26383e;
+  font-size: 1.45rem;
+}
+.eil-tools-intro {
+  max-width: 980px;
+  margin: 0 auto 1.4rem;
+  line-height: 1.55;
+  color: #667477;
+}
+@media (max-width: 720px) {
+  .eil-feature { grid-template-columns: 1fr; gap: 1.2rem; }
+  .eil-feature-aside {
+    border-left: 0;
+    border-top: 1px solid #d0ddd5;
+    padding: 1rem 0 0;
+  }
+  .eil-feature h2 { font-size: clamp(2rem, 9vw, 2.65rem); }
+}
+</style>
+
+```{=html}
+<section class="eil-feature" aria-labelledby="eil-feature-title">
+  <div>
+    <span class="eil-feature-kicker">Educational Inequality Lab · Històries guiades</span>
+    <h2 id="eil-feature-title">Beyond <em>merit.</em></h2>
+    <p class="eil-feature-description">Cinc històries sociològiques interactives sobre com es generen i evolucionen les desigualtats educatives: contextos escolars, condicions de vida, recursos familiars, trajectòries acadèmiques i flexibilitat institucional.</p>
+    <a class="eil-feature-link" href="educational-inequality-lab/">Descobreix el Lab <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="eil-feature-aside">
+    <span class="eil-feature-aside-label">Una altra manera d’explorar la recerca</span>
+    <p>Segueix un recorregut guiat, capítol a capítol. Si vols explorar dades i resultats amb més detall, utilitza les eines de recerca que trobaràs a continuació.</p>
+  </div>
+</section>
+```
+
+<h2 class="eil-tools-heading" id="individual-tools">Eines de recerca individuals</h2>
+<p class="eil-tools-intro">Explora la recerca original mitjançant visualitzacions interactives de dades i models.</p>
+
+<p class="asg-tool-language-note">Les eines interactives estan disponibles actualment en anglès.</p>
+
+<div class="tools-list">
+
+<div class="tool-item">
+
+<a class="tool-image-link" href="../../tools/pathways/">
+<img class="tool-image" src="../../tools/images/pathways.png" alt="Previsualització de Longitudinal Pathway Dynamics">
+</a>
+
+<div class="tool-content">
+
+### [Longitudinal Pathway Dynamics](../../tools/pathways/)
+
+<p class="tool-description">
+Segueix l’evolució d’una cohort universitària durant sis observacions anuals i compara les trajectòries longitudinals de diversos perfils d’estudiants.
+</p>
+
+<p class="tool-meta">
+Anàlisi de seqüències · TraMineR · trajectòries longitudinals
+</p>
+
+[Obre l’explorador →](../../tools/pathways/){.tool-link}
+
+</div>
+</div>
+
+
+<div class="tool-item">
+
+<a class="tool-image-link" href="../../tools/context/">
+<img class="tool-image" src="../../tools/images/context.png" alt="Previsualització de School Context & Transition Explorer">
+</a>
+
+<div class="tool-content">
+
+### [School Context & Transition Explorer](../../tools/context/)
+
+<p class="tool-description">
+Compara les transicions cap a itineraris acadèmics, professionals o d’abandonament segons la composició escolar i examina les desigualtats de gènere i origen migratori.
+</p>
+
+<p class="tool-meta">
+Probabilitats predites · gènere × origen migratori × composició escolar
+</p>
+
+[Obre l’explorador →](../../tools/context/){.tool-link}
+
+</div>
+</div>
+
+
+<div class="tool-item">
+
+<a class="tool-image-link" href="../../tools/entry-space/">
+<img class="tool-image" src="../../tools/images/entry-space.png" alt="Previsualització de University Entry Space Explorer">
+</a>
+
+<div class="tool-content">
+
+### [University Entry Space Explorer](../../tools/entry-space/)
+
+<p class="tool-description">
+Explora l’espai multidimensional d’accés a la universitat i la posició dels perfils d’estudiants, les característiques d’entrada i els àmbits de titulació.
+</p>
+
+<p class="tool-meta">
+Anàlisi de correspondències múltiples · perfils · àmbits de titulació
+</p>
+
+[Obre l’explorador →](../../tools/entry-space/){.tool-link}
+
+</div>
+</div>
+
+
+<div class="tool-item">
+
+<a class="tool-image-link" href="../../tools/compensatory/">
+<img class="tool-image" src="../../tools/images/compensatory.png" alt="Previsualització de Compensatory Advantage Explorer">
+</a>
+
+<div class="tool-content">
+
+### [Compensatory Advantage Explorer](../../tools/compensatory/)
+
+<p class="tool-description">
+Explora com el rendiment del primer curs i el nivell educatiu familiar s’associen amb la probabilitat de continuar, canviar d’estudis o abandonar la universitat.
+</p>
+
+<p class="tool-meta">
+Probabilitats predites · origen social × rendiment acadèmic
+</p>
+
+[Obre l’explorador →](../../tools/compensatory/){.tool-link}
+
+</div>
+</div>
+
+
+<div class="tool-item">
+
+<a class="tool-image-link" href="../../tools/trajectories/">
+<img class="tool-image" src="../../tools/images/trajectories.png" alt="Previsualització de University Trajectory Lab">
+</a>
+
+<div class="tool-content">
+
+### [University Trajectory Lab](../../tools/trajectories/)
+
+<p class="tool-description">
+Explora sis patrons de progressió acadèmica al llarg de set anys, els perfils associats amb cada trajectòria i les diferències entre àmbits d’estudi.
+</p>
+
+<p class="tool-meta">
+Modelització de trajectòries grupals · progressió longitudinal
+</p>
+
+[Obre l’eina →](../../tools/trajectories/){.tool-link}
+
+</div>
+</div>
+
+<div class="tools-note">
+Aquestes eines es basen en estudis publicats i resultats de recerca. Quan es presenten estimacions modelitzades, cal interpretar-les com a associacions i no com a efectes causals.
+</div>
+
+</div>
+

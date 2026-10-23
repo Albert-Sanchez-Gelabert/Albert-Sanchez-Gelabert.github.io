@@ -1,0 +1,99 @@
+---
+pagetitle: "Educational Inequality Lab | Beyond merit"
+lang: es
+description: "Cinco historias sociológicas interactivas sobre desigualdades educativas y trayectorias del estudiantado."
+format:
+  html:
+    page-layout: full
+    toc: false
+    css: ../../../tools/educational-inequality-lab/lab-home.css
+---
+
+```{=html}
+<div id="eil-home">
+  <div class="home-shell">
+    <header class="brandbar">
+      <div class="brand"><span class="brandmark" aria-hidden="true">≋</span> Educational Inequality Lab</div>
+      <span class="descriptor">Sociología interactiva · Cataluña</span>
+    </header>
+
+    <section class="hero">
+      <span class="eyebrow">Un recorrido por la educación y la desigualdad</span>
+      <h1>Beyond <em>merit.</em></h1>
+      <p class="intro">La desigualdad educativa no se resuelve con una sola decisión. A través de cinco historias guiadas, descubre cómo los contextos escolares, las circunstancias vitales, los recursos familiares, las trayectorias académicas y las oportunidades institucionales configuran los futuros educativos del estudiantado.</p>
+      <div class="hero-actions">
+        <a class="button" href="../../../tools/educational-inequality-lab/chapter-1/index.html">Empieza el capítulo 1 (EN) <span aria-hidden="true">→</span></a>
+        <a class="plain" href="#journey-title">Elige un capítulo ↓</a>
+      </div>
+      <p class="hero-note">Cinco descubrimientos independientes · Léelos en orden o elige tu recorrido · Sin registro</p>
+    </section>
+
+    <section aria-labelledby="journey-title">
+      <div class="section-top">
+        <div>
+          <span class="eyebrow">El recorrido</span>
+          <h2 id="journey-title">Cinco preguntas. Un mismo hilo conductor.</h2>
+        </div>
+        <span class="muted">Los cinco capítulos disponibles</span>
+      </div>
+      <p class="asg-lab-lang-note" style="color:#47796d; font-size:.9rem; margin:0 0 1.25rem;">Los cinco capítulos interactivos están disponibles por ahora en inglés.</p>
+      <ol class="chapters">
+        <li class="chapter available">
+          <span class="number">01</span>
+          <div>
+            <h3><a class="titlelink" href="../../../tools/educational-inequality-lab/chapter-1/index.html">¿Importa el contexto escolar?</a></h3>
+            <p>Una brecha menor entre grupos no siempre implica más oportunidades educativas.</p>
+          </div>
+          <a class="status" href="../../../tools/educational-inequality-lab/chapter-1/index.html" aria-label="Leer en inglés el capítulo 1">Leer en inglés →</a>
+        </li>
+        <li class="chapter available">
+          <span class="number">02</span>
+          <div>
+            <h3><a class="titlelink" href="../../../tools/educational-inequality-lab/chapter-2/index.html">¿Qué ocurre cuando la universidad se encuentra con el resto de la vida?</a></h3>
+            <p>Por qué la edad, el trabajo y las circunstancias vitales importan incluso entre estudiantes con buenos resultados.</p>
+          </div>
+          <a class="status" href="../../../tools/educational-inequality-lab/chapter-2/index.html" aria-label="Leer en inglés el capítulo 2">Leer en inglés →</a>
+        </li>
+        <li class="chapter available">
+          <span class="number">03</span>
+          <div>
+            <h3><a class="titlelink" href="../../../tools/educational-inequality-lab/chapter-3/index.html">¿Mismas notas, futuros diferentes?</a></h3>
+            <p>Cuando los resultados son bajos, el origen familiar puede influir en quién cambia de itinerario y quién abandona.</p>
+          </div>
+          <a class="status" href="../../../tools/educational-inequality-lab/chapter-3/index.html" aria-label="Leer en inglés el capítulo 3">Leer en inglés →</a>
+        </li>
+        <li class="chapter available">
+          <span class="number">04</span>
+          <div>
+            <h3><a class="titlelink" href="../../../tools/educational-inequality-lab/chapter-4/index.html">¿El éxito académico sigue una línea recta?</a></h3>
+            <p>Un inicio difícil puede conducir a la graduación, mientras que un buen comienzo puede tomar otra dirección.</p>
+          </div>
+          <a class="status" href="../../../tools/educational-inequality-lab/chapter-4/index.html" aria-label="Leer en inglés el capítulo 4">Leer en inglés →</a>
+        </li>
+        <li class="chapter available">
+          <span class="number">05</span>
+          <div>
+            <h3><a class="titlelink" href="../../../tools/educational-inequality-lab/chapter-5/index.html">¿Quién se beneficia realmente de la flexibilidad?</a></h3>
+            <p>Más flexibilidad para estudiar no implica necesariamente las mismas posibilidades de graduarse.</p>
+          </div>
+          <a class="status" href="../../../tools/educational-inequality-lab/chapter-5/index.html" aria-label="Leer en inglés el capítulo 5">Leer en inglés →</a>
+        </li>
+      </ol>
+    </section>
+
+    <footer class="foot" style="display: block;">
+      <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.4rem 1.5rem;">
+        <span>Cada capítulo se basa en investigación publicada. Son cinco historias sociológicas conectadas, no una única base de datos longitudinal.</span>
+        <a href="../">Explora las herramientas de investigación ↗</a>
+      </div>
+      <div style="margin-top: 1.2rem; font-size: 0.92em;">
+        <div>Creado y desarrollado por <strong>Albert Sánchez-Gelabert</strong> · 2026</div>
+        <details style="margin-top: 0.45rem;">
+          <summary style="cursor: pointer; color: #237e70; text-decoration: underline; text-underline-offset: 3px;">Cómo citar el proyecto</summary>
+          <p style="margin: 0.65rem 0 0; max-width: 45rem; line-height: 1.65;">Sanchez Gelabert, A. (2026). <em>Educational Inequality Lab: Beyond merit</em> [Computer software]. Zenodo. <a href="https://doi.org/10.5281/zenodo.23454648">https://doi.org/10.5281/zenodo.23454648</a></p>
+        </details>
+      </div>
+    </footer>
+  </div>
+</div>
+```

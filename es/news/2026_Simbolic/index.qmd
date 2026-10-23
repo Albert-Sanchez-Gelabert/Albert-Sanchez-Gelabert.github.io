@@ -1,0 +1,22 @@
+---
+title: Nuevo artículo sobre fronteras simbólicas y gustos musicales
+lang: es
+date: '2026-10-16'
+description: Un artículo en Sociological Research Online analiza las estructuras relacionales del gusto musical y la persistencia de fronteras simbólicas en España.
+categories:
+- Publicaciones
+- Consumo cultural
+image: ../../../news/2026_Simbolic/image.jpg
+---
+
+Nuestro nuevo artículo, **«Symbolic boundaries and musical tastes in Spanish consumers: beyond cultural omnivorousness»**, escrito con Marc Barbeta-Viñas, se ha publicado en *Sociological Research Online*.
+
+A partir de la **Encuesta de Hábitos y Prácticas Culturales en España** (n = 14.524), el estudio utiliza el **análisis de clases correlacionales (CCA)** para identificar estructuras relacionales de gustos musicales. Los resultados muestran cuatro configuraciones distintas e indican que los repertorios amplios o eclécticos pueden coexistir con exclusiones selectivas y fronteras simbólicas.
+
+El análisis también examina cómo estas estructuras de gustos se distribuyen socialmente según la edad, la educación, el género y las prácticas culturales.
+
+### Referencia
+
+Sánchez-Gelabert, A., & Barbeta-Viñas, M. (2026). Symbolic boundaries and musical tastes in Spanish consumers: Beyond cultural omnivorousness. *Sociological Research Online*, 0(0). https://doi.org/10.1177/13607804261489903
+
+[DOI](https://doi.org/10.1177/13607804261489903) · [Manuscrito aceptado](../../../files/symbolic-boundaries-aam.pdf)

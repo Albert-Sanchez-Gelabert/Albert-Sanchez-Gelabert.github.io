@@ -1,0 +1,15 @@
+---
+title: Una anàlisi longitudinal de la implicació i el rendiment en la transició a la secundària postobligatòria a Barcelona
+lang: ca
+date: '2026-04-13'
+description: Nova publicació sobre la transició a la secundària postobligatòria a Barcelona.
+categories:
+- Publicació
+image: ../../../news/2026_Youth/image.jpg
+---
+
+S'ha publicat un nou article amb Ona Valls i Rafael Merino a *Journal of Applied Youth Studies*.
+
+L'article examina la transició a la secundària postobligatòria a Barcelona des d'una perspectiva longitudinal, centrant-se en la implicació conductual i el rendiment acadèmic.
+
+[DOI](https://doi.org/10.1007/s43151-025-00193-y) · [Accés lliure](https://hdl.handle.net/2117/460706)

@@ -1,0 +1,41 @@
+---
+title: "Recerca"
+lang: ca
+description: "Línies de recerca sobre desigualtats educatives, trajectòries universitàries i consum cultural."
+---
+
+La meva recerca analitza com les desigualtats socials, els itineraris educatius i els contextos institucionals configuren les oportunitats i les trajectòries educatives. Bona part de la meva feina se centra en l’educació superior, però també estudio les transicions al llarg del sistema educatiu i, més recentment, les desigualtats en el consum cultural.
+
+## Educació superior i desigualtats educatives
+
+Una línia central de la meva recerca tracta les desigualtats d’oportunitats a l’educació superior. Estudio l’accés a la universitat, la continuïtat i l’abandonament, l’elecció d’estudis, l’experiència universitària i les condicions socials i de vida que configuren les trajectòries acadèmiques. M’interessa especialment com els contextos institucionals i els itineraris educatius diferenciats contribueixen a resultats desiguals.
+
+## Transicions educatives i trajectòries de l’estudiantat
+
+També analitzo les transicions educatives abans i durant l’educació superior, incloses les transicions a l’educació postobligatòria, els itineraris de formació professional i els no tradicionals, i les trajectòries complexes o no lineals. En aquest àmbit utilitzo sovint enfocaments quantitatius i longitudinals per examinar com l’origen social, les experiències educatives prèvies i els contextos institucionals condicionen la progressió pel sistema educatiu.
+
+## Cultura, consum i desigualtats socials
+
+Una línia més recent de la meva recerca examina el consum cultural i la desigualtat social. Inclou treballs sobre la participació cultural digital, els gustos musicals i les fronteres simbòliques, amb interès per la relació entre els patrons de consum cultural, la posició social i els processos de diferenciació.
+
+## Projectes de recerca seleccionats
+
+**[MAPINEQ — Mapping inequalities through the life course](https://mapineq.eu/)**  
+*UNED, 2024–2025*  
+Projecte europeu sobre com es desenvolupen i s’interrelacionen les desigualtats al llarg del curs de vida, incloses les desigualtats educatives i les transicions de l’educació al treball.
+
+**[INVENT Culture — European Inventory of Societal Values of Culture as a Basis for Inclusive Cultural Policies](https://inventculture.eu/)**  
+*Universitat Autònoma de Barcelona, 2022–2023*  
+Projecte Horitzó 2020 que examina la participació cultural, els valors i les desigualtats per incorporar una perspectiva social més sòlida a les polítiques culturals i a la recerca.
+
+**[Complex Trajectories](https://fe.up.pt/complext/pages/about.html)**  
+*Universitat Autònoma de Barcelona / Universitat Oberta de Catalunya, 2020–2022*  
+Recerca sobre trajectòries universitàries complexes i no lineals, inclosos els canvis de titulació o modalitat d’estudi, les interrupcions i altres itineraris que s’allunyen d’una progressió lineal estàndard. El projecte també va desenvolupar enfocaments per analitzar i monitorar les trajectòries de l’estudiantat.
+
+**UOC Impact**  
+*Universitat Oberta de Catalunya, 2018–2020*  
+Recerca sobre la contribució de l’educació superior en línia a la societat catalana.
+
+**Via Universitària**  
+*Xarxa Vives d’Universitats, 2015–2019*  
+Recerca sobre l’accés a la universitat, les condicions d’aprenentatge, les expectatives i els resultats en el conjunt del sistema universitari.

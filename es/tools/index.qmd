@@ -1,0 +1,324 @@
+---
+title: "Herramientas interactivas de investigación"
+lang: es
+subtitle: "Exploraciones interactivas de las desigualdades educativas, el acceso a la universidad y las trayectorias del estudiantado."
+format: html
+---
+
+<style>
+.tools-list {
+  max-width: 980px;
+  margin: 1.5rem auto 0 auto;
+}
+
+.tool-item {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.6rem;
+  align-items: start;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.tool-item:first-child {
+  padding-top: 0;
+}
+
+.tool-image-link {
+  display: block;
+  text-decoration: none;
+}
+
+.tool-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+  background: #f4f4f4;
+}
+
+.tool-content h3 {
+  margin: 0 0 .45rem 0;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.tool-content h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tool-content h3 a:hover {
+  text-decoration: underline;
+}
+
+.tool-description {
+  margin: 0 0 .65rem 0;
+  line-height: 1.55;
+}
+
+.tool-meta {
+  font-size: .82rem;
+  color: #777;
+  margin-bottom: .55rem;
+}
+
+.tool-link {
+  font-size: .9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.tools-note {
+  margin-top: 1.4rem;
+  font-size: .82rem;
+  color: #777;
+  line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+  .tool-item {
+    grid-template-columns: 1fr;
+    gap: .9rem;
+  }
+
+  .tool-image {
+    max-height: 260px;
+  }
+}
+
+/* Featured editorial Lab: intentionally distinct from exploratory tools. */
+.eil-feature {
+  max-width: 980px;
+  margin: 1.6rem auto 2.5rem;
+  padding: clamp(1.45rem, 3.5vw, 2.3rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(190px, .7fr);
+  gap: clamp(1.2rem, 3vw, 2.6rem);
+  background: linear-gradient(120deg, #f0f7f3 0%, #f5f6ef 100%);
+  border: 1px solid #d7e5db;
+  border-radius: 16px;
+}
+.eil-feature-kicker,
+.eil-feature-aside-label {
+  display: block;
+  color: #287b70;
+  font-size: .73rem;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+.eil-feature h2 {
+  margin: .7rem 0 .85rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.1rem, 4vw, 3.05rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -.035em;
+  color: #17323a;
+}
+.eil-feature h2 em { color: #187c6d; font-weight: 400; }
+.eil-feature-description {
+  max-width: 580px;
+  margin: 0 0 1.25rem;
+  line-height: 1.58;
+  color: #3f5155;
+}
+.eil-feature-link {
+  display: inline-flex;
+  gap: .6rem;
+  align-items: center;
+  padding: .66rem 1rem;
+  border-radius: 7px;
+  background: #167468;
+  color: #fff !important;
+  font-weight: 650;
+  font-size: .92rem;
+  text-decoration: none !important;
+  transition: background .18s ease;
+}
+.eil-feature-link:hover, .eil-feature-link:focus-visible {
+  background: #105a52;
+}
+.eil-feature-aside {
+  border-left: 1px solid #d0ddd5;
+  padding-left: clamp(1.1rem, 2.3vw, 1.65rem);
+  align-self: center;
+}
+.eil-feature-aside p {
+  margin: .5rem 0 0;
+  line-height: 1.55;
+  color: #586a69;
+  font-size: .92rem;
+}
+.eil-tools-heading {
+  max-width: 980px;
+  margin: 0 auto .55rem;
+  color: #26383e;
+  font-size: 1.45rem;
+}
+.eil-tools-intro {
+  max-width: 980px;
+  margin: 0 auto 1.4rem;
+  line-height: 1.55;
+  color: #667477;
+}
+@media (max-width: 720px) {
+  .eil-feature { grid-template-columns: 1fr; gap: 1.2rem; }
+  .eil-feature-aside {
+    border-left: 0;
+    border-top: 1px solid #d0ddd5;
+    padding: 1rem 0 0;
+  }
+  .eil-feature h2 { font-size: clamp(2rem, 9vw, 2.65rem); }
+}
+</style>
+
+```{=html}
+<section class="eil-feature" aria-labelledby="eil-feature-title">
+  <div>
+    <span class="eil-feature-kicker">Educational Inequality Lab · Historias guiadas</span>
+    <h2 id="eil-feature-title">Beyond <em>merit.</em></h2>
+    <p class="eil-feature-description">Cinco historias sociológicas interactivas sobre cómo surgen y evolucionan las desigualdades educativas: contextos escolares, condiciones de vida, recursos familiares, trayectorias académicas y flexibilidad institucional.</p>
+    <a class="eil-feature-link" href="educational-inequality-lab/">Descubre el Lab <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="eil-feature-aside">
+    <span class="eil-feature-aside-label">Otra manera de explorar la investigación</span>
+    <p>Sigue un recorrido guiado, capítulo a capítulo. Para explorar datos y resultados con más detalle, utiliza las herramientas de investigación que aparecen a continuación.</p>
+  </div>
+</section>
+```
+
+<h2 class="eil-tools-heading" id="individual-tools">Herramientas de investigación individuales</h2>
+<p class="eil-tools-intro">Explora la investigación original mediante visualizaciones interactivas de datos y modelos.</p>
+
+<p class="asg-tool-language-note">Las herramientas interactivas están disponibles actualmente en inglés.</p>
+
+<div class="tools-list">
+
+<div class="tool-item">
+
+<a class="tool-image-link" href="../../tools/pathways/">
+<img class="tool-image" src="../../tools/images/pathways.png" alt="Vista previa de Longitudinal Pathway Dynamics">
+</a>
+
+<div class="tool-content">
+
+### [Longitudinal Pathway Dynamics](../../tools/pathways/)
+
+<p class="tool-description">
+Sigue la evolución de una cohorte universitaria durante seis observaciones anuales y compara las trayectorias longitudinales de distintos perfiles de estudiantes.
+</p>
+
+<p class="tool-meta">
+Análisis de secuencias · TraMineR · trayectorias longitudinales
+</p>
+
+[Abrir explorador →](../../tools/pathways/){.tool-link}
+
+</div>
+</div>
+
+
+<div class="tool-item">
+
+<a class="tool-image-link" href="../../tools/context/">
+<img class="tool-image" src="../../tools/images/context.png" alt="Vista previa de School Context & Transition Explorer">
+</a>
+
+<div class="tool-content">
+
+### [School Context & Transition Explorer](../../tools/context/)
+
+<p class="tool-description">
+Compara las transiciones hacia itinerarios académicos, profesionales o de abandono según la composición escolar y examina las desigualdades de género y origen migratorio.
+</p>
+
+<p class="tool-meta">
+Probabilidades predichas · género × origen migratorio × composición escolar
+</p>
+
+[Abrir explorador →](../../tools/context/){.tool-link}
+
+</div>
+</div>
+
+
+<div class="tool-item">
+
+<a class="tool-image-link" href="../../tools/entry-space/">
+<img class="tool-image" src="../../tools/images/entry-space.png" alt="Vista previa de University Entry Space Explorer">
+</a>
+
+<div class="tool-content">
+
+### [University Entry Space Explorer](../../tools/entry-space/)
+
+<p class="tool-description">
+Explora el espacio multidimensional de acceso a la universidad y la posición de los perfiles del estudiantado, las características de entrada y los ámbitos de titulación.
+</p>
+
+<p class="tool-meta">
+Análisis de correspondencias múltiples · perfiles · ámbitos de titulación
+</p>
+
+[Abrir explorador →](../../tools/entry-space/){.tool-link}
+
+</div>
+</div>
+
+
+<div class="tool-item">
+
+<a class="tool-image-link" href="../../tools/compensatory/">
+<img class="tool-image" src="../../tools/images/compensatory.png" alt="Vista previa de Compensatory Advantage Explorer">
+</a>
+
+<div class="tool-content">
+
+### [Compensatory Advantage Explorer](../../tools/compensatory/)
+
+<p class="tool-description">
+Explora cómo el rendimiento del primer curso y el nivel educativo familiar se asocian con la probabilidad de continuar, cambiar de estudios o abandonar la universidad.
+</p>
+
+<p class="tool-meta">
+Probabilidades predichas · origen social × rendimiento académico
+</p>
+
+[Abrir explorador →](../../tools/compensatory/){.tool-link}
+
+</div>
+</div>
+
+
+<div class="tool-item">
+
+<a class="tool-image-link" href="../../tools/trajectories/">
+<img class="tool-image" src="../../tools/images/trajectories.png" alt="Vista previa de University Trajectory Lab">
+</a>
+
+<div class="tool-content">
+
+### [University Trajectory Lab](../../tools/trajectories/)
+
+<p class="tool-description">
+Explora seis patrones de progresión académica a lo largo de siete años, los perfiles asociados a cada trayectoria y las diferencias entre ámbitos de estudio.
+</p>
+
+<p class="tool-meta">
+Modelización de trayectorias grupales · progresión longitudinal
+</p>
+
+[Abrir herramienta →](../../tools/trajectories/){.tool-link}
+
+</div>
+</div>
+
+<div class="tools-note">
+Estas herramientas se basan en estudios publicados y resultados de investigación. Cuando se presentan estimaciones modelizadas, deben interpretarse como asociaciones y no como efectos causales.
+</div>
+
+</div>
+

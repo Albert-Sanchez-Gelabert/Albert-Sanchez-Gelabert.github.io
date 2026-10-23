@@ -129,3 +129,12 @@
     margin-top: 0.5rem;
   }
 }
+
+/* Language availability for interactive content not yet translated. */
+.asg-tool-language-note {
+  color: #677775; font-size: .87rem; line-height: 1.55;
+  margin: 1rem 0;
+}
+.asg-lab-lang-note {
+  color: #47796d; font-size: .9rem; margin: 0 0 1.25rem;
+}

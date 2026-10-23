@@ -4,6 +4,12 @@ project:
     - "*.qmd"
     - "news/**/*.qmd"
     - "tools/**/*.qmd"
+    - "ca/*.qmd"
+    - "es/*.qmd"
+    - "ca/news/**/*.qmd"
+    - "es/news/**/*.qmd"
+    - "ca/tools/**/*.qmd"
+    - "es/tools/**/*.qmd"
 
 website:
   title: "Albert Sánchez-Gelabert"
@@ -39,10 +45,22 @@ website:
       - href: cv.qmd
         text: CV
 
+    right:
+      - text: "EN · CA · ES"
+        aria-label: "Select language / Selecciona l’idioma"
+        menu:
+          - text: "English"
+            href: index.qmd
+          - text: "Català"
+            href: ca/index.qmd
+          - text: "Castellano"
+            href: es/index.qmd
+
   search: true
 
 format:
   html:
     theme: cosmo
     css: styles.css
+    include-in-header: _includes/multilingual-nav.html
 

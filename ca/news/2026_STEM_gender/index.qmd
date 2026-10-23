@@ -1,0 +1,23 @@
+---
+title: Les desigualtats de gènere en STEM també es fan visibles en l’accés a la universitat
+lang: ca
+date: '2026-09-02'
+description: Nova publicació a Research in Science & Technological Education sobre sobreselecció acadèmica i accés estratificat als estudis STEM.
+categories:
+- Publicació
+image: ../../../news/2026_STEM_gender/image.jpg
+---
+
+Tot i que les diferències de gènere en STEM sovint s'expliquen a partir d'etapes educatives anteriors, els nostres resultats mostren que també importen les condicions estratificades d'accés a la universitat.
+
+Analitzant 36.075 estudiants que accedeixen per primer cop a la universitat a Catalunya, observem que les dones que entren en camps STEM tècnics, experimentals i biològics es concentren en els perfils de més selectivitat acadèmica, mentre que els homes hi accedeixen des d'un ventall més ampli de posicions acadèmiques.
+
+Aquests resultats apunten a un patró de sobreselecció acadèmica en l'accés de les dones als estudis STEM. Les diferències de gènere no es poden entendre només en termes d'interessos o aspiracions, sinó també en relació amb les condicions estratificades d'accés a la universitat.
+
+Publicat amb Cristina Simarro Rodríguez a *Research in Science & Technological Education*.
+
+### Referència
+
+Sánchez-Gelabert, A., & Simarro Rodríguez, C. (2026). Gender and STEM: academic over-selection and stratified university entry. *Research in Science & Technological Education*. https://doi.org/10.1080/02635143.2026.2727576
+
+[DOI](https://doi.org/10.1080/02635143.2026.2727576) · [Manuscrit acceptat](../../../files/Gender_STEM_AAM.pdf)

@@ -1,0 +1,119 @@
+---
+title: "Albert Sánchez-Gelabert"
+lang: ca
+description: "Recerca en desigualtats educatives, trajectòries universitàries i sociologia de l’educació."
+---
+
+::: {.home-hero}
+
+<div class="home-kicker">Sociòleg · Professor · Investigador</div>
+
+<div class="home-affiliation">
+Institut de Ciències de l'Educació (ICE) · Universitat Politècnica de Catalunya · BarcelonaTech (UPC)
+</div>
+
+Soc sociòleg i la meva recerca se centra en les desigualtats socials en l’educació, especialment en l’educació superior. Estudio com l’origen social, els itineraris educatius i els contextos institucionals condicionen l’accés a la universitat, l’elecció d’estudis, la permanència, l’abandonament i les trajectòries acadèmiques de l’estudiantat.
+
+Bona part de la meva recerca utilitza enfocaments quantitatius i longitudinals per analitzar com es desenvolupen les desigualtats al llarg del temps i en les transicions educatives. Més recentment, he ampliat les línies de recerca a les desigualtats al llarg del curs de vida i al consum cultural, incloent-hi la participació digital, els gustos musicals i els processos de diferenciació social.
+
+<div class="home-links">
+<a href="mailto:albert.sanchez.gelabert@upc.edu">Correu electrònic</a>
+<span>·</span>
+<a href="https://orcid.org/0000-0002-4135-6121" target="_blank">ORCID</a>
+<span>·</span>
+<a href="https://scholar.google.es/citations?user=Z5TisEcAAAAJ&hl=ca" target="_blank">Google Scholar</a>
+</div>
+
+:::
+
+## Interessos de recerca
+
+- Educació superior
+- Desigualtats educatives
+- Trajectòries i transicions educatives
+- STEM i gènere
+- Desigualtats al llarg del curs de vida
+- Consum cultural
+
+```{=html}
+<style>
+/* Scoped styles: affect only the two feature cards on the main Home. */
+#asg-home-explore { margin: 2.4rem 0 2.1rem; }
+#asg-home-explore .asg-home-explore-heading {
+  margin: 0 0 .55rem; font-size: 1.6rem; font-weight: 700;
+  letter-spacing: -.025em; line-height: 1.25;
+}
+#asg-home-explore .asg-home-explore-intro {
+  margin: 0 0 1.35rem; color: #586975; line-height: 1.6;
+}
+#asg-home-explore .asg-home-explore-grid {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem; align-items: stretch;
+}
+#asg-home-explore .asg-home-explore-card {
+  display: flex; flex-direction: column; align-items: flex-start;
+  min-width: 0; padding: 1.65rem;
+  border: 1px solid #dbe4df; border-radius: 13px;
+  background: #f8faf9; color: #26343c;
+  text-decoration: none !important;
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+#asg-home-explore .asg-home-explore-card--lab { background: #edf5f1; border-color: #cbded5; }
+#asg-home-explore .asg-home-explore-card:hover,
+#asg-home-explore .asg-home-explore-card:focus-visible {
+  border-color: #277f72; box-shadow: 0 7px 23px rgba(19, 70, 61, .085);
+  transform: translateY(-2px);
+}
+#asg-home-explore .asg-home-explore-card:focus-visible {
+  outline: 3px solid #8dc3b1; outline-offset: 3px;
+}
+#asg-home-explore .asg-home-explore-eyebrow {
+  margin-bottom: .8rem; color: #277668;
+  font-size: .71rem; font-weight: 750; line-height: 1.5;
+  letter-spacing: .10em; text-transform: uppercase;
+}
+#asg-home-explore .asg-home-explore-title {
+  margin: 0 0 .8rem; font-family: Georgia, 'Times New Roman', serif;
+  color: #23343a; font-size: clamp(1.42rem, 2.45vw, 1.95rem);
+  font-weight: 400; letter-spacing: -.035em; line-height: 1.14;
+}
+#asg-home-explore .asg-home-explore-title em { color: #187768; }
+#asg-home-explore .asg-home-explore-description {
+  margin: 0 0 1.3rem; color: #566571; font-size: .96rem; line-height: 1.6;
+  flex: 1;
+}
+#asg-home-explore .asg-home-explore-link {
+  color: #156c60; font-size: .93rem; font-weight: 750;
+  text-decoration: underline; text-underline-offset: 3px;
+}
+@media (max-width: 680px) {
+  #asg-home-explore .asg-home-explore-grid { grid-template-columns: 1fr; }
+  #asg-home-explore .asg-home-explore-card { padding: 1.35rem; }
+  #asg-home-explore .asg-home-explore-title { font-size: 1.7rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #asg-home-explore .asg-home-explore-card { transition: none; }
+  #asg-home-explore .asg-home-explore-card:hover { transform: none; }
+}
+</style>
+
+<section id="asg-home-explore" aria-labelledby="asg-home-explore-title">
+  <h2 class="asg-home-explore-heading" id="asg-home-explore-title">Explora la recerca</h2>
+  <p class="asg-home-explore-intro">Dues maneres d’apropar-te a la recerca: explorar directament les dades o seguir una descoberta sociològica guiada.</p>
+  <div class="asg-home-explore-grid">
+    <a class="asg-home-explore-card" href="tools/" aria-label="Explora les eines interactives de recerca">
+      <span class="asg-home-explore-eyebrow">Explora les dades</span>
+      <h3 class="asg-home-explore-title">Eines interactives<br>de recerca</h3>
+      <p class="asg-home-explore-description">Analitza les desigualtats educatives amb visualitzacions interactives, comparacions i models longitudinals.</p>
+      <span class="asg-home-explore-link">Explora les eines ↗</span>
+    </a>
+    <a class="asg-home-explore-card asg-home-explore-card--lab" href="tools/educational-inequality-lab/" aria-label="Descobreix Beyond merit a l’Educational Inequality Lab">
+      <span class="asg-home-explore-eyebrow">Cinc històries guiades · Beyond merit</span>
+      <h3 class="asg-home-explore-title">Educational<br>Inequality <em>Lab</em></h3>
+      <p class="asg-home-explore-description">Segueix cinc històries interactives sobre com apareixen i evolucionen les desigualtats educatives, des de les transicions escolars fins als itineraris universitaris.</p>
+      <span class="asg-home-explore-link">Comença el Lab →</span>
+    </a>
+  </div>
+</section>
+
+```
