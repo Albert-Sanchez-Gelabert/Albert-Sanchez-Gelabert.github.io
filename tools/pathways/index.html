@@ -78,6 +78,155 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<!-- Language navigation for the Quarto website (EN/CA/ES). -->
+<script>
+(function () {
+  'use strict';
+
+  // This website is served at the domain root (GitHub user Pages and Quarto preview).
+  // Do not infer the root from the navbar brand: its markup/href can vary by page.
+  const ROOT = '/';
+  const routes = {
+    home: 'index.html',
+    research: 'research.html',
+    publications: 'publications.html',
+    news: 'news.html',
+    cv: 'cv.html',
+    tools: 'tools/index.html',
+    lab: 'tools/educational-inequality-lab/index.html'
+  };
+  const articleIds = new Set(['2026_Simbolic', '2026_STEM_gender', '2026_Youth']);
+  const labels = {
+    en: {home: 'Home', research: 'Research', publications: 'Publications', news: 'News', cv: 'CV', tools: 'Tools', lab: 'Lab', all: 'All tools'},
+    ca: {home: 'Inici', research: 'Recerca', publications: 'Publicacions', news: 'Actualitat', cv: 'Currículum', tools: 'Eines', lab: 'Lab', all: 'Totes les eines'},
+    es: {home: 'Inicio', research: 'Investigación', publications: 'Publicaciones', news: 'Actualidad', cv: 'Currículum', tools: 'Herramientas', lab: 'Lab', all: 'Todas las herramientas'}
+  };
+  const languageChoices = {'English': 'en', 'Català': 'ca', 'Castellano': 'es'};
+
+  function pageInfo(pathname) {
+    let rel = pathname.replace(/^\/+/, '');
+    let lang = 'en';
+    const match = rel.match(/^(ca|es)(?:\/|$)/);
+    if (match) {
+      lang = match[1];
+      rel = rel.substring(lang.length).replace(/^\/+/, '');
+    }
+    if (!rel || rel.endsWith('/')) rel += 'index.html';
+    for (const [id, file] of Object.entries(routes)) {
+      if (rel === file) return {lang, page: id, rel};
+    }
+    const newsMatch = rel.match(/^news\/([^/]+)\/index\.html$/);
+    if (newsMatch) return {lang, page: articleIds.has(newsMatch[1]) ? 'article:' + newsMatch[1] : 'news', rel};
+    if (rel.startsWith('tools/educational-inequality-lab/')) return {lang, page: 'lab', rel};
+    if (rel.startsWith('tools/')) return {lang, page: 'tools', rel};
+    if (rel.startsWith('news/')) return {lang, page: 'news', rel};
+    return {lang, page: 'home', rel};
+  }
+
+  function urlFor(lang, page) {
+    let file;
+    if (page.startsWith('article:')) {
+      const id = page.substring('article:'.length);
+      file = articleIds.has(id) ? 'news/' + id + '/index.html' : routes.news;
+    } else {
+      file = routes[page] || routes.home;
+    }
+    return ROOT + (lang === 'en' ? '' : lang + '/') + file;
+  }
+
+  function languageMenu(header) {
+    for (const li of header.querySelectorAll('li.dropdown')) {
+      const choices = [...li.querySelectorAll('a.dropdown-item')].map(a => (a.querySelector('.dropdown-text')?.textContent || a.textContent || '').trim());
+      if (Object.keys(languageChoices).every(name => choices.includes(name))) return li;
+    }
+    return null;
+  }
+
+  function refresh() {
+    const header = document.getElementById('quarto-header');
+    if (!header) return;
+    const info = pageInfo(window.location.pathname);
+    const lang = info.lang;
+    const langNav = languageMenu(header);
+
+    // Quarto's static language menu links all point to the homepage.
+    // Rewrite those links on EVERY page, including listings and nested pages.
+    if (langNav) {
+      const trigger = langNav.querySelector('a.nav-link.dropdown-toggle');
+      const caption = trigger?.querySelector('.menu-text');
+      if (caption) caption.textContent = lang.toUpperCase();
+      trigger?.setAttribute('aria-label', 'Language / Idioma: ' + lang.toUpperCase());
+      for (const a of langNav.querySelectorAll('a.dropdown-item')) {
+        const name = (a.querySelector('.dropdown-text')?.textContent || a.textContent || '').trim();
+        const choice = languageChoices[name];
+        if (!choice) continue;
+        a.setAttribute('href', urlFor(choice, info.page));
+        a.setAttribute('hreflang', choice);
+        a.setAttribute('lang', choice);
+        a.classList.toggle('active', choice === lang);
+        if (choice === lang) a.setAttribute('aria-current', 'page');
+        else a.removeAttribute('aria-current');
+      }
+    }
+
+    // Main navigation: link to equivalent translated landing pages.
+    for (const a of header.querySelectorAll('a.nav-link[href]')) {
+      if (a.classList.contains('dropdown-toggle')) continue;
+      let path;
+      try { path = new URL(a.getAttribute('href'), document.baseURI).pathname; }
+      catch (err) { continue; }
+      const targetInfo = pageInfo(path);
+      if (!(Object.values(routes).includes(targetInfo.rel))) continue;
+      // Only rewrite direct links for sections in the global menu.
+      if (targetInfo.page === 'tools') continue;
+      a.setAttribute('href', urlFor(lang, targetInfo.page));
+      const caption = a.querySelector('.menu-text');
+      if (caption) caption.textContent = labels[lang][targetInfo.page];
+      const selected = info.page === targetInfo.page || (info.page.startsWith('article:') && targetInfo.page === 'news');
+      a.classList.toggle('active', selected);
+      if (selected) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    }
+
+    for (const li of header.querySelectorAll('li.dropdown')) {
+      if (li === langNav) continue;
+      const first = li.querySelector('a.dropdown-item[href]');
+      if (!first) continue;
+      let firstPath;
+      try { firstPath = new URL(first.getAttribute('href'), document.baseURI).pathname; }
+      catch (err) { continue; }
+      if (pageInfo(firstPath).rel !== routes.tools) continue;
+      const trigger = li.querySelector('a.nav-link.dropdown-toggle');
+      const caption = trigger?.querySelector('.menu-text');
+      if (caption) caption.textContent = labels[lang].tools;
+      trigger?.classList.toggle('active', info.page === 'tools');
+      first.setAttribute('href', urlFor(lang, 'tools'));
+      const label = first.querySelector('.dropdown-text');
+      if (label) label.textContent = labels[lang].all;
+      first.classList.toggle('active', info.page === 'tools' && info.rel === routes.tools);
+    }
+  }
+
+  // Safety net: catch language selections even if Quarto or a theme resets
+  // the dropdown's static href after the initial rewrite.
+  document.addEventListener('click', function (event) {
+    const a = event.target.closest?.('a.dropdown-item');
+    if (!a || event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    const header = document.getElementById('quarto-header');
+    const menu = header ? languageMenu(header) : null;
+    if (!menu || !menu.contains(a)) return;
+    const name = (a.querySelector('.dropdown-text')?.textContent || a.textContent || '').trim();
+    const choice = languageChoices[name];
+    if (!choice) return;
+    event.preventDefault();
+    window.location.assign(urlFor(choice, pageInfo(window.location.pathname).page));
+  }, true);
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', refresh, {once: true});
+  else refresh();
+  window.addEventListener('pageshow', refresh);
+})();
+</script>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -155,6 +304,27 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-en-·-ca-·-es" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">EN · CA · ES</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-en-·-ca-·-es">    
+        <li>
+    <a class="dropdown-item" href="../../index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../ca/index.html">
+ <span class="dropdown-text">Català</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../es/index.html">
+ <span class="dropdown-text">Castellano</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">

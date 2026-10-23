@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ca" xml:lang="ca"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>University Trajectory Lab – Albert Sánchez-Gelabert</title>
+<title>Eines interactives de recerca – Albert Sánchez-Gelabert</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,15 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<meta name="shinylive:serviceworker_dir" content="../..">
-<script src="../../site_libs/quarto-contrib/shinylive-0.10.12/shinylive/load-shinylive-sw.js" type="module"></script>
-<script src="../../site_libs/quarto-contrib/shinylive-0.10.12/shinylive/run-python-blocks.js" type="module"></script>
-<link href="../../site_libs/quarto-contrib/shinylive-0.10.12/shinylive/shinylive.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/shinylive-quarto-css/shinylive-quarto.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -62,20 +60,168 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Cap resultat",
+    "search-matching-documents-text": "documents que coincideixen",
+    "search-copy-link-title": "Copia l'enllaç a la cerca",
+    "search-hide-matches-text": "Amaga les coincidències addicionals",
+    "search-more-match-text": "altra coincidència en aquest document",
+    "search-more-matches-text": "altres coincidències en aquest document",
+    "search-clear-button-title": "Neteja",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancel·la",
+    "search-submit-button-title": "Envia",
+    "search-label": "Cerca"
   }
 }</script>
-<meta name="google-site-verification" content="FonrxgXXD00-tiL3CyiMzsFjkJewo8iNo_ZYe2iGWr4">
+<!-- Language navigation for the Quarto website (EN/CA/ES). -->
+<script>
+(function () {
+  'use strict';
+
+  // This website is served at the domain root (GitHub user Pages and Quarto preview).
+  // Do not infer the root from the navbar brand: its markup/href can vary by page.
+  const ROOT = '/';
+  const routes = {
+    home: 'index.html',
+    research: 'research.html',
+    publications: 'publications.html',
+    news: 'news.html',
+    cv: 'cv.html',
+    tools: 'tools/index.html',
+    lab: 'tools/educational-inequality-lab/index.html'
+  };
+  const articleIds = new Set(['2026_Simbolic', '2026_STEM_gender', '2026_Youth']);
+  const labels = {
+    en: {home: 'Home', research: 'Research', publications: 'Publications', news: 'News', cv: 'CV', tools: 'Tools', lab: 'Lab', all: 'All tools'},
+    ca: {home: 'Inici', research: 'Recerca', publications: 'Publicacions', news: 'Actualitat', cv: 'Currículum', tools: 'Eines', lab: 'Lab', all: 'Totes les eines'},
+    es: {home: 'Inicio', research: 'Investigación', publications: 'Publicaciones', news: 'Actualidad', cv: 'Currículum', tools: 'Herramientas', lab: 'Lab', all: 'Todas las herramientas'}
+  };
+  const languageChoices = {'English': 'en', 'Català': 'ca', 'Castellano': 'es'};
+
+  function pageInfo(pathname) {
+    let rel = pathname.replace(/^\/+/, '');
+    let lang = 'en';
+    const match = rel.match(/^(ca|es)(?:\/|$)/);
+    if (match) {
+      lang = match[1];
+      rel = rel.substring(lang.length).replace(/^\/+/, '');
+    }
+    if (!rel || rel.endsWith('/')) rel += 'index.html';
+    for (const [id, file] of Object.entries(routes)) {
+      if (rel === file) return {lang, page: id, rel};
+    }
+    const newsMatch = rel.match(/^news\/([^/]+)\/index\.html$/);
+    if (newsMatch) return {lang, page: articleIds.has(newsMatch[1]) ? 'article:' + newsMatch[1] : 'news', rel};
+    if (rel.startsWith('tools/educational-inequality-lab/')) return {lang, page: 'lab', rel};
+    if (rel.startsWith('tools/')) return {lang, page: 'tools', rel};
+    if (rel.startsWith('news/')) return {lang, page: 'news', rel};
+    return {lang, page: 'home', rel};
+  }
+
+  function urlFor(lang, page) {
+    let file;
+    if (page.startsWith('article:')) {
+      const id = page.substring('article:'.length);
+      file = articleIds.has(id) ? 'news/' + id + '/index.html' : routes.news;
+    } else {
+      file = routes[page] || routes.home;
+    }
+    return ROOT + (lang === 'en' ? '' : lang + '/') + file;
+  }
+
+  function languageMenu(header) {
+    for (const li of header.querySelectorAll('li.dropdown')) {
+      const choices = [...li.querySelectorAll('a.dropdown-item')].map(a => (a.querySelector('.dropdown-text')?.textContent || a.textContent || '').trim());
+      if (Object.keys(languageChoices).every(name => choices.includes(name))) return li;
+    }
+    return null;
+  }
+
+  function refresh() {
+    const header = document.getElementById('quarto-header');
+    if (!header) return;
+    const info = pageInfo(window.location.pathname);
+    const lang = info.lang;
+    const langNav = languageMenu(header);
+
+    // Quarto's static language menu links all point to the homepage.
+    // Rewrite those links on EVERY page, including listings and nested pages.
+    if (langNav) {
+      const trigger = langNav.querySelector('a.nav-link.dropdown-toggle');
+      const caption = trigger?.querySelector('.menu-text');
+      if (caption) caption.textContent = lang.toUpperCase();
+      trigger?.setAttribute('aria-label', 'Language / Idioma: ' + lang.toUpperCase());
+      for (const a of langNav.querySelectorAll('a.dropdown-item')) {
+        const name = (a.querySelector('.dropdown-text')?.textContent || a.textContent || '').trim();
+        const choice = languageChoices[name];
+        if (!choice) continue;
+        a.setAttribute('href', urlFor(choice, info.page));
+        a.setAttribute('hreflang', choice);
+        a.setAttribute('lang', choice);
+        a.classList.toggle('active', choice === lang);
+        if (choice === lang) a.setAttribute('aria-current', 'page');
+        else a.removeAttribute('aria-current');
+      }
+    }
+
+    // Main navigation: link to equivalent translated landing pages.
+    for (const a of header.querySelectorAll('a.nav-link[href]')) {
+      if (a.classList.contains('dropdown-toggle')) continue;
+      let path;
+      try { path = new URL(a.getAttribute('href'), document.baseURI).pathname; }
+      catch (err) { continue; }
+      const targetInfo = pageInfo(path);
+      if (!(Object.values(routes).includes(targetInfo.rel))) continue;
+      // Only rewrite direct links for sections in the global menu.
+      if (targetInfo.page === 'tools') continue;
+      a.setAttribute('href', urlFor(lang, targetInfo.page));
+      const caption = a.querySelector('.menu-text');
+      if (caption) caption.textContent = labels[lang][targetInfo.page];
+      const selected = info.page === targetInfo.page || (info.page.startsWith('article:') && targetInfo.page === 'news');
+      a.classList.toggle('active', selected);
+      if (selected) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    }
+
+    for (const li of header.querySelectorAll('li.dropdown')) {
+      if (li === langNav) continue;
+      const first = li.querySelector('a.dropdown-item[href]');
+      if (!first) continue;
+      let firstPath;
+      try { firstPath = new URL(first.getAttribute('href'), document.baseURI).pathname; }
+      catch (err) { continue; }
+      if (pageInfo(firstPath).rel !== routes.tools) continue;
+      const trigger = li.querySelector('a.nav-link.dropdown-toggle');
+      const caption = trigger?.querySelector('.menu-text');
+      if (caption) caption.textContent = labels[lang].tools;
+      trigger?.classList.toggle('active', info.page === 'tools');
+      first.setAttribute('href', urlFor(lang, 'tools'));
+      const label = first.querySelector('.dropdown-text');
+      if (label) label.textContent = labels[lang].all;
+      first.classList.toggle('active', info.page === 'tools' && info.rel === routes.tools);
+    }
+  }
+
+  // Safety net: catch language selections even if Quarto or a theme resets
+  // the dropdown's static href after the initial rewrite.
+  document.addEventListener('click', function (event) {
+    const a = event.target.closest?.('a.dropdown-item');
+    if (!a || event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    const header = document.getElementById('quarto-header');
+    const menu = header ? languageMenu(header) : null;
+    if (!menu || !menu.contains(a)) return;
+    const name = (a.querySelector('.dropdown-text')?.textContent || a.textContent || '').trim();
+    const choice = languageChoices[name];
+    if (!choice) return;
+    event.preventDefault();
+    window.location.assign(urlFor(choice, pageInfo(window.location.pathname).page));
+  }, true);
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', refresh, {once: true});
+  else refresh();
+  window.addEventListener('pageshow', refresh);
+})();
+</script>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -92,8 +238,8 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Albert Sánchez-Gelabert</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Cerca"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Commuta la navegació" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -114,18 +260,38 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../news.html"> 
 <span class="menu-text">News</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../tools/educational-inequality-lab/index.html"> 
+<span class="menu-text">Lab</span></a>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tools" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Tools</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-tools">    
         <li>
-    <a class="dropdown-item" href="../../tools/compensatory/index.html">
- <span class="dropdown-text">Compensatory Advantage Explorer</span></a>
+    <a class="dropdown-item" href="../../tools/index.html">
+ <span class="dropdown-text">All tools</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../tools/pathways/index.html">
+ <span class="dropdown-text">Longitudinal Pathway Dynamics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../tools/context/index.html">
+ <span class="dropdown-text">School Context &amp; Transition Explorer</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../tools/entry-space/index.html">
  <span class="dropdown-text">University Entry Space Explorer</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../tools/compensatory/index.html">
+ <span class="dropdown-text">Compensatory Advantage Explorer</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../tools/trajectories/index.html">
+ <span class="dropdown-text">University Trajectory Lab</span></a>
   </li>  
     </ul>
   </li>
@@ -133,6 +299,27 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-en-·-ca-·-es" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">EN · CA · ES</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-en-·-ca-·-es">    
+        <li>
+    <a class="dropdown-item" href="../../index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../ca/index.html">
+ <span class="dropdown-text">Català</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../es/index.html">
+ <span class="dropdown-text">Castellano</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -150,7 +337,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">University Trajectory Lab</h1>
+<h1 class="title">Eines interactives de recerca</h1>
+<p class="subtitle lead">Exploracions interactives de les desigualtats educatives, l’accés a la universitat i les trajectòries de l’estudiantat.</p>
 </div>
 
 
@@ -167,578 +355,266 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Explore how different patterns of university progression can unfold over time, and how a student profile could be used to highlight contrasting trajectories.</p>
-<pre class="shinylive-r" data-engine="r"><code>#| '!! shinylive warning !!': |
-#|   shinylive does not work in self-contained HTML documents.
-#|   Please set `embed-resources: false` in your metadata.
-#| standalone: true
-#| viewerHeight: 740
-
-library(shiny)
-
-# ------------------------------------------------------------
-# PROTOTYPE DATA
-# ------------------------------------------------------------
-# IMPORTANT:
-# These trajectory shapes and profile-response rules are illustrative
-# placeholders for interaction/design testing only.
-# Replace them with the exact published GBTM trajectories and model-
-# based profile estimates before publication.
-
-traj &lt;- data.frame(
-  year = rep(1:7, 4),
-  trajectory = rep(
-    c(
-      "Stable high performance",
-      "Recovery after difficulties",
-      "Declining performance",
-      "Persistent difficulties"
-    ),
-    each = 7
-  ),
-  performance = c(
-    .88, .90, .91, .92, .92, .93, .93,
-    .42, .55, .67, .76, .82, .85, .87,
-    .78, .70, .60, .50, .42, .38, .35,
-    .35, .31, .28, .26, .25, .24, .23
-  )
-)
-
-trajectory_meta &lt;- data.frame(
-  trajectory = c(
-    "Stable high performance",
-    "Recovery after difficulties",
-    "Declining performance",
-    "Persistent difficulties"
-  ),
-  short = c(
-    "Stable high",
-    "Recovery",
-    "Declining",
-    "Persistent difficulties"
-  ),
-  colour = c("#4E79A7", "#59A875", "#F2B134", "#C95D5D"),
-  stringsAsFactors = FALSE
-)
-
-# ------------------------------------------------------------
-# UI
-# ------------------------------------------------------------
-
-ui &lt;- fluidPage(
-
-  tags$head(
-    tags$style(
-      HTML("
-        body {
-          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-          margin: 0;
-          padding: 0;
-          background: white;
-        }
-
-        .app-wrap {
-          max-width: 1040px;
-          margin: 0 auto;
-          padding: 4px 10px 18px 10px;
-        }
-
-        .prototype-banner {
-          border: 1px solid #e2e2e2;
-          background: #fafafa;
-          border-radius: 8px;
-          padding: 9px 12px;
-          margin-bottom: 14px;
-          font-size: 12px;
-          line-height: 1.45;
-          color: #555;
-        }
-
-        .prototype-badge {
-          display: inline-block;
-          font-size: 10px;
-          font-weight: 700;
-          letter-spacing: .04em;
-          text-transform: uppercase;
-          border: 1px solid #bbb;
-          border-radius: 999px;
-          padding: 2px 7px;
-          margin-right: 7px;
-          color: #555;
-          background: white;
-        }
-
-        .panel {
-          background: #f7f7f7;
-          border-radius: 9px;
-          padding: 15px;
-          height: 100%;
-        }
-
-        .panel-title {
-          font-size: 13px;
-          font-weight: 650;
-          margin-bottom: 12px;
-        }
-
-        .panel .form-group {
-          margin-bottom: 14px;
-        }
-
-        .panel label {
-          font-size: 12px;
-          font-weight: 600;
-        }
-
-        .hint {
-          font-size: 11px;
-          color: #777;
-          line-height: 1.4;
-          margin-top: 5px;
-        }
-
-        .plot-card {
-          border: 1px solid #e1e1e1;
-          border-radius: 9px;
-          padding: 10px 10px 5px 10px;
-          background: white;
-        }
-
-        .plot-heading {
-          display: flex;
-          align-items: baseline;
-          justify-content: space-between;
-          gap: 10px;
-          padding: 2px 5px 6px 5px;
-        }
-
-        .plot-title {
-          font-size: 14px;
-          font-weight: 650;
-        }
-
-        .plot-subtitle {
-          font-size: 11px;
-          color: #777;
-          text-align: right;
-        }
-
-        .legend {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 8px 15px;
-          margin: 7px 6px 7px 6px;
-          font-size: 11px;
-          color: #666;
-        }
-
-        .legend-item {
-          display: flex;
-          align-items: center;
-          gap: 5px;
-        }
-
-        .legend-line {
-          width: 18px;
-          height: 3px;
-          border-radius: 3px;
-        }
-
-        .insight-card {
-          margin-top: 14px;
-          border: 1px solid #e1e1e1;
-          border-radius: 9px;
-          padding: 13px 15px;
-          background: white;
-          min-height: 94px;
-        }
-
-        .insight-kicker {
-          font-size: 10px;
-          text-transform: uppercase;
-          letter-spacing: .06em;
-          color: #888;
-          font-weight: 700;
-          margin-bottom: 5px;
-        }
-
-        .insight-title {
-          font-size: 15px;
-          font-weight: 650;
-          margin-bottom: 5px;
-        }
-
-        .insight-text {
-          font-size: 12px;
-          line-height: 1.5;
-          color: #555;
-        }
-
-        .source-note {
-          color: #666;
-          font-size: 11px;
-          line-height: 1.45;
-          margin-top: 15px;
-        }
-
-        .source-note a {
-          color: inherit;
-        }
-
-        @media (max-width: 767px) {
-          .plot-subtitle { display: none; }
-          .panel { margin-bottom: 12px; }
-        }
-      ")
-    )
-  ),
-
-  div(
-    class = "app-wrap",
-
-    div(
-      class = "prototype-banner",
-      span(class = "prototype-badge", "Prototype"),
-      "This version tests the interaction and visual language only. ",
-      strong("Trajectory shapes and profile responses are illustrative placeholders"),
-      " and are not published estimates."
-    ),
-
-    fluidRow(
-
-      column(
-        width = 3,
-
-        div(
-          class = "panel",
-
-          div(class = "panel-title", "Explore a student profile"),
-
-          selectInput(
-            "field",
-            "Field of study",
-            choices = c("All fields", "STEM", "Non-STEM"),
-            selected = "All fields"
-          ),
-
-          selectInput(
-            "grade",
-            "Entry grade",
-            choices = c("Lower", "Middle", "Higher"),
-            selected = "Middle"
-          ),
-
-          selectInput(
-            "age",
-            "Age at entry",
-            choices = c("18–20", "21+"),
-            selected = "18–20"
-          ),
-
-          radioButtons(
-            "mode",
-            "Display",
-            choices = c(
-              "Show all trajectories" = "all",
-              "Emphasise profile" = "profile"
-            ),
-            selected = "all"
-          ),
-
-          p(
-            class = "hint",
-            "The final version can use exact GBTM curves plus model-based probabilities of trajectory membership."
-          )
-        )
-      ),
-
-      column(
-        width = 9,
-
-        div(
-          class = "plot-card",
-
-          div(
-            class = "plot-heading",
-            div(class = "plot-title", "Academic performance across seven years"),
-            div(class = "plot-subtitle", "Illustrative prototype · not empirical estimates")
-          ),
-
-          uiOutput("trajectory_plot"),
-
-          div(
-            class = "legend",
-            lapply(
-              seq_len(nrow(trajectory_meta)),
-              function(i) {
-                div(
-                  class = "legend-item",
-                  div(
-                    class = "legend-line",
-                    style = paste0("background:", trajectory_meta$colour[i], ";")
-                  ),
-                  span(trajectory_meta$short[i])
-                )
-              }
-            )
-          )
-        ),
-
-        uiOutput("insight")
-      )
-    ),
-
-    div(
-      class = "source-note",
-      HTML(
-        "&lt;strong&gt;Research basis:&lt;/strong&gt; Troiano, H. &amp; Sánchez-Gelabert, A. (2025),
-        &lt;em&gt;Patterns of university progression and social inequalities: delving into complex trajectories in higher education&lt;/em&gt;,
-        European Journal of Higher Education.
-        The study follows 30,392 students over seven years and identifies academic trajectory types using Group-Based Trajectory Modelling.&lt;br&gt;
-        &lt;strong&gt;Prototype note:&lt;/strong&gt; no published coefficients or trajectory coordinates are used in this mock-up."
-      )
-    )
-  )
-)
-
-# ------------------------------------------------------------
-# SERVER
-# ------------------------------------------------------------
-
-server &lt;- function(input, output, session) {
-
-  profile_emphasis &lt;- reactive({
-
-    # Design-only rules for exploring the interface.
-    # These are NOT empirical estimates.
-
-    scores &lt;- c(
-      "Stable high performance" = 1,
-      "Recovery after difficulties" = 1,
-      "Declining performance" = 1,
-      "Persistent difficulties" = 1
-    )
-
-    if (input$grade == "Higher") {
-      scores["Stable high performance"] &lt;- scores["Stable high performance"] + 1.2
-    }
-
-    if (input$grade == "Lower") {
-      scores["Recovery after difficulties"] &lt;- scores["Recovery after difficulties"] + 0.7
-      scores["Persistent difficulties"] &lt;- scores["Persistent difficulties"] + 0.8
-    }
-
-    if (input$field == "STEM") {
-      scores["Declining performance"] &lt;- scores["Declining performance"] + 0.7
-      scores["Persistent difficulties"] &lt;- scores["Persistent difficulties"] + 0.4
-    }
-
-    if (input$age == "21+") {
-      scores["Recovery after difficulties"] &lt;- scores["Recovery after difficulties"] - 0.35
-      scores["Persistent difficulties"] &lt;- scores["Persistent difficulties"] + 0.35
-    }
-
-    pmax(scores, 0.3)
-  })
-
-
-  output$trajectory_plot &lt;- renderUI({
-
-    W &lt;- 760
-    H &lt;- 390
-
-    left &lt;- 62
-    right &lt;- 18
-    top &lt;- 24
-    bottom &lt;- 48
-
-    plot_w &lt;- W - left - right
-    plot_h &lt;- H - top - bottom
-
-    xmap &lt;- function(year) {
-      left + (year - 1) / 6 * plot_w
-    }
-
-    ymap &lt;- function(p) {
-      top + (1 - p) * plot_h
-    }
-
-    emphasis &lt;- profile_emphasis()
-    max_e &lt;- max(emphasis)
-
-    # Grid
-    grid &lt;- paste0(
-      sapply(
-        seq(0, 1, by = .25),
-        function(v) {
-          paste0(
-            '&lt;line x1="', left, '" y1="', ymap(v),
-            '" x2="', W-right, '" y2="', ymap(v),
-            '" stroke="#eeeeee" stroke-width="1"/&gt;',
-            '&lt;text x="', left-10, '" y="', ymap(v)+4,
-            '" text-anchor="end" font-size="10" fill="#888"&gt;',
-            round(v*100), '%&lt;/text&gt;'
-          )
-        }
-      ),
-      collapse = ""
-    )
-
-    xlabels &lt;- paste0(
-      sapply(
-        1:7,
-        function(y) {
-          paste0(
-            '&lt;text x="', xmap(y), '" y="', H-18,
-            '" text-anchor="middle" font-size="10" fill="#777"&gt;Y', y, '&lt;/text&gt;'
-          )
-        }
-      ),
-      collapse = ""
-    )
-
-    paths &lt;- ""
-
-    for (i in seq_len(nrow(trajectory_meta))) {
-
-      nm &lt;- trajectory_meta$trajectory[i]
-      col &lt;- trajectory_meta$colour[i]
-
-      d &lt;- traj[traj$trajectory == nm, ]
-
-      pts &lt;- paste0(
-        xmap(d$year), ",", ymap(d$performance),
-        collapse = " "
-      )
-
-      if (input$mode == "all") {
-        opacity &lt;- 0.90
-        sw &lt;- 4
-      } else {
-        rel &lt;- emphasis[nm] / max_e
-        opacity &lt;- 0.18 + 0.82 * rel
-        sw &lt;- 2.5 + 4.5 * rel
-      }
-
-      circles &lt;- paste0(
-        sapply(
-          seq_len(nrow(d)),
-          function(j) {
-            paste0(
-              '&lt;circle cx="', xmap(d$year[j]),
-              '" cy="', ymap(d$performance[j]),
-              '" r="3.2" fill="', col,
-              '" opacity="', opacity, '"&gt;',
-              '&lt;title&gt;', nm, ' · Year ', d$year[j],
-              ' · ', round(d$performance[j]*100), '%&lt;/title&gt;',
-              '&lt;/circle&gt;'
-            )
-          }
-        ),
-        collapse = ""
-      )
-
-      paths &lt;- paste0(
-        paths,
-        '&lt;polyline points="', pts,
-        '" fill="none" stroke="', col,
-        '" stroke-width="', sw,
-        '" stroke-linecap="round" stroke-linejoin="round"',
-        ' opacity="', opacity, '"/&gt;',
-        circles
-      )
-    }
-
-    yaxis_label &lt;- paste0(
-      '&lt;text x="15" y="', top + plot_h/2,
-      '" transform="rotate(-90 15 ', top + plot_h/2, ')"',
-      ' text-anchor="middle" font-size="11" fill="#666"&gt;',
-      'Performance rate&lt;/text&gt;'
-    )
-
-    svg &lt;- paste0(
-      '&lt;svg viewBox="0 0 ', W, ' ', H, '"',
-      ' style="width:100%;height:auto;display:block;"&gt;',
-      grid,
-      '&lt;line x1="', left, '" y1="', top+plot_h,
-      '" x2="', W-right, '" y2="', top+plot_h,
-      '" stroke="#bdbdbd" stroke-width="1"/&gt;',
-      xlabels,
-      yaxis_label,
-      paths,
-      '&lt;/svg&gt;'
-    )
-
-    HTML(svg)
-  })
-
-
-  output$insight &lt;- renderUI({
-
-    profile &lt;- paste(
-      input$field,
-      "·",
-      input$grade,
-      "entry grade ·",
-      input$age
-    )
-
-    if (input$mode == "all") {
-
-      title &lt;- "Start with the structure"
-      text &lt;- paste0(
-        "The overview keeps all trajectory shapes equally visible. ",
-        "Switch to “Emphasise profile” to test how a profile-based layer could ",
-        "direct attention without changing the underlying trajectory curves."
-      )
-
-    } else {
-
-      emphasis &lt;- profile_emphasis()
-      top_name &lt;- names(which.max(emphasis))
-
-      title &lt;- paste0("Profile lens: ", top_name)
-
-      notes &lt;- c()
-
-      if (input$field == "STEM") {
-        notes &lt;- c(
-          notes,
-          "The published study reports that trajectory differences are especially marked in STEM."
-        )
-      }
-
-      if (input$age == "21+") {
-        notes &lt;- c(
-          notes,
-          "The published study reports that older students show a reduced tendency towards recovery trajectories."
-        )
-      }
-
-      if (input$grade == "Higher" &amp;&amp; input$field == "STEM") {
-        notes &lt;- c(
-          notes,
-          "The study also notes that even high-entry-grade students can face greater challenges in STEM."
-        )
-      }
-
-      if (length(notes) == 0) {
-        notes &lt;- "This prototype is testing the interaction only; exact profile probabilities will require the published model outputs."
-      }
-
-      text &lt;- paste(notes, collapse = " ")
-    }
-
-    div(
-      class = "insight-card",
-      div(class = "insight-kicker", profile),
-      div(class = "insight-title", title),
-      div(class = "insight-text", text)
-    )
-  })
+<style>
+.tools-list {
+  max-width: 980px;
+  margin: 1.5rem auto 0 auto;
 }
 
-shinyApp(ui, server)</code></pre>
+.tool-item {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.6rem;
+  align-items: start;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.tool-item:first-child {
+  padding-top: 0;
+}
+
+.tool-image-link {
+  display: block;
+  text-decoration: none;
+}
+
+.tool-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+  background: #f4f4f4;
+}
+
+.tool-content h3 {
+  margin: 0 0 .45rem 0;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.tool-content h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tool-content h3 a:hover {
+  text-decoration: underline;
+}
+
+.tool-description {
+  margin: 0 0 .65rem 0;
+  line-height: 1.55;
+}
+
+.tool-meta {
+  font-size: .82rem;
+  color: #777;
+  margin-bottom: .55rem;
+}
+
+.tool-link {
+  font-size: .9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.tools-note {
+  margin-top: 1.4rem;
+  font-size: .82rem;
+  color: #777;
+  line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+  .tool-item {
+    grid-template-columns: 1fr;
+    gap: .9rem;
+  }
+
+  .tool-image {
+    max-height: 260px;
+  }
+}
+
+/* Featured editorial Lab: intentionally distinct from exploratory tools. */
+.eil-feature {
+  max-width: 980px;
+  margin: 1.6rem auto 2.5rem;
+  padding: clamp(1.45rem, 3.5vw, 2.3rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(190px, .7fr);
+  gap: clamp(1.2rem, 3vw, 2.6rem);
+  background: linear-gradient(120deg, #f0f7f3 0%, #f5f6ef 100%);
+  border: 1px solid #d7e5db;
+  border-radius: 16px;
+}
+.eil-feature-kicker,
+.eil-feature-aside-label {
+  display: block;
+  color: #287b70;
+  font-size: .73rem;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+.eil-feature h2 {
+  margin: .7rem 0 .85rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.1rem, 4vw, 3.05rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -.035em;
+  color: #17323a;
+}
+.eil-feature h2 em { color: #187c6d; font-weight: 400; }
+.eil-feature-description {
+  max-width: 580px;
+  margin: 0 0 1.25rem;
+  line-height: 1.58;
+  color: #3f5155;
+}
+.eil-feature-link {
+  display: inline-flex;
+  gap: .6rem;
+  align-items: center;
+  padding: .66rem 1rem;
+  border-radius: 7px;
+  background: #167468;
+  color: #fff !important;
+  font-weight: 650;
+  font-size: .92rem;
+  text-decoration: none !important;
+  transition: background .18s ease;
+}
+.eil-feature-link:hover, .eil-feature-link:focus-visible {
+  background: #105a52;
+}
+.eil-feature-aside {
+  border-left: 1px solid #d0ddd5;
+  padding-left: clamp(1.1rem, 2.3vw, 1.65rem);
+  align-self: center;
+}
+.eil-feature-aside p {
+  margin: .5rem 0 0;
+  line-height: 1.55;
+  color: #586a69;
+  font-size: .92rem;
+}
+.eil-tools-heading {
+  max-width: 980px;
+  margin: 0 auto .55rem;
+  color: #26383e;
+  font-size: 1.45rem;
+}
+.eil-tools-intro {
+  max-width: 980px;
+  margin: 0 auto 1.4rem;
+  line-height: 1.55;
+  color: #667477;
+}
+@media (max-width: 720px) {
+  .eil-feature { grid-template-columns: 1fr; gap: 1.2rem; }
+  .eil-feature-aside {
+    border-left: 0;
+    border-top: 1px solid #d0ddd5;
+    padding: 1rem 0 0;
+  }
+  .eil-feature h2 { font-size: clamp(2rem, 9vw, 2.65rem); }
+}
+</style>
+<section class="eil-feature" aria-labelledby="eil-feature-title">
+  <div>
+    <span class="eil-feature-kicker">Educational Inequality Lab · Històries guiades</span>
+    <h2 id="eil-feature-title" class="anchored">Beyond <em>merit.</em></h2>
+    <p class="eil-feature-description">Cinc històries sociològiques interactives sobre com es generen i evolucionen les desigualtats educatives: contextos escolars, condicions de vida, recursos familiars, trajectòries acadèmiques i flexibilitat institucional.</p>
+    <a class="eil-feature-link" href="educational-inequality-lab/">Descobreix el Lab <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="eil-feature-aside">
+    <span class="eil-feature-aside-label">Una altra manera d’explorar la recerca</span>
+    <p>Segueix un recorregut guiat, capítol a capítol. Si vols explorar dades i resultats amb més detall, utilitza les eines de recerca que trobaràs a continuació.</p>
+  </div>
+</section>
+<h2 class="eil-tools-heading anchored" id="individual-tools">
+Eines de recerca individuals
+</h2>
+<p class="eil-tools-intro">
+Explora la recerca original mitjançant visualitzacions interactives de dades i models.
+</p>
+<p class="asg-tool-language-note">
+Les eines interactives estan disponibles actualment en anglès.
+</p>
+<div class="tools-list">
+<div class="tool-item">
+<p><a class="tool-image-link" href="../../tools/pathways/"> <img class="tool-image" src="../../tools/images/pathways.png" alt="Previsualització de Longitudinal Pathway Dynamics"> </a></p>
+<section id="longitudinal-pathway-dynamics" class="level3 tool-content">
+<h3 class="anchored" data-anchor-id="longitudinal-pathway-dynamics"><a href="../../tools/pathways/">Longitudinal Pathway Dynamics</a></h3>
+<p class="tool-description">
+Segueix l’evolució d’una cohort universitària durant sis observacions anuals i compara les trajectòries longitudinals de diversos perfils d’estudiants.
+</p>
+<p class="tool-meta">
+Anàlisi de seqüències · TraMineR · trajectòries longitudinals
+</p>
+<p><a href="../../tools/pathways/" class="tool-link">Obre l’explorador →</a></p>
+</section>
+</div>
+<div class="tool-item">
+<p><a class="tool-image-link" href="../../tools/context/"> <img class="tool-image" src="../../tools/images/context.png" alt="Previsualització de School Context &amp; Transition Explorer"> </a></p>
+<section id="school-context-transition-explorer" class="level3 tool-content">
+<h3 class="anchored" data-anchor-id="school-context-transition-explorer"><a href="../../tools/context/">School Context &amp; Transition Explorer</a></h3>
+<p class="tool-description">
+Compara les transicions cap a itineraris acadèmics, professionals o d’abandonament segons la composició escolar i examina les desigualtats de gènere i origen migratori.
+</p>
+<p class="tool-meta">
+Probabilitats predites · gènere × origen migratori × composició escolar
+</p>
+<p><a href="../../tools/context/" class="tool-link">Obre l’explorador →</a></p>
+</section>
+</div>
+<div class="tool-item">
+<p><a class="tool-image-link" href="../../tools/entry-space/"> <img class="tool-image" src="../../tools/images/entry-space.png" alt="Previsualització de University Entry Space Explorer"> </a></p>
+<section id="university-entry-space-explorer" class="level3 tool-content">
+<h3 class="anchored" data-anchor-id="university-entry-space-explorer"><a href="../../tools/entry-space/">University Entry Space Explorer</a></h3>
+<p class="tool-description">
+Explora l’espai multidimensional d’accés a la universitat i la posició dels perfils d’estudiants, les característiques d’entrada i els àmbits de titulació.
+</p>
+<p class="tool-meta">
+Anàlisi de correspondències múltiples · perfils · àmbits de titulació
+</p>
+<p><a href="../../tools/entry-space/" class="tool-link">Obre l’explorador →</a></p>
+</section>
+</div>
+<div class="tool-item">
+<p><a class="tool-image-link" href="../../tools/compensatory/"> <img class="tool-image" src="../../tools/images/compensatory.png" alt="Previsualització de Compensatory Advantage Explorer"> </a></p>
+<section id="compensatory-advantage-explorer" class="level3 tool-content">
+<h3 class="anchored" data-anchor-id="compensatory-advantage-explorer"><a href="../../tools/compensatory/">Compensatory Advantage Explorer</a></h3>
+<p class="tool-description">
+Explora com el rendiment del primer curs i el nivell educatiu familiar s’associen amb la probabilitat de continuar, canviar d’estudis o abandonar la universitat.
+</p>
+<p class="tool-meta">
+Probabilitats predites · origen social × rendiment acadèmic
+</p>
+<p><a href="../../tools/compensatory/" class="tool-link">Obre l’explorador →</a></p>
+</section>
+</div>
+<div class="tool-item">
+<p><a class="tool-image-link" href="../../tools/trajectories/"> <img class="tool-image" src="../../tools/images/trajectories.png" alt="Previsualització de University Trajectory Lab"> </a></p>
+<section id="university-trajectory-lab" class="level3 tool-content">
+<h3 class="anchored" data-anchor-id="university-trajectory-lab"><a href="../../tools/trajectories/">University Trajectory Lab</a></h3>
+<p class="tool-description">
+Explora sis patrons de progressió acadèmica al llarg de set anys, els perfils associats amb cada trajectòria i les diferències entre àmbits d’estudi.
+</p>
+<p class="tool-meta">
+Modelització de trajectòries grupals · progressió longitudinal
+</p>
+<p><a href="../../tools/trajectories/" class="tool-link">Obre l’eina →</a></p>
+</section>
+</div>
+<div class="tools-note">
+<p>Aquestes eines es basen en estudis publicats i resultats de recerca. Quan es presenten estimacions modelitzades, cal interpretar-les com a associacions i no com a efectes causals.</p>
+</div>
+</div>
 
 
 
@@ -768,12 +644,12 @@ shinyApp(ui, server)</code></pre>
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiat!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiat!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
