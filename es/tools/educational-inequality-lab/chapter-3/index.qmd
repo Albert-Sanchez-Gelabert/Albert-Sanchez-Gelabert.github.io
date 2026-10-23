@@ -1,0 +1,105 @@
+---
+lang: es
+pagetitle: "¿Mismas notas, futuros diferentes? | Educational Inequality Lab"
+description: "Capítulo interactivo de divulgación sociológica sobre desigualdades educativas."
+format:
+  html:
+    page-layout: full
+    toc: false
+    css: lab.css
+---
+
+```{=html}
+<div class="eil3-guided" data-mode="high" id="eil3-root">
+<div class="eil3-shell">
+<header class="eil3-masthead">
+<a class="eil3-brand" href="../index.html"><span aria-hidden="true" class="eil3-brand-mark">≋</span>Educational Inequality Lab</a>
+<span class="eil3-masthead-note">Sociología interactiva · Cataluña</span>
+</header>
+<nav aria-label="Ruta de navegación" class="eil3-breadcrumb"><a href="../index.html">← Todos los capítulos</a><span aria-hidden="true">/</span><strong>03 · Después del primer año</strong><span class="eil3-breadcrumb-trail">Beyond merit. / Capítulo 03</span></nav>
+<main class="eil3-main">
+<div aria-label="Progreso del capítulo" class="eil3-progress">
+<span class="eil3-progress-name" data-progress-title="">La decisión</span>
+<span aria-hidden="true" class="eil3-progress-bars"><i></i><i></i><i></i><i></i></span>
+<span class="eil3-progress-counter" data-progress-number="">01 / 04</span>
+</div>
+<section aria-labelledby="eil3-title" class="eil3-screen" data-screen="0">
+<p class="eil3-eyebrow">01 / La decisión</p>
+<h1 id="eil3-title">¿Mismas notas, <em>futuros diferentes?</em></h1>
+<p class="eil3-deck">Entrar en la universidad es una decisión importante. <strong>Pero no es la última.</strong></p>
+<p class="eil3-prose">Los estudiantes llegan a la universidad con expectativas sobre sus posibilidades de éxito. Al final del primer curso tienen algo que antes no tenían: <strong>información sobre cómo les está yendo.</strong></p>
+<div aria-label="Secuencia teórica: entrada en la universidad, resultados del primer año y revisión de expectativas, y una nueva decisión educativa" class="eil3-path">
+<div class="eil3-path-first"><span class="eil3-path-num">01 / ENTRADA</span><strong>Entrar en la universidad</strong><small>Expectativas de éxito</small></div>
+<span aria-hidden="true" class="eil3-path-arrow">→</span>
+<div class="eil3-path-first eil3-path-focus"><span class="eil3-path-num">02 / INFORMACIÓN NUEVA</span><strong>Resultados del primer año</strong><small>Revisar las expectativas y las posibilidades de éxito</small></div>
+<span aria-hidden="true" class="eil3-path-arrow">→</span>
+<div class="eil3-path-first eil3-path-last"><span class="eil3-path-num">03 / ¿Y AHORA QUÉ?</span><strong>Una nueva decisión</strong><small>¿Qué opciones educativas parecen posibles ahora?</small></div>
+</div>
+<p class="eil3-turn">Cuando los resultados del primer año son decepcionantes, <strong>¿los itinerarios que siguen los estudiantes dependen del origen familiar?</strong></p>
+<div class="eil3-screen-actions"><button class="eil3-button" data-go="1" type="button">Vamos a explorarlo <span aria-hidden="true">→</span></button></div>
+</section>
+<section aria-labelledby="eil3-figure-title" class="eil3-screen" data-screen="1" hidden="">
+<p class="eil3-eyebrow">02 / Los datos</p>
+<h2 id="eil3-figure-title">Cuando las cosas van bien, <em>la brecha es pequeña.</em></h2>
+<p class="eil3-prose" id="eil3-figure-deck">Comparemos estudiantes de distintos orígenes familiares que han superado <strong>el 80% de los créditos del primer curso.</strong> La mayoría continúa en la misma titulación y el abandono es bajo en ambos grupos.</p>
+<div aria-describedby="eil3-figure-description" class="eil3-chart-card">
+<div class="eil3-chart-top"><span class="eil3-chart-eyebrow">Mismo rendimiento académico · Distintos orígenes familiares</span><span class="eil3-chart-source">Probabilidades predichas</span></div>
+<div class="eil3-credit-status"><span>Créditos superados el primer año</span><strong data-credit-number="">80<span>%</span></strong></div>
+<div aria-hidden="true" class="eil3-credit-meter"><i data-credit-meter="" style="width:80%"></i></div>
+<div class="eil3-groups">
+<div class="eil3-group" data-group="low">
+<div class="eil3-group-head"><strong>Familias con estudios obligatorios</strong><small>Nivel educativo familiar más bajo</small></div>
+<div aria-label="Familias con menos estudios: 91% continúan, 4,9% cambian y 4,1% abandonan." class="eil3-bar" role="img"><span class="eil3-seg stay" data-outcome="continuing" style="width:91%"></span><span class="eil3-seg transfer" data-outcome="transfer" style="width:4.9%"></span><span class="eil3-seg leave" data-outcome="dropout" style="width:4.1%"></span></div>
+<div class="eil3-percent-row"><span>Continuar <b data-value="continuing">91.0%</b></span><span>Cambiar <b data-value="transfer">4.9%</b></span><span>Abandonar <b data-value="dropout">4.1%</b></span></div>
+</div>
+<div class="eil3-group" data-group="high">
+<div class="eil3-group-head"><strong>Familias con estudios universitarios</strong><small>Nivel educativo familiar más alto</small></div>
+<div aria-label="Familias universitarias: 88,7% continúan, 8,3% cambian y 3% abandonan." class="eil3-bar" role="img"><span class="eil3-seg stay" data-outcome="continuing" style="width:88.7%"></span><span class="eil3-seg transfer" data-outcome="transfer" style="width:8.3%"></span><span class="eil3-seg leave" data-outcome="dropout" style="width:3%"></span></div>
+<div class="eil3-percent-row"><span>Continuar <b data-value="continuing">88.7%</b></span><span>Cambiar <b data-value="transfer">8.3%</b></span><span>Abandonar <b data-value="dropout">3.0%</b></span></div>
+</div>
+</div>
+<div aria-label="Colores de las trayectorias" class="eil3-legend"><span><i class="stay"></i> Continuar en la misma titulación</span><span><i class="transfer"></i> Cambiar de titulación</span><span><i class="leave"></i> Abandonar la universidad</span></div><div aria-live="polite" class="eil3-evidence-message" data-evidence-message=""><strong>Con buenos resultados, la probabilidad de abandono es baja en ambos grupos.</strong><p>Con el 80% de créditos superados, el abandono predicho es del 4,1% y del 3,0%. Ahora observa qué cambia cuando los resultados del primer curso son bajos.</p></div>
+<p class="eil3-chart-footnote" id="eil3-figure-description">Probabilidades ajustadas de Sánchez-Gelabert y Troiano (2024), apéndice 2. El modelo compara tres grupos según los estudios familiares; aquí se muestran dos. Las estimaciones describen la progresión después del primer año, no predicciones individuales ni efectos causales.</p>
+</div>
+<div class="eil3-screen-actions eil3-chart-actions">
+<button class="eil3-button" data-switch="" type="button">¿Y si el primer año va mal? <span aria-hidden="true">→</span></button>
+<button class="eil3-button eil3-button-secondary" data-go="2" data-next-after="" hidden="" type="button">¿Qué podría explicarlo? <span aria-hidden="true">→</span></button>
+<button class="eil3-text-button" data-compare-again="" hidden="" type="button">Compáralo con buenos resultados ↺</button>
+</div>
+<div class="eil3-screen-actions eil3-back-action"><button class="eil3-text-button" data-go="0" type="button">← Anterior</button></div>
+</section>
+<section aria-labelledby="eil3-meaning-title" class="eil3-screen" data-screen="2" hidden="">
+<p class="eil3-eyebrow">03 / Qué significa</p>
+<h2 id="eil3-meaning-title">El mismo contratiempo. <em>Distintas maneras de seguir adelante.</em></h2>
+<p class="eil3-deck">Los resultados académicos aportan información nueva. Pero los estudiantes pueden disponer de recursos distintos para responder.</p>
+<p class="eil3-prose">Cuando el primer año va mal, los estudiantes pueden replantearse si la titulación es adecuada, si existen alternativas o si es viable continuar. Aquí es donde <strong>la ventaja compensatoria</strong> ofrece una interpretación sociológica.</p>
+<div aria-label="Posibles mecanismos de diferenciación social de las decisiones educativas" class="eil3-ideas">
+<div><span>Expectativas</span><strong>«¿Todavía puedo conseguirlo?»</strong><p>Los resultados pueden llevar a los estudiantes a revisar sus posibilidades de terminar los estudios.</p></div>
+<div><span>Información</span><strong>«¿Qué otras vías hay?»</strong><p>El conocimiento de las alternativas y la familiaridad con el sistema universitario pueden ser distintos.</p></div>
+<div><span>Recursos</span><strong>«¿Puedo permitirme intentarlo de nuevo?»</strong><p>El apoyo y los costes de cambiar de rumbo pueden hacer que las opciones sean más o menos viables.</p></div>
+</div>
+<p class="eil3-interpret-note">Estos son <strong>mecanismos explicativos plausibles</strong>, no recursos identificados como causas directas de cada decisión individual en el estudio.</p>
+<div class="eil3-seventy"><strong>¿Cuándo se atenúan estas desigualdades?</strong> A medida que mejora el rendimiento, las diferencias de abandono predicho se reducen. En torno al <strong>70% de los créditos superados</strong>, el estudio ya no detecta brechas estadísticamente significativas en el abandono. No es un umbral exacto ni demuestra que todos los itinerarios sean iguales.</div>
+<div class="eil3-screen-actions eil3-screen-actions-spread"><button class="eil3-text-button" data-go="1" type="button">← Vuelve a los datos</button><button class="eil3-button" data-go="3" type="button">Descubre la interpretación sociológica <span aria-hidden="true">→</span></button></div>
+</section>
+<section aria-labelledby="eil3-conclusion-title" class="eil3-screen eil3-outro" data-screen="3" hidden="">
+<p class="eil3-eyebrow">04 / Tu descubrimiento sociológico</p>
+<h2 id="eil3-conclusion-title">La desigualdad no termina <em>a las puertas de la universidad.</em></h2>
+<div class="eil3-insight-card">
+<p class="eil3-eyebrow">El descubrimiento</p>
+<h3>Cuando los resultados académicos son buenos, las diferencias sociales en el abandono son pequeñas. <em>Cuando las cosas van mal, aparecen distintas maneras de seguir adelante.</em></h3>
+<p>Entrar en la universidad es una transición marcada socialmente. Las decisiones posteriores al primer año pueden ser otra. La nueva información sobre el rendimiento académico se combina con las expectativas, la información y los recursos de cada estudiante.</p>
+</div>
+<p class="eil3-final-line">La desigualdad educativa no trata solo de <em>quién consigue entrar.</em> También trata de <strong>qué se vuelve posible después de un contratiempo.</strong></p>
+<div class="eil3-source"><span class="eil3-eyebrow">Basado en investigación publicada</span><p>Sánchez-Gelabert, A. &amp; Troiano, H. (2024). <em>Compensatory advantage after the first year at university in the Catalan system: between continuing, transferring and dropping out.</em> <em>Studies in Higher Education</em>. <a href="https://doi.org/10.1080/03075079.2023.2281539" rel="noopener" target="_blank">Lee el artículo ↗</a></p><p>¿Quieres explorar todas las estimaciones? <a href="https://albert-sanchez-gelabert.github.io/tools/compensatory/" rel="noopener" target="_blank">Compensatory Advantage Explorer ↗</a></p><p class="eil3-meta">Cohorte de 36.909 estudiantes que accedieron a universidades presenciales de Cataluña (2012–13). Los resultados se refieren a la progresión después del primer año, no a la graduación final.</p></div>
+<div class="eil3-screen-actions eil3-screen-actions-spread"><button class="eil3-text-button" data-go="2" type="button">← Anterior</button><button class="eil3-button eil3-button-secondary" data-restart="" type="button">Vuelve a empezar el capítulo ↺</button></div>
+<div class="eil3-end-links"><a href="../index.html">← Todos los capítulos</a><a href="../chapter-2/index.html">← Capítulo anterior: Vidas de estudiantes</a></div>
+</section>
+</main>
+</div>
+</div>
+```
+
+```{=html}
+<script defer="" src="lab.js"></script>
+```

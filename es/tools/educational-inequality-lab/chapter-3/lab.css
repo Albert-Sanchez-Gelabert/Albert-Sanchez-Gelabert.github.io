@@ -1,0 +1,163 @@
+/* Educational Inequality Lab — Chapter 03 editorial edition. All styles scoped. */
+#eil3-root{--ink:#19323a;--muted:#61747a;--green:#1d7569;--line:#dbe4df;--mint:#e9f3ed;--sand:#f6eee4;--stay:#76ae9d;--transfer:#d7a275;--leave:#bf7d73;color:var(--ink);font:16px/1.57 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;padding:10px 0 75px}
+#eil3-root *,#eil3-root *::before,#eil3-root *::after{box-sizing:border-box}
+#eil3-root [hidden]{display:none!important}
+#eil3-root :is(h1,h2,h3,p){margin-top:0}
+#eil3-root a{color:var(--green);text-underline-offset:3px}
+#eil3-root button{font:inherit;cursor:pointer}
+#eil3-root :is(a,button):focus-visible{outline:3px solid #d8a66e;outline-offset:4px}
+#eil3-root .eil3-shell{max-width:1190px;margin:auto;padding:0 22px}
+#eil3-root .eil3-masthead{display:flex;justify-content:space-between;align-items:center;gap:16px;border-bottom:1px solid var(--line);padding:13px 0 19px}
+#eil3-root .eil3-brand{display:flex;gap:12px;align-items:center;color:var(--ink);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;text-decoration:none}
+#eil3-root .eil3-brand-mark{display:grid;place-items:center;color:white;background:var(--green);width:30px;height:30px;border-radius:9px;font:400 19px Georgia,serif;letter-spacing:0}
+#eil3-root .eil3-masthead-note{font-size:12px;color:var(--muted)}
+#eil3-root .eil3-breadcrumb{display:flex;align-items:center;gap:14px;padding:17px 0 18px;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}
+#eil3-root .eil3-breadcrumb strong{font-size:12px;font-weight:750;color:#45665d}
+#eil3-root .eil3-breadcrumb-trail{margin-left:auto;text-transform:uppercase;font-size:10px;letter-spacing:.1em}
+#eil3-root .eil3-main{max-width:990px;margin:auto}
+#eil3-root .eil3-readingline{display:flex;align-items:center;gap:13px;color:#647b6f;text-transform:uppercase;font-weight:800;letter-spacing:.08em;font-size:11px;margin:28px 0 52px}
+#eil3-root .eil3-readingline>span:last-child{font-size:11px;text-transform:none;letter-spacing:0;font-weight:500;color:#8a9990}
+#eil3-root .eil3-reading-dots{display:flex;align-items:center;gap:6px;margin-left:auto}
+#eil3-root .eil3-reading-dots i{width:34px;height:5px;background:#d9e9df;border-radius:10px}
+#eil3-root .eil3-reading-dots i:first-child{background:var(--green)}
+#eil3-root .eil3-eyebrow,#eil3-root .eil3-section-rule span{font-size:11px;text-transform:uppercase;letter-spacing:.13em;font-weight:800;color:var(--green)}
+#eil3-root :is(h1,h2,h3){font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.044em;line-height:1.14;color:var(--ink)}
+#eil3-root h1{font-size:clamp(39px,5vw,59px);max-width:780px;margin:13px 0 21px}
+#eil3-root h2{font-size:clamp(32px,4vw,47px);max-width:770px;margin:14px 0 20px}
+#eil3-root h3{font-size:clamp(24px,3vw,34px)}
+#eil3-root em{font-style:italic;color:var(--green)}
+#eil3-root .eil3-deck{font-size:clamp(19px,2.25vw,25px);line-height:1.42;max-width:745px;color:#3e5856;margin:0 0 15px}
+#eil3-root .eil3-deck strong{color:var(--ink)}
+#eil3-root .eil3-prose{font-size:clamp(16px,1.6vw,19px);line-height:1.7;color:#51686b;max-width:770px;margin:0 0 24px}
+#eil3-root .eil3-intro{margin-bottom:78px}
+#eil3-root .eil3-path{display:grid;grid-template-columns:1fr 30px 1.2fr 30px 1.15fr;gap:10px;align-items:center;margin:31px 0 28px;background:linear-gradient(115deg,#eaf4ed 4%,#f8f9f6 55%,#faf1e9);padding:24px;border:1px solid var(--line);border-radius:14px}
+#eil3-root .eil3-path-first{background:white;border:1px solid #dfe8df;border-radius:9px;min-height:144px;padding:18px 16px;display:flex;flex-direction:column;gap:6px}
+#eil3-root .eil3-path-num{font-weight:800;font-size:10px;letter-spacing:.12em;color:var(--green);margin-bottom:7px}
+#eil3-root .eil3-path-first strong{font:400 20px/1.18 Georgia,serif;letter-spacing:-.02em}
+#eil3-root .eil3-path-first small{font-size:12px;color:var(--muted);line-height:1.5}
+#eil3-root .eil3-path-focus{border-color:#a3cdb8;background:#f7fcf8}
+#eil3-root .eil3-path-arrow{display:grid;place-items:center;font:400 23px Georgia,serif;color:#9cbca9}
+#eil3-root .eil3-path-options{display:grid;gap:6px}
+#eil3-root .eil3-path-options strong{font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px;color:#607c69}
+#eil3-root .eil3-path-options span{font-size:12px;font-weight:650;border-radius:6px;padding:7px 10px;background:#fff;border:1px solid #e3e7df}
+#eil3-root .eil3-path-options span:nth-of-type(2){border-left:3px solid var(--transfer)}
+#eil3-root .eil3-path-options span:nth-of-type(3){border-left:3px solid var(--leave)}
+#eil3-root .eil3-turn{font:400 clamp(20px,2.6vw,27px)/1.45 Georgia,serif;letter-spacing:-.021em;border-left:3px solid var(--green);padding:8px 0 8px 22px;max-width:820px;margin:23px 0;color:#38514e}
+#eil3-root .eil3-turn strong{color:var(--green);font-weight:500}
+#eil3-root .eil3-section-rule{border-top:1px solid var(--line);padding-top:19px;margin-bottom:40px}
+#eil3-root .eil3-evidence{margin-bottom:80px}
+#eil3-root .eil3-chart-card{border:1px solid var(--line);background:#fff;border-radius:14px;padding:clamp(20px,3vw,32px);margin:28px 0 0;box-shadow:0 13px 32px rgba(24,69,55,.05)}
+#eil3-root .eil3-chart-top{display:flex;justify-content:space-between;gap:13px;align-items:center;flex-wrap:wrap;border-bottom:1px solid #e7eee7;padding-bottom:16px;margin-bottom:16px}
+#eil3-root .eil3-chart-eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.075em;font-weight:800;color:#52766a}
+#eil3-root .eil3-chart-source{font-size:10px;color:#8a978e;border:1px solid #e7ece7;border-radius:99px;padding:6px 11px;text-transform:uppercase;letter-spacing:.05em}
+#eil3-root .eil3-credit-status{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+#eil3-root .eil3-credit-status>span{color:#647970;font-size:13px;font-weight:700}
+#eil3-root .eil3-credit-status strong{font:400 44px Georgia,serif;letter-spacing:-.05em;color:var(--green);font-variant-numeric:tabular-nums}
+#eil3-root .eil3-credit-status strong>span{font-size:25px}
+#eil3-root .eil3-credit-meter{height:8px;background:#edf2ed;overflow:hidden;border-radius:20px;margin:8px 0 26px}
+#eil3-root .eil3-credit-meter>i{display:block;background:linear-gradient(90deg,#9ac9b4,var(--green));width:80%;height:100%;transition:width .9s cubic-bezier(.2,.72,.22,1)}
+#eil3-root .eil3-groups{display:grid;gap:30px}
+#eil3-root .eil3-group-head{display:flex;justify-content:space-between;gap:8px;align-items:baseline;margin-bottom:11px}
+#eil3-root .eil3-group-head strong{font-size:15px;color:#2f4b49}
+#eil3-root .eil3-group-head small{font-size:11px;color:#8b9890}
+#eil3-root .eil3-bar{height:45px;border-radius:6px;display:flex;overflow:hidden;background:#eef2ef}
+#eil3-root .eil3-bar .eil3-seg{display:block;height:100%;transition:width .95s cubic-bezier(.19,.72,.22,1);min-width:0}
+#eil3-root .eil3-seg.stay{background:var(--stay)}
+#eil3-root .eil3-seg.transfer{background:var(--transfer)}
+#eil3-root .eil3-seg.leave{background:var(--leave)}
+#eil3-root .eil3-percent-row{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:10px}
+#eil3-root .eil3-percent-row>span{font-size:12px;color:#617770;white-space:nowrap}
+#eil3-root .eil3-percent-row>span:last-child{text-align:right}
+#eil3-root .eil3-percent-row>span:nth-child(2){text-align:center}
+#eil3-root .eil3-percent-row b{font-weight:800;color:#344d47;font-variant-numeric:tabular-nums}
+#eil3-root .eil3-legend{display:flex;flex-wrap:wrap;gap:9px 21px;margin:23px 0 0;padding:16px 0;border-top:1px solid #e9eeea;font-size:12px;color:#60736a}
+#eil3-root .eil3-legend span{display:flex;gap:8px;align-items:center}
+#eil3-root .eil3-legend i{width:10px;height:10px;border-radius:3px}
+#eil3-root .eil3-legend i.stay{background:var(--stay)}
+#eil3-root .eil3-legend i.transfer{background:var(--transfer)}
+#eil3-root .eil3-legend i.leave{background:var(--leave)}
+#eil3-root .eil3-before{background:#f1f7f2;border-radius:9px;padding:19px 21px;margin:7px 0 17px}
+#eil3-root .eil3-before p{margin:0 0 8px;font-size:15px;color:#45615c}
+#eil3-root .eil3-before p:last-child{margin:0}
+#eil3-root .eil3-before-question{font:400 23px/1.36 Georgia,serif!important;color:#234b43!important;letter-spacing:-.018em}
+#eil3-root .eil3-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--green);color:#fff;border:0;border-radius:8px;padding:15px 20px;font-size:14px;font-weight:750;line-height:1.4;transition:background .15s,transform .15s}
+#eil3-root .eil3-button:hover{background:#135d53;transform:translateY(-1px)}
+#eil3-root .eil3-main-action{margin:20px 0 8px}
+#eil3-root .eil3-after{border-top:1px solid #dee8df;margin:28px 0 0;padding-top:26px;animation:eil3-appear .4s ease both}
+@keyframes eil3-appear{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+#eil3-root .eil3-after-eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#a27758;font-weight:800;margin:0 0 9px}
+#eil3-root .eil3-after h3{max-width:750px;font-size:clamp(28px,3.7vw,39px);margin:0 0 14px}
+#eil3-root .eil3-after>p:not(.eil3-after-eyebrow){color:#506b62;font-size:16px;line-height:1.7;max-width:760px;margin:13px 0}
+#eil3-root .eil3-observation{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin:22px 0}
+#eil3-root .eil3-observation>div{border:1px solid #e8e4db;background:#fbf8f3;border-radius:9px;padding:19px}
+#eil3-root .eil3-observation>div:first-child{background:#fcf6f4;border-color:#edd9d4}
+#eil3-root .eil3-observation span{font-size:11px;color:#68756d;text-transform:uppercase;font-weight:750;letter-spacing:.06em}
+#eil3-root .eil3-observation strong{display:block;font:400 clamp(23px,3.2vw,34px)/1.3 Georgia,serif;letter-spacing:-.03em;margin:10px 0 5px}
+#eil3-root .eil3-observation strong small{font:400 13px Arial,sans-serif;color:#8c9c8e}
+#eil3-root .eil3-observation p{font-size:13px;line-height:1.6;margin:5px 0 0;color:#697b71}
+#eil3-root .eil3-after .eil3-after-takeaway{font:400 clamp(20px,2.5vw,26px)/1.42 Georgia,serif!important;color:var(--ink)!important;letter-spacing:-.017em;max-width:780px!important;margin:19px 0 0!important}
+#eil3-root .eil3-chart-footnote{font-size:11px;color:#8c9c92;line-height:1.7;border-top:1px solid #e9eeea;margin:22px 0 0;padding-top:15px}
+#eil3-root .eil3-meaning{margin-bottom:85px;animation:eil3-appear .4s ease both}
+#eil3-root .eil3-ideas{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px 0 22px}
+#eil3-root .eil3-ideas>div{background:#f4f8f4;border:1px solid #dfe7df;border-radius:11px;padding:22px 18px}
+#eil3-root .eil3-ideas span{font-size:10px;font-weight:800;color:var(--green);text-transform:uppercase;letter-spacing:.09em}
+#eil3-root .eil3-ideas strong{display:block;font:400 21px/1.25 Georgia,serif;letter-spacing:-.02em;margin:12px 0 10px;color:#2f4942}
+#eil3-root .eil3-ideas p{font-size:13px;color:#74867a;line-height:1.6;margin:0}
+#eil3-root .eil3-interpret-note{font-size:13px;color:#788a80;max-width:790px;margin:20px 0 30px;line-height:1.7}
+#eil3-root .eil3-seventy{font:400 clamp(20px,2.7vw,27px)/1.45 Georgia,serif;color:#38564c;letter-spacing:-.021em;max-width:875px;border-left:3px solid #d7b28b;padding:10px 0 10px 23px;margin:28px 0 0}
+#eil3-root .eil3-seventy strong{color:var(--green);font-weight:500}
+#eil3-root .eil3-outro{animation:eil3-appear .4s ease both}
+#eil3-root .eil3-outro h2{font-size:clamp(32px,4vw,49px);max-width:760px}
+#eil3-root .eil3-insight-card{background:#e8f3ec;border:1px solid #d5e7d9;padding:clamp(22px,3vw,32px);border-radius:13px;margin:24px 0 29px}
+#eil3-root .eil3-insight-card h3{font-size:clamp(24px,3.15vw,35px);max-width:825px;line-height:1.27;margin:14px 0 19px}
+#eil3-root .eil3-insight-card>p:last-child{font-size:16px;line-height:1.7;color:#486357;max-width:795px;margin:0}
+#eil3-root .eil3-final-line{font:400 clamp(22px,3vw,30px)/1.42 Georgia,serif;max-width:795px;color:#284b40;letter-spacing:-.02em;margin:20px 0 44px}
+#eil3-root .eil3-source{border-top:1px solid var(--line);padding:22px 0 12px;font-size:13px;max-width:910px;color:#70837b}
+#eil3-root .eil3-source p{margin:10px 0;line-height:1.7}
+#eil3-root .eil3-meta{font-size:11px;color:#8b9a90}
+#eil3-root .eil3-end-links{display:flex;gap:20px;flex-wrap:wrap;margin-top:17px;font-size:13px;font-weight:650}
+@media(max-width:760px){#eil3-root .eil3-readingline{margin:22px 0 38px}#eil3-root .eil3-path{grid-template-columns:1fr;gap:6px;padding:15px}#eil3-root .eil3-path-first{min-height:auto;padding:14px}#eil3-root .eil3-path-arrow{transform:rotate(90deg);font-size:20px;height:20px}#eil3-root .eil3-path-options{padding:8px 12px 12px}#eil3-root .eil3-path-options span{padding:7px 8px}#eil3-root .eil3-intro,#eil3-root .eil3-evidence,#eil3-root .eil3-meaning{margin-bottom:58px}#eil3-root .eil3-ideas{grid-template-columns:1fr}#eil3-root .eil3-observation{grid-template-columns:1fr}#eil3-root .eil3-credit-status strong{font-size:38px}#eil3-root .eil3-breadcrumb-trail{display:none}}
+@media(max-width:540px){#eil3-root{font-size:15px}#eil3-root .eil3-shell{padding:0 17px}#eil3-root .eil3-masthead-note{display:none}#eil3-root .eil3-breadcrumb{gap:9px}#eil3-root .eil3-reading-dots i{width:20px}#eil3-root h1{font-size:39px}#eil3-root h2{font-size:34px}#eil3-root .eil3-deck{font-size:19px}#eil3-root .eil3-chart-card{padding:18px 13px}#eil3-root .eil3-group-head{display:grid;gap:2px}#eil3-root .eil3-group-head strong{font-size:13px}#eil3-root .eil3-bar{height:38px}#eil3-root .eil3-percent-row{gap:3px}#eil3-root .eil3-percent-row>span{font-size:10px}#eil3-root .eil3-legend{gap:8px 12px;font-size:11px}#eil3-root .eil3-before{padding:17px 15px}#eil3-root .eil3-button{width:100%;padding:15px 12px;font-size:12.5px}#eil3-root .eil3-turn{font-size:22px}#eil3-root .eil3-observation>div{padding:16px}#eil3-root .eil3-insight-card{padding:21px}#eil3-root .eil3-source{font-size:12px}}
+@media(prefers-reduced-motion:reduce){#eil3-root *,#eil3-root *::before,#eil3-root *::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+/* Hide Quarto's autogenerated title block: this experience owns its typography. */
+body:has(#eil3-root) #title-block-header{display:none!important}
+body:has(#eil3-root) .quarto-title-block{display:none!important}
+body:has(#eil3-root) #quarto-content{overflow-x:clip}
+body:has(#eil3-root) #quarto-document-content{max-width:none!important}
+
+/* Guided four-screen chapter: shared visual grammar of Chapters 1–2. */
+#eil3-root .eil3-main{max-width:990px}
+#eil3-root .eil3-progress{display:flex;align-items:center;gap:15px;margin:26px 0 48px;padding:0 0 15px;border-bottom:1px solid var(--line)}
+#eil3-root .eil3-progress-name{font-size:11px;color:#647b6f;text-transform:uppercase;font-weight:800;letter-spacing:.09em;min-width:120px}
+#eil3-root .eil3-progress-bars{display:flex;gap:7px;margin-left:auto}
+#eil3-root .eil3-progress-bars i{display:block;width:43px;height:5px;background:#c9dcd1;border-radius:6px}
+#eil3-root .eil3-progress-bars i.is-complete{background:var(--green)}
+#eil3-root .eil3-progress-counter{font-size:11px;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums;margin-left:12px}
+#eil3-root .eil3-screen{min-height:460px;padding-bottom:30px;animation:eil3-appear .35s ease both}
+#eil3-root .eil3-screen>h2{font-size:clamp(33px,4vw,49px)}
+#eil3-root .eil3-path{grid-template-columns:1fr 28px 1.15fr 28px 1fr;margin:28px 0 22px}
+#eil3-root .eil3-path-first{min-height:166px;justify-content:flex-start}
+#eil3-root .eil3-path-first strong{font-size:22px}
+#eil3-root .eil3-path-focus small{color:#3b7566;font-weight:600}
+#eil3-root .eil3-path-last{background:#fdfbf8;border-color:#e5e0d7}
+#eil3-root .eil3-turn{font-size:clamp(20px,2.5vw,26px);margin-bottom:27px}
+#eil3-root .eil3-screen-actions{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin:23px 0 4px}
+#eil3-root .eil3-screen-actions-spread{justify-content:space-between;border-top:1px solid var(--line);padding-top:25px;margin-top:33px}
+#eil3-root .eil3-back-action{margin:12px 0}
+#eil3-root .eil3-text-button{background:transparent;border:0;padding:10px 3px;font-size:13px;font-weight:650;color:var(--green);cursor:pointer}
+#eil3-root .eil3-text-button:hover{text-decoration:underline;text-underline-offset:4px}
+#eil3-root .eil3-button-secondary{background:#eef5f0!important;color:var(--green)!important;border:1px solid #cde2d6!important}
+#eil3-root .eil3-button-secondary:hover{background:#dfeee5!important}
+#eil3-root .eil3-chart-card{margin-top:19px}
+#eil3-root .eil3-chart-actions{margin:24px 0 14px}
+#eil3-root .eil3-evidence-message{background:#f1f7f2;border-left:3px solid var(--green);padding:15px 18px;margin:7px 0 0;border-radius:5px;color:#446257;font-size:14px;line-height:1.6}
+#eil3-root .eil3-evidence-message strong{font-weight:750;color:#25493e}
+#eil3-root .eil3-evidence-message p{margin:5px 0 0}
+#eil3-root .eil3-screen .eil3-ideas{margin-top:28px}
+#eil3-root .eil3-screen .eil3-seventy{font:400 18px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;padding:16px 19px;border-left-color:#c7a882;background:#fbf8f4;max-width:900px}
+#eil3-root .eil3-screen .eil3-seventy strong{font-weight:700}
+#eil3-root .eil3-screen .eil3-interpret-note{margin:22px 0}
+#eil3-root .eil3-source{margin-top:10px}
+#eil3-root .eil3-outro h2{font-size:clamp(32px,4vw,49px)}
+@media(max-width:760px){#eil3-root .eil3-progress{margin-bottom:34px}#eil3-root .eil3-progress-name{min-width:auto}#eil3-root .eil3-progress-bars i{width:25px}#eil3-root .eil3-path{grid-template-columns:1fr;gap:6px}#eil3-root .eil3-path-first{min-height:auto;padding:16px}#eil3-root .eil3-path-arrow{transform:rotate(90deg)}#eil3-root .eil3-screen{min-height:0}#eil3-root .eil3-screen-actions-spread{align-items:stretch}#eil3-root .eil3-screen-actions-spread .eil3-button{width:auto}}
+@media(max-width:540px){#eil3-root .eil3-progress-name{font-size:10px;min-width:75px}#eil3-root .eil3-progress-counter{margin-left:0;font-size:10px}#eil3-root .eil3-progress-bars{gap:5px}#eil3-root .eil3-progress-bars i{width:18px}#eil3-root .eil3-screen-actions-spread{flex-direction:column-reverse;align-items:stretch}#eil3-root .eil3-screen-actions-spread .eil3-button{width:100%}#eil3-root .eil3-chart-actions{align-items:stretch;flex-direction:column}#eil3-root .eil3-chart-actions .eil3-button{width:100%}}

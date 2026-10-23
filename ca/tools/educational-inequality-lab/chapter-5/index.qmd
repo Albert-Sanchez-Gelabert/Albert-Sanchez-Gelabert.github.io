@@ -1,0 +1,103 @@
+---
+lang: ca
+pagetitle: "Qui es beneficia realment de la flexibilitat? | Educational Inequality Lab"
+description: "Capítol interactiu de divulgació sociològica sobre desigualtats educatives."
+format:
+  html:
+    page-layout: full
+    toc: false
+    css: lab.css
+---
+
+```{=html}
+<div id="eil5-root">
+<div class="eil5-shell">
+<header class="eil5-masthead">
+<a class="eil5-brand" href="../index.html"><span aria-hidden="true" class="eil5-brand-mark">≋</span><span>Educational Inequality Lab</span></a>
+<span class="eil5-masthead-note">Sociologia interactiva · Catalunya</span>
+</header>
+<nav aria-label="Ruta de navegació" class="eil5-breadcrumb">
+<a href="../index.html">← Tots els capítols</a><span aria-hidden="true">/</span><strong>05 · Flexibilitat i equitat</strong><span class="eil5-breadcrumb-trail">Beyond merit. / Capítol 05</span>
+</nav>
+<main>
+<div aria-label="Progrés del capítol" class="eil5-progress">
+<span data-progress-title="">La promesa</span>
+<span aria-hidden="true" class="eil5-progress-bars"><i></i><i></i><i></i></span>
+<span data-progress-number="">01 / 03</span>
+</div>
+<section aria-labelledby="eil5-main-heading" class="eil5-screen" data-screen="0">
+<p class="eil5-eyebrow">01 / La promesa de la flexibilitat</p>
+<h1 id="eil5-main-heading">Qui es beneficia realment <em>de la flexibilitat?</em></h1>
+<p class="eil5-deck">Què passa si la universitat no encaixa amb el teu horari laboral, les responsabilitats familiars o el dia a dia?</p>
+<div aria-label="Comparació conceptual entre educació presencial i en línia" class="eil5-situation">
+<div><small>Educació presencial</small><strong>Un horari al qual t'has d'adaptar</strong><p>Desplaçaments, classes programades i activitats en llocs i moments determinats.</p></div>
+<span aria-hidden="true" class="eil5-between">→</span>
+<div><small>Educació en línia</small><strong>Una manera més flexible de participar</strong><p>Més llibertat per triar quan i on estudiar, tot i que la feina acadèmica continua exigint temps.</p></div>
+</div>
+<p class="eil5-prose">Per a alguns estudiants, passar a la modalitat en línia permet continuar estudiant mentre gestionen altres responsabilitats. <strong>Però disposar d'aquesta alternativa garanteix les mateixes possibilitats de graduar-se?</strong></p>
+<p class="eil5-context-foot">Aquest canvi era <strong>lleugerament més freqüent</strong> entre els estudiants de famílies sense estudis universitaris: el 3,3%, davant del 2,5% entre els de famílies universitàries (taula 2). És una diferència modesta, no la descoberta central.</p>
+<div class="eil5-actions"><button class="eil5-button" data-go="1" type="button">Explorem-ho <span aria-hidden="true">→</span></button></div>
+</section>
+<section aria-labelledby="eil5-evidence-heading" class="eil5-screen" data-screen="1" hidden="">
+<p class="eil5-eyebrow">02 / Un canvi, un resultat diferent</p>
+<h2 id="eil5-evidence-heading">Quan els estudiants canvien de via, <em>què passa després?</em></h2>
+<p class="eil5-outcomes-intro">Pensem en estudiants que van començar en una universitat presencial i després van canviar d'itinerari. Gairebé una dècada després, els resultats diferien segons el tipus de canvi.</p>
+<div aria-label="Resultats educatius estimats al final del seguiment dels estudiants que van canviar de trajectòria universitària" class="eil5-outcomes" data-benchmark="" role="group">
+<div class="eil5-outcomes-head"><div><strong data-outcomes-title="">Dues vies per comparar</strong><small>Resultats estimats pel model al final del període d'observació</small></div><span class="eil5-outcomes-kicker">Estudiants d'entrada el 2012–13</span></div>
+<div class="eil5-route eil5-quiet-route"><div class="eil5-route-name"><span>Canvi de titulació · mateixa universitat</span><span>Una altra titulació, mateixa institució</span></div><div aria-label="65% graduats, 15% van abandonar sense títol i 20% encara estudien" class="eil5-stacked" role="img"><span class="graduate" style="width:65%"></span><span class="dropout" style="width:15%"></span><span class="enrolled" style="width:20%"></span></div><div class="eil5-route-values"><span><strong>65%</strong> graduats</span><span><strong>15%</strong> han abandonat</span><span><strong>20%</strong> encara estudien</span></div></div>
+<div class="eil5-route eil5-quiet-route"><div class="eil5-route-name"><span>Canvi d'institució</span><span>Una altra universitat presencial</span></div><div aria-label="53% graduats, 19% van abandonar sense títol i 28% encara estudien" class="eil5-stacked" role="img"><span class="graduate" style="width:53%"></span><span class="dropout" style="width:19%"></span><span class="enrolled" style="width:28%"></span></div><div class="eil5-route-values"><span><strong>53%</strong> graduats</span><span><strong>19%</strong> han abandonat</span><span><strong>28%</strong> encara estudien</span></div></div>
+<div aria-live="polite" class="eil5-route eil5-online-route" data-online-route="" hidden="">
+<div class="eil5-route-name"><span>Canvi a una universitat en línia <strong class="eil5-route-new">VIA NOVA</strong></span><span>Canvi d'institució i de modalitat</span></div>
+<div aria-label="6% graduats, 39% van abandonar sense títol i 55% encara estudien" class="eil5-stacked" role="img"><span class="graduate" data-width="6%" style="width:0%"></span><span class="dropout" data-width="39%" style="width:0%"></span><span class="enrolled" data-width="55%" style="width:0%"></span></div>
+<div class="eil5-route-values"><span><strong>6%</strong> graduats</span><span><strong>39%</strong> han abandonat</span><span><strong>55%</strong> encara estudien</span></div>
+</div>
+<div aria-label="Colors dels resultats" class="eil5-legend"><span><i class="eil5-dot graduate"></i>Graduats</span><span><i class="eil5-dot dropout"></i>Abandonament sense titulació</span><span><i class="eil5-dot enrolled"></i>Encara estudien</span></div>
+</div>
+<div class="eil5-trigger" data-online-trigger="">
+<p class="eil5-trigger-question">I si el canvi és cap a una universitat en línia?</p>
+<p class="eil5-prose">Passar a la modalitat en línia ofereix més flexibilitat. Com es compara aquesta tercera via amb les altres dues?</p>
+<button class="eil5-button" data-reveal="online" type="button">Mostra la via en línia <span aria-hidden="true">→</span></button>
+</div>
+<div aria-label="Una mirada més detallada de la via en línia i les diferències socials" aria-live="polite" class="eil5-online-panel" data-online-panel="" hidden="">
+<p class="eil5-online-topline">Una mirada més detallada · La via en línia</p>
+<h3 class="eil5-online-title">Continuar matriculat <em>no és el mateix que graduar-se.</em></h3>
+<p class="eil5-online-subtitle">Entre els qui van canviar a una universitat en línia, molts encara estaven matriculats al final del període d'observació. Els seus resultats difereixen molt dels de les altres dues vies.</p>
+<div aria-label="55% encara estudiaven, davant del 6% que s’havien graduat" class="eil5-focus-facts">
+<div class="eil5-focus-fact continuing"><strong>55%</strong><span>Encara estudien</span></div>
+<span aria-hidden="true" class="eil5-focus-separator">davant de</span>
+<div class="eil5-focus-fact completing"><strong>6%</strong><span>Graduats</span></div>
+</div>
+<p class="eil5-reveal-key">La flexibilitat pot facilitar que es continuï matriculat sense garantir que s'obtingui un títol en el mateix període.</p>
+<p class="eil5-footnote">El 39% restant ja no estava matriculat i no havia obtingut un títol. La figura 1 presenta resultats predits pel model al final del seguiment, no efectes causals. Alguns estudiants encara matriculats poden graduar-se més endavant.</p>
+<div class="eil5-inline-social">
+<p class="eil5-online-topline">I dins d'aquesta mateixa via?</p>
+<h3>Més flexibilitat. <em>Les diferències socials persisteixen.</em></h3>
+<p>Entre els estudiants que van passar a la modalitat en línia, l'origen educatiu familiar continuava associat a diferents probabilitats ajustades d'abandonar sense títol:</p>
+<div aria-label="Probabilitat estimada d’abandonament després de passar a la modalitat en línia: 36,4% entre famílies sense estudis universitaris i 28,4% entre famílies universitàries" class="eil5-social-compact" role="group">
+<div class="eil5-social-mini"><span class="eil5-mini-label">Família sense estudis universitaris</span><div class="eil5-mini-values"><strong>36.4%</strong><span>probabilitat d'abandonar</span></div><div class="eil5-social-track"><i style="width:72.8%"></i></div></div>
+<div class="eil5-social-mini"><span class="eil5-mini-label">Família amb estudis universitaris</span><div class="eil5-mini-values"><strong>28.4%</strong><span>probabilitat d'abandonar</span></div><div class="eil5-social-track"><i style="width:56.8%"></i></div></div>
+</div>
+<p class="eil5-footnote">Prediccions ajustades de la taula 5 en una escala comuna del 0 al 50%. Aquestes estimacions provenen d'una comparació diferent de la xifra global del 39%. La bretxa familiar és estadísticament significativa, però no s'ha demostrat que sigui més gran que en altres tipus de canvi.</p>
+<p class="eil5-meaning-inline">L'estudi en línia pot reduir els desplaçaments i l'obligació d'assistir en horaris fixos. No elimina les responsabilitats que competeixen pel temps ni les desigualtats de recursos. Són mecanismes sociològics plausibles, no causes identificades directament per l'estudi.</p>
+</div>
+</div>
+<div class="eil5-actions eil5-actions-space"><button class="eil5-back" data-go="0" type="button">← Anterior</button><button class="eil5-button" data-go="2" data-next="online" hidden="" type="button">Què ens diu això? <span aria-hidden="true">→</span></button></div>
+</section>
+<section aria-labelledby="eil5-conclusion-heading" class="eil5-screen" data-screen="2" hidden="">
+<p class="eil5-eyebrow">03 / La teva descoberta sociològica</p>
+<h2 id="eil5-conclusion-heading">Tenir més maneres d'estudiar no garanteix <em>les mateixes possibilitats d'acabar.</em></h2>
+<div class="eil5-insight-card"><span class="eil5-eyebrow">La descoberta</span><h3>La flexibilitat pot ajudar a continuar a l'educació superior. <em>No elimina totes les desigualtats que influeixen en els resultats.</em></h3><p>La universitat en línia pot fer possible continuar estudiant a qui no pot seguir els horaris convencionals. Tot i això, molts encara estudien al cap d'anys, i la probabilitat d'abandonar sense títol continua associada a l'origen familiar.</p></div>
+<p class="eil5-final-line">Les oportunitats educatives no depenen només de <em>tenir una alternativa</em>. També depenen de <strong>les condicions en què se'n pot fer ús.</strong></p>
+<p class="eil5-prose">Al llarg de <em>Beyond merit</em>, la història tracta de com les oportunitats educatives es configuren, es reconsideren i es viuen a través de decisions successives, més enllà del mèrit o de l'esforç individuals.</p>
+<div class="eil5-source"><span class="eil5-eyebrow">Basat en recerca publicada</span><p>Sánchez-Gelabert, A., &amp; Elias, M. (2023). <em>Going online? Does transferring to online university increase the likelihood of graduation among students from lower social background?</em> <em>International Journal of Educational Technology in Higher Education</em>, 20, article 39. <a href="https://doi.org/10.1186/s41239-023-00407-4" rel="noopener" target="_blank">Llegeix l'article publicat ↗</a></p><p class="eil5-smallprint">Estudiants que van entrar en universitats catalanes el 2012–13, seguits fins al 2019–20. Les categories de canvi es basen en n=42.370; les comparacions del model se centren en 6.121 estudiants inicialment presencials que van canviar de via. Les proporcions descriptives dels canvis, els resultats globals del model i les probabilitats ajustades d'abandonament per origen familiar tenen bases estadístiques diferents. Cap no identifica un efecte causal de l'estudi en línia.</p></div>
+<div class="eil5-actions eil5-actions-space"><button class="eil5-back" data-go="1" type="button">← Anterior</button><button class="eil5-button eil5-button-outline" data-restart="" type="button">Torna a començar el capítol ↺</button></div>
+<div class="eil5-end-links"><a href="../index.html">← Tots els capítols</a><a href="../chapter-4/index.html">← Capítol anterior: Trajectòries acadèmiques</a></div>
+</section>
+</main>
+</div>
+</div>
+```
+
+```{=html}
+<script defer="" src="lab.js"></script>
+```

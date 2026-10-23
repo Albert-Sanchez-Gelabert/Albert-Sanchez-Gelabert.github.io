@@ -1,0 +1,123 @@
+---
+lang: es
+pagetitle: "¿El éxito académico sigue una línea recta? | Educational Inequality Lab"
+description: "Capítulo interactivo de divulgación sociológica sobre desigualdades educativas."
+format:
+  html:
+    page-layout: full
+    toc: false
+    css: lab.css
+---
+
+```{=html}
+<div id="eil4-root">
+<div class="eil4-shell">
+<header class="eil4-masthead">
+<a class="eil4-brand" href="../index.html"><span aria-hidden="true" class="eil4-brand-mark">≋</span><span>Educational Inequality Lab</span></a>
+<span class="eil4-masthead-note">Sociología interactiva · Cataluña</span>
+</header>
+<nav aria-label="Ruta de navegación" class="eil4-breadcrumb">
+<a href="../index.html">← Todos los capítulos</a><span aria-hidden="true">/</span><strong>04 · Trayectorias universitarias</strong>
+<span class="eil4-breadcrumb-trail">Beyond merit. / Capítulo 04</span>
+</nav>
+<main>
+<div aria-label="Progreso del capítulo" class="eil4-progress">
+<span data-progress-title="">La trayectoria esperada</span>
+<span aria-hidden="true" class="eil4-progress-bars"><i></i><i></i><i></i><i></i><i></i></span>
+<span data-progress-number="">01 / 05</span>
+</div>
+<section aria-labelledby="eil4-heading" class="eil4-screen" data-screen="0">
+<p class="eil4-eyebrow">01 / Una expectativa</p>
+<h1 id="eil4-heading">¿El éxito académico sigue <em>una línea recta?</em></h1>
+<p class="eil4-deck">Solemos imaginar la universidad como un recorrido previsible: entrar, superar cada curso y graduarse.</p>
+<div aria-label="Trayectoria universitaria convencional de cuatro años" class="eil4-path">
+<div><small>INICIO</small><strong>Entrada</strong></div><span aria-hidden="true">→</span>
+<div><small>CURSO 1</small><strong>Progreso</strong></div><span aria-hidden="true">→</span>
+<div><small>CURSOS 2–3</small><strong>Progreso</strong></div><span aria-hidden="true">→</span>
+<div class="eil4-path-final"><small>FINAL</small><strong>Título</strong></div>
+</div>
+<p class="eil4-prose">Pero el progreso académico no es un único acontecimiento. Los estudiantes avanzan, tienen dificultades, se recuperan, reducen el ritmo o se detienen. <strong>El orden en que suceden estas cosas importa.</strong></p>
+<div class="eil4-bridge"><strong>¿Qué cambia si seguimos a los estudiantes a lo largo del tiempo en lugar de mirar únicamente si se gradúan?</strong><p>Hemos seguido la progresión de 30.392 estudiantes que entraron en la universidad en Cataluña durante siete cursos académicos.</p></div>
+<div class="eil4-actions"><button class="eil4-button" data-go="1" type="button">Sigue sus trayectorias <span aria-hidden="true">→</span></button></div>
+</section>
+<section aria-labelledby="eil4-recovery-title" class="eil4-screen" data-screen="1" hidden="">
+<p class="eil4-eyebrow">02 / El primer descubrimiento</p>
+<h2 id="eil4-recovery-title">Hay más de una manera <em>de conseguir un título.</em></h2>
+<p class="eil4-prose">La trayectoria más frecuente es sencilla: rendimiento alto y constante. Pero no es la única que conduce a la graduación.</p>
+<div class="eil4-chart-card" data-figure="recovery">
+<div class="eil4-chart-head"><strong>Rendimiento académico a lo largo de siete años</strong><span>Patrones típicos de trayectoria</span></div>
+<svg aria-label="Gráfico esquemático del rendimiento anual: rendimiento alto y constante y, después, una trayectoria de mejora gradual" class="eil4-chart" data-chart="recovery" role="img" viewBox="0 0 780 314"></svg>
+<div class="eil4-curve-legend"><span><i class="eil4-swatch stable"></i> Alto y constante · <b>43.7%</b> de los estudiantes de nuevo ingreso</span><span data-legend="recovery" hidden=""><i class="eil4-swatch improve"></i> Mejora progresiva · <b>27.0%</b> de los estudiantes de nuevo ingreso</span></div>
+<p class="eil4-chart-note">Formas ilustrativas basadas en la figura 1 del estudio publicado; los porcentajes exactos de resultados proceden de la tabla 4. Son tipos de trayectoria modelizados, no registros individuales.</p>
+</div>
+<div class="eil4-reveal-box" data-before="recovery">
+<strong>¿Hace falta un rendimiento casi perfecto desde el principio para graduarse?</strong>
+<p>Observa qué sucede cuando mostramos otra trayectoria de éxito frecuente.</p>
+<button class="eil4-button" data-reveal="recovery" type="button">Muestra otra trayectoria de éxito <span aria-hidden="true">→</span></button>
+</div>
+<div aria-live="polite" class="eil4-after" data-after="recovery" hidden="">
+<h3>Un recorrido diferente. También termina con un título.</h3>
+<p>El grupo que mejora empieza por debajo del grupo de rendimiento alto y constante y se va acercando gradualmente. <strong>El 94,9% de este grupo se graduó en los siete años de observación</strong> , pero muchos necesitaron más tiempo.</p>
+<div class="eil4-stats-two"><div><small>TRAYECTORIA ALTA Y CONSTANTE</small><strong>92.9%</strong><span>se gradúan a tiempo</span></div><div><small>TRAYECTORIA DE MEJORA</small><strong>56.6%</strong><span>se gradúan a tiempo</span><em>38,3% se gradúan más tarde</em></div></div>
+<p class="eil4-mini-insight">El título final no nos dice <em>cuánto tiempo ha costado conseguirlo.</em></p>
+</div>
+<div class="eil4-actions eil4-actions-space"><button class="eil4-back" data-go="0" type="button">← Anterior</button><button class="eil4-button" data-go="2" data-next="recovery" hidden="" type="button">Pero ¿un buen comienzo también puede acabar mal? <span aria-hidden="true">→</span></button></div>
+</section>
+<section aria-labelledby="eil4-late-title" class="eil4-screen" data-screen="2" hidden="">
+<p class="eil4-eyebrow">03 / Una segunda sorpresa</p>
+<h2 id="eil4-late-title">Un buen comienzo <em>no garantiza un buen final.</em></h2>
+<p class="eil4-prose">Un grupo más pequeño mantiene un rendimiento académico relativamente alto durante varios años. Si solo miráramos el comienzo, esperaríamos que terminaran los estudios.</p>
+<div class="eil4-chart-card" data-figure="late">
+<div class="eil4-chart-head"><strong>Sigue una trayectoria más allá del cuarto año</strong><span>6,1% de los estudiantes de nuevo ingreso · Proporción estimada por el modelo</span></div>
+<svg aria-label="Gráfico esquemático de una trayectoria con rendimiento inicial alto y descenso posterior; al principio solo se muestran los cuatro primeros años" class="eil4-chart" data-chart="late" role="img" viewBox="0 0 780 314"></svg>
+<div class="eil4-curve-legend"><span><i class="eil4-swatch decline"></i> Rendimiento alto seguido de un descenso</span></div>
+<p class="eil4-chart-note">Esquema basado en la figura 1. En el estudio, un año sin matrícula y sin graduación se codifica como progreso cero; la línea descendente no debe interpretarse como si suspendieran todos los exámenes.</p>
+</div>
+<div class="eil4-reveal-box" data-before="late">
+<strong>¿Qué sucede en los años posteriores a este comienzo aparentemente bueno?</strong>
+<button class="eil4-button" data-reveal="late" type="button">Sigue esta trayectoria hasta el séptimo año <span aria-hidden="true">→</span></button>
+</div>
+<div aria-live="polite" class="eil4-after" data-after="late" hidden="">
+<h3>El progreso puede interrumpirse en una fase avanzada.</h3>
+<p>El progreso de este grupo cae bruscamente después de los primeros años. Al final del periodo de observación, <strong>el 67,1% de los estudiantes asignados a esta trayectoria habían abandonado.</strong></p>
+<div class="eil4-stat-line"><strong>67.1%</strong><span>abandono al cabo de siete años entre los estudiantes asignados a esta trayectoria</span></div>
+<p class="eil4-mini-insight">Un buen comienzo y un buen final no son lo mismo.</p>
+</div>
+<div class="eil4-actions eil4-actions-space"><button class="eil4-back" data-go="1" type="button">← Anterior</button><button class="eil4-button" data-go="3" data-next="late" hidden="" type="button">¿Qué condiciona el tiempo necesario para recuperarse? <span aria-hidden="true">→</span></button></div>
+</section>
+<section aria-labelledby="eil4-time-title" class="eil4-screen" data-screen="3" hidden="">
+<p class="eil4-eyebrow">04 / El significado sociológico</p>
+<h2 id="eil4-time-title">Recuperarse requiere tiempo. <em>Y no todo el mundo dispone del mismo tiempo.</em></h2>
+<p class="eil4-deck">Un mismo sistema académico no ofrece a todo el mundo el mismo margen real para alargar o reorientar los estudios universitarios.</p>
+<p class="eil4-prose">El estudio encuentra que los estudiantes que acceden con más edad tienden a seguir menos a menudo una trayectoria de recuperación, especialmente en ámbitos exigentes. Algunos siguen una trayectoria óptima; otros abandonan. <strong>La recuperación gradual es menos frecuente.</strong></p>
+<div class="eil4-age-card">
+<div class="eil4-age-head"><span>INGENIERÍA Y ARQUITECTURA</span><strong>Probabilidad estimada de seguir una trayectoria de mejora</strong></div>
+<div class="eil4-age-row"><span>Hasta los 25 años</span><div class="eil4-age-track"><i style="width:40.2%"></i></div><strong>40.2%</strong></div>
+<div class="eil4-age-row"><span>26 años o más</span><div class="eil4-age-track"><i style="width:16%"></i></div><strong>16.0%</strong></div>
+<p>Probabilidades ajustadas de la tabla 7. Estas asociaciones no demuestran que la edad cause la diferencia.</p>
+</div>
+<p class="eil4-prose">Las obligaciones laborales y familiares, el coste de los años adicionales y las exigencias académicas de cada ámbito son posibles explicaciones de por qué alargar los estudios puede ser más viable para unos estudiantes que para otros. <strong>El estudio identifica patrones de trayectoria, no las causas directas de cada decisión.</strong></p>
+<div class="eil4-additional"><span>OTRA FORMA EN QUE IMPORTA EL TIEMPO</span><p>En el grupo de <strong>progresión lenta</strong> , <strong>74.2%</strong> seguían matriculados al cabo de siete años. Persistir y graduarse no son sinónimos.</p></div>
+<div class="eil4-actions eil4-actions-space"><button class="eil4-back" data-go="2" type="button">← Anterior</button><button class="eil4-button" data-go="4" type="button">Descubre la interpretación sociológica <span aria-hidden="true">→</span></button></div>
+</section>
+<section aria-labelledby="eil4-final-title" class="eil4-screen eil4-outro" data-screen="4" hidden="">
+<p class="eil4-eyebrow">05 / Tu descubrimiento sociológico</p>
+<h2 id="eil4-final-title">Un título es un resultado. <em>Progresar es un recorrido.</em></h2>
+<div class="eil4-insight-card">
+<span class="eil4-eyebrow">El descubrimiento</span>
+<h3>Algunos estudiantes mejoran y se gradúan más tarde. Otros empiezan bien, pero abandonan. <em>El momento y la secuencia de las experiencias académicas importan.</em></h3>
+<p>Si solo miramos quién se gradúa, perdemos la diversidad de experiencias universitarias. Y si solo miramos el rendimiento del primer año, no sabemos qué ocurre después. Las trayectorias de recuperación, permanencia y abandono se distribuyen de manera desigual según las circunstancias de los estudiantes y el ámbito de estudio.</p>
+</div>
+<p class="eil4-final-line"><strong>El éxito no es una línea recta.</strong> Entender la desigualdad significa mirar las trayectorias que pueden seguir los estudiantes y el tiempo que requieren.</p>
+<div class="eil4-source"><span class="eil4-eyebrow">Basado en investigación publicada</span><p>Troiano, H. &amp; Sánchez-Gelabert, A. (2026). <em>Patterns of university progression and social inequalities: delving into complex trajectories in higher education.</em> <em>European Journal of Higher Education</em>, 16(2), 246–268. <a href="https://doi.org/10.1080/21568235.2025.2556438" rel="noopener" target="_blank">Lee el artículo ↗</a></p><p>Para explorarlo con más detalle: <a href="https://albert-sanchez-gelabert.github.io/tools/trajectories/" rel="noopener" target="_blank">University Trajectories Explorer ↗</a></p><p class="eil4-source-note">Cohorte universitaria catalana de entrada en 2012–13, n = 30.392, con siete observaciones anuales. Las proporciones de trayectorias son estimaciones del modelo; los resultados posteriores se observan entre los casos asignados a cada grupo. Las curvas son ilustraciones simplificadas de los patrones publicados.</p></div>
+<div class="eil4-actions eil4-actions-space"><button class="eil4-back" data-go="3" type="button">← Anterior</button><button class="eil4-button eil4-button-outline" data-restart="" type="button">Reinicia el capítulo ↺</button></div>
+<div class="eil4-end-links"><a href="../index.html">← Todos los capítulos</a><a href="../chapter-3/index.html">← Capítulo anterior: Futuros diferentes</a></div>
+</section>
+</main>
+</div>
+</div>
+```
+
+```{=html}
+<script defer="" src="lab.js"></script>
+```

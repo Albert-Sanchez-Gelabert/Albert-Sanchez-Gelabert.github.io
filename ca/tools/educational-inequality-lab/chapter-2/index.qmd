@@ -1,0 +1,206 @@
+---
+lang: ca
+title: "Com es compaginen els estudis universitaris amb la feina i la vida personal? | Educational Inequality Lab"
+subtitle: "Educational Inequality Lab · Chapter 2"
+description: "Capítol interactiu de divulgació sociològica sobre desigualtats educatives."
+format:
+  html:
+    page-layout: full
+    toc: false
+    title-block-style: none
+    css: lab.css
+---
+
+```{=html}
+<div id="eilln-root">
+<div class="eilln-shell">
+<header class="eilln-top">
+<a class="eilln-brand" href="../index.html"><span aria-hidden="true" class="eilln-symbol">≋</span> Educational Inequality Lab</a>
+<span class="eilln-series">BEYOND MERIT <span aria-hidden="true">CAPÍTOL 02</span> CAPÍTOL 02</span>
+</header>
+<div class="eilln-trail"><a href="../index.html">← Tots els capítols</a><span aria-hidden="true">CAPÍTOL 02</span><strong>02 · Vides d'estudiants</strong></div>
+<div aria-label="Progrés del capítol" class="eilln-progress">
+<span data-progress-label="">EL CONTEXT</span><div aria-hidden="true" class="eilln-progress-bar"><span class="current"></span><span></span><span></span><span></span><span></span><span></span></div><span data-progress-count="">01 / 06</span>
+</div>
+<main>
+<section aria-labelledby="eilln-title" class="eilln-scene" data-scene="0">
+<div class="eilln-eyebrow"><i aria-hidden="true"></i> UNA DESCOBERTA GUIADA · CAPÍTOL 02</div>
+<h1 id="eilln-title">Com es compaginen els estudis universitaris <em>amb la feina i la vida personal?</em></h1>
+<p class="eilln-deck">L'educació superior ha acollit un estudiantat cada vegada més divers. Però <strong>ampliar l'accés vol dir que tothom té les mateixes possibilitats de continuar?</strong></p>
+<div aria-label="Dues transformacions: l’estudiantat i l’experiència universitària" class="eilln-change">
+<div class="eilln-premise-head"><span class="eilln-kicker">DOS CANVIS · UNA PREGUNTA</span><span aria-hidden="true" class="eilln-step-mark">↗</span></div>
+<div class="eilln-change-grid">
+<article class="eilln-change-card eilln-change-students">
+<div aria-hidden="true" class="eilln-change-icon">↗</div>
+<span class="eilln-kicker">QUI ARRIBA A LA UNIVERSITAT?</span>
+<h2>Estudiants <em>més diversos.</em></h2>
+<p>Amb l'expansió de l'educació superior, els estudiants van començar a entrar-hi a edats diferents, per vies diverses i amb compromisos més enllà de la universitat.</p>
+<div class="eilln-tagline"><span>Edats diferents</span><span>Vies d'accés diferents</span><span>Compromisos diversos</span></div>
+</article>
+<article class="eilln-change-card eilln-change-institution">
+<div aria-hidden="true" class="eilln-change-icon">≋</div>
+<span class="eilln-kicker">COM FUNCIONA LA UNIVERSITAT?</span>
+<h2>Una participació <em>més contínua.</em></h2>
+<p>Les reformes docents van donar més importància a la participació regular, el treball en grup i l'avaluació contínua, i van fer que l'assistència i la implicació diària fossin cada vegada més rellevants.</p>
+<div class="eilln-tagline"><span>Avaluació contínua</span><span>Treball en grup</span><span>Participació regular</span></div>
+</article>
+</div>
+<div class="eilln-change-question">
+<span class="eilln-kicker">LA PREGUNTA SOCIOLÒGICA</span>
+<p>Si els estudiants tenen vides diferents, però estudiar exigeix temps i continuïtat, <em>tothom té les mateixes possibilitats de persistir?</em></p>
+</div>
+</div>
+<div class="eilln-nav"><button class="eilln-button eilln-button-primary" data-next="" type="button">Segueix els estudiants →</button></div>
+<p class="eilln-tiny">Context: Elias, Masjuan i Sánchez-Gelabert (2012). Aquest plantejament no implica que les reformes de Bolonya causessin les diferències que es mostren a continuació.</p>
+</section>
+<section aria-labelledby="eilln-flow-title" class="eilln-scene" data-scene="1" hidden="">
+<div class="eilln-eyebrow">02 / DEL RENDIMENT A LA PERMANÈNCIA</div>
+<h2 id="eilln-flow-title">Mateix rendiment acadèmic. <em>Mateixes possibilitats de continuar?</em></h2>
+<p class="eilln-deck">Seguim els <strong>1.508 estudiants que van superar pràcticament tots els crèdits del primer any</strong> d'una cohort universitària. La majoria responien al perfil tradicional. D'altres havien entrat més tard o dedicaven més temps al treball remunerat. Què va passar després?</p>
+<div class="eilln-graphic-panel eilln-flow-panel">
+<div class="eilln-panel-head"><span class="eilln-kicker">EL NIVELL MÉS ALT DE RENDIMENT · COHORT UAB</span><span class="eilln-source-chip">ESTUDI DE 2017 · COMPTES OBSERVATS</span></div>
+<div class="eilln-flow-topline">
+<span class="eilln-flow-badge">Mateix rendiment: <strong>&gt;99,3% de crèdits superats</strong></span>
+<span class="eilln-flow-badge">Dos perfils: <strong>tradicionals / no tradicionals</strong></span>
+</div>
+<div class="eilln-flow-statline">
+<div><span class="eilln-flow-sw eilln-flow-teal"></span><strong>Tradicionals</strong><span class="eilln-flow-stat">1.182 estudiants <b>· 78.4%</b></span></div>
+<div><span class="eilln-flow-sw eilln-flow-rust"></span><strong>No tradicionals</strong><span class="eilln-flow-stat">326 estudiants <b>· 21.6%</b></span></div>
+</div>
+<div class="eilln-flow-canvas" data-flow-canvas="">
+<svg aria-label="Els grups són proporcionals a la seva mida observada. En revelar els resultats, s’hi veu quants estudiants van continuar o van abandonar." class="eilln-flow-svg" data-flow-svg="" role="img" viewBox="0 0 1000 470"></svg>
+</div>
+<div class="eilln-flow-mobile" data-flow-mobile="">
+<div class="eilln-flow-mobile-heading" data-flow-mobile-heading="">Quina mida té cada grup entre els estudiants amb rendiment alt?</div>
+<div class="eilln-flow-mobile-row"><strong>Tradicionals <span data-mobile-trad-caption="">1,182 / 1,508</span></strong><div class="eilln-flow-mobile-track"><div class="eilln-flow-mobile-fill teal" data-mobile-trad-fill=""><span data-mobile-trad-stay=""></span><span class="leave" data-mobile-trad-left=""></span></div></div><small data-mobile-trad-detail="">78,4% de la mostra</small></div>
+<div class="eilln-flow-mobile-row"><strong>No tradicionals <span data-mobile-non-caption="">326 / 1,508</span></strong><div class="eilln-flow-mobile-track"><div class="eilln-flow-mobile-fill rust" data-mobile-non-fill=""><span data-mobile-non-stay=""></span><span class="leave" data-mobile-non-left=""></span></div></div><small data-mobile-non-detail="">21,6% de la mostra</small></div>
+</div>
+<div class="eilln-flow-steps">
+<div data-flow-prompt="">
+<p class="eilln-flow-prompt">Aquests dos grups no tenen la mateixa mida. <strong>Però difereixen en la proporció d'estudiants que abandonen la universitat?</strong></p>
+<button class="eilln-button eilln-button-primary" data-flow-reveal="" type="button">Mostra qui continua i qui abandona →</button>
+</div>
+<div aria-live="polite" data-flow-revealed="" hidden="">
+<div class="eilln-flow-comparison">
+<div><span>TRADICIONALS</span><strong>6.3%</strong><small>abandonen · 75 de 1.182</small></div>
+<div><span>NO TRADICIONALS</span><strong>14.4%</strong><small>abandonen · 47 de 326</small></div>
+</div>
+<p class="eilln-flow-prompt">Com que els grups tenen mides diferents, els <strong>percentatges</strong> importen més que l'amplada total de cada flux. Entre aquests estudiants amb rendiment alt, l'abandonament era més del doble de freqüent al grup no tradicional.</p>
+</div>
+<div aria-live="polite" class="eilln-flow-meaning" data-flow-meaning="" hidden="">
+<span class="eilln-kicker">LA DESCOBERTA</span>
+<p>Fins i tot entre estudiants amb rendiments acadèmics pràcticament idèntics, <strong>els no tradicionals tenien més probabilitats d'abandonar.</strong></p>
+<small>L'amplada dels fluxos mostra el nombre observat d'estudiants; els percentatges comparen l'abandonament dins de cada grup. Són associacions observades, no efectes causals.</small>
+</div>
+</div>
+<details class="eilln-flow-details"><summary>Consulta els recomptes i les definicions exactes</summary>
+<table><thead><tr><th>Grup</th><th>Continuen</th><th>Abandonen</th><th>Total</th><th>Abandonament (%)</th></tr></thead><tbody>
+<tr><th>Tradicionals</th><td>1,107</td><td>75</td><td>1,182</td><td>6.3</td></tr>
+<tr><th>No tradicionals*</th><td>279</td><td>47</td><td>326</td><td>14.4</td></tr>
+<tr><th>Total</th><td>1,386</td><td>122</td><td>1,508</td><td>8.1</td></tr>
+</tbody></table>
+<p>*El grup no tradicional agrupa tres tipus: joves que treballen (n=185), més grans (n=63) i més grans que treballen (n=78). Tradicionals: menors de 22 anys amb menys de 15 hores de feina setmanals. Rendiment alt: més del 99,3% dels crèdits matriculats al primer any superats. Abandonament administratiu: dos anys consecutius sense matrícula i sense titulació.</p>
+</details>
+</div>
+<div class="eilln-nav"><button class="eilln-button eilln-button-primary" data-next="" disabled="" type="button">Mira dins dels perfils →</button><button class="eilln-button eilln-button-text" data-back="" type="button">← Enrere</button></div>
+<p class="eilln-tiny">Article de 2017, taula 3; només estudiants amb rendiment alt (n=1.508), amb estat de permanència/abandonament observat. Les mides dels grups i els fluxos són recomptes, no probabilitats poblacionals de graduació.</p>
+</section>
+<section aria-labelledby="eilln-subprofiles-title" class="eilln-scene" data-scene="2" hidden="">
+<div class="eilln-eyebrow">03 / MIRA DINS DE LA MITJANA</div>
+<h2 id="eilln-subprofiles-title">Però el grup no tradicional <em>no és una única història.</em></h2>
+<p class="eilln-deck">Vam agrupar tres perfils per veure el contrast general. Ara mirem dins d'aquest grup. <strong>Tots quatre perfils tenen igualment un rendiment molt alt al primer any.</strong></p>
+<div class="eilln-graphic-panel">
+<div class="eilln-panel-head"><span class="eilln-kicker">ABANDONAMENT AMB RENDIMENT ACADÈMIC ALT</span><span class="eilln-source-chip">TAULA 3 · ESTUDI DE 2017</span></div>
+<div class="eilln-subprofile-list">
+<div class="eilln-subprofile-row"><div class="eilln-subprofile-text"><strong>Tradicionals</strong><small>Menors de 22 · &lt;15 h de feina/setmana · n=1.182</small></div><div class="eilln-subprofile-track"><span class="eilln-subprofile-teal" style="width:6.3%"></span></div><b>6.3%</b></div>
+<div class="eilln-subprofile-row"><div class="eilln-subprofile-text"><strong>Joves que treballen</strong><small>Menors de 22 · ≥15 h/setmana · n=185</small></div><div class="eilln-subprofile-track"><span style="width:11.4%"></span></div><b>11.4%</b></div>
+<div class="eilln-subprofile-row"><div class="eilln-subprofile-text"><strong>Més grans</strong><small>22 anys o més · &lt;15 h/setmana · n=63</small></div><div class="eilln-subprofile-track"><span style="width:20.6%"></span></div><b>20.6%</b></div>
+<div class="eilln-subprofile-row"><div class="eilln-subprofile-text"><strong>Més grans que treballen</strong><small>22 anys o més · ≥15 h/setmana · n=78</small></div><div class="eilln-subprofile-track"><span style="width:16.7%"></span></div><b>16.7%</b></div>
+</div>
+<div class="eilln-flow-meaning eilln-subprofile-insight"><span class="eilln-kicker">QUÈ HI AFEGEIX AIXÒ?</span><p>L'edat d'entrada importa per al patró observat. <strong>Entre els estudiants amb rendiment molt alt, els perfils de més edat presenten més abandonament fins i tot quan treballen menys de 15 hores setmanals.</strong></p><small>Els dos grups de més edat amb rendiment alt són petits (n=63 i n=78). Són taxes descriptives, no estimacions causals. Les barres horitzontals comparteixen l'escala de 0 a 100%.</small></div>
+</div>
+<div class="eilln-nav"><button class="eilln-button eilln-button-primary" data-next="" type="button">Què distingeix aquests perfils? →</button><button class="eilln-button eilln-button-text" data-back="" type="button">← Enrere</button></div>
+</section>
+<section aria-labelledby="eilln-prof-title" class="eilln-scene" data-scene="3" hidden="">
+<div class="eilln-eyebrow">04 / MÉS ENLLÀ DE LES NOTES</div>
+<h2 id="eilln-prof-title">Però què fa diferents <em>aquests perfils?</em></h2>
+<p class="eilln-deck">Per interpretar el que acabem de veure, el primer article fa un pas important: descriu els estudiants no només pel seu rendiment acadèmic, sinó també per <strong>l'edat i el temps dedicat al treball remunerat.</strong></p>
+<div class="eilln-profile-layout">
+<div class="eilln-graphic-panel">
+<div class="eilln-panel-head"><span class="eilln-kicker">LA TIPOLOGIA DELS INVESTIGADORS</span><span class="eilln-source-chip">UAB · ESTUDIANTS D'ENTRADA EL 2008–09</span></div>
+<div class="eilln-matrix">
+<div class="eilln-matrix-empty"></div><div class="eilln-col-label">Menys de 22 anys</div><div class="eilln-col-label">22 anys o més</div>
+<div class="eilln-row-label">Menys de 15 hores de feina/setmana</div>
+<article class="eilln-matrix-cell main"><strong>Tradicionals</strong><span>68,4% dels estudiants d'entrada</span></article>
+<article class="eilln-matrix-cell"><strong>Més grans</strong><span>6,4% dels estudiants d'entrada</span></article>
+<div class="eilln-row-label">15 hores o més de feina/setmana</div>
+<article class="eilln-matrix-cell"><strong>Joves que treballen</strong><span>16,2% dels estudiants d'entrada</span></article>
+<article class="eilln-matrix-cell"><strong>Més grans i que treballen</strong><span>9,0% dels estudiants d'entrada</span></article>
+</div>
+<p class="eilln-mini-note">Aquestes són categories construïdes per a l'estudi, no afirmacions sobre les circumstàncies, responsabilitats o motivacions de cada estudiant.</p>
+</div>
+<div class="eilln-side-story">
+<span class="eilln-kicker">OBSERVA EL CANVI DE MIRADA</span>
+<div class="eilln-large-number">31.6<span>%</span></div>
+<p>dels estudiants d'entrada pertanyien a un dels tres perfils <strong>no tradicionals</strong> d'aquest estudi.</p>
+<div class="eilln-short-rule"></div>
+<h3>La comparació mantenia constant el rendiment.</h3>
+<p>El que canvia és la situació educativa i vital representada per cada perfil.</p>
+</div>
+</div>
+<div class="eilln-bridge"><span>AIXÒ ENCARA NO ENS DIU PER QUÈ VA ABANDONAR UN ESTUDIANT CONCRET.</span><p>Però planteja una pregunta nova: <strong>què passa quan examinem els resultats educatius al llarg del curs de vida?</strong></p></div>
+<div class="eilln-nav"><button class="eilln-button eilln-button-primary" data-next="" type="button">Un segon estudi, una pregunta nova →</button><button class="eilln-button eilln-button-text" data-back="" type="button">← Enrere</button></div>
+</section>
+<section aria-labelledby="eilln-age-title" class="eilln-scene" data-scene="4" hidden="">
+<div class="eilln-eyebrow">05 / UNA SEGONA MIRADA · EL CURS DE VIDA</div>
+<h2 id="eilln-age-title">Entrar a la universitat <em>més tard</em> canvia les possibilitats?</h2>
+<p class="eilln-deck">Un segon estudi analitza una cohort diferent: <strong>29.463 estudiants</strong> que van entrar a les universitats públiques presencials de Catalunya el 2012–13. Aquesta vegada, el resultat és si es van <strong>graduar en un termini de vuit anys</strong>.</p>
+<div class="eilln-dataset-shift"><span class="eilln-shift-left">ESTUDI 1 <small>UAB · Abandonament</small></span><span aria-hidden="true" class="eilln-shift-arrow">→</span><span class="eilln-shift-right">ESTUDI 2 <small>Catalunya · Graduació en vuit anys</small></span><span class="eilln-shift-notice">Evidències relacionades, però no la mateixa cohort ni el mateix resultat.</span></div>
+<div class="eilln-graphic-panel eilln-age-panel">
+<div class="eilln-panel-head"><span class="eilln-kicker" data-age-step="">PRIMER, OBSERVA L'EDAT</span><span class="eilln-source-chip">PROBABILITATS PREDITES · APROXIMADES</span></div>
+<div class="eilln-chart-headline" data-age-headline="">A mesura que augmenta l'edat d'entrada, la probabilitat predita de graduació acostuma a disminuir.</div>
+<p class="eilln-chart-lead" data-age-description="">En el rang principal d'edat representat, la probabilitat estimada de graduació disminueix amb l'edat d'entrada.</p>
+<div class="eilln-legend" data-legend=""><span class="eilln-key teal"></span> Patró segons l'edat</div>
+<div class="eilln-plot-wrap"><svg aria-label="Approximate published predicted probability of graduating, by age at university entry from 18 to 42 years. Employment groups can be revealed." class="eilln-age-plot" data-age-plot="" role="img" viewBox="0 0 900 440"></svg></div>
+<div class="eilln-reveal-work" data-reveal-work-panel="">
+<p><strong>Però l'edat no ho explica tot.</strong> Què passa si també considerem si treballaven en entrar a la universitat?</p>
+<button class="eilln-button eilln-button-outline" data-add-work="" type="button">Afegeix el treball a la comparació →</button>
+</div>
+<div class="eilln-work-reading" data-work-reading="" hidden="">
+<span class="eilln-kicker">LA SEGONA DESCOBERTA</span>
+<p class="eilln-reading-main">Tots dos patrons segons l'edat tendeixen a baixar. <strong>La línia dels estudiants que treballen queda per sota de l'altra</strong> en el rang d'edat representat.</p>
+<div aria-label="Compara dues edats d’exemple" class="eilln-age-tabs" role="group">
+<button aria-pressed="true" data-focus-age="18" type="button">Als 18 anys</button>
+<button aria-pressed="false" data-focus-age="35" type="button">Als 35 anys</button>
+</div>
+<div class="eilln-contrast">
+<div class="eilln-contrast-num" data-gap-number="">≈3</div>
+<div><strong data-gap-text="">graduats menys per cada 100 entre els estudiants que treballen</strong><p data-gap-context="">Als 18 anys, la diferència modelitzada entre treballar i no treballar és de −2,8 punts percentuals.</p></div>
+</div>
+<p class="eilln-mini-note">Són associacions modelitzades, no efectes causals. La diferència per cada 100 il·lustra la bretxa estimada de probabilitat, no és un recompte de graduats observats.</p>
+</div>
+<p class="eilln-mini-note eilln-figure-note">Les línies són <strong>reconstruccions aproximades</strong> de les figures publicades al manuscrit, no prediccions exportades del model. Les diferències exactes provenen de l'apèndix 1. La figura se centra entre els 18 i els 42 anys, on la comparació segons situació laboral té suport estadístic; a edats superiors, les estimacions són menys precises. Consulta l'article enllaçat al final per veure les figures i els intervals d'incertesa complets.</p>
+</div>
+<div class="eilln-learning" data-learning-age="" hidden=""><span class="eilln-kicker">LA SEGONA DESCOBERTA</span><p>L'associació entre edat i graduació no és tota la història. <em>Treballar en el moment d'entrada s'associa amb un desavantatge addicional en el rang en què les dades avalen aquesta comparació.</em></p></div>
+<div class="eilln-nav"><button class="eilln-button eilln-button-primary" data-next="" disabled="" type="button">Uneix les dues descobertes →</button><button class="eilln-button eilln-button-text" data-back="" type="button">← Enrere</button></div>
+</section>
+<section aria-labelledby="eilln-end-title" class="eilln-scene" data-scene="5" hidden="">
+<div class="eilln-eyebrow">06 / LA TEVA DESCOBERTA SOCIOLÒGICA</div>
+<h2 id="eilln-end-title">La universitat és cada vegada més diversa. <em>Però igualtat d'accés no és igualtat d'oportunitats per acabar.</em></h2>
+<div class="eilln-end-statement"><span class="eilln-kicker">LA DESCOBERTA SOCIOLÒGICA</span><p>Tenir bons resultats acadèmics i poder continuar estudiant <em>no són necessàriament el mateix.</em></p></div>
+<div class="eilln-two-findings">
+<article><span>01 · ABANDONAMENT</span><h3>Mateix rendiment, resultats diferents.</h3><p>A la cohort UAB, l'abandonament variava segons el perfil d'estudiant, fins i tot dins de la franja de rendiment acadèmic més alt.</p></article>
+<article><span>02 · GRADUACIÓ</span><h3>Les trajectòries educatives segueixen el curs de vida.</h3><p>En una segona cohort catalana, les probabilitats de graduació s'associaven amb l'edat d'entrada i la situació laboral.</p></article>
+</div>
+<div class="eilln-ending-question"><span>LA PREGUNTA PER EMPORTAR-SE</span><h3>Si les universitats acullen persones en moments diferents de la vida, les maneres d'ensenyar i donar suport s'hi han adaptat?</h3></div>
+<p class="eilln-method-closing">Els dos estudis empírics utilitzen cohorts i resultats diferents: aquí no es poden combinar l'abandonament i la graduació en una sola taxa. Les associacions no demostren que l'edat, la feina, les reformes institucionals o altres responsabilitats causin l'abandonament individual. El capítol sobre Bolonya de 2012 aporta context, no una prova causal d'aquests resultats.</p>
+<div class="eilln-sources"><div class="eilln-kicker">LA RECERCA DARRERE D'AQUEST CAPÍTOL</div><p>Sánchez-Gelabert, A., &amp; Elias, M. (2017). <em>Los estudiantes universitarios no tradicionales y el abandono de los estudios.</em> <em>Estudios sobre Educación</em>, 32, 27–48. <a href="https://doi.org/10.15581/004.32.27-48" rel="noopener noreferrer" target="_blank">Llegeix l'article ↗</a></p><p>Sánchez-Gelabert, A. (2024). <em>Higher education and the life course: exploring the interactive effects of age and employment status on university graduation.</em> <em>Higher Education Quarterly</em>, 78(4), e12553. <a href="https://doi.org/10.1111/hequ.12553" rel="noopener noreferrer" target="_blank">Llegeix l'article publicat ↗</a> Les figures 1–2 i l'apèndix 1 sustenten la segona visualització.</p><p>Context: Elias, M., Masjuan, J. M. i Sánchez-Gelabert, A. (2012). <em>Signs of reengagement? Changes in teaching methodology in the framework of the Bologna Process.</em> In <em>Effects of Higher Education Reforms: Change Dynamics</em>, pàg. 21–42. Utilitzat per contextualitzar l'inici, no com un tercer conjunt de dades empíriques.</p></div>
+<div class="eilln-next"><span class="eilln-kicker">SEGÜENT · CAPÍTOL 03</span><h3>Mateixes notes, futurs diferents?</h3><p>Quan el rendiment és semblant, l'origen familiar encara pot marcar diferències?</p></div>
+<div class="eilln-nav"><button class="eilln-button eilln-button-primary" data-restart="" type="button">Torna a viure el capítol ↺</button><a class="eilln-button eilln-button-outline" href="../index.html">Tots els capítols</a></div>
+</section>
+</main>
+<footer class="eilln-footer"><span>Educational Inequality Lab · Un relat sociològic basat en evidències</span><span>Beyond merit / 02</span></footer>
+</div>
+</div>
+<script defer="" src="lab.js"></script>
+```

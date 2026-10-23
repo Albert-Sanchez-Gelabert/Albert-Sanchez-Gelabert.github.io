@@ -1,0 +1,105 @@
+---
+lang: ca
+pagetitle: "Mateixes notes, futurs diferents? | Educational Inequality Lab"
+description: "Capítol interactiu de divulgació sociològica sobre desigualtats educatives."
+format:
+  html:
+    page-layout: full
+    toc: false
+    css: lab.css
+---
+
+```{=html}
+<div class="eil3-guided" data-mode="high" id="eil3-root">
+<div class="eil3-shell">
+<header class="eil3-masthead">
+<a class="eil3-brand" href="../index.html"><span aria-hidden="true" class="eil3-brand-mark">≋</span>Educational Inequality Lab</a>
+<span class="eil3-masthead-note">Sociologia interactiva · Catalunya</span>
+</header>
+<nav aria-label="Ruta de navegació" class="eil3-breadcrumb"><a href="../index.html">← Tots els capítols</a><span aria-hidden="true">/</span><strong>03 · Després del primer any</strong><span class="eil3-breadcrumb-trail">Beyond merit. / Capítol 03</span></nav>
+<main class="eil3-main">
+<div aria-label="Progrés del capítol" class="eil3-progress">
+<span class="eil3-progress-name" data-progress-title="">La decisió</span>
+<span aria-hidden="true" class="eil3-progress-bars"><i></i><i></i><i></i><i></i></span>
+<span class="eil3-progress-counter" data-progress-number="">01 / 04</span>
+</div>
+<section aria-labelledby="eil3-title" class="eil3-screen" data-screen="0">
+<p class="eil3-eyebrow">01 / La decisió</p>
+<h1 id="eil3-title">Mateixes notes, <em>futurs diferents?</em></h1>
+<p class="eil3-deck">Entrar a la universitat és una decisió important. <strong>Però no és l'última.</strong></p>
+<p class="eil3-prose">Els estudiants arriben a la universitat amb expectatives sobre les seves possibilitats d'èxit. Al final del primer curs, tenen una cosa que abans no tenien: <strong>informació sobre com els està anant.</strong></p>
+<div aria-label="Seqüència teòrica: entrada a la universitat, resultats del primer any i revisió d’expectatives, i una nova decisió educativa" class="eil3-path">
+<div class="eil3-path-first"><span class="eil3-path-num">01 / ENTRADA</span><strong>Entrar a la universitat</strong><small>Expectatives d'èxit</small></div>
+<span aria-hidden="true" class="eil3-path-arrow">→</span>
+<div class="eil3-path-first eil3-path-focus"><span class="eil3-path-num">02 / INFORMACIÓ NOVA</span><strong>Resultats del primer any</strong><small>Revisar les expectatives i les possibilitats d'èxit</small></div>
+<span aria-hidden="true" class="eil3-path-arrow">→</span>
+<div class="eil3-path-first eil3-path-last"><span class="eil3-path-num">03 / I ARA QUÈ?</span><strong>Una nova decisió</strong><small>Quines opcions educatives semblen possibles ara?</small></div>
+</div>
+<p class="eil3-turn">Quan els resultats del primer any són decebedors, <strong>els itineraris que segueixen els estudiants depenen de l'origen familiar?</strong></p>
+<div class="eil3-screen-actions"><button class="eil3-button" data-go="1" type="button">Explorem-ho <span aria-hidden="true">→</span></button></div>
+</section>
+<section aria-labelledby="eil3-figure-title" class="eil3-screen" data-screen="1" hidden="">
+<p class="eil3-eyebrow">02 / Les dades</p>
+<h2 id="eil3-figure-title">Quan les coses van bé, <em>la bretxa és petita.</em></h2>
+<p class="eil3-prose" id="eil3-figure-deck">Comparem estudiants de diferents orígens familiars que han superat <strong>el 80% dels crèdits del primer curs.</strong> La majoria continua a la mateixa titulació i l'abandonament és baix en tots dos grups.</p>
+<div aria-describedby="eil3-figure-description" class="eil3-chart-card">
+<div class="eil3-chart-top"><span class="eil3-chart-eyebrow">Mateix rendiment acadèmic · Diferents orígens familiars</span><span class="eil3-chart-source">Probabilitats predites</span></div>
+<div class="eil3-credit-status"><span>Crèdits superats el primer any</span><strong data-credit-number="">80<span>%</span></strong></div>
+<div aria-hidden="true" class="eil3-credit-meter"><i data-credit-meter="" style="width:80%"></i></div>
+<div class="eil3-groups">
+<div class="eil3-group" data-group="low">
+<div class="eil3-group-head"><strong>Famílies amb estudis obligatoris</strong><small>Nivell educatiu familiar més baix</small></div>
+<div aria-label="Famílies amb menys estudis: 91% continuen, 4,9% canvien i 4,1% abandonen." class="eil3-bar" role="img"><span class="eil3-seg stay" data-outcome="continuing" style="width:91%"></span><span class="eil3-seg transfer" data-outcome="transfer" style="width:4.9%"></span><span class="eil3-seg leave" data-outcome="dropout" style="width:4.1%"></span></div>
+<div class="eil3-percent-row"><span>Continuar <b data-value="continuing">91.0%</b></span><span>Canviar <b data-value="transfer">4.9%</b></span><span>Abandonar <b data-value="dropout">4.1%</b></span></div>
+</div>
+<div class="eil3-group" data-group="high">
+<div class="eil3-group-head"><strong>Famílies amb estudis universitaris</strong><small>Nivell educatiu familiar més alt</small></div>
+<div aria-label="Famílies universitàries: 88,7% continuen, 8,3% canvien i 3% abandonen." class="eil3-bar" role="img"><span class="eil3-seg stay" data-outcome="continuing" style="width:88.7%"></span><span class="eil3-seg transfer" data-outcome="transfer" style="width:8.3%"></span><span class="eil3-seg leave" data-outcome="dropout" style="width:3%"></span></div>
+<div class="eil3-percent-row"><span>Continuar <b data-value="continuing">88.7%</b></span><span>Canviar <b data-value="transfer">8.3%</b></span><span>Abandonar <b data-value="dropout">3.0%</b></span></div>
+</div>
+</div>
+<div aria-label="Colors de les trajectòries" class="eil3-legend"><span><i class="stay"></i> Continuar a la mateixa titulació</span><span><i class="transfer"></i> Canviar de titulació</span><span><i class="leave"></i> Abandonar la universitat</span></div><div aria-live="polite" class="eil3-evidence-message" data-evidence-message=""><strong>Amb bons resultats, la probabilitat d'abandonar és baixa en tots dos grups.</strong><p>Amb el 80% de crèdits superats, l'abandonament predit és del 4,1% i del 3,0%. Ara observa què canvia quan els resultats del primer curs són baixos.</p></div>
+<p class="eil3-chart-footnote" id="eil3-figure-description">Probabilitats ajustades de Sánchez-Gelabert i Troiano (2024), apèndix 2. El model compara tres grups segons els estudis familiars; aquí se'n mostren dos. Les estimacions descriuen el progrés després del primer any, no prediccions individuals ni efectes causals.</p>
+</div>
+<div class="eil3-screen-actions eil3-chart-actions">
+<button class="eil3-button" data-switch="" type="button">I si el primer any va malament? <span aria-hidden="true">→</span></button>
+<button class="eil3-button eil3-button-secondary" data-go="2" data-next-after="" hidden="" type="button">Què ho podria explicar? <span aria-hidden="true">→</span></button>
+<button class="eil3-text-button" data-compare-again="" hidden="" type="button">Compara-ho amb bons resultats ↺</button>
+</div>
+<div class="eil3-screen-actions eil3-back-action"><button class="eil3-text-button" data-go="0" type="button">← Anterior</button></div>
+</section>
+<section aria-labelledby="eil3-meaning-title" class="eil3-screen" data-screen="2" hidden="">
+<p class="eil3-eyebrow">03 / Què significa</p>
+<h2 id="eil3-meaning-title">El mateix entrebanc. <em>Diferents maneres de continuar.</em></h2>
+<p class="eil3-deck">Els resultats acadèmics aporten informació nova. Però els estudiants poden disposar de recursos diferents per respondre-hi.</p>
+<p class="eil3-prose">Quan el primer any va malament, els estudiants poden replantejar-se si la titulació és adequada, si hi ha alternatives o si és viable continuar. És aquí on <strong>l'avantatge compensatori</strong> ofereix una interpretació sociològica.</p>
+<div aria-label="Possibles mecanismes de diferenciació social de les decisions educatives" class="eil3-ideas">
+<div><span>Expectatives</span><strong>«Encara me'n puc sortir?»</strong><p>Els resultats poden portar els estudiants a revisar les seves possibilitats d'acabar els estudis.</p></div>
+<div><span>Informació</span><strong>«Quines altres vies hi ha?»</strong><p>El coneixement de les alternatives i la familiaritat amb el sistema universitari poden ser diferents.</p></div>
+<div><span>Recursos</span><strong>«Em puc permetre tornar-ho a intentar?»</strong><p>El suport i els costos de canviar de direcció poden fer que les opcions siguin més o menys viables.</p></div>
+</div>
+<p class="eil3-interpret-note">Aquests són <strong>mecanismes explicatius plausibles</strong>, no recursos identificats com a causes directes de cada decisió individual a l'estudi.</p>
+<div class="eil3-seventy"><strong>Quan s'atenuen aquestes desigualtats?</strong> A mesura que millora el rendiment, les diferències d'abandonament predit es redueixen. Al voltant del <strong>70% dels crèdits superats</strong>, l'estudi ja no detecta bretxes estadísticament significatives en l'abandonament. No és un llindar exacte ni demostra que tots els itineraris siguin iguals.</div>
+<div class="eil3-screen-actions eil3-screen-actions-spread"><button class="eil3-text-button" data-go="1" type="button">← Torna a les dades</button><button class="eil3-button" data-go="3" type="button">Descobreix la interpretació sociològica <span aria-hidden="true">→</span></button></div>
+</section>
+<section aria-labelledby="eil3-conclusion-title" class="eil3-screen eil3-outro" data-screen="3" hidden="">
+<p class="eil3-eyebrow">04 / La teva descoberta sociològica</p>
+<h2 id="eil3-conclusion-title">La desigualtat no s'acaba <em>a la porta de la universitat.</em></h2>
+<div class="eil3-insight-card">
+<p class="eil3-eyebrow">La descoberta</p>
+<h3>Quan els resultats acadèmics són bons, les diferències socials en l'abandonament són petites. <em>Quan les coses van malament, apareixen maneres diferents de continuar.</em></h3>
+<p>Entrar a la universitat és una transició marcada socialment. Les decisions posteriors al primer any en poden ser una altra. La nova informació sobre rendiment acadèmic es combina amb les expectatives, la informació i els recursos que cada estudiant porta.</p>
+</div>
+<p class="eil3-final-line">La desigualtat educativa no tracta només de <em>qui hi entra.</em> També tracta de <strong>què esdevé possible després d'un entrebanc.</strong></p>
+<div class="eil3-source"><span class="eil3-eyebrow">Basat en recerca publicada</span><p>Sánchez-Gelabert, A. &amp; Troiano, H. (2024). <em>Compensatory advantage after the first year at university in the Catalan system: between continuing, transferring and dropping out.</em> <em>Studies in Higher Education</em>. <a href="https://doi.org/10.1080/03075079.2023.2281539" rel="noopener" target="_blank">Llegeix l'article ↗</a></p><p>Vols explorar totes les estimacions? <a href="https://albert-sanchez-gelabert.github.io/tools/compensatory/" rel="noopener" target="_blank">Compensatory Advantage Explorer ↗</a></p><p class="eil3-meta">Cohort de 36.909 estudiants que van accedir a universitats presencials de Catalunya (2012–13). Els resultats fan referència a la progressió després del primer any, no a la graduació final.</p></div>
+<div class="eil3-screen-actions eil3-screen-actions-spread"><button class="eil3-text-button" data-go="2" type="button">← Anterior</button><button class="eil3-button eil3-button-secondary" data-restart="" type="button">Torna a començar el capítol ↺</button></div>
+<div class="eil3-end-links"><a href="../index.html">← Tots els capítols</a><a href="../chapter-2/index.html">← Capítol anterior: Vides d'estudiants</a></div>
+</section>
+</main>
+</div>
+</div>
+```
+
+```{=html}
+<script defer="" src="lab.js"></script>
+```

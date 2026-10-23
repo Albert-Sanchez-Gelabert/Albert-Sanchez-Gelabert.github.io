@@ -1,0 +1,103 @@
+---
+lang: es
+pagetitle: "¿Quién se beneficia realmente de la flexibilidad? | Educational Inequality Lab"
+description: "Capítulo interactivo de divulgación sociológica sobre desigualdades educativas."
+format:
+  html:
+    page-layout: full
+    toc: false
+    css: lab.css
+---
+
+```{=html}
+<div id="eil5-root">
+<div class="eil5-shell">
+<header class="eil5-masthead">
+<a class="eil5-brand" href="../index.html"><span aria-hidden="true" class="eil5-brand-mark">≋</span><span>Educational Inequality Lab</span></a>
+<span class="eil5-masthead-note">Sociología interactiva · Cataluña</span>
+</header>
+<nav aria-label="Ruta de navegación" class="eil5-breadcrumb">
+<a href="../index.html">← Todos los capítulos</a><span aria-hidden="true">/</span><strong>05 · Flexibilidad y equidad</strong><span class="eil5-breadcrumb-trail">Beyond merit. / Capítulo 05</span>
+</nav>
+<main>
+<div aria-label="Progreso del capítulo" class="eil5-progress">
+<span data-progress-title="">La promesa</span>
+<span aria-hidden="true" class="eil5-progress-bars"><i></i><i></i><i></i></span>
+<span data-progress-number="">01 / 03</span>
+</div>
+<section aria-labelledby="eil5-main-heading" class="eil5-screen" data-screen="0">
+<p class="eil5-eyebrow">01 / La promesa de la flexibilidad</p>
+<h1 id="eil5-main-heading">¿Quién se beneficia realmente <em>de la flexibilidad?</em></h1>
+<p class="eil5-deck">¿Qué ocurre si la universidad no encaja con tu horario laboral, las responsabilidades familiares o el día a día?</p>
+<div aria-label="Comparación conceptual entre educación presencial y en línea" class="eil5-situation">
+<div><small>Educación presencial</small><strong>Un horario al que tienes que adaptarte</strong><p>Desplazamientos, clases programadas y actividades en lugares y momentos determinados.</p></div>
+<span aria-hidden="true" class="eil5-between">→</span>
+<div><small>Educación en línea</small><strong>Una forma más flexible de participar</strong><p>Más libertad para elegir cuándo y dónde estudiar, aunque el trabajo académico sigue exigiendo tiempo.</p></div>
+</div>
+<p class="eil5-prose">Para algunos estudiantes, pasarse a la modalidad en línea permite seguir estudiando mientras gestionan otras responsabilidades. <strong>Pero ¿disponer de esta alternativa garantiza las mismas posibilidades de graduarse?</strong></p>
+<p class="eil5-context-foot">Este cambio era <strong>ligeramente más frecuente</strong> entre los estudiantes de familias sin estudios universitarios: el 3,3%, frente al 2,5% entre los de familias universitarias (tabla 2). Es una diferencia modesta, no el descubrimiento central.</p>
+<div class="eil5-actions"><button class="eil5-button" data-go="1" type="button">Vamos a explorarlo <span aria-hidden="true">→</span></button></div>
+</section>
+<section aria-labelledby="eil5-evidence-heading" class="eil5-screen" data-screen="1" hidden="">
+<p class="eil5-eyebrow">02 / Un cambio, un resultado diferente</p>
+<h2 id="eil5-evidence-heading">Cuando los estudiantes cambian de vía, <em>¿qué pasa después?</em></h2>
+<p class="eil5-outcomes-intro">Pensemos en estudiantes que empezaron en una universidad presencial y después cambiaron de itinerario. Casi una década después, los resultados diferían según el tipo de cambio.</p>
+<div aria-label="Resultados educativos estimados al final del seguimiento de los estudiantes que cambiaron de trayectoria universitaria" class="eil5-outcomes" data-benchmark="" role="group">
+<div class="eil5-outcomes-head"><div><strong data-outcomes-title="">Dos vías para comparar</strong><small>Resultados estimados por el modelo al final del periodo de observación</small></div><span class="eil5-outcomes-kicker">Estudiantes de nuevo ingreso en 2012–13</span></div>
+<div class="eil5-route eil5-quiet-route"><div class="eil5-route-name"><span>Cambio de titulación · misma universidad</span><span>Otra titulación, misma institución</span></div><div aria-label="65% graduados, 15% abandonaron sin título y 20% siguen estudiando" class="eil5-stacked" role="img"><span class="graduate" style="width:65%"></span><span class="dropout" style="width:15%"></span><span class="enrolled" style="width:20%"></span></div><div class="eil5-route-values"><span><strong>65%</strong> graduados</span><span><strong>15%</strong> han abandonado</span><span><strong>20%</strong> siguen estudiando</span></div></div>
+<div class="eil5-route eil5-quiet-route"><div class="eil5-route-name"><span>Cambio de institución</span><span>Otra universidad presencial</span></div><div aria-label="53% graduados, 19% abandonaron sin título y 28% siguen estudiando" class="eil5-stacked" role="img"><span class="graduate" style="width:53%"></span><span class="dropout" style="width:19%"></span><span class="enrolled" style="width:28%"></span></div><div class="eil5-route-values"><span><strong>53%</strong> graduados</span><span><strong>19%</strong> han abandonado</span><span><strong>28%</strong> siguen estudiando</span></div></div>
+<div aria-live="polite" class="eil5-route eil5-online-route" data-online-route="" hidden="">
+<div class="eil5-route-name"><span>Cambio a una universidad en línea <strong class="eil5-route-new">VÍA NUEVA</strong></span><span>Cambio de institución y de modalidad</span></div>
+<div aria-label="6% graduados, 39% abandonaron sin título y 55% siguen estudiando" class="eil5-stacked" role="img"><span class="graduate" data-width="6%" style="width:0%"></span><span class="dropout" data-width="39%" style="width:0%"></span><span class="enrolled" data-width="55%" style="width:0%"></span></div>
+<div class="eil5-route-values"><span><strong>6%</strong> graduados</span><span><strong>39%</strong> han abandonado</span><span><strong>55%</strong> siguen estudiando</span></div>
+</div>
+<div aria-label="Colores de los resultados" class="eil5-legend"><span><i class="eil5-dot graduate"></i>Graduados</span><span><i class="eil5-dot dropout"></i>Abandono sin titulación</span><span><i class="eil5-dot enrolled"></i>Siguen estudiando</span></div>
+</div>
+<div class="eil5-trigger" data-online-trigger="">
+<p class="eil5-trigger-question">¿Y si el cambio es hacia una universidad en línea?</p>
+<p class="eil5-prose">Pasarse a la modalidad en línea ofrece más flexibilidad. ¿Cómo se compara esta tercera vía con las otras dos?</p>
+<button class="eil5-button" data-reveal="online" type="button">Muestra la vía en línea <span aria-hidden="true">→</span></button>
+</div>
+<div aria-label="Una mirada más detallada de la vía en línea y las diferencias sociales" aria-live="polite" class="eil5-online-panel" data-online-panel="" hidden="">
+<p class="eil5-online-topline">Una mirada más detallada · La vía en línea</p>
+<h3 class="eil5-online-title">Seguir matriculado <em>no es lo mismo que graduarse.</em></h3>
+<p class="eil5-online-subtitle">Entre quienes cambiaron a una universidad en línea, muchos seguían matriculados al final del periodo de observación. Sus resultados difieren mucho de los de las otras dos vías.</p>
+<div aria-label="55% seguían estudiando, frente al 6% que se habían graduado" class="eil5-focus-facts">
+<div class="eil5-focus-fact continuing"><strong>55%</strong><span>Siguen estudiando</span></div>
+<span aria-hidden="true" class="eil5-focus-separator">frente a</span>
+<div class="eil5-focus-fact completing"><strong>6%</strong><span>Graduados</span></div>
+</div>
+<p class="eil5-reveal-key">La flexibilidad puede facilitar que se siga matriculado sin garantizar que se obtenga un título en el mismo periodo.</p>
+<p class="eil5-footnote">El 39% restante ya no estaba matriculado y no había obtenido un título. La figura 1 presenta resultados predichos por el modelo al final del seguimiento, no efectos causales. Algunos estudiantes todavía matriculados pueden graduarse más adelante.</p>
+<div class="eil5-inline-social">
+<p class="eil5-online-topline">¿Y dentro de esta misma vía?</p>
+<h3>Más flexibilidad. <em>Las diferencias sociales persisten.</em></h3>
+<p>Entre los estudiantes que pasaron a la modalidad en línea, el origen educativo familiar seguía asociado a distintas probabilidades ajustadas de abandonar sin título:</p>
+<div aria-label="Probabilidad estimada de abandono tras pasar a la modalidad en línea: 36,4% entre familias sin estudios universitarios y 28,4% entre familias universitarias" class="eil5-social-compact" role="group">
+<div class="eil5-social-mini"><span class="eil5-mini-label">Familia sin estudios universitarios</span><div class="eil5-mini-values"><strong>36.4%</strong><span>probabilidad de abandonar</span></div><div class="eil5-social-track"><i style="width:72.8%"></i></div></div>
+<div class="eil5-social-mini"><span class="eil5-mini-label">Familia con estudios universitarios</span><div class="eil5-mini-values"><strong>28.4%</strong><span>probabilidad de abandonar</span></div><div class="eil5-social-track"><i style="width:56.8%"></i></div></div>
+</div>
+<p class="eil5-footnote">Predicciones ajustadas de la tabla 5 en una escala común del 0 al 50%. Estas estimaciones proceden de una comparación distinta de la cifra global del 39%. La brecha familiar es estadísticamente significativa, pero no se ha demostrado que sea mayor que en otros tipos de cambio.</p>
+<p class="eil5-meaning-inline">El estudio en línea puede reducir los desplazamientos y la obligación de asistir en horarios fijos. No elimina las responsabilidades que compiten por el tiempo ni las desigualdades de recursos. Son mecanismos sociológicos plausibles, no causas identificadas directamente por el estudio.</p>
+</div>
+</div>
+<div class="eil5-actions eil5-actions-space"><button class="eil5-back" data-go="0" type="button">← Anterior</button><button class="eil5-button" data-go="2" data-next="online" hidden="" type="button">¿Qué nos dice esto? <span aria-hidden="true">→</span></button></div>
+</section>
+<section aria-labelledby="eil5-conclusion-heading" class="eil5-screen" data-screen="2" hidden="">
+<p class="eil5-eyebrow">03 / Tu descubrimiento sociológico</p>
+<h2 id="eil5-conclusion-heading">Tener más formas de estudiar no garantiza <em>las mismas posibilidades de terminar.</em></h2>
+<div class="eil5-insight-card"><span class="eil5-eyebrow">El descubrimiento</span><h3>La flexibilidad puede ayudar a continuar en la educación superior. <em>No elimina todas las desigualdades que influyen en los resultados.</em></h3><p>La universidad en línea puede hacer posible continuar estudiando a quien no puede seguir los horarios convencionales. Sin embargo, muchos siguen estudiando después de años, y la probabilidad de abandonar sin título continúa asociada al origen familiar.</p></div>
+<p class="eil5-final-line">Las oportunidades educativas no dependen solo de <em>tener una alternativa</em>. También dependen de <strong>las condiciones en que se puede aprovechar.</strong></p>
+<p class="eil5-prose">A lo largo de <em>Beyond merit</em>, la historia trata de cómo las oportunidades educativas se configuran, se reconsideran y se viven a través de decisiones sucesivas, más allá del mérito o del esfuerzo individuales.</p>
+<div class="eil5-source"><span class="eil5-eyebrow">Basado en investigación publicada</span><p>Sánchez-Gelabert, A., &amp; Elias, M. (2023). <em>Going online? Does transferring to online university increase the likelihood of graduation among students from lower social background?</em> <em>International Journal of Educational Technology in Higher Education</em>, 20, article 39. <a href="https://doi.org/10.1186/s41239-023-00407-4" rel="noopener" target="_blank">Lee el artículo publicado ↗</a></p><p class="eil5-smallprint">Estudiantes que entraron en universidades catalanas en 2012–13, seguidos hasta 2019–20. Las categorías de cambio se basan en n=42.370; las comparaciones del modelo se centran en 6.121 estudiantes inicialmente presenciales que cambiaron de vía. Las proporciones descriptivas de los cambios, los resultados globales del modelo y las probabilidades ajustadas de abandono por origen familiar tienen bases estadísticas distintas. Ninguna identifica un efecto causal del estudio en línea.</p></div>
+<div class="eil5-actions eil5-actions-space"><button class="eil5-back" data-go="1" type="button">← Anterior</button><button class="eil5-button eil5-button-outline" data-restart="" type="button">Vuelve a empezar el capítulo ↺</button></div>
+<div class="eil5-end-links"><a href="../index.html">← Todos los capítulos</a><a href="../chapter-4/index.html">← Capítulo anterior: Trayectorias académicas</a></div>
+</section>
+</main>
+</div>
+</div>
+```
+
+```{=html}
+<script defer="" src="lab.js"></script>
+```

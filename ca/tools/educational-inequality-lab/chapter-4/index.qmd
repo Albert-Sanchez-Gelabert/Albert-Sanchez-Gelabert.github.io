@@ -1,0 +1,123 @@
+---
+lang: ca
+pagetitle: "L’èxit acadèmic segueix una línia recta? | Educational Inequality Lab"
+description: "Capítol interactiu de divulgació sociològica sobre desigualtats educatives."
+format:
+  html:
+    page-layout: full
+    toc: false
+    css: lab.css
+---
+
+```{=html}
+<div id="eil4-root">
+<div class="eil4-shell">
+<header class="eil4-masthead">
+<a class="eil4-brand" href="../index.html"><span aria-hidden="true" class="eil4-brand-mark">≋</span><span>Educational Inequality Lab</span></a>
+<span class="eil4-masthead-note">Sociologia interactiva · Catalunya</span>
+</header>
+<nav aria-label="Ruta de navegació" class="eil4-breadcrumb">
+<a href="../index.html">← Tots els capítols</a><span aria-hidden="true">/</span><strong>04 · Trajectòries universitàries</strong>
+<span class="eil4-breadcrumb-trail">Beyond merit. / Capítol 04</span>
+</nav>
+<main>
+<div aria-label="Progrés del capítol" class="eil4-progress">
+<span data-progress-title="">La trajectòria esperada</span>
+<span aria-hidden="true" class="eil4-progress-bars"><i></i><i></i><i></i><i></i><i></i></span>
+<span data-progress-number="">01 / 05</span>
+</div>
+<section aria-labelledby="eil4-heading" class="eil4-screen" data-screen="0">
+<p class="eil4-eyebrow">01 / Una expectativa</p>
+<h1 id="eil4-heading">L'èxit acadèmic segueix <em>una línia recta?</em></h1>
+<p class="eil4-deck">Sovint imaginem la universitat com un recorregut previsible: entrar, superar cada curs i graduar-se.</p>
+<div aria-label="Trajectòria universitària convencional de quatre anys" class="eil4-path">
+<div><small>INICI</small><strong>Entrada</strong></div><span aria-hidden="true">→</span>
+<div><small>CURS 1</small><strong>Progrés</strong></div><span aria-hidden="true">→</span>
+<div><small>CURSOS 2–3</small><strong>Progrés</strong></div><span aria-hidden="true">→</span>
+<div class="eil4-path-final"><small>FINAL</small><strong>Títol</strong></div>
+</div>
+<p class="eil4-prose">Però el progrés acadèmic no és un únic esdeveniment. Els estudiants avancen, tenen dificultats, es recuperen, alenteixen el ritme o s'aturen. <strong>L'ordre en què passen aquestes coses importa.</strong></p>
+<div class="eil4-bridge"><strong>Què canvia si seguim els estudiants al llarg del temps, en lloc de mirar només si es graduen?</strong><p>Hem seguit la progressió de 30.392 estudiants que van entrar a la universitat a Catalunya durant set cursos acadèmics.</p></div>
+<div class="eil4-actions"><button class="eil4-button" data-go="1" type="button">Segueix-ne les trajectòries <span aria-hidden="true">→</span></button></div>
+</section>
+<section aria-labelledby="eil4-recovery-title" class="eil4-screen" data-screen="1" hidden="">
+<p class="eil4-eyebrow">02 / La primera descoberta</p>
+<h2 id="eil4-recovery-title">Hi ha més d'una manera <em>d'aconseguir un títol.</em></h2>
+<p class="eil4-prose">La trajectòria més freqüent és senzilla: rendiment alt i constant. Però no és l'única que porta a la graduació.</p>
+<div class="eil4-chart-card" data-figure="recovery">
+<div class="eil4-chart-head"><strong>Rendiment acadèmic al llarg de set anys</strong><span>Patrons típics de trajectòria</span></div>
+<svg aria-label="Gràfic esquemàtic del rendiment anual: rendiment alt i constant i, després, una trajectòria de millora gradual" class="eil4-chart" data-chart="recovery" role="img" viewBox="0 0 780 314"></svg>
+<div class="eil4-curve-legend"><span><i class="eil4-swatch stable"></i> Alt i constant · <b>43.7%</b> dels estudiants d'entrada</span><span data-legend="recovery" hidden=""><i class="eil4-swatch improve"></i> Millora progressiva · <b>27.0%</b> dels estudiants d'entrada</span></div>
+<p class="eil4-chart-note">Formes il·lustratives basades en la figura 1 de l'estudi publicat; els percentatges exactes de resultats provenen de la taula 4. Són tipus de trajectòria modelitzats, no registres individuals.</p>
+</div>
+<div class="eil4-reveal-box" data-before="recovery">
+<strong>Cal tenir un rendiment gairebé perfecte des del començament per graduar-se?</strong>
+<p>Observa què passa quan mostrem una altra trajectòria d'èxit habitual.</p>
+<button class="eil4-button" data-reveal="recovery" type="button">Mostra una altra trajectòria d'èxit <span aria-hidden="true">→</span></button>
+</div>
+<div aria-live="polite" class="eil4-after" data-after="recovery" hidden="">
+<h3>Un recorregut diferent. També acaba amb un títol.</h3>
+<p>El grup que millora comença per sota del grup de rendiment alt i constant i gradualment s'hi acosta. <strong>El 94,9% d'aquest grup es va graduar en els set anys d'observació</strong> , però molts van necessitar més temps.</p>
+<div class="eil4-stats-two"><div><small>TRAJECTÒRIA ALTA I CONSTANT</small><strong>92.9%</strong><span>es graduen a temps</span></div><div><small>TRAJECTÒRIA DE MILLORA</small><strong>56.6%</strong><span>es graduen a temps</span><em>38,3% es graduen més tard</em></div></div>
+<p class="eil4-mini-insight">El títol final no ens diu <em>quant de temps ha costat arribar-hi.</em></p>
+</div>
+<div class="eil4-actions eil4-actions-space"><button class="eil4-back" data-go="0" type="button">← Anterior</button><button class="eil4-button" data-go="2" data-next="recovery" hidden="" type="button">Però un bon començament també pot acabar malament? <span aria-hidden="true">→</span></button></div>
+</section>
+<section aria-labelledby="eil4-late-title" class="eil4-screen" data-screen="2" hidden="">
+<p class="eil4-eyebrow">03 / Una segona sorpresa</p>
+<h2 id="eil4-late-title">Un bon començament <em>no garanteix un bon final.</em></h2>
+<p class="eil4-prose">Un grup més petit manté un rendiment acadèmic relativament alt durant uns quants anys. Si només en miréssim el començament, esperaríem que acabessin els estudis.</p>
+<div class="eil4-chart-card" data-figure="late">
+<div class="eil4-chart-head"><strong>Segueix una trajectòria més enllà del quart any</strong><span>6,1% dels estudiants d'entrada · Proporció estimada pel model</span></div>
+<svg aria-label="Gràfic esquemàtic d’una trajectòria amb rendiment inicial alt i descens posterior; al principi només es mostren els quatre primers anys" class="eil4-chart" data-chart="late" role="img" viewBox="0 0 780 314"></svg>
+<div class="eil4-curve-legend"><span><i class="eil4-swatch decline"></i> Rendiment alt seguit d'un descens</span></div>
+<p class="eil4-chart-note">Esquema basat en la figura 1. A l'estudi, un any sense matrícula i sense graduació es codifica com a progrés zero; la línia descendent no s'ha d'interpretar com si suspenguessin tots els exàmens.</p>
+</div>
+<div class="eil4-reveal-box" data-before="late">
+<strong>Què passa els anys següents a aquest començament aparentment bo?</strong>
+<button class="eil4-button" data-reveal="late" type="button">Segueix aquesta trajectòria fins al setè any <span aria-hidden="true">→</span></button>
+</div>
+<div aria-live="polite" class="eil4-after" data-after="late" hidden="">
+<h3>El progrés es pot interrompre en una fase avançada.</h3>
+<p>El progrés d'aquest grup cau bruscament després dels primers anys. Al final del període d'observació, <strong>el 67,1% dels estudiants assignats a aquesta trajectòria havien abandonat.</strong></p>
+<div class="eil4-stat-line"><strong>67.1%</strong><span>abandonament al cap de set anys entre els estudiants assignats a aquesta trajectòria</span></div>
+<p class="eil4-mini-insight">Un bon començament i un bon final no són el mateix.</p>
+</div>
+<div class="eil4-actions eil4-actions-space"><button class="eil4-back" data-go="1" type="button">← Anterior</button><button class="eil4-button" data-go="3" data-next="late" hidden="" type="button">Què condiciona el temps necessari per recuperar-se? <span aria-hidden="true">→</span></button></div>
+</section>
+<section aria-labelledby="eil4-time-title" class="eil4-screen" data-screen="3" hidden="">
+<p class="eil4-eyebrow">04 / El significat sociològic</p>
+<h2 id="eil4-time-title">Recuperar-se requereix temps. <em>I no tothom disposa del mateix temps.</em></h2>
+<p class="eil4-deck">Un mateix sistema acadèmic no ofereix a tothom el mateix marge real per allargar o reconduir els estudis universitaris.</p>
+<p class="eil4-prose">L'estudi troba que els estudiants que hi accedeixen amb més edat tendeixen a seguir menys sovint una trajectòria de recuperació, especialment en àmbits exigents. Alguns segueixen una trajectòria òptima; d'altres abandonen. <strong>La recuperació gradual és menys freqüent.</strong></p>
+<div class="eil4-age-card">
+<div class="eil4-age-head"><span>ENGINYERIA I ARQUITECTURA</span><strong>Probabilitat estimada de seguir una trajectòria de millora</strong></div>
+<div class="eil4-age-row"><span>Fins als 25 anys</span><div class="eil4-age-track"><i style="width:40.2%"></i></div><strong>40.2%</strong></div>
+<div class="eil4-age-row"><span>26 anys o més</span><div class="eil4-age-track"><i style="width:16%"></i></div><strong>16.0%</strong></div>
+<p>Probabilitats ajustades de la taula 7. Aquestes associacions no demostren que l'edat causi la diferència.</p>
+</div>
+<p class="eil4-prose">Les obligacions laborals i familiars, el cost d'anys addicionals i les exigències acadèmiques de cada àmbit són possibles explicacions de per què allargar els estudis pot ser més viable per a alguns estudiants que per a d'altres. <strong>L'estudi identifica patrons de trajectòria, no les causes directes de cada decisió.</strong></p>
+<div class="eil4-additional"><span>UNA ALTRA MANERA COM IMPORTA EL TEMPS</span><p>En el grup de <strong>progressió lenta</strong> , <strong>74.2%</strong> encara estaven matriculats al cap de set anys. Persistir i graduar-se no són sinònims.</p></div>
+<div class="eil4-actions eil4-actions-space"><button class="eil4-back" data-go="2" type="button">← Anterior</button><button class="eil4-button" data-go="4" type="button">Descobreix la interpretació sociològica <span aria-hidden="true">→</span></button></div>
+</section>
+<section aria-labelledby="eil4-final-title" class="eil4-screen eil4-outro" data-screen="4" hidden="">
+<p class="eil4-eyebrow">05 / La teva descoberta sociològica</p>
+<h2 id="eil4-final-title">Un títol és un resultat. <em>Progressar és un recorregut.</em></h2>
+<div class="eil4-insight-card">
+<span class="eil4-eyebrow">La descoberta</span>
+<h3>Alguns estudiants milloren i es graduen més tard. D'altres comencen bé, però abandonen. <em>El moment i la seqüència de les experiències acadèmiques importen.</em></h3>
+<p>Si només mirem qui es gradua, perdem la diversitat d'experiències universitàries. I si només mirem el rendiment del primer any, no sabem què passa després. Les trajectòries de recuperació, permanència i abandonament es distribueixen desigualment segons les circumstàncies dels estudiants i l'àmbit d'estudi.</p>
+</div>
+<p class="eil4-final-line"><strong>L'èxit no és una línia recta.</strong> Entendre la desigualtat vol dir mirar les trajectòries que poden seguir els estudiants i el temps que necessiten.</p>
+<div class="eil4-source"><span class="eil4-eyebrow">Basat en recerca publicada</span><p>Troiano, H. &amp; Sánchez-Gelabert, A. (2026). <em>Patterns of university progression and social inequalities: delving into complex trajectories in higher education.</em> <em>European Journal of Higher Education</em>, 16(2), 246–268. <a href="https://doi.org/10.1080/21568235.2025.2556438" rel="noopener" target="_blank">Llegeix l'article ↗</a></p><p>Per explorar-ho amb més detall: <a href="https://albert-sanchez-gelabert.github.io/tools/trajectories/" rel="noopener" target="_blank">University Trajectories Explorer ↗</a></p><p class="eil4-source-note">Cohort universitària catalana d'entrada el 2012–13, n = 30.392, amb set observacions anuals. Les proporcions de trajectòries són estimacions del model; els resultats posteriors s'observen entre els casos assignats a cada grup. Les corbes són il·lustracions simplificades dels patrons publicats.</p></div>
+<div class="eil4-actions eil4-actions-space"><button class="eil4-back" data-go="3" type="button">← Anterior</button><button class="eil4-button eil4-button-outline" data-restart="" type="button">Reinicia el capítol ↺</button></div>
+<div class="eil4-end-links"><a href="../index.html">← Tots els capítols</a><a href="../chapter-3/index.html">← Capítol anterior: Futurs diferents</a></div>
+</section>
+</main>
+</div>
+</div>
+```
+
+```{=html}
+<script defer="" src="lab.js"></script>
+```

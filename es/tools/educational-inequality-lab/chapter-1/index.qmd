@@ -1,0 +1,157 @@
+---
+lang: es
+pagetitle: "¿Importa el contexto escolar? | Educational Inequality Lab"
+description: "Capítulo interactivo de divulgación sociológica sobre desigualdades educativas."
+format:
+  html:
+    page-layout: full
+    toc: false
+    title-block-style: none
+    css: lab.css
+---
+
+```{=html}
+<div id="eil-root">
+<div class="eil-shell">
+<header class="eil-masthead">
+<a aria-label="Portada del Educational Inequality Lab" class="eil-brand" href="../index.html"><span aria-hidden="true" class="eil-brand-mark">≋</span> Educational Inequality Lab</a>
+<span class="eil-masthead-note">Capítulo 1 de 5 · Cataluña</span>
+</header>
+<div class="eil-layout">
+<div aria-label="Experiencia interactiva del capítulo 1" class="eil-stage">
+<nav aria-label="Navegación del Lab" class="eil-breadcrumb"><a href="../index.html">← Todos los capítulos</a><span aria-hidden="true">/</span><span>01 · Antes de la universidad</span></nav>
+<div aria-label="Progreso del capítulo" class="eil-progress">
+<span class="eil-progress-name" data-progress-name="">Introducción</span>
+<div aria-hidden="true" class="eil-dots"><span class="eil-dot"></span><span class="eil-dot"></span><span class="eil-dot"></span><span class="eil-dot"></span><span class="eil-dot"></span></div>
+<span class="eil-step-count" data-step-count="">0 / 5</span>
+</div>
+<!-- SCENE 0 · Introduction -->
+<section class="eil-scene" data-scene="0">
+<span class="eil-eyebrow">Capítulo 01 · Antes de la universidad</span>
+<h1>¿Importa el contexto <em class="eil-emphasis">escolar?</em></h1>
+<p class="eil-deck">Una brecha menor entre grupos parece un avance. Pero ¿qué ocurre si, en algunos contextos, las probabilidades de acceder a la vía académica son más bajas para ambos grupos?</p>
+<div aria-label="Esquema de tres posibles vías tras la educación obligatoria: académica, profesional y salida del sistema. No está a escala." class="eil-hero-art" role="img">
+<svg aria-hidden="true" focusable="false" viewBox="0 0 700 224">
+<defs>
+<linearGradient id="eil-path-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#337f72"></stop><stop offset="1" stop-color="#8fb9a6"></stop></linearGradient>
+</defs>
+<circle cx="60" cy="116" fill="#235d54" r="26"></circle><text fill="#fff" style="fill:#fff;font-size:17px;font-weight:700" text-anchor="middle" x="60" y="120">01</text>
+<path d="M88,116 C210,116 210,43 362,43 L558,43" fill="none" opacity=".9" stroke="url(#eil-path-grad)" stroke-linecap="round" stroke-width="11"></path>
+<path d="M88,116 C205,116 254,116 362,116 L558,116" fill="none" stroke="#b8c8bf" stroke-linecap="round" stroke-width="9"></path>
+<path d="M88,116 C210,116 210,189 362,189 L558,189" fill="none" opacity=".9" stroke="#c8a487" stroke-linecap="round" stroke-width="7"></path>
+<circle cx="562" cy="43" fill="#287969" r="10"></circle><circle cx="562" cy="116" fill="#9cb9a6" r="9"></circle><circle cx="562" cy="189" fill="#bc815e" r="8"></circle>
+<text font-weight="700" x="588" y="47">Vía académica</text>
+<text font-weight="700" x="588" y="120">Formación profesional</text>
+<text font-weight="700" x="588" y="193">Salida del sistema</text>
+<text style="font-size:11px" text-anchor="middle" x="54" y="167">Educación</text><text style="font-size:11px" text-anchor="middle" x="54" y="181">obligatoria</text>
+</svg>
+</div>
+<div class="eil-statline"><span><strong>82,923</strong> estudiantes en el estudio original</span><span><strong>~3 minutos</strong> de descubrimiento</span><span><strong>2024</strong> investigación</span></div>
+<div class="eil-steps-actions"><button class="eil-btn primary" data-action="start" type="button">Empieza el descubrimiento <span aria-hidden="true">→</span></button><a class="eil-btn text" href="https://albert-sanchez-gelabert.github.io/tools/" rel="noopener" target="_blank">Explora otras herramientas de investigación ↗</a></div>
+<p class="eil-mini">No se recogen datos personales. El progreso solo se guarda en este navegador, si el almacenamiento está disponible.</p>
+</section>
+<!-- SCENE 1 · Prediction -->
+<section class="eil-scene" data-scene="1" hidden="">
+<span class="eil-eyebrow">01 / Haz una predicción</span>
+<h2>¿Dónde esperarías encontrar <em class="eil-emphasis">la brecha más grande?</em></h2>
+<p class="eil-deck">Comparamos la probabilidad estimada de acceder a la vía académica tras la educación obligatoria entre alumnado de origen autóctono y no autóctono en distintos contextos escolares.</p>
+<div class="eil-card">
+<div class="eil-card-heading">Elige el grupo</div>
+<p class="eil-mini" style="margin-top:0">También podrás comparar el otro grupo después de ver los datos.</p>
+<div aria-label="Grupo de estudiantes" class="eil-segment" role="group">
+<button aria-pressed="true" class="is-selected" data-gender="female" type="button">Chicas</button>
+<button aria-pressed="false" data-gender="male" type="button">Chicos</button>
+</div>
+<fieldset style="border:0;padding:0;margin:24px 0 0;min-width:0">
+<legend class="eil-card-heading">¿En qué contexto es mayor la brecha entre alumnado autóctono y no autóctono en el acceso a la vía académica?</legend>
+<div class="eil-options">
+<label class="eil-option"><input name="eil-prediction" type="radio" value="Low"/><span class="eil-choice-face"><span aria-hidden="true" class="eil-choice-circle"></span><span>Concentración baja <span class="eil-mini">(0–15% de alumnado no autóctono)</span></span></span></label>
+<label class="eil-option"><input name="eil-prediction" type="radio" value="Medium"/><span class="eil-choice-face"><span aria-hidden="true" class="eil-choice-circle"></span><span>Concentración media <span class="eil-mini">(16–30%)</span></span></span></label>
+<label class="eil-option"><input name="eil-prediction" type="radio" value="High"/><span class="eil-choice-face"><span aria-hidden="true" class="eil-choice-circle"></span><span>Concentración alta <span class="eil-mini">(31% o más)</span></span></span></label>
+</div>
+</fieldset>
+</div>
+<div class="eil-steps-actions"><button class="eil-btn primary" data-action="predict" disabled="" type="button">Descubre la brecha <span aria-hidden="true">→</span></button><button class="eil-btn text" data-action="back" type="button">← Atrás</button></div>
+<div class="eil-note">El ejercicio compara probabilidades predichas ajustadas de un modelo estadístico. Las categorías de composición escolar describen contextos observados, no condiciones asignadas experimentalmente.</div>
+</section>
+<!-- SCENE 2 · Gaps -->
+<section class="eil-scene" data-scene="2" hidden="">
+<span class="eil-eyebrow">02 / Descubre las diferencias</span>
+<h2>La brecha de desigualdad <em class="eil-emphasis">varía</em> según el contexto escolar.</h2>
+<p class="eil-deck">Esta es la diferencia, en puntos porcentuales, entre las probabilidades ajustadas de acceder a la vía académica del alumnado autóctono y no autóctono.</p>
+<div class="eil-card">
+<div aria-label="Cambia el grupo de estudiantes" class="eil-segment" role="group"><button data-gender="female" type="button">Chicas</button><button data-gender="male" type="button">Chicos</button></div>
+<p class="eil-result-kicker" style="margin-top:24px">Autóctono menos no autóctono · <span data-gender-word="">chicas</span></p>
+<div aria-label="Brechas de probabilidad ajustadas según la concentración escolar" class="eil-gap-chart" data-gap-chart="" role="group"></div>
+<div class="eil-mini">Cada barra representa una brecha, no una probabilidad. Todas comparten la misma escala de 0 a 20 puntos porcentuales.</div>
+<div class="eil-feedback" role="status"><strong data-prediction-feedback-title=""></strong><p data-prediction-feedback-body=""></p></div>
+</div>
+<div class="eil-steps-actions"><button class="eil-btn primary" data-action="levels" type="button">Pero ¿qué ocurre con las probabilidades reales? <span aria-hidden="true">→</span></button><button class="eil-btn text" data-action="back" type="button">← Atrás</button></div>
+</section>
+<!-- SCENE 3 · Absolute levels -->
+<section class="eil-scene" data-scene="3" hidden="">
+<span class="eil-eyebrow">03 / Mira más allá de la brecha</span>
+<h2>Una brecha menor no siempre significa <em class="eil-emphasis">más oportunidades.</em></h2>
+<p class="eil-deck">La brecha puede reducirse porque ambos grupos tienen probabilidades predichas más bajas. Ahora compara los niveles absolutos, no solo la distancia entre grupos.</p>
+<div class="eil-card">
+<div aria-label="Cambia el grupo de estudiantes" class="eil-segment" role="group"><button data-gender="female" type="button">Chicas</button><button data-gender="male" type="button">Chicos</button></div>
+<div class="eil-key"><div class="eil-key-item"><span class="eil-key-mark"></span> Autóctono</div><div class="eil-key-item"><span class="eil-key-mark open"></span> No autóctono</div><span>Escala de las barras: 0–100%</span></div>
+<div aria-label="Probabilidades estimadas de alumnado autóctono y no autóctono en tres contextos escolares" class="eil-level-chart" data-level-chart="" role="group"></div>
+<div class="eil-two-facts">
+<div class="eil-fact"><div class="eil-fact-label">Brecha con concentración baja</div><div class="eil-fact-number" data-low-gap="">14.0 pp</div><div class="eil-fact-label">Autóctono <span data-low-native="">71.2%</span> · No autóctono <span data-low-nonnative="">57.2%</span></div></div>
+<div class="eil-fact"><div class="eil-fact-label">Brecha con concentración alta</div><div class="eil-fact-number" data-high-gap="">6.3 pp</div><div class="eil-fact-label">Autóctono <span data-high-native="">60.3%</span> · No autóctono <span data-high-nonnative="">54.0%</span></div></div>
+</div>
+<div class="eil-note">Entre las <span data-gender-word-level="">chicas</span>, ambos grupos tienen probabilidades estimadas de acceder a la vía académica más bajas en contextos de concentración alta que baja. Es una comparación entre contextos, no una prueba de que la composición escolar cause el cambio.</div>
+</div>
+<div class="eil-steps-actions"><button class="eil-btn primary" data-action="insight" type="button">¿Qué nos dice esto sobre la desigualdad? <span aria-hidden="true">→</span></button><button class="eil-btn text" data-action="back" type="button">← Atrás</button></div>
+</section>
+<!-- SCENE 4 · Interpretation -->
+<section class="eil-scene" data-scene="4" hidden="">
+<span class="eil-eyebrow">04 / Interpreta los datos</span>
+<h2>¿Qué podemos concluir <em class="eil-emphasis">realmente?</em></h2>
+<p class="eil-deck">Has visto las brechas y las probabilidades predichas que hay detrás. ¿Qué conclusión refleja mejor los datos?</p>
+<div class="eil-card">
+<fieldset style="border:0;padding:0;margin:0;min-width:0">
+<legend class="eil-card-heading">Elige la interpretación mejor fundamentada</legend>
+<div class="eil-options">
+<label class="eil-option"><input name="eil-reflection" type="radio" value="higher"/><span class="eil-choice-face"><span aria-hidden="true" class="eil-choice-circle"></span>Una brecha menor demuestra que las oportunidades educativas mejoran para todo el mundo.</span></label>
+<label class="eil-option"><input name="eil-reflection" type="radio" value="lower"/><span class="eil-choice-face"><span aria-hidden="true" class="eil-choice-circle"></span>Las diferencias entre grupos pueden reducirse aunque ambos tengan probabilidades predichas más bajas.</span></label>
+<label class="eil-option"><input name="eil-reflection" type="radio" value="causal"/><span class="eil-choice-face"><span aria-hidden="true" class="eil-choice-circle"></span>La composición escolar, por sí sola, causa las diferencias observadas.</span></label>
+</div>
+</fieldset>
+<div class="eil-feedback" data-reflection-feedback="" hidden="" role="status"><strong data-reflection-head=""></strong><p data-reflection-body=""></p></div>
+</div>
+<div class="eil-steps-actions"><button class="eil-btn primary" data-action="reflect" disabled="" type="button">Consulta la interpretación <span aria-hidden="true">→</span></button><button class="eil-btn text" data-action="back" type="button">← Atrás</button></div>
+</section>
+<!-- SCENE 5 · Discovery -->
+<section class="eil-scene" data-scene="5" hidden="">
+<span class="eil-eyebrow">05 / Tu descubrimiento sociológico</span>
+<h2>Las oportunidades educativas se configuran <em class="eil-emphasis">antes de la universidad.</em></h2>
+<div class="eil-discovery">
+<span class="eil-eyebrow">El descubrimiento</span>
+<div class="eil-big">Una brecha menor entre grupos no implica necesariamente más oportunidades para ninguno de ellos.</div>
+<p>El estudio muestra que las transiciones predichas varían según el origen migratorio, el género y la composición escolar. Para entender la desigualdad hay que examinar tanto la distancia entre grupos como los niveles de oportunidad de cada uno.</p>
+</div>
+<p class="eil-deck" data-finish-recall="" style="font-size:16px">Ahora ya has visto por qué una diferencia menor entre grupos no indica, por sí misma, unas oportunidades mejores.</p>
+<div class="eil-outro-card">
+<div aria-hidden="true" class="eil-outro-mark">↗</div>
+<div><strong>Siguiente pregunta: ¿Cómo se compaginan los estudios universitarios con el trabajo y la vida personal?</strong><p>Tener buenos resultados académicos no siempre basta. La edad, el trabajo remunerado y las circunstancias vitales también se relacionan con la permanencia en la universidad y la graduación.</p><div class="eil-next-status"><a href="../chapter-2/index.html" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">Explora el capítulo 2 →</a></div></div>
+</div>
+<div class="eil-steps-actions"><a class="eil-btn primary" href="https://albert-sanchez-gelabert.github.io/tools/context/" rel="noopener" target="_blank">Explora la herramienta de investigación completa ↗</a><button class="eil-btn secondary" data-action="restart" type="button">Vuelve a empezar este capítulo ↺</button><a class="eil-btn text" href="../index.html">← Todos los capítulos</a></div>
+<p class="eil-mini">Continúa con el capítulo 2, explora la herramienta original o vuelve a todos los capítulos.</p>
+</section>
+<footer class="eil-footer">
+<strong>Fuente e interpretación</strong><br/>
+          Datos: probabilidades predichas ajustadas de la transición académica, extraídas de la herramienta del autor <em>School Context &amp; Transition Explorer</em> (tablas 7–9 publicadas). Sánchez-Gelabert, A., Elias Andreu, M. y Bouvier, N. (2024), <em>International Journal of Educational Research</em>, 124, 102321. Cohorte: 82.923 estudiantes en Cataluña.<br/>
+          Estas son asociaciones basadas en modelos, <strong>no efectos causales</strong>. Las categorías de contexto indican la proporción de alumnado no autóctono en el centro (baja: 0–15%; media: 16–30%; alta: 31% o más). El género corresponde a las categorías femenino/masculino del análisis original; aquí usamos «chicas/chicos» para facilitar la lectura. Las tres vías de la introducción son esquemáticas y no proporcionales a las tasas observadas.
+          <div class="eil-source-links"><a href="../index.html">Portada del Lab ↗</a><a href="https://doi.org/10.1016/j.ijer.2024.102321" rel="noopener" target="_blank">Lee el artículo ↗</a><a href="https://albert-sanchez-gelabert.github.io/tools/context/" rel="noopener" target="_blank">Explorador interactivo completo ↗</a><a href="https://albert-sanchez-gelabert.github.io/tools/" rel="noopener" target="_blank">Todas las herramientas de investigación ↗</a></div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+```
+
+```{=html}
+<script defer="" src="lab.js"></script>
+```

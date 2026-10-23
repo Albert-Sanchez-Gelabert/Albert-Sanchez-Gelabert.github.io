@@ -1,0 +1,206 @@
+---
+lang: es
+title: "¿Cómo se compaginan los estudios universitarios con el trabajo y la vida personal? | Educational Inequality Lab"
+subtitle: "Educational Inequality Lab · Chapter 2"
+description: "Capítulo interactivo de divulgación sociológica sobre desigualdades educativas."
+format:
+  html:
+    page-layout: full
+    toc: false
+    title-block-style: none
+    css: lab.css
+---
+
+```{=html}
+<div id="eilln-root">
+<div class="eilln-shell">
+<header class="eilln-top">
+<a class="eilln-brand" href="../index.html"><span aria-hidden="true" class="eilln-symbol">≋</span> Educational Inequality Lab</a>
+<span class="eilln-series">BEYOND MERIT <span aria-hidden="true">CAPÍTULO 02</span> CAPÍTULO 02</span>
+</header>
+<div class="eilln-trail"><a href="../index.html">← Todos los capítulos</a><span aria-hidden="true">CAPÍTULO 02</span><strong>02 · Vidas de estudiantes</strong></div>
+<div aria-label="Progreso del capítulo" class="eilln-progress">
+<span data-progress-label="">EL CONTEXTO</span><div aria-hidden="true" class="eilln-progress-bar"><span class="current"></span><span></span><span></span><span></span><span></span><span></span></div><span data-progress-count="">01 / 06</span>
+</div>
+<main>
+<section aria-labelledby="eilln-title" class="eilln-scene" data-scene="0">
+<div class="eilln-eyebrow"><i aria-hidden="true"></i> UN DESCUBRIMIENTO GUIADO · CAPÍTULO 02</div>
+<h1 id="eilln-title">¿Cómo se compaginan los estudios universitarios <em>con el trabajo y la vida personal?</em></h1>
+<p class="eilln-deck">La educación superior ha acogido a un alumnado cada vez más diverso. Pero <strong>¿ampliar el acceso significa que todo el mundo tiene las mismas posibilidades de continuar?</strong></p>
+<div aria-label="Dos transformaciones: el alumnado y la experiencia universitaria" class="eilln-change">
+<div class="eilln-premise-head"><span class="eilln-kicker">DOS CAMBIOS · UNA PREGUNTA</span><span aria-hidden="true" class="eilln-step-mark">↗</span></div>
+<div class="eilln-change-grid">
+<article class="eilln-change-card eilln-change-students">
+<div aria-hidden="true" class="eilln-change-icon">↗</div>
+<span class="eilln-kicker">¿QUIÉN LLEGA A LA UNIVERSIDAD?</span>
+<h2>Estudiantes <em>más diversos.</em></h2>
+<p>Con la expansión de la educación superior, los estudiantes comenzaron a entrar a edades distintas, por vías diversas y con compromisos más allá de la universidad.</p>
+<div class="eilln-tagline"><span>Edades diferentes</span><span>Vías de acceso diferentes</span><span>Compromisos diversos</span></div>
+</article>
+<article class="eilln-change-card eilln-change-institution">
+<div aria-hidden="true" class="eilln-change-icon">≋</div>
+<span class="eilln-kicker">¿CÓMO FUNCIONA LA UNIVERSIDAD?</span>
+<h2>Una participación <em>más continua.</em></h2>
+<p>Las reformas docentes dieron más importancia a la participación regular, el trabajo en grupo y la evaluación continua, y aumentaron el peso de la asistencia y la implicación diaria.</p>
+<div class="eilln-tagline"><span>Evaluación continua</span><span>Trabajo en grupo</span><span>Participación regular</span></div>
+</article>
+</div>
+<div class="eilln-change-question">
+<span class="eilln-kicker">LA PREGUNTA SOCIOLÓGICA</span>
+<p>Si los estudiantes tienen vidas diferentes, pero estudiar exige tiempo y continuidad, <em>¿todo el mundo tiene las mismas posibilidades de persistir?</em></p>
+</div>
+</div>
+<div class="eilln-nav"><button class="eilln-button eilln-button-primary" data-next="" type="button">Sigue a los estudiantes →</button></div>
+<p class="eilln-tiny">Contexto: Elias, Masjuan y Sánchez-Gelabert (2012). Este planteamiento no implica que las reformas de Bolonia causaran las diferencias que se muestran a continuación.</p>
+</section>
+<section aria-labelledby="eilln-flow-title" class="eilln-scene" data-scene="1" hidden="">
+<div class="eilln-eyebrow">02 / DEL RENDIMIENTO A LA PERMANENCIA</div>
+<h2 id="eilln-flow-title">Mismo rendimiento académico. <em>¿Mismas posibilidades de continuar?</em></h2>
+<p class="eilln-deck">Sigamos a los <strong>1.508 estudiantes que superaron prácticamente todos los créditos del primer año</strong> de una cohorte universitaria. La mayoría respondían al perfil tradicional. Otros habían entrado más tarde o dedicaban más tiempo al trabajo remunerado. ¿Qué ocurrió después?</p>
+<div class="eilln-graphic-panel eilln-flow-panel">
+<div class="eilln-panel-head"><span class="eilln-kicker">EL NIVEL MÁS ALTO DE RENDIMIENTO · COHORTE UAB</span><span class="eilln-source-chip">ESTUDIO DE 2017 · RECUENTOS OBSERVADOS</span></div>
+<div class="eilln-flow-topline">
+<span class="eilln-flow-badge">Mismo rendimiento: <strong>&gt;99,3% de créditos superados</strong></span>
+<span class="eilln-flow-badge">Dos perfiles: <strong>tradicionales / no tradicionales</strong></span>
+</div>
+<div class="eilln-flow-statline">
+<div><span class="eilln-flow-sw eilln-flow-teal"></span><strong>Tradicionales</strong><span class="eilln-flow-stat">1.182 estudiantes <b>· 78.4%</b></span></div>
+<div><span class="eilln-flow-sw eilln-flow-rust"></span><strong>No tradicionales</strong><span class="eilln-flow-stat">326 estudiantes <b>· 21.6%</b></span></div>
+</div>
+<div class="eilln-flow-canvas" data-flow-canvas="">
+<svg aria-label="Los grupos son proporcionales a su tamaño observado. Al revelar los resultados se ve cuántos estudiantes continuaron o abandonaron." class="eilln-flow-svg" data-flow-svg="" role="img" viewBox="0 0 1000 470"></svg>
+</div>
+<div class="eilln-flow-mobile" data-flow-mobile="">
+<div class="eilln-flow-mobile-heading" data-flow-mobile-heading="">¿Qué tamaño tiene cada grupo entre los estudiantes con rendimiento alto?</div>
+<div class="eilln-flow-mobile-row"><strong>Tradicionales <span data-mobile-trad-caption="">1,182 / 1,508</span></strong><div class="eilln-flow-mobile-track"><div class="eilln-flow-mobile-fill teal" data-mobile-trad-fill=""><span data-mobile-trad-stay=""></span><span class="leave" data-mobile-trad-left=""></span></div></div><small data-mobile-trad-detail="">78,4% de la muestra</small></div>
+<div class="eilln-flow-mobile-row"><strong>No tradicionales <span data-mobile-non-caption="">326 / 1,508</span></strong><div class="eilln-flow-mobile-track"><div class="eilln-flow-mobile-fill rust" data-mobile-non-fill=""><span data-mobile-non-stay=""></span><span class="leave" data-mobile-non-left=""></span></div></div><small data-mobile-non-detail="">21,6% de la muestra</small></div>
+</div>
+<div class="eilln-flow-steps">
+<div data-flow-prompt="">
+<p class="eilln-flow-prompt">Estos dos grupos no tienen el mismo tamaño. <strong>Pero ¿difieren en la proporción de estudiantes que abandonan la universidad?</strong></p>
+<button class="eilln-button eilln-button-primary" data-flow-reveal="" type="button">Muestra quién continúa y quién abandona →</button>
+</div>
+<div aria-live="polite" data-flow-revealed="" hidden="">
+<div class="eilln-flow-comparison">
+<div><span>TRADICIONALES</span><strong>6.3%</strong><small>abandonan · 75 de 1.182</small></div>
+<div><span>NO TRADICIONALES</span><strong>14.4%</strong><small>abandonan · 47 de 326</small></div>
+</div>
+<p class="eilln-flow-prompt">Como los grupos tienen tamaños distintos, los <strong>porcentajes</strong> importan más que la anchura total de cada flujo. Entre estos estudiantes con rendimiento alto, el abandono era más del doble de frecuente en el grupo no tradicional.</p>
+</div>
+<div aria-live="polite" class="eilln-flow-meaning" data-flow-meaning="" hidden="">
+<span class="eilln-kicker">EL DESCUBRIMIENTO</span>
+<p>Incluso entre estudiantes con rendimientos académicos prácticamente idénticos, <strong>los no tradicionales tenían más probabilidades de abandonar.</strong></p>
+<small>La anchura de los flujos muestra el número observado de estudiantes; los porcentajes comparan el abandono dentro de cada grupo. Son asociaciones observadas, no efectos causales.</small>
+</div>
+</div>
+<details class="eilln-flow-details"><summary>Consulta los recuentos y las definiciones exactas</summary>
+<table><thead><tr><th>Grupo</th><th>Continúan</th><th>Abandonan</th><th>Total</th><th>Abandono (%)</th></tr></thead><tbody>
+<tr><th>Tradicionales</th><td>1,107</td><td>75</td><td>1,182</td><td>6.3</td></tr>
+<tr><th>No tradicionales*</th><td>279</td><td>47</td><td>326</td><td>14.4</td></tr>
+<tr><th>Total</th><td>1,386</td><td>122</td><td>1,508</td><td>8.1</td></tr>
+</tbody></table>
+<p>*El grupo no tradicional agrupa tres tipos: jóvenes que trabajan (n=185), mayores (n=63) y mayores que trabajan (n=78). Tradicionales: menores de 22 años con menos de 15 horas de trabajo semanales. Rendimiento alto: más del 99,3% de los créditos matriculados en el primer año superados. Abandono administrativo: dos años consecutivos sin matrícula y sin titulación.</p>
+</details>
+</div>
+<div class="eilln-nav"><button class="eilln-button eilln-button-primary" data-next="" disabled="" type="button">Mira dentro de los perfiles →</button><button class="eilln-button eilln-button-text" data-back="" type="button">← Atrás</button></div>
+<p class="eilln-tiny">Artículo de 2017, tabla 3; solo estudiantes con rendimiento alto (n=1.508), con estado de permanencia/abandono observado. Los tamaños de los grupos y los flujos son recuentos, no probabilidades poblacionales de graduación.</p>
+</section>
+<section aria-labelledby="eilln-subprofiles-title" class="eilln-scene" data-scene="2" hidden="">
+<div class="eilln-eyebrow">03 / MIRA DENTRO DEL PROMEDIO</div>
+<h2 id="eilln-subprofiles-title">Pero el grupo no tradicional <em>no es una única historia.</em></h2>
+<p class="eilln-deck">Agrupamos tres perfiles para ver el contraste general. Ahora miremos dentro de ese grupo. <strong>Los cuatro perfiles tienen igualmente un rendimiento muy alto en el primer año.</strong></p>
+<div class="eilln-graphic-panel">
+<div class="eilln-panel-head"><span class="eilln-kicker">ABANDONO CON RENDIMIENTO ACADÉMICO ALTO</span><span class="eilln-source-chip">TABLA 3 · ESTUDIO DE 2017</span></div>
+<div class="eilln-subprofile-list">
+<div class="eilln-subprofile-row"><div class="eilln-subprofile-text"><strong>Tradicionales</strong><small>Menores de 22 · &lt;15 h de trabajo/semana · n=1.182</small></div><div class="eilln-subprofile-track"><span class="eilln-subprofile-teal" style="width:6.3%"></span></div><b>6.3%</b></div>
+<div class="eilln-subprofile-row"><div class="eilln-subprofile-text"><strong>Jóvenes que trabajan</strong><small>Menores de 22 · ≥15 h/semana · n=185</small></div><div class="eilln-subprofile-track"><span style="width:11.4%"></span></div><b>11.4%</b></div>
+<div class="eilln-subprofile-row"><div class="eilln-subprofile-text"><strong>Mayores</strong><small>22 años o más · &lt;15 h/semana · n=63</small></div><div class="eilln-subprofile-track"><span style="width:20.6%"></span></div><b>20.6%</b></div>
+<div class="eilln-subprofile-row"><div class="eilln-subprofile-text"><strong>Mayores que trabajan</strong><small>22 años o más · ≥15 h/semana · n=78</small></div><div class="eilln-subprofile-track"><span style="width:16.7%"></span></div><b>16.7%</b></div>
+</div>
+<div class="eilln-flow-meaning eilln-subprofile-insight"><span class="eilln-kicker">¿QUÉ APORTA ESTO?</span><p>La edad de entrada importa para el patrón observado. <strong>Entre los estudiantes con rendimiento muy alto, los perfiles de más edad presentan más abandono incluso cuando trabajan menos de 15 horas semanales.</strong></p><small>Los dos grupos de más edad con rendimiento alto son pequeños (n=63 y n=78). Son tasas descriptivas, no estimaciones causales. Las barras horizontales comparten la escala de 0 a 100%.</small></div>
+</div>
+<div class="eilln-nav"><button class="eilln-button eilln-button-primary" data-next="" type="button">¿Qué distingue estos perfiles? →</button><button class="eilln-button eilln-button-text" data-back="" type="button">← Atrás</button></div>
+</section>
+<section aria-labelledby="eilln-prof-title" class="eilln-scene" data-scene="3" hidden="">
+<div class="eilln-eyebrow">04 / MÁS ALLÁ DE LAS NOTAS</div>
+<h2 id="eilln-prof-title">Pero ¿qué hace diferentes <em>a estos perfiles?</em></h2>
+<p class="eilln-deck">Para interpretar lo que acabamos de ver, el primer artículo da un paso importante: describe a los estudiantes no solo por su rendimiento académico, sino también por <strong>la edad y el tiempo dedicado al trabajo remunerado.</strong></p>
+<div class="eilln-profile-layout">
+<div class="eilln-graphic-panel">
+<div class="eilln-panel-head"><span class="eilln-kicker">LA TIPOLOGÍA DE LOS INVESTIGADORES</span><span class="eilln-source-chip">UAB · ESTUDIANTES DE NUEVO INGRESO EN 2008–09</span></div>
+<div class="eilln-matrix">
+<div class="eilln-matrix-empty"></div><div class="eilln-col-label">Menos de 22 años</div><div class="eilln-col-label">22 años o más</div>
+<div class="eilln-row-label">Menos de 15 horas de trabajo/semana</div>
+<article class="eilln-matrix-cell main"><strong>Tradicionales</strong><span>68,4% de los estudiantes de nuevo ingreso</span></article>
+<article class="eilln-matrix-cell"><strong>Mayores</strong><span>6,4% de los estudiantes de nuevo ingreso</span></article>
+<div class="eilln-row-label">15 horas o más de trabajo/semana</div>
+<article class="eilln-matrix-cell"><strong>Jóvenes que trabajan</strong><span>16,2% de los estudiantes de nuevo ingreso</span></article>
+<article class="eilln-matrix-cell"><strong>Mayores y que trabajan</strong><span>9,0% de los estudiantes de nuevo ingreso</span></article>
+</div>
+<p class="eilln-mini-note">Estas son categorías construidas para el estudio, no afirmaciones sobre las circunstancias, responsabilidades o motivaciones de cada estudiante.</p>
+</div>
+<div class="eilln-side-story">
+<span class="eilln-kicker">OBSERVA EL CAMBIO DE MIRADA</span>
+<div class="eilln-large-number">31.6<span>%</span></div>
+<p>de los estudiantes de nuevo ingreso pertenecían a uno de los tres perfiles <strong>no tradicionales</strong> de este estudio.</p>
+<div class="eilln-short-rule"></div>
+<h3>La comparación mantenía constante el rendimiento.</h3>
+<p>Lo que cambia es la situación educativa y vital representada por cada perfil.</p>
+</div>
+</div>
+<div class="eilln-bridge"><span>ESTO TODAVÍA NO NOS DICE POR QUÉ ABANDONÓ UN ESTUDIANTE CONCRETO.</span><p>Pero plantea una pregunta nueva: <strong>¿qué sucede cuando examinamos los resultados educativos a lo largo del curso de vida?</strong></p></div>
+<div class="eilln-nav"><button class="eilln-button eilln-button-primary" data-next="" type="button">Un segundo estudio, una pregunta nueva →</button><button class="eilln-button eilln-button-text" data-back="" type="button">← Atrás</button></div>
+</section>
+<section aria-labelledby="eilln-age-title" class="eilln-scene" data-scene="4" hidden="">
+<div class="eilln-eyebrow">05 / UNA SEGUNDA MIRADA · EL CURSO DE VIDA</div>
+<h2 id="eilln-age-title">¿Entrar en la universidad <em>más tarde</em> cambia las posibilidades?</h2>
+<p class="eilln-deck">Un segundo estudio analiza una cohorte diferente: <strong>29.463 estudiantes</strong> que entraron en las universidades públicas presenciales de Cataluña en 2012–13. Esta vez, el resultado es si se <strong>graduaron en un plazo de ocho años</strong>.</p>
+<div class="eilln-dataset-shift"><span class="eilln-shift-left">ESTUDIO 1 <small>UAB · Abandono</small></span><span aria-hidden="true" class="eilln-shift-arrow">→</span><span class="eilln-shift-right">ESTUDIO 2 <small>Cataluña · Graduación en ocho años</small></span><span class="eilln-shift-notice">Evidencias relacionadas, pero no la misma cohorte ni el mismo resultado.</span></div>
+<div class="eilln-graphic-panel eilln-age-panel">
+<div class="eilln-panel-head"><span class="eilln-kicker" data-age-step="">PRIMERO, OBSERVA LA EDAD</span><span class="eilln-source-chip">PROBABILIDADES PREDICHAS · APROXIMADAS</span></div>
+<div class="eilln-chart-headline" data-age-headline="">A medida que aumenta la edad de entrada, la probabilidad predicha de graduación suele disminuir.</div>
+<p class="eilln-chart-lead" data-age-description="">En el rango principal de edad representado, la probabilidad estimada de graduación disminuye con la edad de entrada.</p>
+<div class="eilln-legend" data-legend=""><span class="eilln-key teal"></span> Patrón según la edad</div>
+<div class="eilln-plot-wrap"><svg aria-label="Approximate published predicted probability of graduating, by age at university entry from 18 to 42 years. Employment groups can be revealed." class="eilln-age-plot" data-age-plot="" role="img" viewBox="0 0 900 440"></svg></div>
+<div class="eilln-reveal-work" data-reveal-work-panel="">
+<p><strong>Pero la edad no lo explica todo.</strong> ¿Qué ocurre si también tenemos en cuenta si trabajaban al entrar en la universidad?</p>
+<button class="eilln-button eilln-button-outline" data-add-work="" type="button">Añade el trabajo a la comparación →</button>
+</div>
+<div class="eilln-work-reading" data-work-reading="" hidden="">
+<span class="eilln-kicker">EL SEGUNDO DESCUBRIMIENTO</span>
+<p class="eilln-reading-main">Ambos patrones según la edad tienden a bajar. <strong>La línea de los estudiantes que trabajan queda por debajo de la otra</strong> en el rango de edad representado.</p>
+<div aria-label="Compara dos edades de ejemplo" class="eilln-age-tabs" role="group">
+<button aria-pressed="true" data-focus-age="18" type="button">A los 18 años</button>
+<button aria-pressed="false" data-focus-age="35" type="button">A los 35 años</button>
+</div>
+<div class="eilln-contrast">
+<div class="eilln-contrast-num" data-gap-number="">≈3</div>
+<div><strong data-gap-text="">graduados menos por cada 100 entre los estudiantes que trabajan</strong><p data-gap-context="">A los 18 años, la diferencia modelizada entre trabajar y no trabajar es de −2,8 puntos porcentuales.</p></div>
+</div>
+<p class="eilln-mini-note">Son asociaciones modelizadas, no efectos causales. La diferencia por cada 100 ilustra la brecha estimada de probabilidad, no es un recuento de graduados observados.</p>
+</div>
+<p class="eilln-mini-note eilln-figure-note">Las líneas son <strong>reconstrucciones aproximadas</strong> de las figuras publicadas en el manuscrito, no predicciones exportadas del modelo. Las diferencias exactas proceden del apéndice 1. La figura se centra entre los 18 y los 42 años, donde la comparación según situación laboral tiene respaldo estadístico; a edades superiores, las estimaciones son menos precisas. Consulta el artículo enlazado al final para ver las figuras y los intervalos de incertidumbre completos.</p>
+</div>
+<div class="eilln-learning" data-learning-age="" hidden=""><span class="eilln-kicker">EL SEGUNDO DESCUBRIMIENTO</span><p>La asociación entre edad y graduación no es toda la historia. <em>Trabajar en el momento de entrada se asocia con una desventaja adicional en el rango en que los datos respaldan esta comparación.</em></p></div>
+<div class="eilln-nav"><button class="eilln-button eilln-button-primary" data-next="" disabled="" type="button">Une los dos descubrimientos →</button><button class="eilln-button eilln-button-text" data-back="" type="button">← Atrás</button></div>
+</section>
+<section aria-labelledby="eilln-end-title" class="eilln-scene" data-scene="5" hidden="">
+<div class="eilln-eyebrow">06 / TU DESCUBRIMIENTO SOCIOLÓGICO</div>
+<h2 id="eilln-end-title">La universidad es cada vez más diversa. <em>Pero igualdad de acceso no es igualdad de oportunidades para terminar.</em></h2>
+<div class="eilln-end-statement"><span class="eilln-kicker">EL DESCUBRIMIENTO SOCIOLÓGICO</span><p>Tener buenos resultados académicos y poder seguir estudiando <em>no son necesariamente lo mismo.</em></p></div>
+<div class="eilln-two-findings">
+<article><span>01 · ABANDONO</span><h3>Mismo rendimiento, resultados diferentes.</h3><p>En la cohorte UAB, el abandono variaba según el perfil del estudiante, incluso dentro de la franja de rendimiento académico más alto.</p></article>
+<article><span>02 · GRADUACIÓN</span><h3>Las trayectorias educativas siguen el curso de vida.</h3><p>En una segunda cohorte catalana, las probabilidades de graduación se asociaban con la edad de entrada y la situación laboral.</p></article>
+</div>
+<div class="eilln-ending-question"><span>LA PREGUNTA PARA LLEVARSE</span><h3>Si las universidades acogen a personas en momentos distintos de la vida, ¿se han adaptado sus formas de enseñar y de dar apoyo?</h3></div>
+<p class="eilln-method-closing">Los dos estudios empíricos utilizan cohortes y resultados distintos: aquí no se pueden combinar el abandono y la graduación en una sola tasa. Las asociaciones no demuestran que la edad, el trabajo, las reformas institucionales u otras responsabilidades causen el abandono individual. El capítulo sobre Bolonia de 2012 aporta contexto, no una prueba causal de estos resultados.</p>
+<div class="eilln-sources"><div class="eilln-kicker">LA INVESTIGACIÓN DETRÁS DE ESTE CAPÍTULO</div><p>Sánchez-Gelabert, A., &amp; Elias, M. (2017). <em>Los estudiantes universitarios no tradicionales y el abandono de los estudios.</em> <em>Estudios sobre Educación</em>, 32, 27–48. <a href="https://doi.org/10.15581/004.32.27-48" rel="noopener noreferrer" target="_blank">Lee el artículo ↗</a></p><p>Sánchez-Gelabert, A. (2024). <em>Higher education and the life course: exploring the interactive effects of age and employment status on university graduation.</em> <em>Higher Education Quarterly</em>, 78(4), e12553. <a href="https://doi.org/10.1111/hequ.12553" rel="noopener noreferrer" target="_blank">Lee el artículo publicado ↗</a> Las figuras 1–2 y el apéndice 1 sustentan la segunda visualización.</p><p>Contexto: Elias, M., Masjuan, J. M. y Sánchez-Gelabert, A. (2012). <em>Signs of reengagement? Changes in teaching methodology in the framework of the Bologna Process.</em> In <em>Effects of Higher Education Reforms: Change Dynamics</em>, pp. 21–42. Utilizado para contextualizar el comienzo, no como un tercer conjunto de datos empíricos.</p></div>
+<div class="eilln-next"><span class="eilln-kicker">SIGUIENTE · CAPÍTULO 03</span><h3>¿Mismas notas, futuros diferentes?</h3><p>Cuando el rendimiento es similar, ¿el origen familiar todavía puede marcar diferencias?</p></div>
+<div class="eilln-nav"><button class="eilln-button eilln-button-primary" data-restart="" type="button">Vuelve a vivir el capítulo ↺</button><a class="eilln-button eilln-button-outline" href="../index.html">Todos los capítulos</a></div>
+</section>
+</main>
+<footer class="eilln-footer"><span>Educational Inequality Lab · Un relato sociológico basado en evidencias</span><span>Beyond merit / 02</span></footer>
+</div>
+</div>
+<script defer="" src="lab.js"></script>
+```

@@ -1,0 +1,203 @@
+{
+  "citation": "Sánchez-Gelabert & Troiano (2024), Studies in Higher Education, DOI 10.1080/03075079.2023.2281539, Appendix 2",
+  "description": "Modelled probabilities (percent) by percentage of first-year credits passed and family educational level, original labels compulsory / post-compulsory / university.",
+  "field_order": [
+    "continuing",
+    "dropout",
+    "transfer"
+  ],
+  "education_order": [
+    "compulsory",
+    "postcompulsory",
+    "university"
+  ],
+  "values": {
+    "0": [
+      {
+        "continuing": 13.2,
+        "dropout": 59.9,
+        "transfer": 26.9
+      },
+      {
+        "continuing": 14.7,
+        "dropout": 53.2,
+        "transfer": 32.1
+      },
+      {
+        "continuing": 16.8,
+        "dropout": 44.5,
+        "transfer": 38.7
+      }
+    ],
+    "10": [
+      {
+        "continuing": 20.7,
+        "dropout": 52.6,
+        "transfer": 26.7
+      },
+      {
+        "continuing": 22.6,
+        "dropout": 45.3,
+        "transfer": 32.1
+      },
+      {
+        "continuing": 24.5,
+        "dropout": 37.6,
+        "transfer": 37.9
+      }
+    ],
+    "20": [
+      {
+        "continuing": 30.8,
+        "dropout": 44.0,
+        "transfer": 25.2
+      },
+      {
+        "continuing": 32.9,
+        "dropout": 36.7,
+        "transfer": 30.4
+      },
+      {
+        "continuing": 34.2,
+        "dropout": 30.4,
+        "transfer": 35.4
+      }
+    ],
+    "30": [
+      {
+        "continuing": 43.0,
+        "dropout": 34.6,
+        "transfer": 22.4
+      },
+      {
+        "continuing": 45.1,
+        "dropout": 27.8,
+        "transfer": 27.1
+      },
+      {
+        "continuing": 45.3,
+        "dropout": 23.3,
+        "transfer": 31.4
+      }
+    ],
+    "40": [
+      {
+        "continuing": 56.1,
+        "dropout": 25.4,
+        "transfer": 18.6
+      },
+      {
+        "continuing": 57.7,
+        "dropout": 19.8,
+        "transfer": 22.6
+      },
+      {
+        "continuing": 56.7,
+        "dropout": 16.9,
+        "transfer": 26.4
+      }
+    ],
+    "50": [
+      {
+        "continuing": 68.3,
+        "dropout": 17.4,
+        "transfer": 14.4
+      },
+      {
+        "continuing": 69.2,
+        "dropout": 13.2,
+        "transfer": 17.6
+      },
+      {
+        "continuing": 67.4,
+        "dropout": 11.6,
+        "transfer": 21.0
+      }
+    ],
+    "60": [
+      {
+        "continuing": 78.3,
+        "dropout": 11.2,
+        "transfer": 10.5
+      },
+      {
+        "continuing": 78.7,
+        "dropout": 8.3,
+        "transfer": 13.0
+      },
+      {
+        "continuing": 76.4,
+        "dropout": 7.6,
+        "transfer": 15.9
+      }
+    ],
+    "70": [
+      {
+        "continuing": 85.8,
+        "dropout": 6.9,
+        "transfer": 7.3
+      },
+      {
+        "continuing": 85.7,
+        "dropout": 5.0,
+        "transfer": 9.2
+      },
+      {
+        "continuing": 83.5,
+        "dropout": 4.8,
+        "transfer": 11.7
+      }
+    ],
+    "80": [
+      {
+        "continuing": 91.0,
+        "dropout": 4.1,
+        "transfer": 4.9
+      },
+      {
+        "continuing": 90.7,
+        "dropout": 2.9,
+        "transfer": 6.4
+      },
+      {
+        "continuing": 88.7,
+        "dropout": 3.0,
+        "transfer": 8.3
+      }
+    ],
+    "90": [
+      {
+        "continuing": 94.4,
+        "dropout": 2.4,
+        "transfer": 3.2
+      },
+      {
+        "continuing": 94.0,
+        "dropout": 1.7,
+        "transfer": 4.3
+      },
+      {
+        "continuing": 92.4,
+        "dropout": 1.8,
+        "transfer": 5.8
+      }
+    ],
+    "100": [
+      {
+        "continuing": 96.5,
+        "dropout": 1.4,
+        "transfer": 2.1
+      },
+      {
+        "continuing": 96.2,
+        "dropout": 1.0,
+        "transfer": 2.9
+      },
+      {
+        "continuing": 95.0,
+        "dropout": 1.1,
+        "transfer": 4.0
+      }
+    ]
+  }
+}

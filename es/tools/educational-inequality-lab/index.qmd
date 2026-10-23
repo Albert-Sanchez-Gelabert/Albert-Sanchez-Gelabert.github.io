@@ -22,7 +22,7 @@ format:
       <h1>Beyond <em>merit.</em></h1>
       <p class="intro">La desigualdad educativa no se resuelve con una sola decisión. A través de cinco historias guiadas, descubre cómo los contextos escolares, las circunstancias vitales, los recursos familiares, las trayectorias académicas y las oportunidades institucionales configuran los futuros educativos del estudiantado.</p>
       <div class="hero-actions">
-        <a class="button" href="../../../tools/educational-inequality-lab/chapter-1/index.html">Empieza el capítulo 1 (EN) <span aria-hidden="true">→</span></a>
+        <a class="button" href="chapter-1/index.html">Empieza el capítulo 1 <span aria-hidden="true">→</span></a>
         <a class="plain" href="#journey-title">Elige un capítulo ↓</a>
       </div>
       <p class="hero-note">Cinco descubrimientos independientes · Léelos en orden o elige tu recorrido · Sin registro</p>
@@ -36,47 +36,47 @@ format:
         </div>
         <span class="muted">Los cinco capítulos disponibles</span>
       </div>
-      <p class="asg-lab-lang-note" style="color:#47796d; font-size:.9rem; margin:0 0 1.25rem;">Los cinco capítulos interactivos están disponibles por ahora en inglés.</p>
+      <p class="asg-lab-lang-note" style="color:#47796d; font-size:.9rem; margin:0 0 1.25rem;">Los cinco capítulos interactivos ya están disponibles en castellano.</p>
       <ol class="chapters">
         <li class="chapter available">
           <span class="number">01</span>
           <div>
-            <h3><a class="titlelink" href="../../../tools/educational-inequality-lab/chapter-1/index.html">¿Importa el contexto escolar?</a></h3>
+            <h3><a class="titlelink" href="chapter-1/index.html">¿Importa el contexto escolar?</a></h3>
             <p>Una brecha menor entre grupos no siempre implica más oportunidades educativas.</p>
           </div>
-          <a class="status" href="../../../tools/educational-inequality-lab/chapter-1/index.html" aria-label="Leer en inglés el capítulo 1">Leer en inglés →</a>
+          <a class="status" href="chapter-1/index.html" aria-label="Leer el capítulo 1">Lee el capítulo →</a>
         </li>
         <li class="chapter available">
           <span class="number">02</span>
           <div>
-            <h3><a class="titlelink" href="../../../tools/educational-inequality-lab/chapter-2/index.html">¿Qué ocurre cuando la universidad se encuentra con el resto de la vida?</a></h3>
+            <h3><a class="titlelink" href="chapter-2/index.html">¿Cómo se compaginan los estudios universitarios con el trabajo y la vida personal?</a></h3>
             <p>Por qué la edad, el trabajo y las circunstancias vitales importan incluso entre estudiantes con buenos resultados.</p>
           </div>
-          <a class="status" href="../../../tools/educational-inequality-lab/chapter-2/index.html" aria-label="Leer en inglés el capítulo 2">Leer en inglés →</a>
+          <a class="status" href="chapter-2/index.html" aria-label="Leer el capítulo 2">Lee el capítulo →</a>
         </li>
         <li class="chapter available">
           <span class="number">03</span>
           <div>
-            <h3><a class="titlelink" href="../../../tools/educational-inequality-lab/chapter-3/index.html">¿Mismas notas, futuros diferentes?</a></h3>
+            <h3><a class="titlelink" href="chapter-3/index.html">¿Mismas notas, futuros diferentes?</a></h3>
             <p>Cuando los resultados son bajos, el origen familiar puede influir en quién cambia de itinerario y quién abandona.</p>
           </div>
-          <a class="status" href="../../../tools/educational-inequality-lab/chapter-3/index.html" aria-label="Leer en inglés el capítulo 3">Leer en inglés →</a>
+          <a class="status" href="chapter-3/index.html" aria-label="Leer el capítulo 3">Lee el capítulo →</a>
         </li>
         <li class="chapter available">
           <span class="number">04</span>
           <div>
-            <h3><a class="titlelink" href="../../../tools/educational-inequality-lab/chapter-4/index.html">¿El éxito académico sigue una línea recta?</a></h3>
+            <h3><a class="titlelink" href="chapter-4/index.html">¿El éxito académico sigue una línea recta?</a></h3>
             <p>Un inicio difícil puede conducir a la graduación, mientras que un buen comienzo puede tomar otra dirección.</p>
           </div>
-          <a class="status" href="../../../tools/educational-inequality-lab/chapter-4/index.html" aria-label="Leer en inglés el capítulo 4">Leer en inglés →</a>
+          <a class="status" href="chapter-4/index.html" aria-label="Leer el capítulo 4">Lee el capítulo →</a>
         </li>
         <li class="chapter available">
           <span class="number">05</span>
           <div>
-            <h3><a class="titlelink" href="../../../tools/educational-inequality-lab/chapter-5/index.html">¿Quién se beneficia realmente de la flexibilidad?</a></h3>
+            <h3><a class="titlelink" href="chapter-5/index.html">¿Quién se beneficia realmente de la flexibilidad?</a></h3>
             <p>Más flexibilidad para estudiar no implica necesariamente las mismas posibilidades de graduarse.</p>
           </div>
-          <a class="status" href="../../../tools/educational-inequality-lab/chapter-5/index.html" aria-label="Leer en inglés el capítulo 5">Leer en inglés →</a>
+          <a class="status" href="chapter-5/index.html" aria-label="Leer el capítulo 5">Lee el capítulo →</a>
         </li>
       </ol>
     </section>
