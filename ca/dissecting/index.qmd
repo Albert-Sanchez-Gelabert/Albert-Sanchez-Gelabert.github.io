@@ -16,7 +16,7 @@ format:
     <p class="das-intro">Una recerca publicada, oberta per dins. Explora’n la pregunta, les dades, les decisions metodològiques i els límits. Comença per on vulguis.</p>
     <div class="das-test">PILOT · EN PROVES — La primera dissecció és un pilot. Els textos i la presentació encara poden canviar.</div>
   </header>
-  <div class="das-catalog-head">01 / ESTUDIS</div>
+  <div class="das-catalog-head">02 / ESTUDIS</div>
   <article class="das-entry">
     <div class="das-entry-index">STUDY 01</div>
     <div>
@@ -25,6 +25,15 @@ format:
       <p class="das-entry-desc">Com vam seleccionar una cohort, definir la progressió acadèmica, identificar trajectòries i analitzar-ne la distribució social.</p>
     </div>
     <a class="das-entry-link" href="university-trajectories/index.html">Entra a la recerca →</a>
+  </article>
+  <article class="das-entry das-entry-secondary">
+    <div class="das-entry-index">ESTUDI 02</div>
+    <div>
+      <h2>Gender and STEM: academic over-selection and stratified university entry</h2>
+      <p class="das-entry-meta">Sánchez-Gelabert i Simarro Rodríguez · 2026</p>
+      <p class="das-entry-desc">Com una pregunta sobre gènere es transforma en conceptes multidimensionals, 23 subdisciplines i un espai factorial.</p>
+    </div>
+    <a class="das-entry-link" href="gender-stem/index.html">Obre l’estudi →</a>
   </article>
 </div>
 ```

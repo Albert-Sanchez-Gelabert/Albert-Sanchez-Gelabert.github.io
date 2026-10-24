@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>DISSECTING A STUDY — PILOT / UNDER TEST</title><style>
+<html lang="en"><head><meta charset="utf-8"/><meta content="2026-10-24-navigation-republished" name="dissecting-site-nav-revision"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>DISSECTING A STUDY — PILOT / UNDER TEST</title><style>
 :root{color-scheme:light;--paper:#f9f9f7;--ink:#0d0d0e;--line:#dfdfdc;--soft:#6f6e6d;--accent:#cf8085;--quiet:#ecebe8;--white:#fff;--font:Arial,"Helvetica Neue",Helvetica,sans-serif}
 *{box-sizing:border-box}html,body{padding:0;margin:0;min-height:100%;background:var(--paper);color:var(--ink);font-family:var(--font)}body{overflow-x:hidden}button,a{font:inherit}a{color:inherit}button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:3px}a{text-decoration:none}
 .masthead{height:76px;padding:0 clamp(22px,4.2vw,68px);display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line);background:#fff}
@@ -27,8 +27,57 @@ h2 .pink{color:var(--accent)}
 .back-collection {font-size:11px;font-weight:800;white-space:nowrap;letter-spacing:.02em;color:#444;text-decoration:none;border-bottom:1px solid #a1a1a1;padding:3px 0}
 .back-collection:hover{color:#ac626a;border-color:#ac626a}
 @media(max-width:680px){.back-collection{font-size:0;white-space:nowrap;border:0;line-height:1}.back-collection::before{content:"←";font-size:20px;line-height:1}.header-right{gap:10px}}
+
+/* Site-level navigation: connects this standalone interactive study to the main Quarto website. */
+.site-bar{position:sticky;top:0;z-index:60;height:58px;background:#fff;border-bottom:1px solid #dededa;font-family:Arial,"Helvetica Neue",Helvetica,sans-serif}
+.site-bar-inner{height:100%;max-width:1700px;padding:0 clamp(22px,4.2vw,68px);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.site-identity{font-size:15px;font-weight:800;letter-spacing:-.025em;color:#222;white-space:nowrap;text-decoration:none}
+.site-identity:hover{color:#a75c66}
+.site-menu-desktop{display:flex;align-items:center;gap:clamp(15px,1.8vw,28px);height:100%}
+.site-menu-desktop>a,.site-explore>summary{font-size:13px;line-height:19px;font-weight:600;color:#484848;white-space:nowrap;text-decoration:none}
+.site-menu-desktop>a:hover,.site-explore>summary:hover{color:#a75c66}
+.site-menu-desktop>a{display:inline-flex;align-items:center;height:100%}
+.site-explore{height:100%;position:relative;display:flex;align-items:center}
+.site-explore>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:7px;height:100%;border-bottom:2px solid #cf8085;padding-top:2px;color:#171717;font-weight:800}
+.site-explore>summary::-webkit-details-marker,.site-mobile>summary::-webkit-details-marker{display:none}
+.site-explore>summary::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-4px}
+.site-explore[open]>summary::after{transform:rotate(225deg);margin-top:3px}
+.site-explore-menu{position:absolute;right:-18px;top:calc(100% + 1px);width:252px;background:#fff;border:1px solid #dededa;box-shadow:0 14px 35px rgba(0,0,0,.10);padding:8px;z-index:70}
+.site-explore-menu a{display:block;font-size:13px;line-height:1.4;padding:11px 12px;border-radius:3px;color:#393939;text-decoration:none}
+.site-explore-menu a:hover{background:#f4f3f0;color:#111}
+.site-explore-menu a[aria-current="page"]{font-weight:800;background:#f9f1f1;color:#8b4c54}
+.site-mobile{display:none;position:relative}
+.site-mobile>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;font-size:13px;font-weight:800;color:#222;min-height:44px}
+.site-mobile>summary::after{content:"☰";font-size:18px;font-weight:400;line-height:1}
+.site-mobile[open]>summary::after{content:"×";font-size:25px}
+.site-mobile-panel{position:absolute;right:-2px;top:calc(100% + 6px);width:min(330px,calc(100vw - 24px));max-height:calc(100dvh - 78px);overflow-y:auto;background:#fff;border:1px solid #dededa;box-shadow:0 14px 35px rgba(0,0,0,.12);padding:12px;z-index:70}
+.site-mobile-panel a{display:block;padding:11px 12px;color:#333;font-size:14px;font-weight:600;text-decoration:none}
+.site-mobile-panel a:hover{background:#f4f3f0}
+.site-mobile-panel a[aria-current="page"]{color:#8b4c54;font-weight:800;background:#f9f1f1}
+.site-mobile-heading{padding:13px 12px 4px;border-top:1px solid #e5e3e0;margin-top:7px;color:#777;font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.site-mobile-panel .site-subitem{padding-left:23px;font-size:13px}
+/* Keep the original study header and all seven interactive stages intact. */
+.frame{min-height:calc(100dvh - 134px)}
+.masthead{top:58px}
+@media(max-width:850px){.site-menu-desktop{display:none}.site-mobile{display:block}}
+@media(max-width:680px){.site-bar-inner{padding:0 20px}.site-identity{font-size:14px}.masthead{position:relative;top:auto}.frame{min-height:calc(100dvh - 121px)}}
 </style></head>
-<body><header class="masthead"><div class="brand">DISSECTING A STUDY<i>.</i></div><div class="header-right"><a class="back-collection" href="../index.html">← All studies</a><span class="pilot">PILOT / UNDER TEST</span><div class="langs"><a class="" href="../../ca/dissecting/university-trajectories/index.html#s0" lang="ca">CA</a> <span>/</span> <a class="current" href="index.html#s0" lang="en">EN</a> <span>/</span> <a class="" href="../../es/dissecting/university-trajectories/index.html#s0" lang="es">ES</a></div></div></header>
+<body><div class="site-bar">
+  <div class="site-bar-inner">
+    <a class="site-identity" href="/index.html">Albert Sánchez-Gelabert</a>
+    <nav class="site-menu-desktop" aria-label="Main website navigation">
+      <a href="/index.html">Home</a><a href="/research.html">Research</a><a href="/publications.html">Publications</a><a href="/news.html">News</a>
+      <details class="site-explore"><summary>Explore</summary>
+        <div class="site-explore-menu"><a href="/tools/index.html">Research Tools</a><a href="/tools/educational-inequality-lab/index.html">Educational Inequality Lab</a><a href="/dissecting/index.html" aria-current="page">Dissecting a Study</a></div>
+      </details>
+      <a href="/cv.html">CV</a>
+    </nav>
+    <details class="site-mobile"><summary>Menu</summary>
+      <nav class="site-mobile-panel" aria-label="Main website navigation"><a href="/index.html">Home</a><a href="/research.html">Research</a><a href="/publications.html">Publications</a><a href="/news.html">News</a><div class="site-mobile-heading">Explore</div><a href="/tools/index.html" class="site-subitem">Research Tools</a><a href="/tools/educational-inequality-lab/index.html" class="site-subitem">Educational Inequality Lab</a><a href="/dissecting/index.html" class="site-subitem" aria-current="page">Dissecting a Study</a><a href="/cv.html">CV</a></nav>
+    </details>
+  </div>
+</div>
+<header class="masthead"><div class="brand">DISSECTING A STUDY<i>.</i></div><div class="header-right"><a class="back-collection" href="../index.html">← All studies</a><span class="pilot">PILOT / UNDER TEST</span><div class="langs"><a class="" href="../../ca/dissecting/university-trajectories/index.html#s0" lang="ca">CA</a> <span>/</span> <a class="current" href="index.html#s0" lang="en">EN</a> <span>/</span> <a class="" href="../../es/dissecting/university-trajectories/index.html#s0" lang="es">ES</a></div></div></header>
 <div class="frame"><aside aria-label="THE PROCESS" class="rail"><div class="kicker rail-label">THE PROCESS / 07</div><nav class="rail-nav" id="nav-items"><button class="rail-item" data-screen="0" type="button"><span class="nav-n">00</span><span class="nav-label">OVERVIEW</span></button><button class="rail-item" data-screen="1" type="button"><span class="nav-n">01</span><span class="nav-label">The question</span></button><button class="rail-item" data-screen="2" type="button"><span class="nav-n">02</span><span class="nav-label">Previous work</span></button><button class="rail-item" data-screen="3" type="button"><span class="nav-n">03</span><span class="nav-label">The concepts</span></button><button class="rail-item" data-screen="4" type="button"><span class="nav-n">04</span><span class="nav-label">The data</span></button><button class="rail-item" data-screen="5" type="button"><span class="nav-n">05</span><span class="nav-label">The measure</span></button><button class="rail-item" data-screen="6" type="button"><span class="nav-n">06</span><span class="nav-label">The methodological strategy</span></button><button class="rail-item" data-screen="7" type="button"><span class="nav-n">07</span><span class="nav-label">The conclusions</span></button></nav><div class="rail-bottom"><strong>A first draft.</strong>This pilot is still being tested. Open any stage and look as closely as you like. We are still refining the content and layout.<p class="small">One published study, opened up.</p></div></aside>
 <main class="stage"><div class="workspace">
 <div class="mobile-select"><label class="kicker" for="mobile-menu">Select a section</label><select id="mobile-menu"><option value="0">00 — OVERVIEW</option><option value="1">01 — The question</option><option value="2">02 — Previous work</option><option value="3">03 — The concepts</option><option value="4">04 — The data</option><option value="5">05 — The measure</option><option value="6">06 — The methodological strategy</option><option value="7">07 — The conclusions</option></select></div>

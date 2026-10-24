@@ -16,7 +16,7 @@ format:
     <p class="das-intro">A published study, opened up. Browse its research question, data, decisions, analytical strategy and limitations. Start wherever you like.</p>
     <div class="das-test">PILOT · WORK IN PROGRESS — The first study is a pilot. Its text and presentation may still change.</div>
   </header>
-  <div class="das-catalog-head">01 / STUDIES</div>
+  <div class="das-catalog-head">02 / STUDIES</div>
   <article class="das-entry">
     <div class="das-entry-index">STUDY 01</div>
     <div>
@@ -25,6 +25,15 @@ format:
       <p class="das-entry-desc">How we selected a cohort, defined academic progression, identified trajectories and analysed their social distribution.</p>
     </div>
     <a class="das-entry-link" href="university-trajectories/index.html">Open the study →</a>
+  </article>
+  <article class="das-entry das-entry-secondary">
+    <div class="das-entry-index">STUDY 02</div>
+    <div>
+      <h2>Gender and STEM: academic over-selection and stratified university entry</h2>
+      <p class="das-entry-meta">Sánchez-Gelabert & Simarro Rodríguez · 2026</p>
+      <p class="das-entry-desc">How a gender inequality question led to multidimensional concepts, 23 subfields and a factorial space.</p>
+    </div>
+    <a class="das-entry-link" href="gender-stem/index.html">Open the study →</a>
   </article>
 </div>
 ```

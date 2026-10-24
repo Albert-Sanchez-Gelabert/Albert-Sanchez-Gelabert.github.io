@@ -58,6 +58,10 @@ for (const item of items) {
       <a href="<%- item.manuscript %>" target="_blank">Manuscrit acceptat</a>
     <% } %>
 
+    <% if (item.doi === "10.1080/02635143.2026.2727576" || item.doi_url === "https://doi.org/10.1080/02635143.2026.2727576") { %>
+      <a href="dissecting/gender-stem/index.html" class="publication-dissect-link">Dins d’aquest estudi · Esborrany ↗</a>
+    <% } %>
+
     <% if (item.doi === "10.1080/21568235.2025.2556438" || item.doi_url === "https://doi.org/10.1080/21568235.2025.2556438") { %>
       <a href="dissecting/university-trajectories/index.html" class="publication-dissect-link">Dins d’aquesta recerca · Pilot ↗</a>
     <% } %>

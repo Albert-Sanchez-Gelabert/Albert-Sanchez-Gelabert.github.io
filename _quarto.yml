@@ -18,6 +18,9 @@ project:
     - "dissecting/university-trajectories/index.html"
     - "ca/dissecting/university-trajectories/index.html"
     - "es/dissecting/university-trajectories/index.html"
+    - "dissecting/gender-stem/index.html"
+    - "ca/dissecting/gender-stem/index.html"
+    - "es/dissecting/gender-stem/index.html"
 
 website:
   title: "Albert Sánchez-Gelabert"

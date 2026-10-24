@@ -22,7 +22,11 @@ La traducció del menú i dels enllaços es gestiona des de `_includes/multiling
 
 Pàgina de la col·lecció en `.qmd`: `dissecting/index.qmd`, `ca/dissecting/index.qmd`, `es/dissecting/index.qmd`.
 
-Cada estudi és un HTML **estàtic i autònom**, conscientment desvinculat de la plantilla Quarto: preserva l'estètica pròpia del Pilot 03, la navegació sense scroll continu i els textos que s'han anat acordant. El seu menú intern EN/CA/ES preserva la fase oberta, i un enllaç torna a la col·lecció.
+Cada estudi continua sent un HTML **estàtic i autònom** (no es renderitza amb la plantilla de Quarto), però **ara està visualment integrat en la navegació del web**: incorpora a la part superior la marca «Albert Sánchez-Gelabert» i els enllaços a Inici/Home, Recerca/Research, Publicacions/Publications, Actualitat/News, Explora/Explore i CV. El menú Explore obre les tres seccions (Eines / Research Tools, Educational Inequality Lab i Dissecting a Study). En pantalles petites, aquests enllaços apareixen agrupats en un menú mòbil. Les rutes i els textos s’adapten a l’idioma de cada versió (EN/CA/ES).
+
+Per sota es manté **intacta la capçalera pròpia de Dissecting**, amb l’enllaç a la col·lecció, el distintiu del pilot i el selector de llengua. També es preserven els continguts, el funcionament per fases, la navegació sense scroll continu i l’estètica del Pilot 03. El menú intern EN/CA/ES continua preservant la fase oberta (fragment `#s0`–`#s7`).
+
+**Nota tècnica:** la navegació general dels estudis s’inclou dins de cadascun dels tres HTML, perquè són recursos estàtics: no hereten automàticament `_quarto.yml` ni `_includes/multilingual-nav.html`. Quan en el futur canviï el menú principal o s’afegeixin estudis, caldrà traslladar aquesta navegació als nous HTML i mantenir-la sincronitzada amb la capçalera Quarto. No s’hi afegeixen dependències de CSS o JS externes.
 
 La còpia dels HTML a `_site` s'especifica a `_quarto.yml` via `project.resources`.
 
@@ -47,4 +51,19 @@ Afegir una segona dissecció implicarà: una carpeta `dissecting/<slug>/` (amb e
 
 ### Nota de verificació
 
-Comprovacions efectuades: sintaxi YAML, estructura HTML, rutes internes i enllaços de llengua, integritat dels materials i anàlisi del JavaScript. Aquest entorn **no té l'executable Quarto**; cal verificar `quarto render` al teu ordinador abans de publicar.
+Comprovacions efectuades sobre aquesta revisió: estructura HTML, rutes i enllaços de navegació en EN/CA/ES, canvi de fase, selector de llengua i presentació d’escriptori/mòbil. Els continguts de les vuit pantalles de cada estudi es conserven. Aquest entorn **no té l’executable Quarto**; cal verificar `quarto render` al teu ordinador abans de publicar.
+
+---
+
+## Actualització Study 02 · Gender & STEM (octubre 2026)
+
+Aquest paquet incorpora un **segon Dissecting a Study**, independent del pilot University Trajectories.
+Les rutes noves són:
+- `/dissecting/gender-stem/index.html`
+- `/ca/dissecting/gender-stem/index.html`
+- `/es/dissecting/gender-stem/index.html`
+
+També s'actualitzen les tres pàgines de col·lecció `dissecting/index.qmd`, les tres llistes `publications.ejs.md` i els recursos de `_quarto.yml`.
+
+La navegació general ja integrada del primer estudi es manté i s'ha reutilitzat al segon.
+Vegeu `LLEGEIX-ME-GENDER-STEM.md` per al contingut, els límits i les instruccions detallades.
