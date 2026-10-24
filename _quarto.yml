@@ -21,6 +21,9 @@ project:
     - "dissecting/gender-stem/index.html"
     - "ca/dissecting/gender-stem/index.html"
     - "es/dissecting/gender-stem/index.html"
+    - "dissecting/life-course/index.html"
+    - "ca/dissecting/life-course/index.html"
+    - "es/dissecting/life-course/index.html"
 
 website:
   title: "Albert Sánchez-Gelabert"
