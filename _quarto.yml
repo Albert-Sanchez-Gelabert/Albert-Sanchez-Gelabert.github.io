@@ -4,12 +4,20 @@ project:
     - "*.qmd"
     - "news/**/*.qmd"
     - "tools/**/*.qmd"
+    - "dissecting/**/*.qmd"
     - "ca/*.qmd"
     - "es/*.qmd"
     - "ca/news/**/*.qmd"
     - "es/news/**/*.qmd"
     - "ca/tools/**/*.qmd"
+    - "ca/dissecting/**/*.qmd"
     - "es/tools/**/*.qmd"
+    - "es/dissecting/**/*.qmd"
+
+  resources:
+    - "dissecting/university-trajectories/index.html"
+    - "ca/dissecting/university-trajectories/index.html"
+    - "es/dissecting/university-trajectories/index.html"
 
 website:
   title: "Albert Sánchez-Gelabert"
@@ -26,22 +34,14 @@ website:
         text: Publications
       - href: news.qmd
         text: News
-      - href: tools/educational-inequality-lab/index.qmd
-        text: Lab
-      - text: Tools
+      - text: Explore
         menu:
           - href: tools/index.qmd
-            text: All tools
-          - href: tools/pathways/index.qmd
-            text: Longitudinal Pathway Dynamics
-          - href: tools/context/index.qmd
-            text: School Context & Transition Explorer
-          - href: tools/entry-space/index.qmd
-            text: University Entry Space Explorer
-          - href: tools/compensatory/index.qmd
-            text: Compensatory Advantage Explorer
-          - href: tools/trajectories/index.qmd
-            text: University Trajectory Lab
+            text: Research Tools
+          - href: tools/educational-inequality-lab/index.qmd
+            text: Educational Inequality Lab
+          - href: dissecting/index.qmd
+            text: Dissecting a Study
       - href: cv.qmd
         text: CV
 

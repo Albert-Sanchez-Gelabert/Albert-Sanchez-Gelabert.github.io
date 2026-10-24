@@ -47,7 +47,7 @@ Gran parte de mi investigación utiliza enfoques cuantitativos y longitudinales 
   margin: 0 0 1.35rem; color: #586975; line-height: 1.6;
 }
 #asg-home-explore .asg-home-explore-grid {
-  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.15rem; align-items: stretch;
 }
 #asg-home-explore .asg-home-explore-card {
@@ -58,6 +58,10 @@ Gran parte de mi investigación utiliza enfoques cuantitativos y longitudinales 
   text-decoration: none !important;
   transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
 }
+#asg-home-explore .asg-home-explore-card--dissect { background: #fcf8f8; border-color: #eadcdc; }
+#asg-home-explore .asg-home-explore-card--dissect .asg-home-explore-eyebrow,
+#asg-home-explore .asg-home-explore-card--dissect .asg-home-explore-link { color: #985057; }
+#asg-home-explore .asg-home-explore-card--dissect .asg-home-explore-title { font-family: Arial, Helvetica, sans-serif; font-weight: 800; letter-spacing: -.045em; }
 #asg-home-explore .asg-home-explore-card--lab { background: #edf5f1; border-color: #cbded5; }
 #asg-home-explore .asg-home-explore-card:hover,
 #asg-home-explore .asg-home-explore-card:focus-visible {
@@ -86,6 +90,9 @@ Gran parte de mi investigación utiliza enfoques cuantitativos y longitudinales 
   color: #156c60; font-size: .93rem; font-weight: 750;
   text-decoration: underline; text-underline-offset: 3px;
 }
+@media (min-width: 681px) and (max-width: 1050px) {
+  #asg-home-explore .asg-home-explore-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 @media (max-width: 680px) {
   #asg-home-explore .asg-home-explore-grid { grid-template-columns: 1fr; }
   #asg-home-explore .asg-home-explore-card { padding: 1.35rem; }
@@ -99,7 +106,7 @@ Gran parte de mi investigación utiliza enfoques cuantitativos y longitudinales 
 
 <section id="asg-home-explore" aria-labelledby="asg-home-explore-title">
   <h2 class="asg-home-explore-heading" id="asg-home-explore-title">Explora la investigación</h2>
-  <p class="asg-home-explore-intro">Dos formas de acercarse a la investigación: explorar directamente los datos o seguir un recorrido sociológico guiado.</p>
+  <p class="asg-home-explore-intro">Tres formas de acercarse a la investigación: explorar datos, seguir historias guiadas o mirar dentro de un artículo publicado.</p>
   <div class="asg-home-explore-grid">
     <a class="asg-home-explore-card" href="tools/" aria-label="Explora las herramientas interactivas de investigación">
       <span class="asg-home-explore-eyebrow">Explora los datos</span>
@@ -112,6 +119,12 @@ Gran parte de mi investigación utiliza enfoques cuantitativos y longitudinales 
       <h3 class="asg-home-explore-title">Educational<br>Inequality <em>Lab</em></h3>
       <p class="asg-home-explore-description">Sigue cinco historias interactivas sobre cómo surgen y evolucionan las desigualdades educativas, desde las transiciones escolares hasta los itinerarios universitarios.</p>
       <span class="asg-home-explore-link">Empieza el Lab →</span>
+    </a>
+    <a class="asg-home-explore-card asg-home-explore-card--dissect" href="dissecting/index.html" aria-label="Descubre la colección Dissecting a Study">
+      <span class="asg-home-explore-eyebrow">Dentro del artículo · Piloto</span>
+      <h3 class="asg-home-explore-title">Dissecting<br>a Study<span style="color:#c97980">.</span></h3>
+      <p class="asg-home-explore-description">Entra en una investigación publicada y descubre sus preguntas, datos, decisiones metodológicas y límites, a tu ritmo.</p>
+      <span class="asg-home-explore-link">Entra en el estudio →</span>
     </a>
   </div>
 </section>

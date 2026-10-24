@@ -32,6 +32,8 @@ Projecte Horitzó 2020 que examina la participació cultural, els valors i les d
 *Universitat Autònoma de Barcelona / Universitat Oberta de Catalunya, 2020–2022*  
 Recerca sobre trajectòries universitàries complexes i no lineals, inclosos els canvis de titulació o modalitat d’estudi, les interrupcions i altres itineraris que s’allunyen d’una progressió lineal estàndard. El projecte també va desenvolupar enfocaments per analitzar i monitorar les trajectòries de l’estudiantat.
 
+Un article relacionat amb els patrons de progressió acadèmica es pot consultar també al [pilot de Dissecting a Study](dissecting/university-trajectories/index.html), que n’obre les dades i les decisions metodològiques.
+
 **UOC Impact**  
 *Universitat Oberta de Catalunya, 2018–2020*  
 Recerca sobre la contribució de l’educació superior en línia a la societat catalana.

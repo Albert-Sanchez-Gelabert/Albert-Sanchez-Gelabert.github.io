@@ -30,6 +30,8 @@ Horizon 2020 project examining cultural participation, values and inequalities, 
 *Universitat Autònoma de Barcelona / Universitat Oberta de Catalunya, 2020–2022*  
 Research on complex and non-linear university trajectories, including changes between programmes or study modalities, interruptions and other pathways that depart from a standard linear progression. The project also developed approaches for analysing and monitoring student trajectories.
 
+A related article on patterns of academic progression is now available as a [Dissecting a Study pilot](dissecting/university-trajectories/index.html), with a closer look at its data and methodological decisions.
+
 **UOC Impact**  
 *Universitat Oberta de Catalunya, 2018–2020*  
 Research on the contribution of online higher education to Catalan society.

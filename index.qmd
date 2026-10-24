@@ -45,7 +45,7 @@ Much of my work uses quantitative and longitudinal approaches to examine how ine
   margin: 0 0 1.35rem; color: #586975; line-height: 1.6;
 }
 #asg-home-explore .asg-home-explore-grid {
-  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.15rem; align-items: stretch;
 }
 #asg-home-explore .asg-home-explore-card {
@@ -56,6 +56,10 @@ Much of my work uses quantitative and longitudinal approaches to examine how ine
   text-decoration: none !important;
   transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
 }
+#asg-home-explore .asg-home-explore-card--dissect { background: #fcf8f8; border-color: #eadcdc; }
+#asg-home-explore .asg-home-explore-card--dissect .asg-home-explore-eyebrow,
+#asg-home-explore .asg-home-explore-card--dissect .asg-home-explore-link { color: #985057; }
+#asg-home-explore .asg-home-explore-card--dissect .asg-home-explore-title { font-family: Arial, Helvetica, sans-serif; font-weight: 800; letter-spacing: -.045em; }
 #asg-home-explore .asg-home-explore-card--lab { background: #edf5f1; border-color: #cbded5; }
 #asg-home-explore .asg-home-explore-card:hover,
 #asg-home-explore .asg-home-explore-card:focus-visible {
@@ -84,6 +88,9 @@ Much of my work uses quantitative and longitudinal approaches to examine how ine
   color: #156c60; font-size: .93rem; font-weight: 750;
   text-decoration: underline; text-underline-offset: 3px;
 }
+@media (min-width: 681px) and (max-width: 1050px) {
+  #asg-home-explore .asg-home-explore-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 @media (max-width: 680px) {
   #asg-home-explore .asg-home-explore-grid { grid-template-columns: 1fr; }
   #asg-home-explore .asg-home-explore-card { padding: 1.35rem; }
@@ -97,7 +104,7 @@ Much of my work uses quantitative and longitudinal approaches to examine how ine
 
 <section id="asg-home-explore" aria-labelledby="asg-home-explore-title">
   <h2 class="asg-home-explore-heading" id="asg-home-explore-title">Explore the research</h2>
-  <p class="asg-home-explore-intro">Two ways to engage with the evidence: explore the data yourself or follow a guided sociological discovery.</p>
+  <p class="asg-home-explore-intro">Three ways to engage with the research: explore the evidence, follow guided stories or look inside a published study.</p>
   <div class="asg-home-explore-grid">
     <a class="asg-home-explore-card" href="tools/" aria-label="Explore interactive research tools">
       <span class="asg-home-explore-eyebrow">Explore the evidence</span>
@@ -110,6 +117,12 @@ Much of my work uses quantitative and longitudinal approaches to examine how ine
       <h3 class="asg-home-explore-title">Educational<br>Inequality <em>Lab</em></h3>
       <p class="asg-home-explore-description">Follow five interactive stories about how educational inequalities emerge and unfold, from school transitions to university pathways.</p>
       <span class="asg-home-explore-link">Start the Lab →</span>
+    </a>
+    <a class="asg-home-explore-card asg-home-explore-card--dissect" href="dissecting/index.html" aria-label="Discover the Dissecting a Study collection">
+      <span class="asg-home-explore-eyebrow">Behind the article · Pilot</span>
+      <h3 class="asg-home-explore-title">Dissecting<br>a Study<span style="color:#c97980">.</span></h3>
+      <p class="asg-home-explore-description">Look inside a published study: its questions, data, methodological decisions and limitations, at your own pace.</p>
+      <span class="asg-home-explore-link">Explore the study →</span>
     </a>
   </div>
 </section>

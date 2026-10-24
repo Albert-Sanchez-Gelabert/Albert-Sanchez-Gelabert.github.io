@@ -1,0 +1,30 @@
+---
+title: "Dissecting a Study"
+lang: en
+description: "A published study, opened up. Browse its research question, data, decisions, analytical strategy and limitations. Start wherever you like."
+title-block-style: none
+format:
+  html:
+    css: collection.css
+---
+
+```{=html}
+<div class="das-collection">
+  <header class="das-head">
+    <div class="das-kicker">RESEARCH / DISSECTING A STUDY</div>
+    <h1>Dissecting<br>a Study<span>.</span></h1>
+    <p class="das-intro">A published study, opened up. Browse its research question, data, decisions, analytical strategy and limitations. Start wherever you like.</p>
+    <div class="das-test">PILOT · WORK IN PROGRESS — The first study is a pilot. Its text and presentation may still change.</div>
+  </header>
+  <div class="das-catalog-head">01 / STUDIES</div>
+  <article class="das-entry">
+    <div class="das-entry-index">STUDY 01</div>
+    <div>
+      <h2>Patterns of university progression and social inequalities</h2>
+      <p class="das-entry-meta">Troiano & Sánchez-Gelabert · 2026</p>
+      <p class="das-entry-desc">How we selected a cohort, defined academic progression, identified trajectories and analysed their social distribution.</p>
+    </div>
+    <a class="das-entry-link" href="university-trajectories/index.html">Open the study →</a>
+  </article>
+</div>
+```

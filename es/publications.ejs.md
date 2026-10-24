@@ -58,6 +58,10 @@ for (const item of items) {
       <a href="<%- item.manuscript %>" target="_blank">Manuscrito aceptado</a>
     <% } %>
 
+    <% if (item.doi === "10.1080/21568235.2025.2556438" || item.doi_url === "https://doi.org/10.1080/21568235.2025.2556438") { %>
+      <a href="dissecting/university-trajectories/index.html" class="publication-dissect-link">Dentro de este estudio · Pilot ↗</a>
+    <% } %>
+
   </div>
 
 </div>

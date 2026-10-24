@@ -32,6 +32,8 @@ Proyecto Horizonte 2020 que examina la participación cultural, los valores y la
 *Universitat Autònoma de Barcelona / Universitat Oberta de Catalunya, 2020–2022*  
 Investigación sobre trayectorias universitarias complejas y no lineales, incluidos los cambios de titulación o modalidad de estudio, las interrupciones y otros itinerarios que se alejan de una progresión lineal estándar. El proyecto también desarrolló enfoques para analizar y seguir las trayectorias del estudiantado.
 
+Un artículo relacionado con los patrones de progresión académica puede consultarse también en el [piloto de Dissecting a Study](dissecting/university-trajectories/index.html), que permite examinar sus datos y decisiones metodológicas.
+
 **UOC Impact**  
 *Universitat Oberta de Catalunya, 2018–2020*  
 Investigación sobre la contribución de la educación superior en línea a la sociedad catalana.

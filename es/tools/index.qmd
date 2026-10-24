@@ -88,70 +88,6 @@ format: html
   }
 }
 
-/* Featured editorial Lab: intentionally distinct from exploratory tools. */
-.eil-feature {
-  max-width: 980px;
-  margin: 1.6rem auto 2.5rem;
-  padding: clamp(1.45rem, 3.5vw, 2.3rem);
-  display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(190px, .7fr);
-  gap: clamp(1.2rem, 3vw, 2.6rem);
-  background: linear-gradient(120deg, #f0f7f3 0%, #f5f6ef 100%);
-  border: 1px solid #d7e5db;
-  border-radius: 16px;
-}
-.eil-feature-kicker,
-.eil-feature-aside-label {
-  display: block;
-  color: #287b70;
-  font-size: .73rem;
-  font-weight: 700;
-  letter-spacing: .11em;
-  text-transform: uppercase;
-}
-.eil-feature h2 {
-  margin: .7rem 0 .85rem;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(2.1rem, 4vw, 3.05rem);
-  font-weight: 400;
-  line-height: 1.08;
-  letter-spacing: -.035em;
-  color: #17323a;
-}
-.eil-feature h2 em { color: #187c6d; font-weight: 400; }
-.eil-feature-description {
-  max-width: 580px;
-  margin: 0 0 1.25rem;
-  line-height: 1.58;
-  color: #3f5155;
-}
-.eil-feature-link {
-  display: inline-flex;
-  gap: .6rem;
-  align-items: center;
-  padding: .66rem 1rem;
-  border-radius: 7px;
-  background: #167468;
-  color: #fff !important;
-  font-weight: 650;
-  font-size: .92rem;
-  text-decoration: none !important;
-  transition: background .18s ease;
-}
-.eil-feature-link:hover, .eil-feature-link:focus-visible {
-  background: #105a52;
-}
-.eil-feature-aside {
-  border-left: 1px solid #d0ddd5;
-  padding-left: clamp(1.1rem, 2.3vw, 1.65rem);
-  align-self: center;
-}
-.eil-feature-aside p {
-  margin: .5rem 0 0;
-  line-height: 1.55;
-  color: #586a69;
-  font-size: .92rem;
-}
 .eil-tools-heading {
   max-width: 980px;
   margin: 0 auto .55rem;
@@ -164,31 +100,8 @@ format: html
   line-height: 1.55;
   color: #667477;
 }
-@media (max-width: 720px) {
-  .eil-feature { grid-template-columns: 1fr; gap: 1.2rem; }
-  .eil-feature-aside {
-    border-left: 0;
-    border-top: 1px solid #d0ddd5;
-    padding: 1rem 0 0;
-  }
-  .eil-feature h2 { font-size: clamp(2rem, 9vw, 2.65rem); }
-}
-</style>
 
-```{=html}
-<section class="eil-feature" aria-labelledby="eil-feature-title">
-  <div>
-    <span class="eil-feature-kicker">Educational Inequality Lab · Historias guiadas</span>
-    <h2 id="eil-feature-title">Beyond <em>merit.</em></h2>
-    <p class="eil-feature-description">Cinco historias sociológicas interactivas sobre cómo surgen y evolucionan las desigualdades educativas: contextos escolares, condiciones de vida, recursos familiares, trayectorias académicas y flexibilidad institucional.</p>
-    <a class="eil-feature-link" href="educational-inequality-lab/">Descubre el Lab <span aria-hidden="true">→</span></a>
-  </div>
-  <div class="eil-feature-aside">
-    <span class="eil-feature-aside-label">Otra manera de explorar la investigación</span>
-    <p>Sigue un recorrido guiado, capítulo a capítulo. Para explorar datos y resultados con más detalle, utiliza las herramientas de investigación que aparecen a continuación.</p>
-  </div>
-</section>
-```
+</style>
 
 <h2 class="eil-tools-heading" id="individual-tools">Herramientas de investigación individuales</h2>
 <p class="eil-tools-intro">Explora la investigación original mediante visualizaciones interactivas de datos y modelos.</p>
