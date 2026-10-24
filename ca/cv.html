@@ -89,27 +89,13 @@ ul.task-list li input[type="checkbox"] {
     cv: 'cv.html',
     tools: 'tools/index.html',
     lab: 'tools/educational-inequality-lab/index.html',
-    chapter1: 'tools/educational-inequality-lab/chapter-1/index.html',
-    chapter2: 'tools/educational-inequality-lab/chapter-2/index.html',
-    chapter3: 'tools/educational-inequality-lab/chapter-3/index.html',
-    chapter4: 'tools/educational-inequality-lab/chapter-4/index.html',
-    chapter5: 'tools/educational-inequality-lab/chapter-5/index.html',
-    chapter1: 'tools/educational-inequality-lab/chapter-1/index.html',
-    chapter2: 'tools/educational-inequality-lab/chapter-2/index.html',
-    chapter3: 'tools/educational-inequality-lab/chapter-3/index.html',
-    chapter4: 'tools/educational-inequality-lab/chapter-4/index.html',
-    chapter5: 'tools/educational-inequality-lab/chapter-5/index.html',
-    chapter1: 'tools/educational-inequality-lab/chapter-1/index.html',
-    chapter2: 'tools/educational-inequality-lab/chapter-2/index.html',
-    chapter3: 'tools/educational-inequality-lab/chapter-3/index.html',
-    chapter4: 'tools/educational-inequality-lab/chapter-4/index.html',
-    chapter5: 'tools/educational-inequality-lab/chapter-5/index.html'
+    dissecting: 'dissecting/index.html'
   };
   const articleIds = new Set(['2026_Simbolic', '2026_STEM_gender', '2026_Youth']);
   const labels = {
-    en: {home: 'Home', research: 'Research', publications: 'Publications', news: 'News', cv: 'CV', tools: 'Tools', lab: 'Lab', all: 'All tools'},
-    ca: {home: 'Inici', research: 'Recerca', publications: 'Publicacions', news: 'Actualitat', cv: 'Currículum', tools: 'Eines', lab: 'Lab', all: 'Totes les eines'},
-    es: {home: 'Inicio', research: 'Investigación', publications: 'Publicaciones', news: 'Actualidad', cv: 'Currículum', tools: 'Herramientas', lab: 'Lab', all: 'Todas las herramientas'}
+    en: {home: 'Home', research: 'Research', publications: 'Publications', news: 'News', cv: 'CV', tools: 'Tools', lab: 'Lab', dissecting: 'Dissecting a Study', explore: 'Explore', all: 'All tools'},
+    ca: {home: 'Inici', research: 'Recerca', publications: 'Publicacions', news: 'Actualitat', cv: 'Currículum', tools: 'Eines', lab: 'Lab', dissecting: 'Dissecting a Study', explore: 'Explora', all: 'Totes les eines'},
+    es: {home: 'Inicio', research: 'Investigación', publications: 'Publicaciones', news: 'Actualidad', cv: 'Currículum', tools: 'Herramientas', lab: 'Lab', dissecting: 'Dissecting a Study', explore: 'Explorar', all: 'Todas las herramientas'}
   };
   const languageChoices = {'English': 'en', 'Català': 'ca', 'Castellano': 'es'};
 
@@ -127,6 +113,8 @@ ul.task-list li input[type="checkbox"] {
     }
     const newsMatch = rel.match(/^news\/([^/]+)\/index\.html$/);
     if (newsMatch) return {lang, page: articleIds.has(newsMatch[1]) ? 'article:' + newsMatch[1] : 'news', rel};
+    if (/^dissecting\/[^/]+\/index\.html$/.test(rel)) return {lang, page: 'dissecting-study:' + rel.split('/')[1], rel};
+    if (rel.startsWith('dissecting/')) return {lang, page: 'dissecting', rel};
     if (rel.startsWith('tools/educational-inequality-lab/')) return {lang, page: 'lab', rel};
     if (rel.startsWith('tools/')) return {lang, page: 'tools', rel};
     if (rel.startsWith('news/')) return {lang, page: 'news', rel};
@@ -135,7 +123,10 @@ ul.task-list li input[type="checkbox"] {
 
   function urlFor(lang, page) {
     let file;
-    if (page.startsWith('article:')) {
+    if (page.startsWith('dissecting-study:')) {
+      const slug = page.substring('dissecting-study:'.length);
+      file = 'dissecting/' + slug + '/index.html';
+    } else if (page.startsWith('article:')) {
       const id = page.substring('article:'.length);
       file = articleIds.has(id) ? 'news/' + id + '/index.html' : routes.news;
     } else {
@@ -192,28 +183,37 @@ ul.task-list li input[type="checkbox"] {
       a.setAttribute('href', urlFor(lang, targetInfo.page));
       const caption = a.querySelector('.menu-text');
       if (caption) caption.textContent = labels[lang][targetInfo.page];
-      const selected = info.page === targetInfo.page || (info.page.startsWith('chapter') && targetInfo.page === 'lab') || (info.page.startsWith('article:') && targetInfo.page === 'news');
+      const selected = info.page === targetInfo.page || (info.page.startsWith('article:') && targetInfo.page === 'news');
       a.classList.toggle('active', selected);
       if (selected) a.setAttribute('aria-current', 'page');
       else a.removeAttribute('aria-current');
     }
 
+    // Explore dropdown: each of its three destinations stays in the current language.
     for (const li of header.querySelectorAll('li.dropdown')) {
       if (li === langNav) continue;
-      const first = li.querySelector('a.dropdown-item[href]');
-      if (!first) continue;
-      let firstPath;
-      try { firstPath = new URL(first.getAttribute('href'), document.baseURI).pathname; }
-      catch (err) { continue; }
-      if (pageInfo(firstPath).rel !== routes.tools) continue;
+      const links = [...li.querySelectorAll('a.dropdown-item[href]')];
+      const destinations = links.map(a => {
+        try { return pageInfo(new URL(a.getAttribute('href'), document.baseURI).pathname).page; }
+        catch (err) { return null; }
+      });
+      if (!(destinations.includes('tools') && destinations.includes('lab') && destinations.includes('dissecting'))) continue;
       const trigger = li.querySelector('a.nav-link.dropdown-toggle');
       const caption = trigger?.querySelector('.menu-text');
-      if (caption) caption.textContent = labels[lang].tools;
-      trigger?.classList.toggle('active', info.page === 'tools');
-      first.setAttribute('href', urlFor(lang, 'tools'));
-      const label = first.querySelector('.dropdown-text');
-      if (label) label.textContent = labels[lang].all;
-      first.classList.toggle('active', info.page === 'tools' && info.rel === routes.tools);
+      if (caption) caption.textContent = labels[lang].explore;
+      const isExplore = ['tools', 'lab', 'dissecting'].includes(info.page) || info.page.startsWith('dissecting-study:');
+      trigger?.classList.toggle('active', isExplore);
+      links.forEach((a, i) => {
+        const page = destinations[i];
+        if (!['tools', 'lab', 'dissecting'].includes(page)) return;
+        a.setAttribute('href', urlFor(lang, page));
+        const label = a.querySelector('.dropdown-text');
+        if (label) label.textContent = labels[lang][page];
+        const active = info.page === page || (page === 'dissecting' && info.page.startsWith('dissecting-study:'));
+        a.classList.toggle('active', active);
+        if (active) a.setAttribute('aria-current', 'page');
+        else a.removeAttribute('aria-current');
+      });
     }
   }
 
@@ -275,38 +275,22 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../news.html"> 
 <span class="menu-text">News</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../tools/educational-inequality-lab/index.html"> 
-<span class="menu-text">Lab</span></a>
-  </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tools" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Tools</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-explore" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Explore</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-tools">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-explore">    
         <li>
     <a class="dropdown-item" href="../tools/index.html">
- <span class="dropdown-text">All tools</span></a>
+ <span class="dropdown-text">Research Tools</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tools/pathways/index.html">
- <span class="dropdown-text">Longitudinal Pathway Dynamics</span></a>
+    <a class="dropdown-item" href="../tools/educational-inequality-lab/index.html">
+ <span class="dropdown-text">Educational Inequality Lab</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tools/context/index.html">
- <span class="dropdown-text">School Context &amp; Transition Explorer</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../tools/entry-space/index.html">
- <span class="dropdown-text">University Entry Space Explorer</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../tools/compensatory/index.html">
- <span class="dropdown-text">Compensatory Advantage Explorer</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../tools/trajectories/index.html">
- <span class="dropdown-text">University Trajectory Lab</span></a>
+    <a class="dropdown-item" href="../dissecting/index.html">
+ <span class="dropdown-text">Dissecting a Study</span></a>
   </li>  
     </ul>
   </li>

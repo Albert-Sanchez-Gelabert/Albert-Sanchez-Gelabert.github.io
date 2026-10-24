@@ -1,0 +1,20 @@
+/* Only for the Dissecting a Study collection pages. The study is a standalone document. */
+#title-block-header {display:none}
+.das-collection {max-width:1120px;margin:1.5rem auto 5rem;font-family:Arial,Helvetica,sans-serif;color:#101011}
+.das-collection * {box-sizing:border-box}
+.das-kicker {font-size:.72rem;letter-spacing:.15em;font-weight:850;text-transform:uppercase;color:#6e6e6e}
+.das-head {padding:clamp(1.7rem,5vw,4rem) 0 clamp(2rem,5vw,4rem);border-bottom:2px solid #141414}
+.das-head h1 {font-size:clamp(3.3rem,8.5vw,7.4rem);font-weight:900;line-height:.97;letter-spacing:-.075em;margin:.9rem 0 1.4rem;color:#101011}
+.das-head h1 span {color:#ce8186}
+.das-intro {font-size:clamp(1.15rem,2vw,1.48rem);font-weight:560;line-height:1.5;max-width:720px;margin:0 0 1.4rem}
+.das-test {display:inline-flex;align-items:center;gap:.6rem;border-top:1px solid #d5d5d5;padding-top:.75rem;color:#5d5d5d;font-size:.8rem;font-weight:700;letter-spacing:.02em}
+.das-test::before {content:'';width:8px;height:8px;background:#ce8186;display:inline-block}
+.das-catalog-head {font-size:.78rem;letter-spacing:.12em;font-weight:900;margin:2.4rem 0 1.5rem;text-transform:uppercase}
+.das-entry {display:grid;grid-template-columns:130px minmax(0,1fr) auto;gap:1.7rem;padding:1.8rem 0;border-top:1px solid #d5d5d5;border-bottom:1px solid #d5d5d5;align-items:start}
+.das-entry-index {font-size:.76rem;font-weight:800;color:#9f6165;letter-spacing:.1em}
+.das-entry h2 {font-size:clamp(1.45rem,2.8vw,2.25rem);font-weight:850;line-height:1.15;letter-spacing:-.04em;margin:0 0 .7rem;color:#111}
+.das-entry-meta {color:#666;font-size:.85rem;margin:0 0 1rem}
+.das-entry-desc {color:#454545;max-width:680px;font-size:.95rem;line-height:1.55;margin:0}
+.das-entry-link {display:inline-block;padding:.77rem .85rem;border:1px solid #111;color:#111!important;font-size:.8rem;font-weight:850;white-space:nowrap;text-decoration:none!important}
+.das-entry-link:hover,.das-entry-link:focus-visible {background:#111;color:#fff!important}
+@media(max-width:760px){.das-collection{margin:0 auto 3rem}.das-entry{grid-template-columns:1fr;gap:1rem}.das-entry-link{justify-self:start}.das-head h1{letter-spacing:-.065em}}
