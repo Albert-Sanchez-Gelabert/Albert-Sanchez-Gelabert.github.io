@@ -18,3 +18,13 @@
 .das-entry-link {display:inline-block;padding:.77rem .85rem;border:1px solid #111;color:#111!important;font-size:.8rem;font-weight:850;white-space:nowrap;text-decoration:none!important}
 .das-entry-link:hover,.das-entry-link:focus-visible {background:#111;color:#fff!important}
 @media(max-width:760px){.das-collection{margin:0 auto 3rem}.das-entry{grid-template-columns:1fr;gap:1rem}.das-entry-link{justify-self:start}.das-head h1{letter-spacing:-.065em}}
+
+/* An open invitation to discuss research; shared across the collection indices. */
+.das-collection .das-contact {display:block;position:relative;float:none;clear:both;width:100%;max-width:800px;margin:3.1rem auto 0;padding:1.7rem 0 0;border-top:2px solid #151515;box-sizing:border-box}
+.das-contact-kicker {font-size:.7rem;letter-spacing:.13em;color:#9f6165;font-weight:900;text-transform:uppercase;margin-bottom:.9rem}
+.das-contact h2 {font-size:clamp(1.55rem,3vw,2.4rem);font-weight:850;letter-spacing:-.045em;line-height:1.14;margin:0 0 1.1rem}
+.das-contact p {font-size:1rem;line-height:1.7;color:#414141;max-width:735px;margin:0 0 .95rem}
+.das-contact p:last-of-type {margin-bottom:1.45rem}
+.das-contact-link {display:inline-block;color:#151515!important;font-size:.86rem;font-weight:850;letter-spacing:.01em;text-decoration:none!important;border-bottom:2px solid #ce8186;padding:0 0 .4rem}
+.das-contact-link:hover,.das-contact-link:focus-visible {color:#9f6165!important;border-bottom-color:#9f6165}
+@media(max-width:760px){.das-collection .das-contact{max-width:100%;margin-top:2.4rem;padding-top:1.4rem}}

@@ -14,11 +14,11 @@ format:
     <div class="das-kicker">RESEARCH / DISSECTING A STUDY</div>
     <h1>Dissecting<br>a Study<span>.</span></h1>
     <p class="das-intro">Un estudio publicado, abierto por dentro. Explora su pregunta, sus datos, las decisiones metodológicas y sus límites. Empieza por donde quieras.</p>
-    <div class="das-test">PILOTO · EN PRUEBAS — El primer estudio es un piloto. Los textos y la presentación todavía pueden cambiar.</div>
+    <div class="das-test">PILOTO · EN PRUEBAS — La colección está en desarrollo. Los textos y la presentación todavía pueden cambiar.</div>
   </header>
-  <div class="das-catalog-head">02 / ESTUDIOS</div>
+  <div class="das-catalog-head">03 / ESTUDIOS</div>
   <article class="das-entry">
-    <div class="das-entry-index">STUDY 01</div>
+    <div class="das-entry-index">ESTUDIO 01</div>
     <div>
       <h2>Patterns of university progression and social inequalities</h2>
       <p class="das-entry-meta">Troiano y Sánchez-Gelabert · 2026</p>
@@ -35,5 +35,21 @@ format:
     </div>
     <a class="das-entry-link" href="gender-stem/index.html">Abrir el estudio →</a>
   </article>
+  <article class="das-entry das-entry-secondary">
+    <div class="das-entry-index">ESTUDIO 03</div>
+    <div>
+      <h2>Higher education and the life course: Exploring the interactive effects of age and employment status on university graduation</h2>
+      <p class="das-entry-meta">Sánchez-Gelabert · 2024</p>
+      <p class="das-entry-desc">Cómo investigamos si la asociación entre trabajo y graduación varía según la edad y qué implica interpretar una interacción estadística.</p>
+    </div>
+    <a class="das-entry-link" href="life-course/index.html">Abrir el estudio →</a>
+  </article>
+  <div class="das-contact" role="region" aria-labelledby="das-contact-heading">
+    <div class="das-contact-kicker">DISSECTING A STUDY</div>
+    <h2 id="das-contact-heading">La investigación plantea preguntas.</h2>
+    <p><em>Dissecting a Study</em> busca abrir el proceso de investigación — incluidas las preguntas, las decisiones y las incertidumbres que hay detrás de los trabajos publicados.</p>
+    <p>Si estos estudios te suscitan preguntas sobre un método, una decisión de investigación o incluso sobre algo en lo que estés trabajando, no dudes en escribirme. Me interesa especialmente intercambiar ideas con quienes están dando sus primeros pasos en la investigación.</p>
+    <a class="das-contact-link" href="mailto:albert.sanchez.gelabert@upc.edu?subject=Dissecting%20a%20Study%20%E2%80%94%20Consulta">Escríbeme →</a>
+  </div>
 </div>
 ```
