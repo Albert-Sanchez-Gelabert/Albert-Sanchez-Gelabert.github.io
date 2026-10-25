@@ -7,8 +7,6 @@
 .das-head h1 {font-size:clamp(3.3rem,8.5vw,7.4rem);font-weight:900;line-height:.97;letter-spacing:-.075em;margin:.9rem 0 1.4rem;color:#101011}
 .das-head h1 span {color:#ce8186}
 .das-intro {font-size:clamp(1.15rem,2vw,1.48rem);font-weight:560;line-height:1.5;max-width:720px;margin:0 0 1.4rem}
-.das-test {display:inline-flex;align-items:center;gap:.6rem;border-top:1px solid #d5d5d5;padding-top:.75rem;color:#5d5d5d;font-size:.8rem;font-weight:700;letter-spacing:.02em}
-.das-test::before {content:'';width:8px;height:8px;background:#ce8186;display:inline-block}
 .das-catalog-head {font-size:.78rem;letter-spacing:.12em;font-weight:900;margin:2.4rem 0 1.5rem;text-transform:uppercase}
 .das-entry {display:grid;grid-template-columns:130px minmax(0,1fr) auto;gap:1.7rem;padding:1.8rem 0;border-top:1px solid #d5d5d5;border-bottom:1px solid #d5d5d5;align-items:start}
 .das-entry-index {font-size:.76rem;font-weight:800;color:#9f6165;letter-spacing:.1em}
@@ -28,3 +26,13 @@
 .das-contact-link {display:inline-block;color:#151515!important;font-size:.86rem;font-weight:850;letter-spacing:.01em;text-decoration:none!important;border-bottom:2px solid #ce8186;padding:0 0 .4rem}
 .das-contact-link:hover,.das-contact-link:focus-visible {color:#9f6165!important;border-bottom-color:#9f6165}
 @media(max-width:760px){.das-collection .das-contact{max-width:100%;margin-top:2.4rem;padding-top:1.4rem}}
+
+
+/* Subtle authorship and Zenodo citation, below the collection contact block. */
+.das-collection .das-archive {max-width:800px;margin:2.7rem auto 0;padding:1.2rem 0 0;border-top:1px solid #d5d5d5;color:#626262;text-align:left;font-size:.78rem;line-height:1.65;}
+.das-archive-credit,.das-archive-citation {margin:0 0 .7rem;font-size:inherit;line-height:inherit;}
+.das-archive-credit strong {font-weight:750;color:#343434;}
+.das-archive-label {font-weight:800;letter-spacing:.02em;margin:.65rem 0 .1rem;color:#444;}
+.das-archive a {color:#565656!important;text-decoration:underline;text-decoration-color:#ce8186;text-underline-offset:3px;overflow-wrap:anywhere;}
+.das-archive a:hover,.das-archive a:focus-visible {color:#9f6165!important;}
+@media(max-width:760px){.das-collection .das-archive{margin-top:2rem;padding-top:1rem;}}
