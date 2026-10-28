@@ -15,7 +15,7 @@ format:
     <h1>Dissecting<br>a Study<span>.</span></h1>
     <p class="das-intro">Una recerca publicada, oberta per dins. Explora’n la pregunta, les dades, les decisions metodològiques i els límits. Comença per on vulguis.</p>
   </header>
-  <div class="das-catalog-head">04 / ESTUDIS</div>
+  <div class="das-catalog-head">05 / ESTUDIS</div>
   <article class="das-entry">
     <div class="das-entry-index">ESTUDI 01</div>
     <div>
@@ -51,6 +51,15 @@ format:
       <p class="das-entry-desc">Com una pregunta plantejada per McInnis va conduir a 80 entrevistes, un llibre de codis i una interpretació qualitativa de la participació i la identificació universitària.</p>
     </div>
     <a class="das-entry-link" href="signs-of-reengagement/index.html">Obre l’estudi →</a>
+  </article>
+  <article class="das-entry das-entry-secondary">
+    <div class="das-entry-index">ESTUDI 05</div>
+    <div>
+      <h2>La actitud del alumnado frente a la escuela</h2>
+      <p class="das-entry-meta">Valls, Sánchez-Gelabert i Troiano · 2023</p>
+      <p class="das-entry-desc">Com un qüestionari internacional es va adaptar a Barcelona i com deu ítems permeten construir dues dimensions d’identificació escolar i cinc perfils.</p>
+    </div>
+    <a class="das-entry-link" href="attitudes-towards-school/index.html">Obre l’estudi →</a>
   </article>
   <div class="das-contact" role="region" aria-labelledby="das-contact-heading">
     <div class="das-contact-kicker">DISSECTING A STUDY</div>

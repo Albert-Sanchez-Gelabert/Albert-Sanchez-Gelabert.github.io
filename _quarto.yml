@@ -27,6 +27,9 @@ project:
     - "dissecting/signs-of-reengagement/index.html"
     - "ca/dissecting/signs-of-reengagement/index.html"
     - "es/dissecting/signs-of-reengagement/index.html"
+    - "dissecting/attitudes-towards-school/index.html"
+    - "ca/dissecting/attitudes-towards-school/index.html"
+    - "es/dissecting/attitudes-towards-school/index.html"
 
 website:
   title: "Albert Sánchez-Gelabert"
