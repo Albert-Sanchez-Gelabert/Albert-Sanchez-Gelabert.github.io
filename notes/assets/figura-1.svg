@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 437" role="img" aria-labelledby="tit desc">
+<title id="tit">Evolució dels estudiants de nou ingrés a grau segons tipus d’universitat</title>
+<desc id="desc">Índex 2015–2016 = 100. Les públiques presencials acaben en 102,8, les privades presencials en 163,1 i les no presencials en 163,8 el curs 2025–2026. Sèries amb evolucions anuals diferents.</desc>
+<rect width="1000" height="437" fill="#fff"/>
+<line x1="65" x2="960" y1="385.0" y2="385.0" stroke="#e5e5e5" stroke-width="1" />
+<text x="47" y="389.0" text-anchor="end" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-size="12" fill="#686868">90</text>
+<line x1="65" x2="960" y1="304.8" y2="304.8" stroke="#e5e5e5" stroke-width="1" />
+<text x="47" y="308.8" text-anchor="end" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-size="12" fill="#686868">110</text>
+<line x1="65" x2="960" y1="224.6" y2="224.6" stroke="#e5e5e5" stroke-width="1" />
+<text x="47" y="228.6" text-anchor="end" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-size="12" fill="#686868">130</text>
+<line x1="65" x2="960" y1="144.3" y2="144.3" stroke="#e5e5e5" stroke-width="1" />
+<text x="47" y="148.3" text-anchor="end" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-size="12" fill="#686868">150</text>
+<line x1="65" x2="960" y1="64.1" y2="64.1" stroke="#e5e5e5" stroke-width="1" />
+<text x="47" y="68.1" text-anchor="end" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-size="12" fill="#686868">170</text>
+<text x="65.0" y="415" text-anchor="middle" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-size="12" fill="#686868">2015–16</text>
+<text x="244.0" y="415" text-anchor="middle" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-size="12" fill="#686868">2017–18</text>
+<text x="423.0" y="415" text-anchor="middle" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-size="12" fill="#686868">2019–20</text>
+<text x="602.0" y="415" text-anchor="middle" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-size="12" fill="#686868">2021–22</text>
+<text x="781.0" y="415" text-anchor="middle" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-size="12" fill="#686868">2023–24</text>
+<text x="960.0" y="415" text-anchor="middle" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-size="12" fill="#686868">2025–26</text>
+<polyline points="65.0,344.9 154.5,357.3 244.0,356.3 333.5,352.6 423.0,354.8 512.5,336.1 602.0,344.3 691.5,335.1 781.0,332.6 870.5,332.1 960.0,333.8" fill="none" stroke="#52777A" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="65.0" cy="344.9" r="6.5" fill="transparent"><title>Públiques presencials · 2015–16: 38,712 estudiants · índex 100.0</title></circle>
+<circle cx="154.5" cy="357.3" r="6.5" fill="transparent"><title>Públiques presencials · 2016–17: 37,514 estudiants · índex 96.9</title></circle>
+<circle cx="244.0" cy="356.3" r="6.5" fill="transparent"><title>Públiques presencials · 2017–18: 37,609 estudiants · índex 97.2</title></circle>
+<circle cx="333.5" cy="352.6" r="6.5" fill="transparent"><title>Públiques presencials · 2018–19: 37,969 estudiants · índex 98.1</title></circle>
+<circle cx="423.0" cy="354.8" r="6.5" fill="transparent"><title>Públiques presencials · 2019–20: 37,760 estudiants · índex 97.5</title></circle>
+<circle cx="512.5" cy="336.1" r="6.5" fill="transparent"><title>Públiques presencials · 2020–21: 39,557 estudiants · índex 102.2</title></circle>
+<circle cx="602.0" cy="344.3" r="6.5" fill="transparent"><title>Públiques presencials · 2021–22: 38,769 estudiants · índex 100.1</title></circle>
+<circle cx="691.5" cy="335.1" r="6.5" fill="transparent"><title>Públiques presencials · 2022–23: 39,654 estudiants · índex 102.4</title></circle>
+<circle cx="781.0" cy="332.6" r="6.5" fill="transparent"><title>Públiques presencials · 2023–24: 39,894 estudiants · índex 103.1</title></circle>
+<circle cx="870.5" cy="332.1" r="6.5" fill="transparent"><title>Públiques presencials · 2024–25: 39,951 estudiants · índex 103.2</title></circle>
+<circle cx="960.0" cy="333.8" r="6.5" fill="transparent"><title>Públiques presencials · 2025–26: 39,781 estudiants · índex 102.8</title></circle>
+<polyline points="65.0,344.9 154.5,322.7 244.0,300.5 333.5,299.1 423.0,268.8 512.5,252.5 602.0,199.5 691.5,175.5 781.0,160.6 870.5,152.3 960.0,91.7" fill="none" stroke="#52777A" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="11 7" />
+<circle cx="65.0" cy="344.9" r="6.5" fill="transparent"><title>Privades presencials · 2015–16: 5,916 estudiants · índex 100.0</title></circle>
+<circle cx="154.5" cy="322.7" r="6.5" fill="transparent"><title>Privades presencials · 2016–17: 6,243 estudiants · índex 105.5</title></circle>
+<circle cx="244.0" cy="300.5" r="6.5" fill="transparent"><title>Privades presencials · 2017–18: 6,570 estudiants · índex 111.1</title></circle>
+<circle cx="333.5" cy="299.1" r="6.5" fill="transparent"><title>Privades presencials · 2018–19: 6,592 estudiants · índex 111.4</title></circle>
+<circle cx="423.0" cy="268.8" r="6.5" fill="transparent"><title>Privades presencials · 2019–20: 7,038 estudiants · índex 119.0</title></circle>
+<circle cx="512.5" cy="252.5" r="6.5" fill="transparent"><title>Privades presencials · 2020–21: 7,278 estudiants · índex 123.0</title></circle>
+<circle cx="602.0" cy="199.5" r="6.5" fill="transparent"><title>Privades presencials · 2021–22: 8,060 estudiants · índex 136.2</title></circle>
+<circle cx="691.5" cy="175.5" r="6.5" fill="transparent"><title>Privades presencials · 2022–23: 8,415 estudiants · índex 142.2</title></circle>
+<circle cx="781.0" cy="160.6" r="6.5" fill="transparent"><title>Privades presencials · 2023–24: 8,634 estudiants · índex 145.9</title></circle>
+<circle cx="870.5" cy="152.3" r="6.5" fill="transparent"><title>Privades presencials · 2024–25: 8,756 estudiants · índex 148.0</title></circle>
+<circle cx="960.0" cy="91.7" r="6.5" fill="transparent"><title>Privades presencials · 2025–26: 9,650 estudiants · índex 163.1</title></circle>
+<polyline points="65.0,344.9 154.5,290.2 244.0,272.8 333.5,233.5 423.0,210.7 512.5,132.8 602.0,270.4 691.5,162.7 781.0,174.3 870.5,130.1 960.0,88.8" fill="none" stroke="#52777A" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 8" />
+<circle cx="65.0" cy="344.9" r="6.5" fill="transparent"><title>No presencials · 2015–16: 10,010 estudiants · índex 100.0</title></circle>
+<circle cx="154.5" cy="290.2" r="6.5" fill="transparent"><title>No presencials · 2016–17: 11,376 estudiants · índex 113.6</title></circle>
+<circle cx="244.0" cy="272.8" r="6.5" fill="transparent"><title>No presencials · 2017–18: 11,808 estudiants · índex 118.0</title></circle>
+<circle cx="333.5" cy="233.5" r="6.5" fill="transparent"><title>No presencials · 2018–19: 12,790 estudiants · índex 127.8</title></circle>
+<circle cx="423.0" cy="210.7" r="6.5" fill="transparent"><title>No presencials · 2019–20: 13,358 estudiants · índex 133.4</title></circle>
+<circle cx="512.5" cy="132.8" r="6.5" fill="transparent"><title>No presencials · 2020–21: 15,302 estudiants · índex 152.9</title></circle>
+<circle cx="602.0" cy="270.4" r="6.5" fill="transparent"><title>No presencials · 2021–22: 11,868 estudiants · índex 118.6</title></circle>
+<circle cx="691.5" cy="162.7" r="6.5" fill="transparent"><title>No presencials · 2022–23: 14,556 estudiants · índex 145.4</title></circle>
+<circle cx="781.0" cy="174.3" r="6.5" fill="transparent"><title>No presencials · 2023–24: 14,268 estudiants · índex 142.5</title></circle>
+<circle cx="870.5" cy="130.1" r="6.5" fill="transparent"><title>No presencials · 2024–25: 15,369 estudiants · índex 153.5</title></circle>
+<circle cx="960.0" cy="88.8" r="6.5" fill="transparent"><title>No presencials · 2025–26: 16,400 estudiants · índex 163.8</title></circle>
+</svg>

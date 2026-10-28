@@ -1,23 +1,7 @@
 [
   {
-    "listing": "/ca/news.html",
-    "items": [
-      "/ca/news/2026_Simbolic/index.html",
-      "/ca/news/2026_STEM_gender/index.html",
-      "/ca/news/2026_Youth/index.html"
-    ]
-  },
-  {
     "listing": "/ca/publications.html",
     "items": []
-  },
-  {
-    "listing": "/es/news.html",
-    "items": [
-      "/es/news/2026_Simbolic/index.html",
-      "/es/news/2026_STEM_gender/index.html",
-      "/es/news/2026_Youth/index.html"
-    ]
   },
   {
     "listing": "/es/publications.html",
@@ -26,14 +10,8 @@
   {
     "listing": "/news.html",
     "items": [
-      "/ca/news/2026_Simbolic/index.html",
-      "/es/news/2026_Simbolic/index.html",
       "/news/2026_Simbolic/index.html",
-      "/ca/news/2026_STEM_gender/index.html",
-      "/es/news/2026_STEM_gender/index.html",
       "/news/2026_STEM_gender/index.html",
-      "/ca/news/2026_Youth/index.html",
-      "/es/news/2026_Youth/index.html",
       "/news/2026_Youth/index.html"
     ]
   },
