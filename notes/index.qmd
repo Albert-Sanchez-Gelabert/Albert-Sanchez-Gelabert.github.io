@@ -1,0 +1,32 @@
+---
+title: "Notes"
+lang: ca
+title-block-style: none
+toc: false
+page-layout: full
+format:
+  html:
+    css: notes.css
+    metadata:
+      description: "Notes — un fet, un gràfic, una lectura. Anàlisis breus d’educació i desigualtats socials."
+---
+
+```{=html}
+<div class="notes-page notes-index" lang="ca">
+  <header class="notes-index-head">
+    <h1 class="visually-hidden">Notes</h1>
+    <div class="notes-brand" role="img" aria-label="[notes]">
+      <div class="notes-brand-word"><span class="notes-brand-bracket">[</span><span class="notes-brand-name">notes</span><span class="notes-brand-bracket">]</span></div>
+    </div>
+    <p>Una observació empírica, un gràfic i una lectura sociològica.</p>
+  </header>
+  <section aria-labelledby="notes-list-title" class="notes-list">
+    <div class="notes-list-header"><h2 id="notes-list-title">Les notes</h2><span>01 / 01</span></div>
+    <a class="notes-entry" href="001-expansio-desigual/" aria-label="Llegir la nota 001: L’expansió desigual del sistema universitari català">
+      <span class="notes-issue"><span class="notes-bracket">[</span>001<span class="notes-bracket">]</span></span>
+      <span class="notes-entry-content"><strong>L’expansió desigual del sistema universitari català</strong><span>Una dècada de canvis en el nou ingrés a grau, la distribució institucional i les limitacions per analitzar l’equitat.</span><small>EDUCACIÓ SUPERIOR <b> | </b> CATALUNYA</small></span>
+      <span class="notes-arrow" aria-hidden="true">↗</span>
+    </a>
+  </section>
+</div>
+```

@@ -54,6 +54,8 @@ website:
             text: Educational Inequality Lab
           - href: dissecting/index.qmd
             text: Dissecting a Study
+      - href: notes/index.qmd
+        text: Notes
       - href: cv.qmd
         text: CV
 
