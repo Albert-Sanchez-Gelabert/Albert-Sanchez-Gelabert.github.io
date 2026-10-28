@@ -24,6 +24,9 @@ project:
     - "dissecting/life-course/index.html"
     - "ca/dissecting/life-course/index.html"
     - "es/dissecting/life-course/index.html"
+    - "dissecting/signs-of-reengagement/index.html"
+    - "ca/dissecting/signs-of-reengagement/index.html"
+    - "es/dissecting/signs-of-reengagement/index.html"
 
 website:
   title: "Albert Sánchez-Gelabert"

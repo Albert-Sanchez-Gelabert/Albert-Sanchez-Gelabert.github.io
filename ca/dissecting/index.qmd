@@ -15,7 +15,7 @@ format:
     <h1>Dissecting<br>a Study<span>.</span></h1>
     <p class="das-intro">Una recerca publicada, oberta per dins. Explora’n la pregunta, les dades, les decisions metodològiques i els límits. Comença per on vulguis.</p>
   </header>
-  <div class="das-catalog-head">03 / ESTUDIS</div>
+  <div class="das-catalog-head">04 / ESTUDIS</div>
   <article class="das-entry">
     <div class="das-entry-index">ESTUDI 01</div>
     <div>
@@ -42,6 +42,15 @@ format:
       <p class="das-entry-desc">Com vam investigar si l’associació entre treball i graduació varia segons l’edat, i què implica interpretar una interacció estadística.</p>
     </div>
     <a class="das-entry-link" href="life-course/index.html">Obrir l’estudi →</a>
+  </article>
+  <article class="das-entry das-entry-secondary">
+    <div class="das-entry-index">ESTUDI 04</div>
+    <div>
+      <h2>Signs of Reengagement? Changes in teaching methodology in the framework of the Bologna Process</h2>
+      <p class="das-entry-meta">Elias, Masjuan i Sánchez-Gelabert · 2012</p>
+      <p class="das-entry-desc">Com una pregunta plantejada per McInnis va conduir a 80 entrevistes, un llibre de codis i una interpretació qualitativa de la participació i la identificació universitària.</p>
+    </div>
+    <a class="das-entry-link" href="signs-of-reengagement/index.html">Obre l’estudi →</a>
   </article>
   <div class="das-contact" role="region" aria-labelledby="das-contact-heading">
     <div class="das-contact-kicker">DISSECTING A STUDY</div>
