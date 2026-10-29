@@ -76,5 +76,7 @@ format:
   html:
     theme: cosmo
     css: styles.css
-    include-in-header: _includes/multilingual-nav.html
+    include-in-header: 
+     - _includes/multilingual-nav.html
+     - goatcounter.html
 
