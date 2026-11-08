@@ -1,19 +1,19 @@
 [
   {
-    "listing": "/ca/publications.html",
-    "items": []
-  },
-  {
-    "listing": "/es/publications.html",
-    "items": []
-  },
-  {
     "listing": "/news.html",
     "items": [
       "/news/2026_Simbolic/index.html",
       "/news/2026_STEM_gender/index.html",
       "/news/2026_Youth/index.html"
     ]
+  },
+  {
+    "listing": "/es/publications.html",
+    "items": []
+  },
+  {
+    "listing": "/ca/publications.html",
+    "items": []
   },
   {
     "listing": "/publications.html",
