@@ -109,3 +109,15 @@
   justify-content: flex-start;
   gap: 0;
 }
+
+/* Note 002: preserve the existing note's typography and editorial chart treatment. */
+.notes-article article a.notes-inline-link { color:#466c70; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.notes-article article a.notes-inline-link:hover { color:#2c5053; }
+.notes-age-legend { display:flex; flex-wrap:wrap; gap:9px 20px; margin:0 0 11px; color:#555b5d; font-size:12px; }
+.notes-age-legend span { display:inline-flex; gap:7px; align-items:center; white-space:nowrap; }
+.notes-age-swatch { display:inline-block; width:13px; height:13px; border-radius:1px; border:1px solid rgba(0,0,0,.07); }
+.notes-age-18 { background:#384445; }
+.notes-age-22 { background:#737d7f; }
+.notes-age-26 { background:#b0b7b6; }
+.notes-age-30 { background:#e3e6e5; }
+@media (max-width:760px) { .notes-age-legend { gap:8px 14px; font-size:10.5px; padding:0 4px; } .notes-age-swatch { width:11px; height:11px; } }

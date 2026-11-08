@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="220" viewBox="0 0 900 220" role="img" aria-labelledby="title desc">
+<title id="title">Distribució per edat del nou ingrés en universitats no presencials</title>
+<desc id="desc">Comparació de dos cursos. 18 a 21 anys: 10,7% el 2015-2016 i 20,6% el 2025-2026. 22 a 25: 20,4% i 24,4%. 26 a 30: 19,4% i 18,3%. Més de 30: 49,4% i 36,8%.</desc>
+<text x="6" y="72" fill="#343a3b" font-size="17" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-weight="600">2015-2016</text>
+<clipPath id="bar0"><rect x="139" y="46" width="727" height="39" rx="3"/></clipPath>
+<g clip-path="url(#bar0)">
+<rect x="139.000" y="46" width="77.831" height="39" fill="#384445"/>
+<text x="177.86" y="65.95" fill="#fff" font-size="14" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-weight="700" text-anchor="middle" dominant-baseline="middle">10,7</text>
+<rect x="216.711" y="46" width="148.788" height="39" fill="#737d7f"/>
+<path d="M 216.711 48 V 83" stroke="#ffffff" stroke-opacity="0.7" stroke-width="1.2"/>
+<text x="291.05" y="65.95" fill="#fff" font-size="14" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-weight="700" text-anchor="middle" dominant-baseline="middle">20,4</text>
+<rect x="365.380" y="46" width="141.308" height="39" fill="#b0b7b6"/>
+<path d="M 365.380 48 V 83" stroke="#ffffff" stroke-opacity="0.7" stroke-width="1.2"/>
+<text x="435.97" y="65.95" fill="#273133" font-size="14" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-weight="700" text-anchor="middle" dominant-baseline="middle">19,4</text>
+<rect x="506.567" y="46" width="359.553" height="39" fill="#e3e6e5"/>
+<path d="M 506.567 48 V 83" stroke="#ffffff" stroke-opacity="0.7" stroke-width="1.2"/>
+<text x="686.28" y="65.95" fill="#273133" font-size="14" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-weight="700" text-anchor="middle" dominant-baseline="middle">49,4</text>
+</g>
+<text x="6" y="147" fill="#343a3b" font-size="17" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-weight="600">2025-2026</text>
+<clipPath id="bar1"><rect x="139" y="121" width="727" height="39" rx="3"/></clipPath>
+<g clip-path="url(#bar1)">
+<rect x="139.000" y="121" width="149.820" height="39" fill="#384445"/>
+<text x="213.85" y="140.95" fill="#fff" font-size="14" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-weight="700" text-anchor="middle" dominant-baseline="middle">20,6</text>
+<rect x="288.700" y="121" width="177.215" height="39" fill="#737d7f"/>
+<path d="M 288.700 123 V 158" stroke="#ffffff" stroke-opacity="0.7" stroke-width="1.2"/>
+<text x="377.25" y="140.95" fill="#fff" font-size="14" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-weight="700" text-anchor="middle" dominant-baseline="middle">24,4</text>
+<rect x="465.795" y="121" width="132.930" height="39" fill="#b0b7b6"/>
+<path d="M 465.795 123 V 158" stroke="#ffffff" stroke-opacity="0.7" stroke-width="1.2"/>
+<text x="532.20" y="140.95" fill="#273133" font-size="14" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-weight="700" text-anchor="middle" dominant-baseline="middle">18,3</text>
+<rect x="598.606" y="121" width="267.514" height="39" fill="#e3e6e5"/>
+<path d="M 598.606 123 V 158" stroke="#ffffff" stroke-opacity="0.7" stroke-width="1.2"/>
+<text x="732.30" y="140.95" fill="#273133" font-size="14" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" font-weight="700" text-anchor="middle" dominant-baseline="middle">36,8</text>
+</g>
+<line x1="139" y1="181" x2="866" y2="181" stroke="#dfe2e2" stroke-width="1"/>
+<line x1="139.00" y1="178" x2="139.00" y2="184" stroke="#afb4b4" stroke-width="1"/>
+<text x="139.00" y="203" font-size="11" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" fill="#777d7e" text-anchor="middle">0%</text>
+<line x1="320.75" y1="178" x2="320.75" y2="184" stroke="#afb4b4" stroke-width="1"/>
+<text x="320.75" y="203" font-size="11" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" fill="#777d7e" text-anchor="middle">25%</text>
+<line x1="502.50" y1="178" x2="502.50" y2="184" stroke="#afb4b4" stroke-width="1"/>
+<text x="502.50" y="203" font-size="11" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" fill="#777d7e" text-anchor="middle">50%</text>
+<line x1="684.25" y1="178" x2="684.25" y2="184" stroke="#afb4b4" stroke-width="1"/>
+<text x="684.25" y="203" font-size="11" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" fill="#777d7e" text-anchor="middle">75%</text>
+<line x1="866.00" y1="178" x2="866.00" y2="184" stroke="#afb4b4" stroke-width="1"/>
+<text x="866.00" y="203" font-size="11" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" fill="#777d7e" text-anchor="middle">100%</text>
+</svg>
